@@ -1,0 +1,311 @@
+{
+  "nav": {
+    "about": "About",
+    "doctors": "Doctors",
+    "services": "Services",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Contact",
+    "bookAppointment": "Book Appointment",
+    "phone": "+1 800 555 1234"
+  },
+  "footer": {
+    "description": "Modern dental care with a personal touch. Our team of specialists is dedicated to your smile and long-term oral health.",
+    "pages": "Pages",
+    "ourDoctors": "Our Doctors",
+    "patientReviews": "Patient Reviews",
+    "services": "Services",
+    "contact": "Contact",
+    "servicesList": {
+      "whitening": "Teeth Whitening",
+      "implants": "Dental Implants",
+      "orthodontics": "Orthodontics",
+      "veneers": "Veneers",
+      "rootCanal": "Root Canal",
+      "pediatric": "Pediatric Dentistry",
+      "cosmetic": "Cosmetic Dentistry"
+    },
+    "address": "123 Medical Plaza, Suite 400\nNew York, NY 10001",
+    "email": "hello@matikyan.com",
+    "hours1": "Mon – Fri: 8:00 – 20:00",
+    "hours2": "Sat: 9:00 – 17:00",
+    "hours3": "Sun: Closed",
+    "copyright": "© 2026 Matikyan Stomatology Center. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "home": {
+    "stats": {
+      "years": "Years of Excellence",
+      "patients": "Happy Patients",
+      "doctors": "Specialist Doctors",
+      "satisfaction": "Satisfaction Rate"
+    },
+    "services": {
+      "badge": "What We Offer",
+      "title": "Comprehensive Dental Services",
+      "viewAll": "All Services",
+      "learnMore": "Learn more",
+      "items": {
+        "implants": { "title": "Dental Implants", "desc": "Permanent, natural-looking tooth replacements using titanium implants." },
+        "whitening": { "title": "Teeth Whitening", "desc": "Professional whitening treatments that brighten your smile up to 8 shades." },
+        "ortho": { "title": "Orthodontics", "desc": "Braces and clear aligners for perfectly aligned teeth at any age." },
+        "veneers": { "title": "Cosmetic Veneers", "desc": "Ultra-thin porcelain veneers for a flawless, Hollywood-worthy smile." },
+        "rootCanal": { "title": "Root Canal", "desc": "Pain-free endodontic treatment to save your natural tooth." },
+        "pediatric": { "title": "Pediatric Dentistry", "desc": "Gentle, friendly dental care tailored for children of all ages." }
+      }
+    },
+    "whyUs": {
+      "badge": "Why Choose Us",
+      "title": "Where Advanced Technology Meets Gentle Care",
+      "desc": "Our clinic combines cutting-edge dental technology with a warm, patient-first approach. Every treatment is personalized to your unique needs and comfort level.",
+      "learnMore": "Learn About Us",
+      "rating": "Rated 5.0 on Google",
+      "ratingBase": "Based on 1,240 reviews",
+      "features": {
+        "painFree": { "title": "Pain-Free Treatments", "desc": "Advanced anesthesia for a comfortable experience." },
+        "certified": { "title": "Certified Specialists", "desc": "Board-certified dentists with international training." },
+        "family": { "title": "Family Friendly", "desc": "Welcoming environment for patients of all ages." },
+        "hours": { "title": "Flexible Hours", "desc": "Evening and weekend appointments available." }
+      }
+    },
+    "testimonials": {
+      "badge": "Patient Stories",
+      "title": "What Our Patients Say",
+      "readAll": "Read all reviews",
+      "items": [
+        { "name": "Sarah Mitchell", "service": "Porcelain Veneers", "text": "Absolutely incredible experience. Dr. Kovalenko transformed my smile with veneers and I couldn't be happier. The whole team was warm and professional." },
+        { "name": "James Thornton", "service": "Dental Implants", "text": "I was terrified of dental procedures but the team here made me feel completely at ease. My implants look and feel completely natural." },
+        { "name": "Elena Vasquez", "service": "Teeth Whitening", "text": "Best dental clinic I have ever visited. Modern equipment, kind staff, and results that exceeded my expectations. Highly recommended!" }
+      ]
+    },
+    "cta": {
+      "title": "Ready for a Healthier, Brighter Smile?",
+      "desc": "Book your free consultation today. Our specialists will assess your needs and create a personalized treatment plan just for you.",
+      "button": "Schedule Free Consultation"
+    }
+  },
+  "slider": {
+    "bookConsultation": "Book Free Consultation",
+    "slides": [
+      {
+        "tag": "Advanced Implantology",
+        "title": "Restore Your Smile\nWith Dental Implants",
+        "desc": "Permanent, natural-looking tooth replacements — from single implants to full-arch restorations.",
+        "cta": "Our Services"
+      },
+      {
+        "tag": "Modern Equipment",
+        "title": "State-of-the-Art\nClinic & Technology",
+        "desc": "3D scanning, digital X-rays, CAD/CAM same-day crowns — precision dentistry in a comfortable setting.",
+        "cta": "About Us"
+      },
+      {
+        "tag": "Cosmetic Dentistry",
+        "title": "Your Dream Smile\nStarts Here",
+        "desc": "Veneers, whitening, bonding and full smile makeovers performed by award-winning cosmetic specialists.",
+        "cta": "Our Services"
+      },
+      {
+        "tag": "Orthodontics",
+        "title": "Straighter Teeth,\nClearer Confidence",
+        "desc": "Invisalign and ceramic braces tailored to adults and teens — start with a free 3D simulation.",
+        "cta": "Meet Our Doctors"
+      }
+    ]
+  },
+  "about": {
+    "hero": {
+      "badge": "Our Story",
+      "title": "Dedicated to Transforming Smiles Since 2012",
+      "desc1": "DentaCare was founded on a simple belief: that dental care should be as comfortable as it is effective. Over the past 12 years, we have grown into one of New York's most trusted stomatology centers, treating over 8,400 patients.",
+      "desc2": "Our clinic brings together a diverse team of specialists — from orthodontists and periodontists to cosmetic and pediatric dentists — all working under one roof to deliver seamless, comprehensive care.",
+      "stats": {
+        "patients": "Patients",
+        "specialists": "Specialists",
+        "satisfaction": "Satisfaction"
+      },
+      "meetTeam": "Meet Our Team"
+    },
+    "values": {
+      "badge": "Our Values",
+      "title": "The Principles That Guide Us",
+      "items": [
+        { "title": "Patient-First", "desc": "Every decision is guided by what's best for the patient's health and comfort." },
+        { "title": "Clinical Excellence", "desc": "Continuous education and adoption of the latest evidence-based treatments." },
+        { "title": "Inclusivity", "desc": "Welcoming patients of all ages, backgrounds, and dental anxiety levels." },
+        { "title": "Transparency", "desc": "Clear communication, honest pricing, and no surprise fees — ever." }
+      ]
+    },
+    "milestones": {
+      "badge": "Our Journey",
+      "title": "Key Milestones",
+      "items": [
+        { "year": "2012", "title": "Founded", "desc": "DentaCare opened its doors with a mission to redefine the dental experience in New York." },
+        { "year": "2015", "title": "First Expansion", "desc": "Added a dedicated implantology suite and orthodontics department." },
+        { "year": "2018", "title": "Digital Dentistry", "desc": "Introduced 3D scanning, digital X-rays, and CAD/CAM same-day crowns." },
+        { "year": "2021", "title": "Award of Excellence", "desc": "Recognized as Top Dental Practice by New York Health Magazine." },
+        { "year": "2024", "title": "18 Specialists", "desc": "Grew to a full-service team of 18 board-certified dental specialists." }
+      ]
+    },
+    "cta": {
+      "title": "Come Visit Our Clinic",
+      "desc": "Schedule a tour or book a consultation — we would love to meet you.",
+      "button": "Get In Touch"
+    }
+  },
+  "services": {
+    "header": {
+      "badge": "What We Offer",
+      "title": "Our Dental Services",
+      "desc": "Comprehensive dental care under one roof — from routine check-ups to complex full-arch restorations."
+    },
+    "filter": {
+      "all": "All",
+      "preventive": "Preventive",
+      "cosmetic": "Cosmetic",
+      "restorative": "Restorative",
+      "orthodontics": "Orthodontics",
+      "surgery": "Surgery",
+      "pediatric": "Pediatric"
+    },
+    "card": {
+      "learnMore": "Learn more",
+      "lessInfo": "Less info",
+      "book": "Book"
+    },
+    "cta": {
+      "title": "Not Sure Which Service You Need?",
+      "desc": "Book a free consultation and our specialists will assess your needs and recommend the best treatment plan for you.",
+      "button": "Book Free Consultation"
+    }
+  },
+  "doctors": {
+    "header": {
+      "badge": "Our Team",
+      "title": "Meet Our Specialists",
+      "desc": "Board-certified dentists bringing decades of combined expertise and genuine care for every patient's wellbeing."
+    },
+    "filter": {
+      "all": "All"
+    },
+    "card": {
+      "bookAppointment": "Book Appointment"
+    }
+  },
+  "reviews": {
+    "header": {
+      "badge": "Patient Reviews",
+      "title": "What Our Patients Say",
+      "rating": "4.9 out of 5 — based on 1,240+ reviews"
+    },
+    "stats": {
+      "overallRating": "Overall Rating",
+      "totalReviews": "Total Reviews",
+      "recommend": "Recommend Us",
+      "fiveStar": "5-Star Reviews"
+    }
+  },
+  "faq": {
+    "header": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "desc": "Everything you want to know about our services, treatments, and what to expect at DentaCare."
+    },
+    "categories": {
+      "general": "General",
+      "treatments": "Treatments",
+      "invisalign": "Invisalign & Braces",
+      "payment": "Payment & Insurance"
+    },
+    "cta": {
+      "title": "Still Have Questions?",
+      "desc": "Our patient care team is available Monday–Saturday to answer any questions you may have.",
+      "button": "Contact Us"
+    }
+  },
+  "blog": {
+    "header": {
+      "badge": "Knowledge Hub",
+      "title": "Dental Health Blog",
+      "desc": "Expert advice, treatment guides, and oral health tips from our specialist team."
+    },
+    "filter": {
+      "all": "All",
+      "oralHealth": "Oral Health",
+      "cosmetic": "Cosmetic",
+      "orthodontics": "Orthodontics",
+      "nutrition": "Nutrition",
+      "technology": "Technology"
+    },
+    "featured": "Featured",
+    "read": "Read",
+    "readMore": "Read more",
+    "minRead": "min read",
+    "empty": "No articles in this category yet. Check back soon!"
+  },
+  "contact": {
+    "header": {
+      "badge": "Get in Touch",
+      "title": "Book Your Appointment",
+      "desc": "Free consultations available. Fill out the form below and we'll confirm within 2 hours."
+    },
+    "success": {
+      "title": "Request Received!",
+      "desc": "Thank you, {{name}}! Our team will contact you within 2 business hours to confirm your appointment.",
+      "another": "Submit another request"
+    },
+    "form": {
+      "title": "Appointment Request",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "Jane",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Smith",
+      "email": "Email",
+      "emailPlaceholder": "jane@example.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 (555) 000-0000",
+      "service": "Service Needed",
+      "servicePlaceholder": "Select a service...",
+      "doctor": "Preferred Doctor",
+      "doctorPlaceholder": "Select a doctor...",
+      "noPreference": "No preference",
+      "date": "Preferred Date",
+      "message": "Message (optional)",
+      "messagePlaceholder": "Tell us about your dental concerns or questions...",
+      "submit": "Request Appointment",
+      "disclaimer": "By submitting this form you agree to our Privacy Policy. We never share your information.",
+      "services": {
+        "implants": "Dental Implants",
+        "ortho": "Orthodontics / Invisalign",
+        "whitening": "Teeth Whitening",
+        "veneers": "Porcelain Veneers",
+        "rootCanal": "Root Canal",
+        "perio": "Periodontal Treatment",
+        "checkup": "General Check-up",
+        "pediatric": "Pediatric Dentistry",
+        "cosmetic": "Cosmetic Consultation",
+        "other": "Other"
+      }
+    },
+    "info": {
+      "title": "Clinic Information",
+      "address": "Address",
+      "addressValue": "123 Medical Plaza, Suite 400\nNew York, NY 10001",
+      "phone": "Phone",
+      "email": "Email",
+      "emailValue": "hello@dentacare.com",
+      "hours": "Hours",
+      "hours1": "Mon – Fri: 8:00 – 20:00",
+      "hours2": "Saturday: 9:00 – 17:00",
+      "hours3": "Sunday: Closed",
+      "mapPlaceholder": "123 Medical Plaza, NY"
+    },
+    "emergency": {
+      "title": "Dental Emergency?",
+      "desc": "Same-day slots reserved for urgent cases.",
+      "button": "Call Now"
+    }
+  }
+}

@@ -1,0 +1,131 @@
+SECTION,ELEMENT,LOCATION ON PAGE,ENGLISH (EN),ARMENIAN (HY),RUSSIAN (RU),IMAGE,NOTES
+,,,,,,,
+,,,,,,,
+IMAGE REQUIREMENTS,,,,,,,"📐 Read before uploading any image"
+,Slider images,Full screen background,,,,,1600 × 900 px | JPG or WebP | max 500 KB | keep subject center-right (left half covered by text overlay)
+,Section images,Inside page sections,,,,,700 × 600 px | JPG or WebP | max 300 KB
+,Doctor photos,Doctor profile cards,,,,,400 × 480 px | JPG | max 200 KB | portrait orientation | clean background preferred
+,Blog covers,Blog article cards,,,,,600 × 380 px | JPG or WebP | max 200 KB
+,,,,,,,
+,,,,,,,
+NAVIGATION BAR,,,,,,,Fixed top bar — visible on all pages
+,Main menu - About,Top nav link,About,,,,"Same label used on all pages"
+,Main menu - Doctors,Top nav link,Doctors,,,,
+,Main menu - Services,Top nav link,Services,,,,
+,Main menu - Reviews,Top nav link,Reviews,,,,
+,Main menu - FAQ,Top nav link,FAQ,,,,
+,Main menu - Blog,Top nav link,Blog,,,,
+,Main menu - Contact,Top nav link,Contact,,,,
+,CTA Button,Top right button,Book Appointment,,,,
+,Phone number,Top right,+1 800 555 1234,,,,"⚠️ Replace with real clinic number"
+,,,,,,,
+HERO SLIDER — SLIDE 1,,,,,,,Full-screen background image with text overlay
+,🖼️ Background image,Full screen behind text,,,,[Upload image here],"1600 × 900 px | Subject: dental chair / clinic room / treatment in progress"
+,Tag / badge label,Small pill above title,Advanced Implantology,,,,
+,Main title line 1,Large heading — line 1,Restore Your Smile,,,,
+,Main title line 2,Large heading — line 2,With Dental Implants,,,,
+,Description,Text below title,Permanent natural-looking tooth replacements — from single implants to full-arch restorations.,,,,
+,Button — primary,Main action button,Our Services,,,,"Link → /services"
+,Button — secondary,Book button,Book Free Consultation,,,,"Link → /contact"
+,,,,,,,
+HERO SLIDER — SLIDE 2,,,,,,,Full-screen background image with text overlay
+,🖼️ Background image,Full screen behind text,,,,[Upload image here],"1600 × 900 px | Subject: modern clinic interior / equipment / 3D scanner"
+,Tag / badge label,Small pill above title,Modern Equipment,,,,
+,Main title line 1,Large heading — line 1,State-of-the-Art,,,,
+,Main title line 2,Large heading — line 2,Clinic & Technology,,,,
+,Description,Text below title,"3D scanning, digital X-rays, CAD/CAM same-day crowns — precision dentistry in a comfortable setting.",,,,
+,Button — primary,Main action button,About Us,,,,"Link → /about"
+,Button — secondary,Book button,Book Free Consultation,,,,"Link → /contact"
+,,,,,,,
+HERO SLIDER — SLIDE 3,,,,,,,Full-screen background image with text overlay
+,🖼️ Background image,Full screen behind text,,,,[Upload image here],"1600 × 900 px | Subject: patient smiling / cosmetic result / bright smile"
+,Tag / badge label,Small pill above title,Cosmetic Dentistry,,,,
+,Main title line 1,Large heading — line 1,Your Dream Smile,,,,
+,Main title line 2,Large heading — line 2,Starts Here,,,,
+,Description,Text below title,"Veneers, whitening, bonding and full smile makeovers performed by award-winning cosmetic specialists.",,,,
+,Button — primary,Main action button,Our Services,,,,"Link → /services"
+,Button — secondary,Book button,Book Free Consultation,,,,"Link → /contact"
+,,,,,,,
+HERO SLIDER — SLIDE 4,,,,,,,Full-screen background image with text overlay
+,🖼️ Background image,Full screen behind text,,,,[Upload image here],"1600 × 900 px | Subject: orthodontics / braces / clear aligners / teeth close-up"
+,Tag / badge label,Small pill above title,Orthodontics,,,,
+,Main title line 1,Large heading — line 1,Straighter Teeth,,,,
+,Main title line 2,Large heading — line 2,Clearer Confidence,,,,
+,Description,Text below title,Invisalign and ceramic braces tailored to adults and teens — start with a free 3D simulation.,,,,
+,Button — primary,Main action button,Meet Our Doctors,,,,"Link → /doctors"
+,Button — secondary,Book button,Book Free Consultation,,,,"Link → /contact"
+,,,,,,,
+STATS BAR,,,,,,,4 numbers on dark navy bar below slider
+,Stat 1 — value,Large number,12+,,,,"⚠️ Replace with real number if different"
+,Stat 1 — label,Label below number,Years of Excellence,,,,
+,Stat 2 — value,Large number,8400+,,,,"⚠️ Replace with real number if different"
+,Stat 2 — label,Label below number,Happy Patients,,,,
+,Stat 3 — value,Large number,18,,,,"⚠️ Replace with real number if different"
+,Stat 3 — label,Label below number,Specialist Doctors,,,,
+,Stat 4 — value,Large number,99%,,,,"⚠️ Replace with real number if different"
+,Stat 4 — label,Label below number,Satisfaction Rate,,,,
+,,,,,,,
+SERVICES SECTION,,,,,,,6 service cards in a grid
+,Section badge,Small pill label,What We Offer,,,,
+,Section title,Large heading,Comprehensive Dental Services,,,,
+,Link — view all,Top right text link,All Services,,,,
+,Card hover link,Appears on hover over card,Learn more,,,,
+,,,,,,,
+,Service 1 — title,Card heading,Dental Implants,,,,
+,Service 1 — description,Card body text,Permanent natural-looking tooth replacements using titanium implants.,,,,
+,,,,,,,
+,Service 2 — title,Card heading,Teeth Whitening,,,,
+,Service 2 — description,Card body text,Professional whitening treatments that brighten your smile up to 8 shades.,,,,
+,,,,,,,
+,Service 3 — title,Card heading,Orthodontics,,,,
+,Service 3 — description,Card body text,Braces and clear aligners for perfectly aligned teeth at any age.,,,,
+,,,,,,,
+,Service 4 — title,Card heading,Cosmetic Veneers,,,,
+,Service 4 — description,Card body text,Ultra-thin porcelain veneers for a flawless Hollywood-worthy smile.,,,,
+,,,,,,,
+,Service 5 — title,Card heading,Root Canal,,,,
+,Service 5 — description,Card body text,Pain-free endodontic treatment to save your natural tooth.,,,,
+,,,,,,,
+,Service 6 — title,Card heading,Pediatric Dentistry,,,,
+,Service 6 — description,Card body text,Gentle friendly dental care tailored for children of all ages.,,,,
+,,,,,,,
+WHY CHOOSE US,,,,,,,Clinic image on left + text blocks on right
+,🖼️ Section image,Large photo — left side,,,,[Upload image here],"700 × 600 px | Subject: clinic interior / dentist with patient / treatment room"
+,Section badge,Small pill label,Why Choose Us,,,,
+,Section title,Large heading,Where Advanced Technology Meets Gentle Care,,,,
+,Section description,Paragraph text,"Our clinic combines cutting-edge dental technology with a warm, patient-first approach. Every treatment is personalized to your unique needs and comfort level.",,,,
+,Google rating label,Badge overlaid on photo,Rated 5.0 on Google,,,,"⚠️ Replace with real rating"
+,Google rating base,Small text below badge,Based on 1240 reviews,,,,"⚠️ Replace with real review count"
+,Button,Action button,Learn About Us,,,,"Link → /about"
+,,,,,,,
+,Feature 1 — title,Icon block,Pain-Free Treatments,,,,
+,Feature 1 — description,Small text,Advanced anesthesia for a comfortable experience.,,,,
+,,,,,,,
+,Feature 2 — title,Icon block,Certified Specialists,,,,
+,Feature 2 — description,Small text,Board-certified dentists with international training.,,,,
+,,,,,,,
+,Feature 3 — title,Icon block,Family Friendly,,,,
+,Feature 3 — description,Small text,Welcoming environment for patients of all ages.,,,,
+,,,,,,,
+,Feature 4 — title,Icon block,Flexible Hours,,,,
+,Feature 4 — description,Small text,Evening and weekend appointments available.,,,,
+,,,,,,,
+TESTIMONIALS,,,,,,,⚠️ PLACEHOLDER ONLY — will be replaced by Google/Yandex reviews integration. Marketing team does not need to fill this section.
+,Section badge,Small pill label,Patient Stories,,,,
+,Section title,Large heading,What Our Patients Say,,,,
+,Link — read all,Text link below cards,Read all reviews,,,,
+,,,,,,,
+CTA BANNER,,,,,,,Dark section at the bottom of the page
+,Title,Large heading,Ready for a Healthier Brighter Smile?,,,,
+,Description,Paragraph text,"Book your free consultation today. Our specialists will assess your needs and create a personalized treatment plan just for you.",,,,
+,Button,Action button,Schedule Free Consultation,,,,"Link → /contact"
+,,,,,,,
+FOOTER,,,,,,,Dark footer — shown on all pages
+,Brand description,Short text under logo,"Modern dental care with a personal touch. Our team of specialists is dedicated to your smile and long-term oral health.",,,,
+,Address,Contact block,"123 Medical Plaza, Suite 400, New York, NY 10001",,,,"⚠️ Replace with real address"
+,Phone,Contact block,+1 800 555 1234,,,,"⚠️ Replace with real phone"
+,Email,Contact block,hello@matikyan.com,,,,"⚠️ Replace with real email"
+,Hours — weekdays,Contact block,Mon – Fri: 8:00 – 20:00,,,,"⚠️ Replace with real hours"
+,Hours — Saturday,Contact block,Sat: 9:00 – 17:00,,,,"⚠️ Replace with real hours"
+,Hours — Sunday,Contact block,Sun: Closed,,,,
+,Copyright,Bottom bar,© 2026 Matikyan Stomatology Center. All rights reserved.,,,,"⚠️ Update year/name if needed"

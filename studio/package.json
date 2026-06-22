@@ -1,0 +1,23 @@
+{
+  "name": "matikyan-dental-clinic-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy"
+  },
+  "dependencies": {
+    "@sanity/vision": "^3.52.0",
+    "date-fns": "^2.30.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "sanity": "^3.52.0",
+    "styled-components": "^6.1.19"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.23",
+    "typescript": "^5.9.2"
+  }
+}

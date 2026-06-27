@@ -1,0 +1,46 @@
+KEY,SECTION,ELEMENT,ENGLISH (EN),ARMENIAN (HY),RUSSIAN (RU),NOTES,CURRENT SOURCE
+about.hero.badge,Hero,Badge,Our Story,,,About page hero,src/i18n/locales/en.json
+about.hero.title,Hero,Title,Dedicated to Transforming Smiles Since 2012,,,About page hero,src/i18n/locales/en.json
+about.hero.desc1,Hero,Description 1,DentaCare was founded on a simple belief: that dental care should be as comfortable as it is effective. Over the past 12 years, we have grown into one of New York's most trusted stomatology centers, treating over 8,400 patients.,,,About page hero,src/i18n/locales/en.json
+about.hero.desc2,Hero,Description 2,Our clinic brings together a diverse team of specialists — from orthodontists and periodontists to cosmetic and pediatric dentists — all working under one roof to deliver seamless, comprehensive care.,,,About page hero,src/i18n/locales/en.json
+about.hero.stat1.value,Hero,Stat 1 value,"8,400+",,,Hardcoded visual stat,src/app/pages/About.tsx
+about.hero.stats.patients,Hero,Stat 1 label,Patients,,,About page hero stat label,src/i18n/locales/en.json
+about.hero.stat2.value,Hero,Stat 2 value,18,,,Hardcoded visual stat,src/app/pages/About.tsx
+about.hero.stats.specialists,Hero,Stat 2 label,Specialists,,,About page hero stat label,src/i18n/locales/en.json
+about.hero.stat3.value,Hero,Stat 3 value,99%,,,Hardcoded visual stat,src/app/pages/About.tsx
+about.hero.stats.satisfaction,Hero,Stat 3 label,Satisfaction,,,About page hero stat label,src/i18n/locales/en.json
+about.hero.meetTeam,Hero,CTA button,Meet Our Team,,,About page hero CTA,src/i18n/locales/en.json
+about.values.badge,Values,Badge,Our Values,,,Values section,src/i18n/locales/en.json
+about.values.title,Values,Title,The Principles That Guide Us,,,Values section,src/i18n/locales/en.json
+about.values.items.0.title,Values,Item 1 title,Patient-First,,,Values card,src/i18n/locales/en.json
+about.values.items.0.desc,Values,Item 1 description,Every decision is guided by what's best for the patient's health and comfort.,,,Values card,src/i18n/locales/en.json
+about.values.items.1.title,Values,Item 2 title,Clinical Excellence,,,Values card,src/i18n/locales/en.json
+about.values.items.1.desc,Values,Item 2 description,Continuous education and adoption of the latest evidence-based treatments.,,,Values card,src/i18n/locales/en.json
+about.values.items.2.title,Values,Item 3 title,Inclusivity,,,Values card,src/i18n/locales/en.json
+about.values.items.2.desc,Values,Item 3 description,Welcoming patients of all ages backgrounds and dental anxiety levels.,,,Values card,src/i18n/locales/en.json
+about.values.items.3.title,Values,Item 4 title,Transparency,,,Values card,src/i18n/locales/en.json
+about.values.items.3.desc,Values,Item 4 description,Clear communication honest pricing and no surprise fees — ever.,,,Values card,src/i18n/locales/en.json
+about.milestones.badge,Milestones,Badge,Our Journey,,,Timeline section,src/i18n/locales/en.json
+about.milestones.title,Milestones,Title,Key Milestones,,,Timeline section,src/i18n/locales/en.json
+about.milestones.items.0.year,Milestones,Item 1 year,2012,,,Timeline item,src/i18n/locales/en.json
+about.milestones.items.0.title,Milestones,Item 1 title,Founded,,,Timeline item,src/i18n/locales/en.json
+about.milestones.items.0.desc,Milestones,Item 1 description,DentaCare opened its doors with a mission to redefine the dental experience in New York.,,,Timeline item,src/i18n/locales/en.json
+about.milestones.items.1.year,Milestones,Item 2 year,2015,,,Timeline item,src/i18n/locales/en.json
+about.milestones.items.1.title,Milestones,Item 2 title,First Expansion,,,Timeline item,src/i18n/locales/en.json
+about.milestones.items.1.desc,Milestones,Item 2 description,Added a dedicated implantology suite and orthodontics department.,,,Timeline item,src/i18n/locales/en.json
+about.milestones.items.2.year,Milestones,Item 3 year,2018,,,Timeline item,src/i18n/locales/en.json
+about.milestones.items.2.title,Milestones,Item 3 title,Digital Dentistry,,,Timeline item,src/i18n/locales/en.json
+about.milestones.items.2.desc,Milestones,Item 3 description,Introduced 3D scanning digital X-rays and CAD/CAM same-day crowns.,,,Timeline item,src/i18n/locales/en.json
+about.milestones.items.3.year,Milestones,Item 4 year,2021,,,Timeline item,src/i18n/locales/en.json
+about.milestones.items.3.title,Milestones,Item 4 title,Award of Excellence,,,Timeline item,src/i18n/locales/en.json
+about.milestones.items.3.desc,Milestones,Item 4 description,Recognized as Top Dental Practice by New York Health Magazine.,,,Timeline item,src/i18n/locales/en.json
+about.milestones.items.4.year,Milestones,Item 5 year,2024,,,Timeline item,src/i18n/locales/en.json
+about.milestones.items.4.title,Milestones,Item 5 title,18 Specialists,,,Timeline item,src/i18n/locales/en.json
+about.milestones.items.4.desc,Milestones,Item 5 description,Grew to a full-service team of 18 board-certified dental specialists.,,,Timeline item,src/i18n/locales/en.json
+about.cta.title,CTA,Title,Come Visit Our Clinic,,,About page CTA,src/i18n/locales/en.json
+about.cta.desc,CTA,Description,Schedule a tour or book a consultation — we would love to meet you.,,,About page CTA,src/i18n/locales/en.json
+about.cta.button,CTA,Button,Get In Touch,,,About page CTA,src/i18n/locales/en.json
+about.image.1,Images,Hero collage image 1,https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=400&h=480&fit=crop&auto=format,,,Replace with approved clinic image,src/app/pages/About.tsx
+about.image.2,Images,Hero collage image 2,https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&h=280&fit=crop&auto=format,,,Replace with approved clinic image,src/app/pages/About.tsx
+about.image.3,Images,Hero collage image 3,https://images.unsplash.com/photo-1588776814546-1ffbb172601e?w=400&h=280&fit=crop&auto=format,,,Replace with approved clinic image,src/app/pages/About.tsx
+about.image.4,Images,Hero collage image 4,https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=480&fit=crop&auto=format,,,Replace with approved clinic image,src/app/pages/About.tsx

@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { NavLink } from "react-router";
 import { useTranslation } from "react-i18next";
@@ -32,30 +32,48 @@ export function PhotoSlider() {
   const [paused, setPaused] = useState(false);
 
   const useSanity = Array.isArray(sanitySlides) && sanitySlides.length > 0;
-  const totalSlides = useSanity ? sanitySlides.length : fallbackSlides.length;
+  const localizedFallbackSlides = useMemo(() => {
+    const translatedSlides = t("slider.slides", { returnObjects: true });
+
+    if (!Array.isArray(translatedSlides)) {
+      return fallbackSlides;
+    }
+
+    return fallbackSlides.map((fallbackSlide, index) => {
+      const translatedSlide = translatedSlides[index];
+
+      if (!translatedSlide || typeof translatedSlide !== "object") {
+        return fallbackSlide;
+      }
+
+      return {
+        ...fallbackSlide,
+        tag: "tag" in translatedSlide && typeof translatedSlide.tag === "string" ? translatedSlide.tag : fallbackSlide.tag,
+        title: "title" in translatedSlide && typeof translatedSlide.title === "string" ? translatedSlide.title : fallbackSlide.title,
+        desc: "desc" in translatedSlide && typeof translatedSlide.desc === "string" ? translatedSlide.desc : fallbackSlide.desc,
+        cta: "cta" in translatedSlide && typeof translatedSlide.cta === "string" ? translatedSlide.cta : fallbackSlide.cta,
+      };
+    });
+  }, [t]);
+
+  const slides = useSanity ? sanitySlides : localizedFallbackSlides;
+  const totalSlides = slides.length;
 
   const next = useCallback(() => setCurrent((c) => (c + 1) % totalSlides), [totalSlides]);
   const prev = useCallback(() => setCurrent((c) => (c - 1 + totalSlides) % totalSlides), [totalSlides]);
 
   useEffect(() => {
-    if (paused) return;
-    const timer = setInterval(next, 5500);
-    return () => clearInterval(timer);
-  }, [paused, next]);
+    if (totalSlides <= 1 || paused) return;
 
-  const getSlide = (i: number) => {
-    if (useSanity) return sanitySlides[i];
-    return {
-      image: fallbackSlides[i].image,
-      tag: t(`slider.slides.${i}.tag`),
-      title: t(`slider.slides.${i}.title`),
-      desc: t(`slider.slides.${i}.desc`),
-      cta: t(`slider.slides.${i}.cta`),
-      link: fallbackSlides[i].link,
-    };
-  };
+    const timer = window.setTimeout(next, 5500);
+    return () => window.clearTimeout(timer);
+  }, [paused, next, current, totalSlides]);
 
-  const slide = getSlide(current);
+  useEffect(() => {
+    setCurrent((value) => (value >= totalSlides ? 0 : value));
+  }, [totalSlides]);
+
+  const slide = slides[current];
 
   return (
     <div
@@ -65,7 +83,7 @@ export function PhotoSlider() {
       onMouseLeave={() => setPaused(false)}
     >
       {Array.from({ length: totalSlides }).map((_, i) => {
-        const s = getSlide(i);
+        const s = slides[i];
         return (
           <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{ opacity: i === current ? 1 : 0 }}>
             <div

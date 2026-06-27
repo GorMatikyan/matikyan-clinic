@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="vendor2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/node_modules/.pnpm/@sanity+runtime-cli@9.2.0_@types+node@26.0.0_lightningcss@1.30.1_typescript@5.9.3_yaml@2.9.0/node_modules/@architect/hydrate/src/actions/autoinstall/python/py/vendor.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

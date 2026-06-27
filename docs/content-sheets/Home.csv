@@ -1,0 +1,97 @@
+KEY,SECTION,ELEMENT,ENGLISH (EN),ARMENIAN (HY),RUSSIAN (RU),IMAGE URL / ASSET,NOTES,CURRENT SOURCE
+nav.about,Navigation,Main menu - About,About,,,,Shared top navigation,src/i18n/locales/en.json
+nav.doctors,Navigation,Main menu - Doctors,Doctors,,,,Shared top navigation,src/i18n/locales/en.json
+nav.services,Navigation,Main menu - Services,Services,,,,Shared top navigation,src/i18n/locales/en.json
+nav.reviews,Navigation,Main menu - Reviews,Reviews,,,,Shared top navigation,src/i18n/locales/en.json
+nav.faq,Navigation,Main menu - FAQ,FAQ,,,,Shared top navigation,src/i18n/locales/en.json
+nav.blog,Navigation,Main menu - Blog,Blog,,,,Shared top navigation,src/i18n/locales/en.json
+nav.contact,Navigation,Main menu - Contact,Contact,,,,Shared top navigation,src/i18n/locales/en.json
+nav.bookAppointment,Navigation,CTA button,Book Appointment,,,,Shared top navigation CTA,src/i18n/locales/en.json
+nav.phone,Navigation,Phone number,+1 800 555 1234,,,,Replace with real clinic number,src/i18n/locales/en.json
+slider.slides.0.image,Hero Slider — Slide 1,Background image,,,,https://images.unsplash.com/photo-1643660527098-559f89e45a92?w=1600&h=900&fit=crop&auto=format,Replace with approved clinic image,src/app/components/PhotoSlider.tsx
+slider.slides.0.tag,Hero Slider — Slide 1,Tag / badge label,Advanced Implantology,,,,Slide 1 copy,src/i18n/locales/en.json
+slider.slides.0.title.line1,Hero Slider — Slide 1,Main title line 1,Restore Your Smile,,,,Slide 1 copy,src/i18n/locales/en.json
+slider.slides.0.title.line2,Hero Slider — Slide 1,Main title line 2,With Dental Implants,,,,Slide 1 copy,src/i18n/locales/en.json
+slider.slides.0.desc,Hero Slider — Slide 1,Description,Permanent natural-looking tooth replacements — from single implants to full-arch restorations.,,,,Slide 1 copy,src/i18n/locales/en.json
+slider.slides.0.cta,Hero Slider — Slide 1,Primary button,Our Services,,,,Link goes to /services,src/i18n/locales/en.json
+slider.bookConsultation,Hero Slider — Slide 1,Secondary button,Book Free Consultation,,,,Shared secondary button,src/i18n/locales/en.json
+slider.slides.1.image,Hero Slider — Slide 2,Background image,,,,https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1600&h=900&fit=crop&auto=format,Replace with approved clinic image,src/app/components/PhotoSlider.tsx
+slider.slides.1.tag,Hero Slider — Slide 2,Tag / badge label,Modern Equipment,,,,Slide 2 copy,src/i18n/locales/en.json
+slider.slides.1.title.line1,Hero Slider — Slide 2,Main title line 1,State-of-the-Art,,,,Slide 2 copy,src/i18n/locales/en.json
+slider.slides.1.title.line2,Hero Slider — Slide 2,Main title line 2,Clinic & Technology,,,,Slide 2 copy,src/i18n/locales/en.json
+slider.slides.1.desc,Hero Slider — Slide 2,Description,"3D scanning, digital X-rays, CAD/CAM same-day crowns — precision dentistry in a comfortable setting.",,,,Slide 2 copy,src/i18n/locales/en.json
+slider.slides.1.cta,Hero Slider — Slide 2,Primary button,About Us,,,,Link goes to /about,src/i18n/locales/en.json
+slider.slides.2.image,Hero Slider — Slide 3,Background image,,,,https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=1600&h=900&fit=crop&auto=format,Replace with approved clinic image,src/app/components/PhotoSlider.tsx
+slider.slides.2.tag,Hero Slider — Slide 3,Tag / badge label,Cosmetic Dentistry,,,,Slide 3 copy,src/i18n/locales/en.json
+slider.slides.2.title.line1,Hero Slider — Slide 3,Main title line 1,Your Dream Smile,,,,Slide 3 copy,src/i18n/locales/en.json
+slider.slides.2.title.line2,Hero Slider — Slide 3,Main title line 2,Starts Here,,,,Slide 3 copy,src/i18n/locales/en.json
+slider.slides.2.desc,Hero Slider — Slide 3,Description,"Veneers, whitening, bonding and full smile makeovers performed by award-winning cosmetic specialists.",,,,Slide 3 copy,src/i18n/locales/en.json
+slider.slides.2.cta,Hero Slider — Slide 3,Primary button,Our Services,,,,Link goes to /services,src/i18n/locales/en.json
+slider.slides.3.image,Hero Slider — Slide 4,Background image,,,,https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=1600&h=900&fit=crop&auto=format,Replace with approved clinic image,src/app/components/PhotoSlider.tsx
+slider.slides.3.tag,Hero Slider — Slide 4,Tag / badge label,Orthodontics,,,,Slide 4 copy,src/i18n/locales/en.json
+slider.slides.3.title.line1,Hero Slider — Slide 4,Main title line 1,"Straighter Teeth,",,,,Slide 4 copy,src/i18n/locales/en.json
+slider.slides.3.title.line2,Hero Slider — Slide 4,Main title line 2,Clearer Confidence,,,,Slide 4 copy,src/i18n/locales/en.json
+slider.slides.3.desc,Hero Slider — Slide 4,Description,Invisalign and ceramic braces tailored to adults and teens — start with a free 3D simulation.,,,,Slide 4 copy,src/i18n/locales/en.json
+slider.slides.3.cta,Hero Slider — Slide 4,Primary button,Meet Our Doctors,,,,Link goes to /doctors,src/i18n/locales/en.json
+home.stats.0.value,Stats Bar,Stat 1 value,12+,,,,Replace with real number if different,src/app/pages/Home.tsx
+home.stats.years,Stats Bar,Stat 1 label,Years of Excellence,,,,Stats label,src/i18n/locales/en.json
+home.stats.1.value,Stats Bar,Stat 2 value,"8,400+",,,,Replace with real number if different,src/app/pages/Home.tsx
+home.stats.patients,Stats Bar,Stat 2 label,Happy Patients,,,,Stats label,src/i18n/locales/en.json
+home.stats.2.value,Stats Bar,Stat 3 value,18,,,,Replace with real number if different,src/app/pages/Home.tsx
+home.stats.doctors,Stats Bar,Stat 3 label,Specialist Doctors,,,,Stats label,src/i18n/locales/en.json
+home.stats.3.value,Stats Bar,Stat 4 value,99%,,,,Replace with real number if different,src/app/pages/Home.tsx
+home.stats.satisfaction,Stats Bar,Stat 4 label,Satisfaction Rate,,,,Stats label,src/i18n/locales/en.json
+home.services.badge,Services Overview,Section badge,What We Offer,,,,Home services section,src/i18n/locales/en.json
+home.services.title,Services Overview,Section title,Comprehensive Dental Services,,,,Home services section,src/i18n/locales/en.json
+home.services.viewAll,Services Overview,Link - view all,All Services,,,,Home services section,src/i18n/locales/en.json
+home.services.learnMore,Services Overview,Card hover link,Learn more,,,,Home services section,src/i18n/locales/en.json
+home.services.items.implants.title,Services Overview,Service 1 title,Dental Implants,,,,Home services card,src/i18n/locales/en.json
+home.services.items.implants.desc,Services Overview,Service 1 description,"Permanent, natural-looking tooth replacements using titanium implants.",,,,Home services card,src/i18n/locales/en.json
+home.services.items.whitening.title,Services Overview,Service 2 title,Teeth Whitening,,,,Home services card,src/i18n/locales/en.json
+home.services.items.whitening.desc,Services Overview,Service 2 description,Professional whitening treatments that brighten your smile up to 8 shades.,,,,Home services card,src/i18n/locales/en.json
+home.services.items.ortho.title,Services Overview,Service 3 title,Orthodontics,,,,Home services card,src/i18n/locales/en.json
+home.services.items.ortho.desc,Services Overview,Service 3 description,Braces and clear aligners for perfectly aligned teeth at any age.,,,,Home services card,src/i18n/locales/en.json
+home.services.items.veneers.title,Services Overview,Service 4 title,Cosmetic Veneers,,,,Home services card,src/i18n/locales/en.json
+home.services.items.veneers.desc,Services Overview,Service 4 description,"Ultra-thin porcelain veneers for a flawless, Hollywood-worthy smile.",,,,Home services card,src/i18n/locales/en.json
+home.services.items.rootCanal.title,Services Overview,Service 5 title,Root Canal,,,,Home services card,src/i18n/locales/en.json
+home.services.items.rootCanal.desc,Services Overview,Service 5 description,Pain-free endodontic treatment to save your natural tooth.,,,,Home services card,src/i18n/locales/en.json
+home.services.items.pediatric.title,Services Overview,Service 6 title,Pediatric Dentistry,,,,Home services card,src/i18n/locales/en.json
+home.services.items.pediatric.desc,Services Overview,Service 6 description,"Gentle, friendly dental care tailored for children of all ages.",,,,Home services card,src/i18n/locales/en.json
+home.whyUs.image,Why Choose Us,Main section image,,,,https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=700&h=600&fit=crop&auto=format,Replace with approved clinic image,src/app/pages/Home.tsx
+home.whyUs.badge,Why Choose Us,Section badge,Why Choose Us,,,,Why choose us section,src/i18n/locales/en.json
+home.whyUs.title,Why Choose Us,Section title,Where Advanced Technology Meets Gentle Care,,,,Why choose us section,src/i18n/locales/en.json
+home.whyUs.desc,Why Choose Us,Section description,Our clinic combines cutting-edge dental technology with a warm patient-first approach. Every treatment is personalized to your unique needs and comfort level.,,,,Why choose us section,src/i18n/locales/en.json
+home.whyUs.rating,Why Choose Us,Google rating label,Rated 5.0 on Google,,,,Replace with real rating if different,src/i18n/locales/en.json
+home.whyUs.ratingBase,Why Choose Us,Google rating base,Based on 1240 reviews,,,,Replace with real review count,src/i18n/locales/en.json
+home.whyUs.features.painFree.title,Why Choose Us,Feature 1 title,Pain-Free Treatments,,,,Feature card,src/i18n/locales/en.json
+home.whyUs.features.painFree.desc,Why Choose Us,Feature 1 description,Advanced anesthesia for a comfortable experience.,,,,Feature card,src/i18n/locales/en.json
+home.whyUs.features.certified.title,Why Choose Us,Feature 2 title,Certified Specialists,,,,Feature card,src/i18n/locales/en.json
+home.whyUs.features.certified.desc,Why Choose Us,Feature 2 description,Board-certified dentists with international training.,,,,Feature card,src/i18n/locales/en.json
+home.whyUs.features.family.title,Why Choose Us,Feature 3 title,Family Friendly,,,,Feature card,src/i18n/locales/en.json
+home.whyUs.features.family.desc,Why Choose Us,Feature 3 description,Welcoming environment for patients of all ages.,,,,Feature card,src/i18n/locales/en.json
+home.whyUs.features.hours.title,Why Choose Us,Feature 4 title,Flexible Hours,,,,Feature card,src/i18n/locales/en.json
+home.whyUs.features.hours.desc,Why Choose Us,Feature 4 description,Evening and weekend appointments available.,,,,Feature card,src/i18n/locales/en.json
+home.whyUs.learnMore,Why Choose Us,Button,Learn About Us,,,,Link goes to /about,src/i18n/locales/en.json
+home.testimonials.badge,Testimonials,Section badge,Patient Stories,,,,Testimonials section,src/i18n/locales/en.json
+home.testimonials.title,Testimonials,Section title,What Our Patients Say,,,,Testimonials section,src/i18n/locales/en.json
+home.testimonials.readAll,Testimonials,Read all link,Read all reviews,,,,Link goes to /reviews,src/i18n/locales/en.json
+home.testimonials.items.0.name,Testimonials,Testimonial 1 name,Sarah Mitchell,,,,Placeholder review content,src/i18n/locales/en.json
+home.testimonials.items.0.service,Testimonials,Testimonial 1 service,Porcelain Veneers,,,,Placeholder review content,src/i18n/locales/en.json
+home.testimonials.items.0.text,Testimonials,Testimonial 1 text,Absolutely incredible experience. Dr. Kovalenko transformed my smile with veneers and I couldn't be happier. The whole team was warm and professional.,,,,Placeholder review content,src/i18n/locales/en.json
+home.testimonials.items.1.name,Testimonials,Testimonial 2 name,James Thornton,,,,Placeholder review content,src/i18n/locales/en.json
+home.testimonials.items.1.service,Testimonials,Testimonial 2 service,Dental Implants,,,,Placeholder review content,src/i18n/locales/en.json
+home.testimonials.items.1.text,Testimonials,Testimonial 2 text,I was terrified of dental procedures but the team here made me feel completely at ease. My implants look and feel completely natural.,,,,Placeholder review content,src/i18n/locales/en.json
+home.testimonials.items.2.name,Testimonials,Testimonial 3 name,Elena Vasquez,,,,Placeholder review content,src/i18n/locales/en.json
+home.testimonials.items.2.service,Testimonials,Testimonial 3 service,Teeth Whitening,,,,Placeholder review content,src/i18n/locales/en.json
+home.testimonials.items.2.text,Testimonials,Testimonial 3 text,Best dental clinic I have ever visited. Modern equipment kind staff and results that exceeded my expectations. Highly recommended!,,,,Placeholder review content,src/i18n/locales/en.json
+home.cta.title,CTA Banner,Title,Ready for a Healthier Brighter Smile?,,,,Bottom CTA section,src/i18n/locales/en.json
+home.cta.desc,CTA Banner,Description,Book your free consultation today. Our specialists will assess your needs and create a personalized treatment plan just for you.,,,,Bottom CTA section,src/i18n/locales/en.json
+home.cta.button,CTA Banner,Button,Schedule Free Consultation,,,,Link goes to /contact,src/i18n/locales/en.json
+footer.description,Footer,Brand description,Modern dental care with a personal touch. Our team of specialists is dedicated to your smile and long-term oral health.,,,,Shared footer text,src/i18n/locales/en.json
+footer.address,Footer,Address,"123 Medical Plaza, Suite 400
+New York, NY 10001",,,,Replace with real address,src/i18n/locales/en.json
+footer.email,Footer,Email,hello@matikyan.com,,,,Replace with real email,src/i18n/locales/en.json
+footer.hours1,Footer,Hours - weekdays,Mon – Fri: 8:00 – 20:00,,,,Replace with real hours,src/i18n/locales/en.json
+footer.hours2,Footer,Hours - Saturday,Sat: 9:00 – 17:00,,,,Replace with real hours,src/i18n/locales/en.json
+footer.hours3,Footer,Hours - Sunday,Sun: Closed,,,,Replace with real hours,src/i18n/locales/en.json
+footer.copyright,Footer,Copyright,© 2026 Matikyan Stomatology Center. All rights reserved.,,,,Shared footer legal text,src/i18n/locales/en.json

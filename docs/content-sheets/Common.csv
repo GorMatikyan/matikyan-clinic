@@ -1,0 +1,32 @@
+KEY,SECTION,ELEMENT,ENGLISH (EN),ARMENIAN (HY),RUSSIAN (RU),NOTES,CURRENT SOURCE
+nav.about,Navigation,Main menu - About,About,,,Shared top navigation,src/i18n/locales/en.json
+nav.doctors,Navigation,Main menu - Doctors,Doctors,,,Shared top navigation,src/i18n/locales/en.json
+nav.services,Navigation,Main menu - Services,Services,,,Shared top navigation,src/i18n/locales/en.json
+nav.reviews,Navigation,Main menu - Reviews,Reviews,,,Shared top navigation,src/i18n/locales/en.json
+nav.faq,Navigation,Main menu - FAQ,FAQ,,,Shared top navigation,src/i18n/locales/en.json
+nav.blog,Navigation,Main menu - Blog,Blog,,,Shared top navigation,src/i18n/locales/en.json
+nav.contact,Navigation,Main menu - Contact,Contact,,,Shared top navigation,src/i18n/locales/en.json
+nav.bookAppointment,Navigation,CTA button,Book Appointment,,,Shared top navigation CTA,src/i18n/locales/en.json
+nav.phone,Navigation,Phone number,+1 800 555 1234,,,Replace with real clinic number,src/i18n/locales/en.json
+footer.description,Footer,Brand description,Modern dental care with a personal touch. Our team of specialists is dedicated to your smile and long-term oral health.,,,Shared footer text,src/i18n/locales/en.json
+footer.pages,Footer,Pages column title,Pages,,,Shared footer label,src/i18n/locales/en.json
+footer.ourDoctors,Footer,Pages link - Our Doctors,Our Doctors,,,Shared footer label,src/i18n/locales/en.json
+footer.patientReviews,Footer,Pages link - Patient Reviews,Patient Reviews,,,Shared footer label,src/i18n/locales/en.json
+footer.services,Footer,Services column title,Services,,,Shared footer label,src/i18n/locales/en.json
+footer.contact,Footer,Contact column title,Contact,,,Shared footer label,src/i18n/locales/en.json
+footer.servicesList.whitening,Footer,Service link - Whitening,Teeth Whitening,,,Shared footer service link,src/i18n/locales/en.json
+footer.servicesList.implants,Footer,Service link - Implants,Dental Implants,,,Shared footer service link,src/i18n/locales/en.json
+footer.servicesList.orthodontics,Footer,Service link - Orthodontics,Orthodontics,,,Shared footer service link,src/i18n/locales/en.json
+footer.servicesList.veneers,Footer,Service link - Veneers,Veneers,,,Shared footer service link,src/i18n/locales/en.json
+footer.servicesList.rootCanal,Footer,Service link - Root Canal,Root Canal,,,Shared footer service link,src/i18n/locales/en.json
+footer.servicesList.pediatric,Footer,Service link - Pediatric,Pediatric Dentistry,,,Shared footer service link,src/i18n/locales/en.json
+footer.servicesList.cosmetic,Footer,Service link - Cosmetic,Cosmetic Dentistry,,,Shared footer service link,src/i18n/locales/en.json
+footer.address,Footer,Address,"123 Medical Plaza, Suite 400
+New York, NY 10001",,,Replace with real address,src/i18n/locales/en.json
+footer.email,Footer,Email,hello@matikyan.com,,,Replace with real email,src/i18n/locales/en.json
+footer.hours1,Footer,Hours - weekdays,Mon – Fri: 8:00 – 20:00,,,Replace with real hours,src/i18n/locales/en.json
+footer.hours2,Footer,Hours - Saturday,Sat: 9:00 – 17:00,,,Replace with real hours,src/i18n/locales/en.json
+footer.hours3,Footer,Hours - Sunday,Sun: Closed,,,Replace with real hours,src/i18n/locales/en.json
+footer.copyright,Footer,Copyright,© 2026 Matikyan Stomatology Center. All rights reserved.,,,Shared footer legal text,src/i18n/locales/en.json
+footer.privacy,Footer,Privacy link,Privacy Policy,,,Shared footer legal link,src/i18n/locales/en.json
+footer.terms,Footer,Terms link,Terms of Service,,,Shared footer legal link,src/i18n/locales/en.json

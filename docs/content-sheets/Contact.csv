@@ -1,0 +1,55 @@
+KEY,SECTION,ELEMENT,ENGLISH (EN),ARMENIAN (HY),RUSSIAN (RU),NOTES,CURRENT SOURCE
+contact.header.badge,Header,Badge,Get in Touch,,,Contact page header,src/i18n/locales/en.json
+contact.header.title,Header,Title,Book Your Appointment,,,Contact page header,src/i18n/locales/en.json
+contact.header.desc,Header,Description,Free consultations available. Fill out the form below and we'll confirm within 2 hours.,,,Contact page header,src/i18n/locales/en.json
+contact.form.title,Form,Title,Appointment Request,,,Form heading,src/i18n/locales/en.json
+contact.form.firstName,Form,First name label,First Name,,,Form label,src/i18n/locales/en.json
+contact.form.firstNamePlaceholder,Form,First name placeholder,Jane,,,Form placeholder,src/i18n/locales/en.json
+contact.form.lastName,Form,Last name label,Last Name,,,Form label,src/i18n/locales/en.json
+contact.form.lastNamePlaceholder,Form,Last name placeholder,Smith,,,Form placeholder,src/i18n/locales/en.json
+contact.form.email,Form,Email label,Email,,,Form label,src/i18n/locales/en.json
+contact.form.emailPlaceholder,Form,Email placeholder,jane@example.com,,,Form placeholder,src/i18n/locales/en.json
+contact.form.phone,Form,Phone label,Phone,,,Form label,src/i18n/locales/en.json
+contact.form.phonePlaceholder,Form,Phone placeholder,+1 (555) 000-0000,,,Form placeholder,src/i18n/locales/en.json
+contact.form.service,Form,Service label,Service Needed,,,Form label,src/i18n/locales/en.json
+contact.form.servicePlaceholder,Form,Service placeholder,Select a service...,,,Form placeholder,src/i18n/locales/en.json
+contact.form.doctor,Form,Doctor label,Preferred Doctor,,,Form label,src/i18n/locales/en.json
+contact.form.doctorPlaceholder,Form,Doctor placeholder,Select a doctor...,,,Form placeholder,src/i18n/locales/en.json
+contact.form.noPreference,Form,No preference option,No preference,,,Form dropdown option,src/i18n/locales/en.json
+contact.form.date,Form,Preferred date label,Preferred Date,,,Form label,src/i18n/locales/en.json
+contact.form.message,Form,Message label,Message (optional),,,Form label,src/i18n/locales/en.json
+contact.form.messagePlaceholder,Form,Message placeholder,Tell us about your dental concerns or questions...,,,Form placeholder,src/i18n/locales/en.json
+contact.form.submit,Form,Submit button,Request Appointment,,,Form CTA,src/i18n/locales/en.json
+contact.form.disclaimer,Form,Disclaimer,By submitting this form you agree to our Privacy Policy. We never share your information.,,,Form legal note,src/i18n/locales/en.json
+contact.info.title,Info,Clinic information title,Clinic Information,,,Info card title,src/i18n/locales/en.json
+contact.info.address,Info,Address label,Address,,,Info card label,src/i18n/locales/en.json
+contact.info.addressValue,Info,Address value,"123 Medical Plaza, Suite 400
+New York, NY 10001",,,Replace with real address,src/i18n/locales/en.json
+contact.info.phone,Info,Phone label,Phone,,,Info card label,src/i18n/locales/en.json
+nav.phone,Info,Phone value,+1 800 555 1234,,,Replace with real phone,src/i18n/locales/en.json
+contact.info.email,Info,Email label,Email,,,Info card label,src/i18n/locales/en.json
+contact.info.emailValue,Info,Email value,hello@dentacare.com,,,Replace with real email,src/i18n/locales/en.json
+contact.info.hours,Info,Hours label,Hours,,,Info card label,src/i18n/locales/en.json
+contact.info.hours1,Info,Hours row 1,Mon – Fri: 8:00 – 20:00,,,Replace with real hours,src/i18n/locales/en.json
+contact.info.hours2,Info,Hours row 2,Saturday: 9:00 – 17:00,,,Replace with real hours,src/i18n/locales/en.json
+contact.info.hours3,Info,Hours row 3,Sunday: Closed,,,Replace with real hours,src/i18n/locales/en.json
+contact.info.mapPlaceholder,Info,Map placeholder,123 Medical Plaza NY,,,Replace with real map/embed later,src/i18n/locales/en.json
+contact.emergency.title,Emergency,Title,Dental Emergency?,,,Emergency block,src/i18n/locales/en.json
+contact.emergency.desc,Emergency,Description,Same-day slots reserved for urgent cases.,,,Emergency block,src/i18n/locales/en.json
+contact.emergency.button,Emergency,Button,Call Now,,,Emergency block,src/i18n/locales/en.json
+doctor.option.1,Form,Doctor option,Dr. Anna Kovalenko – Implantology,,,Hardcoded dropdown option,src/app/pages/Contact.tsx
+doctor.option.2,Form,Doctor option,Dr. Marcus Reid – Orthodontics,,,Hardcoded dropdown option,src/app/pages/Contact.tsx
+doctor.option.3,Form,Doctor option,Dr. Sofia Marchetti – Cosmetic,,,Hardcoded dropdown option,src/app/pages/Contact.tsx
+doctor.option.4,Form,Doctor option,Dr. Ethan Brooks – Periodontics,,,Hardcoded dropdown option,src/app/pages/Contact.tsx
+doctor.option.5,Form,Doctor option,Dr. Nadia Okonkwo – Endodontics,,,Hardcoded dropdown option,src/app/pages/Contact.tsx
+doctor.option.6,Form,Doctor option,Dr. Liam Chen – Pediatric,,,Hardcoded dropdown option,src/app/pages/Contact.tsx
+service.option.implants,Form,Service option,Dental Implants,,,Service dropdown option,src/i18n/locales/en.json
+service.option.ortho,Form,Service option,Orthodontics / Invisalign,,,Service dropdown option,src/i18n/locales/en.json
+service.option.whitening,Form,Service option,Teeth Whitening,,,Service dropdown option,src/i18n/locales/en.json
+service.option.veneers,Form,Service option,Porcelain Veneers,,,Service dropdown option,src/i18n/locales/en.json
+service.option.rootCanal,Form,Service option,Root Canal,,,Service dropdown option,src/i18n/locales/en.json
+service.option.perio,Form,Service option,Periodontal Treatment,,,Service dropdown option,src/i18n/locales/en.json
+service.option.checkup,Form,Service option,General Check-up,,,Service dropdown option,src/i18n/locales/en.json
+service.option.pediatric,Form,Service option,Pediatric Dentistry,,,Service dropdown option,src/i18n/locales/en.json
+service.option.cosmetic,Form,Service option,Cosmetic Consultation,,,Service dropdown option,src/i18n/locales/en.json
+service.option.other,Form,Service option,Other,,,Service dropdown option,src/i18n/locales/en.json

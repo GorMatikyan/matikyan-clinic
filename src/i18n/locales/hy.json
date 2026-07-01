@@ -1,311 +1,1010 @@
 {
   "nav": {
-    "about": "About",
-    "doctors": "Doctors",
-    "services": "Services",
-    "reviews": "Reviews",
-    "faq": "FAQ",
-    "blog": "Blog",
-    "contact": "Contact",
-    "bookAppointment": "Book Appointment",
-    "phone": "+1 800 555 1234"
+    "about": "Մեր մասին",
+    "doctors": "Բժիշկներ",
+    "services": "Ծառայություններ",
+    "reviews": "Կարծիքներ",
+    "faq": "Հաճախ տրվող հարցեր",
+    "blog": "Բլոգ",
+    "contact": "Կապ",
+    "bookAppointment": "Ամրագրել այց",
+    "phone": "+1 800 555 1234",
+    "logoAlt": "Matikyan Dental Clinic",
+    "toggleMenu": "Բացել մենյուն",
+    "languageNames": {
+      "en": "անգլերեն",
+      "hy": "հայերեն",
+      "ru": "ռուսերեն"
+    },
+    "switchLanguage": "Փոխել լեզուն՝ {{language}}",
+    "callClinic": "Զանգահարել կլինիկա"
   },
   "footer": {
-    "description": "Modern dental care with a personal touch. Our team of specialists is dedicated to your smile and long-term oral health.",
-    "pages": "Pages",
-    "ourDoctors": "Our Doctors",
-    "patientReviews": "Patient Reviews",
-    "services": "Services",
-    "contact": "Contact",
+    "logoAlt": "Matikyan Dental Clinic",
+    "description": "Ժամանակակից ստոմատոլոգիա անհատական մոտեցմամբ։ Մեր մասնագետները հոգ են տանում ձեր ժպիտի և երկարաժամկետ բերանի խոռոչի առողջության մասին։",
+    "pages": "Էջեր",
+    "ourDoctors": "Մեր բժիշկները",
+    "patientReviews": "Պացիենտների կարծիքներ",
+    "services": "Ծառայություններ",
+    "contact": "Կապ",
     "servicesList": {
-      "whitening": "Teeth Whitening",
-      "implants": "Dental Implants",
-      "orthodontics": "Orthodontics",
-      "veneers": "Veneers",
-      "rootCanal": "Root Canal",
-      "pediatric": "Pediatric Dentistry",
-      "cosmetic": "Cosmetic Dentistry"
+      "whitening": "Ատամների սպիտակեցում",
+      "implants": "Ատամնային իմպլանտներ",
+      "orthodontics": "Օրթոդոնտիա",
+      "veneers": "Վինիրներ",
+      "rootCanal": "Արմատախողովակային բուժում",
+      "pediatric": "Մանկական ստոմատոլոգիա",
+      "cosmetic": "Էսթետիկ ստոմատոլոգիա"
     },
     "address": "123 Medical Plaza, Suite 400\nNew York, NY 10001",
     "email": "hello@matikyan.com",
-    "hours1": "Mon – Fri: 8:00 – 20:00",
-    "hours2": "Sat: 9:00 – 17:00",
-    "hours3": "Sun: Closed",
-    "copyright": "© 2026 Matikyan Stomatology Center. All rights reserved.",
+    "hours1": "Երկ - Ուրբ՝ 8:00 – 20:00",
+    "hours2": "Շաբթ՝ 9:00 – 17:00",
+    "hours3": "Կիր՝ Փակ է",
+    "copyright": "© 2026 Matikyan ստոմատոլոգիական կենտրոն։ Բոլոր իրավունքները պաշտպանված են։",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "about": "Մեր մասին",
+    "phoneLinkAria": "Զանգահարել կլինիկա",
+    "emailLinkAria": "Գրել կլինիկային"
   },
   "home": {
     "stats": {
-      "years": "Years of Excellence",
-      "patients": "Happy Patients",
-      "doctors": "Specialist Doctors",
-      "satisfaction": "Satisfaction Rate"
+      "years": "Տարիների փորձ",
+      "patients": "Գոհ պացիենտներ",
+      "doctors": "Մասնագետ բժիշկներ",
+      "satisfaction": "Բավարարվածություն"
     },
     "services": {
-      "badge": "What We Offer",
-      "title": "Comprehensive Dental Services",
-      "viewAll": "All Services",
-      "learnMore": "Learn more",
+      "badge": "Մեր առաջարկը",
+      "title": "Լիարժեք ստոմատոլոգիական ծառայություններ",
+      "viewAll": "Բոլոր ծառայությունները",
+      "learnMore": "Իմանալ ավելին",
       "items": {
-        "implants": { "title": "Dental Implants", "desc": "Permanent, natural-looking tooth replacements using titanium implants." },
-        "whitening": { "title": "Teeth Whitening", "desc": "Professional whitening treatments that brighten your smile up to 8 shades." },
-        "ortho": { "title": "Orthodontics", "desc": "Braces and clear aligners for perfectly aligned teeth at any age." },
-        "veneers": { "title": "Cosmetic Veneers", "desc": "Ultra-thin porcelain veneers for a flawless, Hollywood-worthy smile." },
-        "rootCanal": { "title": "Root Canal", "desc": "Pain-free endodontic treatment to save your natural tooth." },
-        "pediatric": { "title": "Pediatric Dentistry", "desc": "Gentle, friendly dental care tailored for children of all ages." }
+        "implants": {
+          "title": "Ատամնային իմպլանտներ",
+          "desc": "Կայուն և բնական տեսքով վերականգնում բացակայող ատամների համար։"
+        },
+        "whitening": {
+          "title": "Ատամների սպիտակեցում",
+          "desc": "Մասնագիտական սպիտակեցում, որը տեսանելիորեն պայծառացնում է ժպիտը։"
+        },
+        "ortho": {
+          "title": "Օրթոդոնտիա",
+          "desc": "Բրեկետներ և թափանցիկ կապաններ՝ ատամների ճիշտ շարքի համար։"
+        },
+        "veneers": {
+          "title": "Էսթետիկ վինիրներ",
+          "desc": "Նուրբ պորցելյան վինիրներ՝ համաչափ և բնական ժպիտի համար։"
+        },
+        "rootCanal": {
+          "title": "Արմատախողովակային բուժում",
+          "desc": "Ժամանակակից էնդոդոնտիկ բուժում՝ բնական ատամը պահպանելու համար։"
+        },
+        "pediatric": {
+          "title": "Մանկական ստոմատոլոգիա",
+          "desc": "Նուրբ և հարմարեցված խնամք երեխաների առողջ ժպիտի համար։"
+        }
       }
     },
     "whyUs": {
-      "badge": "Why Choose Us",
-      "title": "Where Advanced Technology Meets Gentle Care",
-      "desc": "Our clinic combines cutting-edge dental technology with a warm, patient-first approach. Every treatment is personalized to your unique needs and comfort level.",
-      "learnMore": "Learn About Us",
-      "rating": "Rated 5.0 on Google",
-      "ratingBase": "Based on 1,240 reviews",
+      "badge": "Ինչու ընտրել մեզ",
+      "title": "Ժամանակակից տեխնոլոգիա և նուրբ խնամք մեկ վայրում",
+      "desc": "Մեր կլինիկայում նորագույն ստոմատոլոգիական տեխնոլոգիաները համադրվում են պացիենտակենտրոն, վստահություն ներշնչող մոտեցման հետ։",
+      "imageAlt": "Ժամանակակից ստոմատոլոգիական կլինիկայի ինտերիեր",
+      "learnMore": "Ավելին մեր մասին",
+      "rating": "Google-ում գնահատականը՝ 5.0",
+      "ratingBase": "1,240 կարծիքի հիման վրա",
       "features": {
-        "painFree": { "title": "Pain-Free Treatments", "desc": "Advanced anesthesia for a comfortable experience." },
-        "certified": { "title": "Certified Specialists", "desc": "Board-certified dentists with international training." },
-        "family": { "title": "Family Friendly", "desc": "Welcoming environment for patients of all ages." },
-        "hours": { "title": "Flexible Hours", "desc": "Evening and weekend appointments available." }
+        "painFree": {
+          "title": "Հարմարավետ բուժում",
+          "desc": "Ժամանակակից անզգայացում՝ առավել հանգիստ փորձառության համար։"
+        },
+        "certified": {
+          "title": "Վկայագրված մասնագետներ",
+          "desc": "Փորձառու բժիշկներ՝ շարունակական մասնագիտական զարգացման հիմքով։"
+        },
+        "family": {
+          "title": "Ընտանեկան մոտեցում",
+          "desc": "Հյուրընկալ միջավայր բոլոր տարիքի պացիենտների համար։"
+        },
+        "hours": {
+          "title": "Ճկուն ժամեր",
+          "desc": "Հարմար այցաժամեր շաբաթվա ընթացքում և հանգստյան օրերին։"
+        }
       }
     },
     "testimonials": {
-      "badge": "Patient Stories",
-      "title": "What Our Patients Say",
-      "readAll": "Read all reviews",
+      "badge": "Պացիենտների պատմություններ",
+      "title": "Ինչ են ասում մեր պացիենտները",
+      "readAll": "Կարդալ բոլոր կարծիքները",
       "items": [
-        { "name": "Sarah Mitchell", "service": "Porcelain Veneers", "text": "Absolutely incredible experience. Dr. Kovalenko transformed my smile with veneers and I couldn't be happier. The whole team was warm and professional." },
-        { "name": "James Thornton", "service": "Dental Implants", "text": "I was terrified of dental procedures but the team here made me feel completely at ease. My implants look and feel completely natural." },
-        { "name": "Elena Vasquez", "service": "Teeth Whitening", "text": "Best dental clinic I have ever visited. Modern equipment, kind staff, and results that exceeded my expectations. Highly recommended!" }
-      ]
+        {
+          "name": "Սառա Միտչել",
+          "service": "Պորցելյան վինիրներ",
+          "text": "Վինիրներով ստացված արդյունքը շատ բնական է, իսկ ամբողջ թիմի վերաբերմունքը՝ ջերմ և պրոֆեսիոնալ։"
+        },
+        {
+          "name": "Ջեյմս Թորնթոն",
+          "service": "Ատամնային իմպլանտներ",
+          "text": "Բուժման ամբողջ ընթացքում ինձ հանգիստ և վստահ էի զգում, իսկ իմպլանտների արդյունքը լիովին բնական տեսք ունի։"
+        },
+        {
+          "name": "Էլենա Վասկես",
+          "service": "Ատամների սպիտակեցում",
+          "text": "Շատ լավ կազմակերպված կլինիկա է՝ ժամանակակից սարքավորումներով և ուշադիր անձնակազմով։ Արդյունքը գերազանցեց սպասումներս։"
+        }
+      ],
+      "avatarAlt": "{{name}}-ի լուսանկար"
     },
     "cta": {
-      "title": "Ready for a Healthier, Brighter Smile?",
-      "desc": "Book your free consultation today. Our specialists will assess your needs and create a personalized treatment plan just for you.",
-      "button": "Schedule Free Consultation"
+      "title": "Պատրա՞ստ եք ավելի առողջ և պայծառ ժպիտի",
+      "desc": "Ամրագրեք անվճար խորհրդատվություն, և մեր մասնագետները կկազմեն ձեր կարիքներին համապատասխան բուժման պլան։",
+      "button": "Ամրագրել անվճար խորհրդատվություն"
     }
   },
   "slider": {
-    "bookConsultation": "Book Free Consultation",
+    "bookConsultation": "Ամրագրել անվճար խորհրդատվություն",
+    "previousSlide": "Նախորդ սլայդ",
+    "nextSlide": "Հաջորդ սլայդ",
+    "goToSlide": "Անցնել սլայդ {{index}}",
     "slides": [
       {
-        "tag": "Advanced Implantology",
-        "title": "Restore Your Smile\nWith Dental Implants",
-        "desc": "Permanent, natural-looking tooth replacements — from single implants to full-arch restorations.",
-        "cta": "Our Services"
+        "tag": "Ժամանակակից իմպլանտոլոգիա",
+        "title": "Վերականգնեք ժպիտը\nատամնային իմպլանտներով",
+        "desc": "Կայուն և բնական տեսքով լուծումներ՝ մեկ ատամից մինչև ամբողջական վերականգնում։",
+        "cta": "Մեր ծառայությունները"
       },
       {
-        "tag": "Modern Equipment",
-        "title": "State-of-the-Art\nClinic & Technology",
-        "desc": "3D scanning, digital X-rays, CAD/CAM same-day crowns — precision dentistry in a comfortable setting.",
-        "cta": "About Us"
+        "tag": "Ժամանակակից սարքավորումներ",
+        "title": "Նորագույն\nկլինիկա և տեխնոլոգիա",
+        "desc": "Թվային սկանավորում, ռենտգեն, CAD/CAM լուծումներ՝ ճշգրիտ և հարմարավետ բուժման համար։",
+        "cta": "Մեր մասին"
       },
       {
-        "tag": "Cosmetic Dentistry",
-        "title": "Your Dream Smile\nStarts Here",
-        "desc": "Veneers, whitening, bonding and full smile makeovers performed by award-winning cosmetic specialists.",
-        "cta": "Our Services"
+        "tag": "Էսթետիկ ստոմատոլոգիա",
+        "title": "Ձեր երազած ժպիտը\nսկսվում է այստեղ",
+        "desc": "Վինիրներ, սպիտակեցում, բոնդինգ և ժպիտի էսթետիկ վերականգնում՝ փորձառու մասնագետների կողմից։",
+        "cta": "Մեր ծառայությունները"
       },
       {
-        "tag": "Orthodontics",
-        "title": "Straighter Teeth,\nClearer Confidence",
-        "desc": "Invisalign and ceramic braces tailored to adults and teens — start with a free 3D simulation.",
-        "cta": "Meet Our Doctors"
+        "tag": "Օրթոդոնտիա",
+        "title": "Ավելի ուղիղ ատամներ,\nավելի վստահ ժպիտ",
+        "desc": "Invisalign և կերամիկական բրեկետներ՝ մեծահասակների և դեռահասների համար հարմարեցված ծրագրերով։",
+        "cta": "Ծանոթացեք բժիշկներին"
       }
     ]
   },
   "about": {
     "hero": {
-      "badge": "Our Story",
-      "title": "Dedicated to Transforming Smiles Since 2012",
-      "desc1": "DentaCare was founded on a simple belief: that dental care should be as comfortable as it is effective. Over the past 12 years, we have grown into one of New York's most trusted stomatology centers, treating over 8,400 patients.",
-      "desc2": "Our clinic brings together a diverse team of specialists — from orthodontists and periodontists to cosmetic and pediatric dentists — all working under one roof to deliver seamless, comprehensive care.",
+      "badge": "Մեր պատմությունը",
+      "title": "Ժպիտներ վերականգնելու առաքելությամբ 2012-ից",
+      "desc1": "Matikyan Dental Clinic-ը հիմնվել է պարզ համոզմամբ․ ստոմատոլոգիական խնամքը պետք է լինի նույնքան վստահություն ներշնչող, որքան արդյունավետ։ Տարիների ընթացքում մեր կլինիկան դարձել է համալիր բերանի խոռոչի խնամքի վստահելի կենտրոն։",
+      "desc2": "Մենք մեկ վայրում համախմբում ենք իմպլանտոլոգիան, օրթոդոնտիան, վերականգնողական, պերիոդոնտալ, էսթետիկ և մանկական ստոմատոլոգիան, որպեսզի բուժումը լինի համակարգված և հարմարավետ։",
       "stats": {
-        "patients": "Patients",
-        "specialists": "Specialists",
-        "satisfaction": "Satisfaction"
+        "patients": "Պացիենտ",
+        "specialists": "Մասնագետ",
+        "satisfaction": "Բավարարվածություն"
       },
-      "meetTeam": "Meet Our Team"
+      "meetTeam": "Ծանոթացեք թիմին"
+    },
+    "images": {
+      "clinicAlt": "Ստոմատոլոգիական կլինիկա",
+      "consultationAlt": "Բժիշկը խորհրդատվություն է անցկացնում",
+      "equipmentAlt": "Ժամանակակից ստոմատոլոգիական սարքավորում",
+      "interiorAlt": "Կլինիկայի ինտերիեր"
     },
     "values": {
-      "badge": "Our Values",
-      "title": "The Principles That Guide Us",
+      "badge": "Մեր արժեքները",
+      "title": "Սկզբունքները, որոնցով առաջնորդվում ենք",
       "items": [
-        { "title": "Patient-First", "desc": "Every decision is guided by what's best for the patient's health and comfort." },
-        { "title": "Clinical Excellence", "desc": "Continuous education and adoption of the latest evidence-based treatments." },
-        { "title": "Inclusivity", "desc": "Welcoming patients of all ages, backgrounds, and dental anxiety levels." },
-        { "title": "Transparency", "desc": "Clear communication, honest pricing, and no surprise fees — ever." }
+        {
+          "title": "Պացիենտը առաջին տեղում",
+          "desc": "Յուրաքանչյուր որոշում ընդունվում է պացիենտի հարմարավետությունը, առողջությունն ու վստահությունը առաջնահերթ պահելով։"
+        },
+        {
+          "title": "Կլինիկական որակ",
+          "desc": "Մենք կարևորում ենք շարունակական կրթությունը, ճշգրիտ պլանավորումը և ապացուցողական մոտեցումը։"
+        },
+        {
+          "title": "Բաց և հարգալից միջավայր",
+          "desc": "Ընդունում ենք տարբեր տարիքի և տարբեր կարիքներ ունեցող պացիենտների՝ անհատական մոտեցմամբ։"
+        },
+        {
+          "title": "Թափանցիկ հաղորդակցություն",
+          "desc": "Բուժման տարբերակները ներկայացնում ենք հստակ, սպասումները քննարկում ենք բաց և ազնիվ։"
+        }
       ]
     },
     "milestones": {
-      "badge": "Our Journey",
-      "title": "Key Milestones",
+      "badge": "Մեր ուղին",
+      "title": "Կարևոր փուլեր",
       "items": [
-        { "year": "2012", "title": "Founded", "desc": "DentaCare opened its doors with a mission to redefine the dental experience in New York." },
-        { "year": "2015", "title": "First Expansion", "desc": "Added a dedicated implantology suite and orthodontics department." },
-        { "year": "2018", "title": "Digital Dentistry", "desc": "Introduced 3D scanning, digital X-rays, and CAD/CAM same-day crowns." },
-        { "year": "2021", "title": "Award of Excellence", "desc": "Recognized as Top Dental Practice by New York Health Magazine." },
-        { "year": "2024", "title": "18 Specialists", "desc": "Grew to a full-service team of 18 board-certified dental specialists." }
+        {
+          "year": "2012",
+          "title": "Կլինիկայի հիմնադրում",
+          "desc": "Matikyan Dental Clinic-ը բացվեց՝ կենտրոնանալով ժամանակակից ախտորոշման և պացիենտակենտրոն խնամքի վրա։"
+        },
+        {
+          "year": "2015",
+          "title": "Ծառայությունների ընդլայնում",
+          "desc": "Կլինիկան զարգացրեց իմպլանտոլոգիական և օրթոդոնտիկ ուղղությունները՝ ավելի ամբողջական բուժում առաջարկելու համար։"
+        },
+        {
+          "year": "2018",
+          "title": "Թվային աշխատանքային հոսք",
+          "desc": "Թվային պատկերային հետազոտությունները և առաջադեմ վերականգնողական գործիքները դարձան ամենօրյա աշխատանքի մաս։"
+        },
+        {
+          "year": "2021",
+          "title": "Բարդ կլինիկական դեպքեր",
+          "desc": "Թիմը սկսեց ավելի համակարգված վարել բազմապրոֆիլ բարդ բուժման դեպքերը։"
+        },
+        {
+          "year": "2024",
+          "title": "Մասնագետների թիմի աճ",
+          "desc": "Մեր թիմը շարունակեց ընդլայնվել՝ մեկ կլինիկայում ընդգրկելով ավելի լայն ծառայություններ։"
+        }
       ]
     },
     "cta": {
-      "title": "Come Visit Our Clinic",
-      "desc": "Schedule a tour or book a consultation — we would love to meet you.",
-      "button": "Get In Touch"
+      "title": "Այցելեք մեր կլինիկա",
+      "desc": "Ամրագրեք խորհրդատվություն և ծանոթացեք ձեր բուժման պլանը կազմող թիմին։",
+      "button": "Կապվել մեզ հետ"
     }
   },
   "services": {
     "header": {
-      "badge": "What We Offer",
-      "title": "Our Dental Services",
-      "desc": "Comprehensive dental care under one roof — from routine check-ups to complex full-arch restorations."
+      "badge": "Ինչ ենք առաջարկում",
+      "title": "Մեր ստոմատոլոգիական ծառայությունները",
+      "desc": "Լիարժեք ստոմատոլոգիական խնամք մեկ վայրում՝ կանխարգելիչ այցերից մինչև բարդ վերականգնողական բուժում։"
     },
     "filter": {
-      "all": "All",
-      "preventive": "Preventive",
-      "cosmetic": "Cosmetic",
-      "restorative": "Restorative",
-      "orthodontics": "Orthodontics",
-      "surgery": "Surgery",
-      "pediatric": "Pediatric"
+      "all": "Բոլորը",
+      "preventive": "Կանխարգելիչ",
+      "cosmetic": "Էսթետիկ",
+      "restorative": "Վերականգնողական",
+      "orthodontics": "Օրթոդոնտիա",
+      "surgery": "Վիրաբուժական",
+      "pediatric": "Մանկական"
     },
     "card": {
-      "learnMore": "Learn more",
-      "lessInfo": "Less info",
-      "book": "Book"
+      "learnMore": "Ավելին",
+      "lessInfo": "Փակել",
+      "book": "Ամրագրել",
+      "imageAlt": "{{service}}",
+      "learnMoreAria": "Ավելին {{service}} ծառայության մասին",
+      "bookAria": "Ամրագրել {{service}} ծառայությունը"
     },
     "cta": {
-      "title": "Not Sure Which Service You Need?",
-      "desc": "Book a free consultation and our specialists will assess your needs and recommend the best treatment plan for you.",
-      "button": "Book Free Consultation"
+      "title": "Չե՞ք կողմնորոշվում, որ ծառայությունն է պետք",
+      "desc": "Ամրագրեք անվճար խորհրդատվություն, և մեր մասնագետները կգնահատեն ձեր կարիքներն ու կառաջարկեն լավագույն տարբերակը։",
+      "button": "Ամրագրել անվճար խորհրդատվություն"
     }
   },
   "doctors": {
     "header": {
-      "badge": "Our Team",
-      "title": "Meet Our Specialists",
-      "desc": "Board-certified dentists bringing decades of combined expertise and genuine care for every patient's wellbeing."
+      "badge": "Մեր թիմը",
+      "title": "Ծանոթացեք մեր մասնագետներին",
+      "desc": "Փորձառու բժիշկներ, ովքեր համադրում են մասնագիտական հմտությունն ու հոգատար վերաբերմունքը յուրաքանչյուր պացիենտի հանդեպ։"
+    },
+    "intro": {
+      "title": "Բժիշկներ, որոնք ղեկավարում են ձեր բուժման յուրաքանչյուր փուլը",
+      "desc": "Բացահայտեք մասնագետներին, որոնք իրականացնում են իմպլանտոլոգիական, օրթոդոնտիկ, էսթետիկ, վերականգնողական, պերիոդոնտալ և մանկական ստոմատոլոգիական բուժում։"
     },
     "filter": {
-      "all": "All"
+      "all": "Բոլորը",
+      "implantology": "Իմպլանտոլոգիա",
+      "orthodontics": "Օրթոդոնտիա",
+      "cosmetic": "Էսթետիկ",
+      "periodontics": "Պերիոդոնտոլոգիա",
+      "endodontics": "Էնդոդոնտիա",
+      "pediatric": "Մանկական"
     },
     "card": {
-      "bookAppointment": "Book Appointment"
+      "bookAppointment": "Ամրագրել այց",
+      "photoAlt": "{{name}}-ի լուսանկար",
+      "bookDoctor": "Ամրագրել այց {{name}} բժշկի մոտ"
+    },
+    "items": {
+      "annaKovalenko": {
+        "title": "Իմպլանտոլոգիայի ղեկավար",
+        "specialty": "Իմպլանտոլոգիա",
+        "experience": "14 տարվա փորձ",
+        "education": "Կոլումբիայի համալսարան, Նյու Յորք",
+        "desc": "Մասնագիտացած է ամբողջական իմպլանտային վերականգնումների և ոսկրային ավելացման ծրագրերում՝ կայուն արդյունքներով։",
+        "name": "Դր. Աննա Կովալենկո"
+      },
+      "marcusReid": {
+        "title": "Ավագ օրթոդոնտ",
+        "specialty": "Օրթոդոնտիա",
+        "experience": "11 տարվա փորձ",
+        "education": "NYU ստոմատոլոգիական քոլեջ",
+        "desc": "Մասնագիտացած է Invisalign-ի, կերամիկական բրեկետների և մեծահասակների ու դեռահասների օրթոդոնտիկ բուժման մեջ։",
+        "name": "Դր. Մարկուս Ռիդ"
+      },
+      "sofiaMarchetti": {
+        "title": "Էսթետիկ ստոմատոլոգ",
+        "specialty": "Էսթետիկ",
+        "experience": "9 տարվա փորձ",
+        "education": "Փենսիլվանիայի համալսարան",
+        "desc": "Հայտնի է ժպիտի դիզայնի նուրբ մոտեցմամբ՝ վինիրների, բոնդինգի և ամբողջական էսթետիկ վերափոխումների ոլորտում։",
+        "name": "Դր. Սոֆիա Մարկետտի"
+      },
+      "ethanBrooks": {
+        "title": "Պերիոդոնտոլոգ",
+        "specialty": "Պերիոդոնտոլոգիա",
+        "experience": "13 տարվա փորձ",
+        "education": "Հարվարդի ստոմատոլոգիական դպրոց",
+        "desc": "Մասնագիտացած է լնդերի հիվանդությունների բուժման, լնդերի վերականգնման և հյուսվածքային վերականգնման մեջ։",
+        "name": "Դր. Իթան Բրուքս"
+      },
+      "nadiaOkonkwo": {
+        "title": "Էնդոդոնտ",
+        "specialty": "Էնդոդոնտիա",
+        "experience": "8 տարվա փորձ",
+        "education": "Թաֆթսի համալսարանի ստոմատոլոգիական դպրոց",
+        "desc": "Արմատախողովակային բուժման մասնագետ՝ ժամանակակից ռոտացիոն և լազերային տեխնիկայի կիրառմամբ։",
+        "name": "Դր. Նադիա Օկոնկվո"
+      },
+      "liamChen": {
+        "title": "Մանկական ստոմատոլոգ",
+        "specialty": "Մանկական",
+        "experience": "7 տարվա փորձ",
+        "education": "Բոստոնի համալսարան, Goldman School",
+        "desc": "Կենտրոնացած է երեխաների համար վստահություն ներշնչող և հարմարավետ ստոմատոլոգիական փորձառություն ստեղծելու վրա։",
+        "name": "Դր. Լիամ Չեն"
+      }
     }
   },
   "reviews": {
     "header": {
-      "badge": "Patient Reviews",
-      "title": "What Our Patients Say",
-      "rating": "4.9 out of 5 — based on 1,240+ reviews"
+      "badge": "Պացիենտների կարծիքներ",
+      "title": "Ինչ են ասում մեր պացիենտները",
+      "rating": "4.9 / 5 — ավելի քան 1,240 կարծիքի հիման վրա"
+    },
+    "intro": {
+      "title": "Պացիենտների բավարարվածության ավելի մոտ դիտարկում",
+      "desc": "Այս կարծիքները ցույց են տալիս, թե ինչպես են պացիենտները նկարագրում բուժման ընթացքում իրենց հարմարավետությունը, հաղորդակցությունն ու արդյունքը։"
     },
     "stats": {
-      "overallRating": "Overall Rating",
-      "totalReviews": "Total Reviews",
-      "recommend": "Recommend Us",
-      "fiveStar": "5-Star Reviews"
-    }
+      "overallRating": "Ընդհանուր գնահատական",
+      "totalReviews": "Կարծիքների քանակ",
+      "recommend": "Խորհուրդ են տալիս",
+      "fiveStar": "5-աստղանի կարծիքներ"
+    },
+    "avatarAlt": "{{name}}-ի լուսանկար",
+    "items": [
+      {
+        "name": "Սառա Միտչել",
+        "date": "Մայիս 2026",
+        "service": "Պորցելյան վինիրներ",
+        "text": "Արդյունքը պարզապես հրաշալի է։ Դր. Կովալենկոն փոխեց իմ ժպիտը վինիրներով, իսկ ամբողջ թիմը եղել է ջերմ, պրոֆեսիոնալ և հանգիստ մթնոլորտ ստեղծող։"
+      },
+      {
+        "name": "Ջեյմս Թորնթոն",
+        "date": "Ապրիլ 2026",
+        "service": "Ատամնային իմպլանտներ",
+        "text": "Ատամնաբուժական միջամտություններից վախենում էի, բայց թիմը ինձ ամբողջ ընթացքում հանգիստ պահեց։ Իմպլանտների տեսքն ու զգացողությունը լիովին բնական են։"
+      },
+      {
+        "name": "Էլենա Վասկես",
+        "date": "Ապրիլ 2026",
+        "service": "Ատամների սպիտակեցում",
+        "text": "Սա լավագույն ստոմատոլոգիական կլինիկան է, որտեղ երբևէ եղել եմ։ Ժամանակակից սարքավորումներ, բարի անձնակազմ և արդյունք, որը գերազանցեց սպասելիքներս։"
+      },
+      {
+        "name": "Մայքլ Օ՛Բրայեն",
+        "date": "Մարտ 2026",
+        "service": "Invisalign",
+        "text": "Դր. Ռիդը իսկական մասնագետ է Invisalign-ի հարցում։ 14 ամսվա բուժումից հետո ատամներս կատարյալ հարթ են, իսկ թվային սկանավորումը շատ հարմար էր։"
+      },
+      {
+        "name": "Պրիյա Նաիր",
+        "date": "Մարտ 2026",
+        "service": "Ժպիտի ամբողջական վերափոխում",
+        "text": "Դր. Մարկետտիի հետ անցա ամբողջական ժպիտի վերափոխում։ Արդյունքը շատ բնական է, և մարդիկ անընդհատ հաճոյախոսում են ժպիտս։"
+      },
+      {
+        "name": "Դավիդ Կովալսկի",
+        "date": "Փետրվար 2026",
+        "service": "Արմատախողովակային բուժում",
+        "text": "Չնայած արմատախողովակային բուժման վատ համբավին, Դր. Օկոնկվոն այն անցկացրեց շատ հարմարավետ։ Գրեթե ոչինչ չզգացի և արագ վերադարձա բնական առօրյային։"
+      },
+      {
+        "name": "Լիզա Պարկ",
+        "date": "Փետրվար 2026",
+        "service": "Մանկական ստոմատոլոգիա",
+        "text": "Իմ 6-ամյա երեխան միշտ վախենում էր ատամնաբույժից։ Դր. Չենի մոտ մեկ այցից հետո արդեն ինքն է հարցնում, թե երբ ենք նորից գնալու։"
+      },
+      {
+        "name": "Ռոբերտո Էսպոզիտո",
+        "date": "Հունվար 2026",
+        "service": "Պերիոդոնտալ բուժում",
+        "text": "Դր. Բրուքսը մեծ ճշգրտությամբ ախտորոշեց և բուժեց իմ լնդերի խնդիրը։ Այժմ լնդերս ավելի առողջ են, քան տարիներ շարունակ եղել էին։"
+      },
+      {
+        "name": "Ամանդա Ֆոսթեր",
+        "date": "Հունվար 2026",
+        "service": "Ընդհանուր ստուգում",
+        "text": "Տարեկան ստուգումը շատ մանրակրկիտ էր։ Թվային ռենտգենն ու ներբերանային տեսախցիկը օգնեցին հստակ հասկանալ բժշկի բացատրությունները։"
+      }
+    ]
   },
   "faq": {
     "header": {
-      "badge": "FAQ",
-      "title": "Frequently Asked Questions",
-      "desc": "Everything you want to know about our services, treatments, and what to expect at DentaCare."
+      "badge": "Հաճախ տրվող հարցեր",
+      "title": "Հաճախ տրվող հարցեր",
+      "desc": "Այստեղ հավաքել ենք հարցերը, որոնք պացիենտներն ամենից հաճախ տալիս են բուժման, այցերի և սպասելիքների մասին։"
     },
     "categories": {
-      "general": "General",
-      "treatments": "Treatments",
-      "invisalign": "Invisalign & Braces",
-      "payment": "Payment & Insurance"
+      "general": "Ընդհանուր",
+      "treatments": "Բուժումներ",
+      "invisalign": "Invisalign և բրեկետներ",
+      "payment": "Վճարում և պայմաններ"
+    },
+    "items": {
+      "general": [
+        {
+          "q": "Որքա՞ն հաճախ պետք է այցելեմ ատամնաբույժի",
+          "a": "Սովորաբար խորհուրդ է տրվում կանխարգելիչ զննում և մասնագիտական մաքրում կատարել յուրաքանչյուր 6 ամիսը մեկ։ Որոշ դեպքերում այցերը կարող են ավելի հաճախ լինել։"
+        },
+        {
+          "q": "Ի՞նչ պետք է բերեմ առաջին այցիս",
+          "a": "Խորհուրդ է տրվում ունենալ անձը հաստատող փաստաթուղթ, նախորդ հետազոտությունները, եթե կան, և ընդունվող դեղերի ցանկը։"
+        },
+        {
+          "q": "Ընդունո՞ւմ եք առանց նախնական գրանցման",
+          "a": "Շտապ դեպքերում փորձում ենք նույն օրը ժամանակ տրամադրել, իսկ պլանային բուժման համար ցանկալի է նախապես ամրագրել։"
+        }
+      ],
+      "treatments": [
+        {
+          "q": "Ատամների սպիտակեցումը անվտանգ՞ է",
+          "a": "Այո, եթե այն իրականացվում է բժշկական գնահատումից հետո և համապատասխանում է ատամների ու լնդերի վիճակին։"
+        },
+        {
+          "q": "Որքա՞ն երկար կարող են ծառայել իմպլանտները",
+          "a": "Ճիշտ խնամքի և կանոնավոր վերահսկման դեպքում իմպլանտները կարող են ծառայել երկար տարիներ։"
+        },
+        {
+          "q": "Վինիրները հետադարձելի՞ են",
+          "a": "Դասական պորցելյան վինիրները սովորաբար պահանջում են որոշակի նախապատրաստում, ուստի համարվում են ոչ լիովին հետադարձելի։"
+        },
+        {
+          "q": "Արմատախողովակային բուժումը ցավոտ՞ է",
+          "a": "Ժամանակակից անզգայացման պայմաններում բուժումը սովորաբար անցնում է հարմարավետ, և շատ պացիենտներ այն ավելի հեշտ են տանում, քան սպասում էին։"
+        }
+      ],
+      "invisalign": [
+        {
+          "q": "Արդյո՞ք ես հարմար թեկնածու եմ Invisalign-ի համար",
+          "a": "Invisalign-ը հաճախ հարմար է թեթև և միջին խտացման, բացվածքների և որոշ կծվածքային խնդիրների դեպքում։ Վերջնական պատասխանը տալիս է կլինիկական զննումը։"
+        },
+        {
+          "q": "Որքա՞ն է տևում Invisalign բուժումը",
+          "a": "Տևողությունը կախված է դեպքի բարդությունից, սակայն շատ բուժումներ տեղավորվում են 6-ից 24 ամսվա միջակայքում։"
+        }
+      ],
+      "payment": [
+        {
+          "q": "Ընդունո՞ւմ եք ապահովագրություն",
+          "a": "Ապահովագրության կիրառելիությունը կախված է ձեր պոլիսից և բուժման տեսակից։ Մեր թիմը կօգնի հասկանալ պայմանները մինչև բուժումը։"
+        },
+        {
+          "q": "Կա՞ն վճարման փուլային տարբերակներ",
+          "a": "Ավելի ծավալուն բուժումների դեպքում հնարավոր վճարման ձևաչափերը կարելի է քննարկել մեր թիմի հետ նախապես։"
+        },
+        {
+          "q": "Որքա՞ն արժե խորհրդատվությունը",
+          "a": "Խորհրդատվության արժեքը կախված է այցի կազմից, օրինակ՝ արդյոք անհրաժեշտ են պատկերային հետազոտություններ կամ մասնագետի գնահատում։"
+        }
+      ]
     },
     "cta": {
-      "title": "Still Have Questions?",
-      "desc": "Our patient care team is available Monday–Saturday to answer any questions you may have.",
-      "button": "Contact Us"
+      "title": "Դեռ հարցե՞ր ունեք",
+      "desc": "Մեր թիմը պատրաստ է պատասխանել այցերի, բուժման պլանավորման և հաջորդ քայլերի մասին ձեր հարցերին։",
+      "button": "Կապ մեզ հետ"
     }
   },
   "blog": {
     "header": {
-      "badge": "Knowledge Hub",
-      "title": "Dental Health Blog",
-      "desc": "Expert advice, treatment guides, and oral health tips from our specialist team."
+      "badge": "Գիտելիքների բաժին",
+      "title": "Ստոմատոլոգիական բլոգ",
+      "desc": "Մասնագիտական խորհուրդներ, բուժման ուղեցույցներ և բերանի խոռոչի առողջության մասին օգտակար հոդվածներ։"
     },
     "filter": {
-      "all": "All",
-      "oralHealth": "Oral Health",
-      "cosmetic": "Cosmetic",
-      "orthodontics": "Orthodontics",
-      "nutrition": "Nutrition",
-      "technology": "Technology"
+      "all": "Բոլորը",
+      "oralHealth": "Բերանի առողջություն",
+      "cosmetic": "Էսթետիկա",
+      "orthodontics": "Օրթոդոնտիա",
+      "nutrition": "Սննդակարգ",
+      "technology": "Տեխնոլոգիա"
     },
-    "featured": "Featured",
-    "read": "Read",
-    "readMore": "Read more",
-    "minRead": "min read",
-    "empty": "No articles in this category yet. Check back soon!"
+    "featured": "Առանձնացված",
+    "read": "Կարդալ",
+    "readAria": "Կարդալ հոդվածը՝ {{title}}",
+    "readMore": "Կարդալ ավելին",
+    "readMoreAria": "Ավելին {{title}} հոդվածի մասին",
+    "minRead": "րոպե",
+    "coverAlt": "{{title}}",
+    "empty": "Այս բաժնում դեռ հոդվածներ չկան։ Ստուգեք ավելի ուշ։",
+    "posts": [
+      {
+        "category": "Բերանի առողջություն",
+        "title": "Ինչպես ճիշտ լվանալ ատամները․ քայլ առ քայլ ուղեցույց",
+        "excerpt": "Շատերը ատամները լվանում են ամեն օր, բայց ճիշտ տեխնիկան մեծ տարբերություն է ստեղծում։ Մեր հիգիենիստները բացատրում են կարևոր մանրուքները։",
+        "author": "Դր. Աննա Կովալենկո",
+        "date": "5 հունիսի, 2026",
+        "readTime": "5 րոպե"
+      },
+      {
+        "category": "Էսթետիկա",
+        "title": "Վինիրներ թե բոնդինգ․ ո՞ր տարբերակն է ավելի ճիշտ ձեր ժպիտի համար",
+        "excerpt": "Պորցելյան վինիրներն ու կոմպոզիտ բոնդինգը երկուսն էլ կարող են բարելավել ժպիտի տեսքը, սակայն կիրառվում են տարբեր նպատակներով։",
+        "author": "Դր. Սոֆիա Մարկետտի",
+        "date": "22 մայիսի, 2026",
+        "readTime": "7 րոպե"
+      },
+      {
+        "category": "Օրթոդոնտիա",
+        "title": "Invisalign-ը 2026-ին․ ինչ է փոխվել և ինչ պետք է իմանան պացիենտները",
+        "excerpt": "Թվային պլանավորումն ու կապանային համակարգերը զարգանում են։ Տեսնենք, թե այսօր ինչն է կարևոր Invisalign ընտրելիս։",
+        "author": "Դր. Մարկուս Ռիդ",
+        "date": "10 մայիսի, 2026",
+        "readTime": "6 րոպե"
+      },
+      {
+        "category": "Սննդակարգ",
+        "title": "10 մթերք, որոնք աննկատ վնասում են էմալը",
+        "excerpt": "Որոշ ուտելիքներ և ըմպելիքներ էմալին վնասում են ավելի շատ, քան հաճախ պատկերացնում են պացիենտները։",
+        "author": "Դր. Իթան Բրուքս",
+        "date": "28 ապրիլի, 2026",
+        "readTime": "4 րոպե"
+      },
+      {
+        "category": "Տեխնոլոգիա",
+        "title": "Մեկօրյա պսակներ․ ինչպես է CAD/CAM տեխնոլոգիան փոխում վերականգնողական բուժումը",
+        "excerpt": "Թվային սկանավորումն ու տեղում պատրաստումը թույլ են տալիս որոշ դեպքերում պսակը կատարել նույն այցի ընթացքում։",
+        "author": "Դր. Աննա Կովալենկո",
+        "date": "15 ապրիլի, 2026",
+        "readTime": "5 րոպե"
+      },
+      {
+        "category": "Բերանի առողջություն",
+        "title": "Լնդերի հիվանդության փուլերը, ախտանշանները և լուծումները",
+        "excerpt": "Լնդերի խնդիրները հաճախ զարգանում են աննկատ։ Վաղ հայտնաբերումն ու ժամանակին բուժումը մեծ տարբերություն են ստեղծում։",
+        "author": "Դր. Իթան Բրուքս",
+        "date": "30 մարտի, 2026",
+        "readTime": "8 րոպե"
+      }
+    ]
   },
   "contact": {
     "header": {
-      "badge": "Get in Touch",
-      "title": "Book Your Appointment",
-      "desc": "Free consultations available. Fill out the form below and we'll confirm within 2 hours."
+      "badge": "Կապ մեզ հետ",
+      "title": "Ամրագրեք ձեր այցը",
+      "desc": "Խորհրդատվությունները հասանելի են նախնական գրանցմամբ։ Լրացրեք ձևը, և մեր թիմը կապ կհաստատի՝ հասանելի մոտակա ժամանակը հաստատելու համար։"
     },
     "success": {
-      "title": "Request Received!",
-      "desc": "Thank you, {{name}}! Our team will contact you within 2 business hours to confirm your appointment.",
-      "another": "Submit another request"
+      "title": "Հարցումը ստացվել է",
+      "desc": "Շնորհակալություն, {{name}}։ Մեր թիմը շուտով կապ կհաստատի՝ ձեր այցի մանրամասները հաստատելու համար։",
+      "another": "Ուղարկել նոր հարցում"
     },
     "form": {
-      "title": "Appointment Request",
-      "firstName": "First Name",
-      "firstNamePlaceholder": "Jane",
-      "lastName": "Last Name",
-      "lastNamePlaceholder": "Smith",
-      "email": "Email",
-      "emailPlaceholder": "jane@example.com",
-      "phone": "Phone",
-      "phonePlaceholder": "+1 (555) 000-0000",
-      "service": "Service Needed",
-      "servicePlaceholder": "Select a service...",
-      "doctor": "Preferred Doctor",
-      "doctorPlaceholder": "Select a doctor...",
-      "noPreference": "No preference",
-      "date": "Preferred Date",
-      "message": "Message (optional)",
-      "messagePlaceholder": "Tell us about your dental concerns or questions...",
-      "submit": "Request Appointment",
-      "disclaimer": "By submitting this form you agree to our Privacy Policy. We never share your information.",
+      "title": "Այցի հարցում",
+      "firstName": "Անուն",
+      "firstNamePlaceholder": "Աննա",
+      "lastName": "Ազգանուն",
+      "lastNamePlaceholder": "Մարտիրոսյան",
+      "email": "Էլ․ հասցե",
+      "emailPlaceholder": "anna@example.com",
+      "phone": "Հեռախոս",
+      "phonePlaceholder": "+374 00 00 00 00",
+      "service": "Անհրաժեշտ ծառայություն",
+      "servicePlaceholder": "Ընտրեք ծառայությունը...",
+      "doctor": "Նախընտրելի բժիշկ",
+      "doctorPlaceholder": "Ընտրեք բժշկին...",
+      "noPreference": "Առանց նախընտրության",
+      "date": "Նախընտրելի ամսաթիվ",
+      "message": "Հաղորդագրություն (ըստ ցանկության)",
+      "messagePlaceholder": "Գրեք ձեր խնդրի կամ հարցի մասին...",
+      "submit": "Ուղարկել հարցում",
+      "disclaimer": "Ձևը լրացնելով՝ դուք համաձայնում եք, որ մեր թիմը կապ հաստատի այցի կազմակերպման համար։",
       "services": {
-        "implants": "Dental Implants",
-        "ortho": "Orthodontics / Invisalign",
-        "whitening": "Teeth Whitening",
-        "veneers": "Porcelain Veneers",
-        "rootCanal": "Root Canal",
-        "perio": "Periodontal Treatment",
-        "checkup": "General Check-up",
-        "pediatric": "Pediatric Dentistry",
-        "cosmetic": "Cosmetic Consultation",
-        "other": "Other"
+        "implants": "Ատամնային իմպլանտներ",
+        "ortho": "Օրթոդոնտիա / Invisalign",
+        "whitening": "Ատամների սպիտակեցում",
+        "veneers": "Պորցելյան վինիրներ",
+        "rootCanal": "Արմատախողովակային բուժում",
+        "perio": "Պերիոդոնտալ բուժում",
+        "checkup": "Ընդհանուր ստուգում",
+        "pediatric": "Մանկական ստոմատոլոգիա",
+        "cosmetic": "Էսթետիկ խորհրդատվություն",
+        "other": "Այլ"
       }
     },
     "info": {
-      "title": "Clinic Information",
-      "address": "Address",
+      "title": "Կլինիկայի տվյալներ",
+      "address": "Հասցե",
       "addressValue": "123 Medical Plaza, Suite 400\nNew York, NY 10001",
-      "phone": "Phone",
-      "email": "Email",
+      "phone": "Հեռախոս",
+      "email": "Էլ․ հասցե",
       "emailValue": "hello@dentacare.com",
-      "hours": "Hours",
-      "hours1": "Mon – Fri: 8:00 – 20:00",
-      "hours2": "Saturday: 9:00 – 17:00",
-      "hours3": "Sunday: Closed",
+      "hours": "Աշխատանքային ժամեր",
+      "hours1": "Երկ - Ուրբ՝ 8:00 – 20:00",
+      "hours2": "Շաբաթ՝ 9:00 – 17:00",
+      "hours3": "Կիրակի՝ փակ է",
       "mapPlaceholder": "123 Medical Plaza, NY"
     },
     "emergency": {
-      "title": "Dental Emergency?",
-      "desc": "Same-day slots reserved for urgent cases.",
-      "button": "Call Now"
+      "title": "Ատամնաբուժական շտապ դեպք՞ է",
+      "desc": "Շտապ խնդիրների դեպքում կարող եք հնարավորինս արագ կապ հաստատել մեր թիմի հետ։",
+      "button": "Զանգահարել հիմա",
+      "callAria": "Զանգահարել կլինիկա շտապ ստոմատոլոգիական օգնության համար"
+    }
+  },
+  "serviceDetail": {
+    "labels": {
+      "startingFee": "Սկսած",
+      "typicalDuration": "Տևողություն",
+      "patientRating": "Գնահատական",
+      "keyBenefits": "Հիմնական առավելություններ"
+    },
+    "cta": {
+      "title": "Պատրա՞ստ եք քննարկել {{service}}",
+      "desc": "Ամրագրեք խորհրդատվություն՝ ձեր նպատակները, կլինիկական կարիքները և համապատասխան բուժման տարբերակները քննարկելու համար։",
+      "book": "Ամրագրել խորհրդատվություն",
+      "back": "Վերադառնալ բոլոր ծառայություններին"
+    },
+    "imageAlt": "{{service}} ծառայություն"
+  },
+  "serviceCatalog": {
+    "categories": {
+      "preventive": "Կանխարգելիչ",
+      "cosmetic": "Էսթետիկ",
+      "restorative": "Վերականգնողական",
+      "orthodontics": "Օրթոդոնտիա",
+      "surgery": "Վիրաբուժական",
+      "pediatric": "Մանկական"
+    },
+    "services": {
+      "dentalCleaningCheckup": {
+        "title": "Մասնագիտական մաքրում և ստուգում",
+        "tagline": "Առողջ ժպիտի հիմքը",
+        "desc": "Պրոֆեսիոնալ մաքրումը հեռացնում է ատամնաքարն ու փառը, իսկ զննումը օգնում է վաղ փուլում հայտնաբերել խնդիրները։",
+        "price": "$80-ից",
+        "duration": "60 րոպե",
+        "benefits": [
+          "Հեռացնում է ատամնաքարն ու գունափոխումները",
+          "Օգնում է վաղ հայտնաբերել կարիեսը",
+          "Գնահատում է լնդերի վիճակը",
+          "Տալիս է հիգիենայի անհատական խորհուրդներ"
+        ],
+        "intro": "Կանխարգելիչ այցերը թույլ են տալիս փոքր խնդիրները կանգնեցնել մինչև դրանք դառնան բարդ բուժման պատճառ։",
+        "h2Title": "Ինչ է ներառում այցը",
+        "h2Description": "Այցի ընթացքում գնահատվում է բերանի խոռոչի առողջությունը, կատարվում է մաքրում և տրվում են հետագա խնամքի ցուցումներ։",
+        "processTitle": "Այցի հիմնական փուլերը",
+        "process": [
+          "Քննարկվում են գանգատները, հիգիենայի սովորությունները և նախորդ բուժումները։",
+          "Կատարվում է մասնագիտական մաքրում՝ ատամնաքարը և փառը հեռացնելու համար։",
+          "Բժիշկը զննում է ատամները, լնդերը, կծվածքը և առկա վերականգնումները։"
+        ],
+        "candidatesTitle": "Ում համար է հարմար",
+        "candidates": [
+          "Պացիենտների համար, ովքեր նախատեսված են հերթական կանխարգելիչ այցի։",
+          "Մեծահասակների և դեռահասների համար, ովքեր ուզում են ստանալ ընդհանուր գնահատում։",
+          "Նրանց համար, ովքեր նկատում են արյունահոսություն, զգայունություն կամ գունափոխում։"
+        ]
+      },
+      "teethWhitening": {
+        "title": "Ատամների մասնագիտական սպիտակեցում",
+        "tagline": "Մինչև 8 երանգով պայծառ մեկ այցում",
+        "desc": "Կլինիկական սպիտակեցում վերահսկվող գործընթացով՝ ատամների գույնը հավասար և անվտանգ լուսավորելու համար։",
+        "price": "$350-ից",
+        "duration": "90 րոպե",
+        "benefits": [
+          "Ավելի բաց մինչև 8+ երանգ",
+          "Մեկ այցով բուժում",
+          "Զգայունությունը նվազեցնող մոտեցում",
+          "Տնային պահպանման խորհուրդներ"
+        ],
+        "intro": "Մասնագիտական սպիտակեցումը ժպիտը արագ թարմացնելու ամենաարդյունավետ տարբերակներից մեկն է։",
+        "h2Title": "Ինչպես է պլանավորվում սպիտակեցումը",
+        "h2Description": "Սկզբում գնահատում ենք գունափոխման պատճառները, հետո ընտրում անվտանգ և հավասար սպիտակեցման սխեմա։",
+        "processTitle": "Սպիտակեցման ընթացքը",
+        "process": [
+          "Գնահատվում է մեկնարկային երանգը և բուժման նպատակահարմարությունը։",
+          "Պաշտպանվում են լնդերը և կիրառվում է մասնագիտական գելը։",
+          "Ավարտին տրվում են արդյունքը պահպանելու ցուցումներ։"
+        ],
+        "candidatesTitle": "Ավելի հարմար է",
+        "candidates": [
+          "Սուրճից, թեյից կամ ծխախոտից գունափոխումներ ունեցող պացիենտների համար։",
+          "Նրանց համար, ովքեր ցանկանում են ոչ ինվազիվ էսթետիկ թարմացում։",
+          "Միջոցառման կամ կարևոր օրվա նախաշեմին ժպիտը պայծառացնելու ցանկություն ունեցողների համար։"
+        ]
+      },
+      "veneers": {
+        "title": "Պորցելյան վինիրներ",
+        "tagline": "Համաչափ և բնական ժպիտ",
+        "desc": "Բարակ պորցելյան շերտեր, որոնք բարելավում են ատամների գույնը, ձևը և առջևի շարքի ընդհանուր տեսքը։",
+        "price": "$900-ից / ատամ",
+        "duration": "2 այց",
+        "benefits": [
+          "Բնական տեսք",
+          "Դիմացկուն պորցելյան",
+          "Երկարաժամկետ արդյունք",
+          "Անհատական գունային ընտրություն"
+        ],
+        "intro": "Վինիրները թույլ են տալիս շատ վերահսկելի կերպով փոխել ժպիտի տեսանելի գիծը և ստանալ նրբաճաշակ արդյունք։",
+        "h2Title": "Ինչու են ընտրում վինիրները",
+        "h2Description": "Վինիրները հաճախ կիրառվում են ճաքերի, անհավասար եզրերի, տարածությունների և կայուն գունափոխման դեպքում։",
+        "processTitle": "Ինչպես է իրականացվում բուժումը",
+        "process": [
+          "Կատարվում է էսթետիկ խորհրդատվություն և ժպիտի պլանավորում։",
+          "Նախապատրաստվում են ատամները և վերցվում են թվային կամ լաբորատոր տվյալներ։",
+          "Վերջնական վինիրները տեղադրվում և ֆիքսվում են ընտրված ձևավորմամբ։"
+        ],
+        "candidatesTitle": "Հաճախ խորհուրդ է տրվում",
+        "candidates": [
+          "Առաջային ատամների ճաքերի, բացվածքների կամ անհավասար ձևի դեպքում։",
+          "Նրանց համար, ովքեր ուզում են ավելի երկարաժամկետ էսթետիկ լուծում։",
+          "Պացիենտների համար, ովքեր պատրաստ են անհատական պլանավորված բուժման։"
+        ]
+      },
+      "compositeBonding": {
+        "title": "Կոմպոզիտ բոնդինգ",
+        "tagline": "Ժպիտի շտկում մեկ այցով",
+        "desc": "Ատամի գույնին համապատասխան կոմպոզիտ, որը կիրառվում է ճաքերը փակելու, բացվածքները փոքրացնելու և ձևը շտկելու համար։",
+        "price": "$250-ից / ատամ",
+        "duration": "60–90 րոպե",
+        "benefits": [
+          "Առանց էմալի հեռացման",
+          "Արդյունք նույն օրը",
+          "Պահպանողական մոտեցում",
+          "Գույնի բնական համադրում"
+        ],
+        "intro": "Կոմպոզիտ բոնդինգը լավ տարբերակ է այն դեպքերում, երբ անհրաժեշտ է տեսանելի փոփոխություն՝ առանց մեծ միջամտության։",
+        "h2Title": "Երբ է բոնդինգը արդյունավետ",
+        "h2Description": "Այն ընտրվում է փոքր էսթետիկ շտկումների համար, երբ առաջնահերթ է բնական հյուսվածքի պահպանումը։",
+        "processTitle": "Ինչ է կատարվում բուժման ընթացքում",
+        "process": [
+          "Ընտրվում է գույնը և պլանավորվում է ցանկալի ձևափոխումը։",
+          "Կոմպոզիտը շերտ առ շերտ ձևավորվում է ատամի վրա։",
+          "Կատարվում է վերջնական հղկում և փայլեցում։"
+        ],
+        "candidatesTitle": "Երբ են ընտրում բոնդինգը",
+        "candidates": [
+          "Փոքր ճաքերի, անհավասար եզրերի կամ նեղ բացվածքների դեպքում։",
+          "Նրանց համար, ովքեր ուզում են ավելի մատչելի էսթետիկ լուծում։",
+          "Պացիենտների համար, ովքեր նախընտրում են նույն օրը ստացված արդյունք։"
+        ]
+      },
+      "dentalImplants": {
+        "title": "Ատամնային իմպլանտներ",
+        "tagline": "Կայուն ատամի փոխարինում",
+        "desc": "Իմպլանտները վերականգնում են բացակայող ատամները՝ ապահովելով կայունություն, ֆունկցիա և բնական տեսք։",
+        "price": "$2,400-ից",
+        "duration": "3–6 ամիս",
+        "benefits": [
+          "Երկարաժամկետ լուծում",
+          "Պահպանում է ոսկրային հյուսվածքը",
+          "Չի վնասում հարևան ատամները",
+          "Բարձր դիմացկունություն"
+        ],
+        "intro": "Իմպլանտները նախատեսված են բացակայող ատամների երկարաժամկետ վերականգնման համար՝ ուշադրություն դարձնելով թե՛ ֆունկցիային, թե՛ գեղագիտությանը։",
+        "h2Title": "Ինչու է կարևոր ճիշտ պլանավորումը",
+        "h2Description": "Հաջող իմպլանտացիան հիմնված է ճիշտ ախտորոշման, վիրաբուժական պլանավորման և վերջնական վերականգնման նախագծման վրա։",
+        "processTitle": "Բուժման հիմնական փուլերը",
+        "process": [
+          "Խորհրդատվություն և հետազոտություն՝ ոսկրային պայմաններն ու նպատակները գնահատելու համար։",
+          "Իմպլանտի տեղադրում՝ ըստ կլինիկական ծրագրի և ապաքինման ժամկետի։",
+          "Վերջնական պսակի կամ պրոթեզային վերականգնման տեղադրում ապաքինումից հետո։"
+        ],
+        "candidatesTitle": "Հաճախ հարմար է",
+        "candidates": [
+          "Մեկ կամ մի քանի բացակայող ատամ ունեցող պացիենտների համար։",
+          "Նրանց համար, ովքեր ուզում են ֆիքսված լուծում շարժական տարբերակի փոխարեն։",
+          "Այն դեպքերում, երբ կարևոր է պահպանել հարևան առողջ ատամները։"
+        ]
+      },
+      "sameDayCrowns": {
+        "title": "Մեկօրյա պսակներ (CEREC)",
+        "tagline": "Պսակ մեկ այցով",
+        "desc": "Թվային սկանավորումն ու տեղում պատրաստվող կերամիկական պսակը թույլ են տալիս ստանալ վերականգնում մեկ այցի ընթացքում։",
+        "price": "$1,100-ից",
+        "duration": "2 ժամ",
+        "benefits": [
+          "Բուժում մեկ այցով",
+          "Թվային ճշգրտություն",
+          "Մետաղազուրկ կերամիկա",
+          "Ժամանակավոր պսակների կարիք չկա"
+        ],
+        "intro": "Մեկօրյա պսակները նախատեսված են այն դեպքերի համար, երբ անհրաժեշտ է արագ և ճշգրիտ վերականգնում՝ առանց մի քանի այցելության։",
+        "h2Title": "Մեկ այցով պսակի վերականգնում",
+        "h2Description": "Թվային տեխնոլոգիաները թույլ են տալիս նույն այցի ընթացքում պատրաստել և տեղադրել կերամիկական պսակը։",
+        "processTitle": "Ինչպես է կազմակերպվում այցը",
+        "process": [
+          "Ատամի նախապատրաստում և թվային սկանավորում դասական կաղապարի փոխարեն։",
+          "Պսակի նախագծում և պատրաստում կլինիկայում՝ թվային մոդելի հիման վրա։",
+          "Փորձում, ճշգրտում և վերջնական ֆիքսում նույն օրը։"
+        ],
+        "candidatesTitle": "Ավելի հարմար է",
+        "candidates": [
+          "Կոտրվածքի, կարիեսի կամ արմատախողովակային բուժումից հետո պսակ պահանջող ատամների համար։",
+          "Նրանց համար, ովքեր ուզում են ավելի արագ վերականգնողական գործընթաց։",
+          "Մետաղազուրկ և ճշգրիտ կերամիկական տարբերակ նախընտրողների համար։"
+        ]
+      },
+      "rootCanalTreatment": {
+        "title": "Արմատախողովակային բուժում",
+        "tagline": "Պահպանեք բնական ատամը",
+        "desc": "Ժամանակակից էնդոդոնտիկ բուժում՝ վարակված հյուսվածքը հեռացնելու և ատամը պահպանելու համար։",
+        "price": "$700-ից",
+        "duration": "60–90 րոպե",
+        "benefits": [
+          "Պահպանում է բնական ատամը",
+          "Հարմարավետ բուժում",
+          "Ժամանակակից տեխնիկա",
+          "Բարձր հաջողություն"
+        ],
+        "intro": "Արմատախողովակային բուժումը կիրառվում է, երբ վարակը կամ բորբոքումը հասել է ատամի ներսի հատվածներին։",
+        "h2Title": "Երբ է խորհուրդ տրվում բուժումը",
+        "h2Description": "Բուժումը հաճախ անհրաժեշտ է խոր կարիեսի, վնասվածքի, ցավի կամ ներսի վարակի դեպքում։",
+        "processTitle": "Ինչպես է կատարվում բուժումը",
+        "process": [
+          "Կատարվում է ախտորոշում և պատկերային հետազոտություն։",
+          "Տեղային անզգայացմամբ մաքրվում և մշակվում են արմատախողովակները։",
+          "Ավարտին խողովակները փակվում են և պլանավորվում է վերջնական վերականգնումը։"
+        ],
+        "candidatesTitle": "Տարածված նշաններ",
+        "candidates": [
+          "Շարունակական ցավ, ճնշման զգացողություն կամ երկարատև զգայունություն։",
+          "Խոր կարիես կամ ներսի վարակ։",
+          "Դեպքեր, երբ ատամը հնարավոր է պահպանել հեռացման փոխարեն։"
+        ]
+      },
+      "invisalign": {
+        "title": "Invisalign թափանցիկ կապաններ",
+        "tagline": "Ատամների ուղղում աննկատ ձևով",
+        "desc": "Թափանցիկ, հանվող կապաններ՝ ատամների շարքը շտկելու և կծվածքի որոշ խնդիրներ կարգավորելու համար։",
+        "price": "$3,200-ից",
+        "duration": "6–24 ամիս",
+        "benefits": [
+          "Գրեթե աննկատ են",
+          "Հանվում են սնվելու ժամանակ",
+          "Թվային նախնական պատկերացում",
+          "Սննդային սահմանափակումներ չկան"
+        ],
+        "intro": "Invisalign-ը նախատեսված է նրանց համար, ովքեր ցանկանում են ուղղել ատամները՝ խուսափելով ֆիքսված բրեկետներից։",
+        "h2Title": "Ինչի վրա է կենտրոնանում Invisalign-ը",
+        "h2Description": "Թափանցիկ կապանները օգնում են շտկել խտացումը, բացվածքները և որոշ կծվածքային խնդիրներ՝ հարմար առօրյայով։",
+        "processTitle": "Բուժման պլանը ներառում է",
+        "process": [
+          "Թվային սկանավորում և օրթոդոնտիկ գնահատում։",
+          "Շարժման փուլային պլան՝ ըստ ցանկալի արդյունքի։",
+          "Պարբերական վերահսկում և անհրաժեշտության դեպքում ճշգրտումներ։"
+        ],
+        "candidatesTitle": "Հաճախ հարմար է",
+        "candidates": [
+          "Մեծահասակների և դեռահասների համար, ովքեր ուզում են ավելի աննկատ տարբերակ։",
+          "Թեթևից միջին խտացման կամ բացվածքների դեպքում։",
+          "Նրանց համար, ովքեր պատրաստ են կապանները կրել կանոնավոր կերպով։"
+        ]
+      },
+      "ceramicBraces": {
+        "title": "Կերամիկական բրեկետներ",
+        "tagline": "Արդյունավետ և ավելի նուրբ տեսքով ուղղում",
+        "desc": "Կերամիկական բրեկետները ապահովում են վստահելի վերահսկում ավելի բարդ օրթոդոնտիկ դեպքերում՝ ավելի մեղմ տեսքով։",
+        "price": "$2,800-ից",
+        "duration": "12–24 ամիս",
+        "benefits": [
+          "Ատամի գույնին մոտ բրեկետներ",
+          "Հարմար բարդ դեպքերի համար",
+          "Մեծահասակների և դեռահասների համար",
+          "Ճշգրիտ շտկում"
+        ],
+        "intro": "Կերամիկական բրեկետները համատեղում են ֆիքսված օրթոդոնտիկ համակարգի արդյունավետությունը և ավելի նրբին տեսքը։",
+        "h2Title": "Ինչու են ընտրում կերամիկական բրեկետները",
+        "h2Description": "Դրանք հարմար են այն դեպքերի համար, երբ անհրաժեշտ է ամբողջական օրթոդոնտիկ շտկում՝ ավելի զուսպ արտաքինով։",
+        "processTitle": "Ինչպես է ընթանում բուժումը",
+        "process": [
+          "Կատարվում է օրթոդոնտիկ գնահատում և բուժման պլանավորում։",
+          "Տեղադրվում են կերամիկական բրեկետները և սահմանվում են վերահսկիչ այցերը։",
+          "Բուժման ողջ ընթացքում հետևվում է շարժին մինչև վերջնական արդյունք։"
+        ],
+        "candidatesTitle": "Հաճախ ընտրում են",
+        "candidates": [
+          "Մեծահասակներն ու դեռահասները, ովքեր կարիք ունեն ֆիքսված օրթոդոնտիկ բուժման։",
+          "Միջինից բարդ կծվածքային կամ շարային խնդիրներ ունեցող պացիենտները։",
+          "Դեպքերը, որտեղ կապանները բավարար վերահսկում չեն ապահովում։"
+        ]
+      },
+      "periodontalTreatment": {
+        "title": "Պերիոդոնտալ բուժում",
+        "tagline": "Լնդերի հիվանդությունների նպատակային բուժում",
+        "desc": "Մասնագիտական խնամք լնդերի բորբոքման, նահանջի և պերիոդոնտալ խնդիրների վերահսկման համար։",
+        "price": "$450-ից",
+        "duration": "Ըստ փուլի",
+        "benefits": [
+          "Հարմար է լնդերի տարբեր փուլերի խնդիրների համար",
+          "Կան ժամանակակից բուժման տարբերակներ",
+          "Հասանելի է շարունակական հսկողություն",
+          "Ներառում է պահպանում"
+        ],
+        "intro": "Պերիոդոնտալ բուժումը վերահսկում է լնդերի բորբոքումը, նահանջն ու ոսկրային կորուստը՝ նպատակ ունենալով պահպանել հենակառույցները։",
+        "h2Title": "Ինչպես է վերահսկվում լնդերի հիվանդությունը",
+        "h2Description": "Բուժման տեսակը որոշվում է հիվանդության փուլով, գրպանների խորությամբ և հյուսվածքների արձագանքով։",
+        "processTitle": "Բուժումը կարող է ներառել",
+        "process": [
+          "Պերիոդոնտալ մանրամասն զննում և գնահատում։",
+          "Խորը մաքրում կամ նպատակային մասնագիտական միջամտություն։",
+          "Հետագա հսկողության և պահպանումների պլանավորում։"
+        ],
+        "candidatesTitle": "Մտածեք բուժման մասին, եթե ունեք",
+        "candidates": [
+          "Լնդերի արյունահոսություն, տհաճ հոտ կամ ցավոտություն։",
+          "Ախտորոշված պերիոդոնտալ հիվանդություն կամ խոր գրպաններ։",
+          "Լնդերի նահանջ կամ հենակառույցների կորուստ։"
+        ]
+      },
+      "wisdomToothExtraction": {
+        "title": "Իմաստության ատամի հեռացում",
+        "tagline": "Անվտանգ և հարմարավետ հեռացում",
+        "desc": "Խնդրահարույց կամ ներսում մնացած իմաստության ատամների հեռացում՝ հստակ պլանավորմամբ և հետվիրահատական խնամքով։",
+        "price": "$300-ից / ատամ",
+        "duration": "45–90 րոպե",
+        "benefits": [
+          "Հնարավոր է սեդացիա",
+          "Կատարվում է նույն օրը",
+          "Կարճ վերականգնում",
+          "Մանրամասն հետվիրահատական ցուցումներ"
+        ],
+        "intro": "Հեռացումը հաճախ խորհուրդ է տրվում, երբ իմաստության ատամը ցավ է առաջացնում, բորբոքվում է կամ ազդում է հարևան ատամների վրա։",
+        "h2Title": "Երբ է հեռացումը նպատակահարմար",
+        "h2Description": "Մասամբ ծկված կամ սխալ դիրքավորված իմաստության ատամները կարող են ազդել լնդերի և հարևան ատամների առողջության վրա։",
+        "processTitle": "Ինչ է ներառում միջամտությունը",
+        "process": [
+          "Կատարվում է զննում և պատկերային հետազոտություն՝ բարդությունը գնահատելու համար։",
+          "Հեռացումը կատարվում է տեղային անզգայացմամբ, անհրաժեշտության դեպքում նաև սեդացիայով։",
+          "Տրվում են վերականգնման և խնամքի հստակ ցուցումներ։"
+        ],
+        "candidatesTitle": "Տարածված պատճառներ",
+        "candidates": [
+          "Ցավ, այտուց, բորբոքում կամ սննդի կուտակում իմաստության ատամների շրջանում։",
+          "Ներսում մնացած ատամներ, որոնք ազդում են կողքի մոլյարների վրա։",
+          "Օրթոդոնտիկ կամ կանխարգելիչ ցուցումներ ըստ բժշկական գնահատման։"
+        ]
+      },
+      "pediatricDentistry": {
+        "title": "Մանկական ստոմատոլոգիա",
+        "tagline": "Նուրբ խնամք փոքրիկ ժպիտների համար",
+        "desc": "Երեխաների համար հարմարեցված կանխարգելիչ և բուժական խնամք՝ առողջ սովորություններ ձևավորելու նպատակով։",
+        "price": "$60-ից",
+        "duration": "30–60 րոպե",
+        "benefits": [
+          "Ընդունվում են 1+ տարեկանից",
+          "Վախը նվազեցնող մոտեցում",
+          "Կանխարգելիչ պաշտպանություն",
+          "Վաղ օրթոդոնտիկ հետևում"
+        ],
+        "intro": "Մանկական ստոմատոլոգիան կենտրոնանում է կանխարգելման, առողջ սովորությունների և երեխայի համար դրական առաջին փորձառության վրա։",
+        "h2Title": "Ինչու են վաղ այցերը կարևոր",
+        "h2Description": "Կանոնավոր մանկական այցերը նպաստում են առողջ զարգացմանը, կարիեսի վաղ կանխարգելմանը և կծվածքի վերահսկմանը։",
+        "processTitle": "Ինչ կարող են սպասել ընտանիքները",
+        "process": [
+          "Տարիքին և հարմարավետությանը համապատասխան նուրբ զննում։",
+          "Մաքրում, ֆտոր և անհրաժեշտության դեպքում կանխարգելիչ առաջարկություններ։",
+          "Խորհուրդներ ծնողների համար՝ հիգիենայի, սննդակարգի և սովորությունների վերաբերյալ։"
+        ],
+        "candidatesTitle": "Նախատեսված է",
+        "candidates": [
+          "Առաջին այցից մինչև դեռահասություն գտնվող երեխաների համար։",
+          "Ընտանիքների համար, ովքեր ցանկանում են կանոնավոր կանխարգելիչ վերահսկում։",
+          "Երեխաների համար, ովքեր ավելի նուրբ և վստահություն ձևավորող մոտեցման կարիք ունեն։"
+        ]
+      }
     }
   }
 }

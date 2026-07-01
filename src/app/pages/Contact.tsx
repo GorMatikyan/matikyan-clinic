@@ -18,12 +18,12 @@ export function Contact() {
 
   const serviceOptions = ["implants", "ortho", "whitening", "veneers", "rootCanal", "perio", "checkup", "pediatric", "cosmetic", "other"] as const;
   const doctorOptions = [
-    { value: "Dr. Anna Kovalenko", label: "Dr. Anna Kovalenko – Implantology" },
-    { value: "Dr. Marcus Reid", label: "Dr. Marcus Reid – Orthodontics" },
-    { value: "Dr. Sofia Marchetti", label: "Dr. Sofia Marchetti – Cosmetic" },
-    { value: "Dr. Ethan Brooks", label: "Dr. Ethan Brooks – Periodontics" },
-    { value: "Dr. Nadia Okonkwo", label: "Dr. Nadia Okonkwo – Endodontics" },
-    { value: "Dr. Liam Chen", label: "Dr. Liam Chen – Pediatric" },
+    { value: "annaKovalenko", nameKey: "annaKovalenko", specialtyKey: "implantology" },
+    { value: "marcusReid", nameKey: "marcusReid", specialtyKey: "orthodontics" },
+    { value: "sofiaMarchetti", nameKey: "sofiaMarchetti", specialtyKey: "cosmetic" },
+    { value: "ethanBrooks", nameKey: "ethanBrooks", specialtyKey: "periodontics" },
+    { value: "nadiaOkonkwo", nameKey: "nadiaOkonkwo", specialtyKey: "endodontics" },
+    { value: "liamChen", nameKey: "liamChen", specialtyKey: "pediatric" },
   ];
 
   return (
@@ -109,7 +109,11 @@ export function Contact() {
                       <select name="doctor" value={form.doctor} onChange={handleChange}
                         className="w-full bg-[#F7FAFC] border border-[#0F1932]/10 rounded-xl px-4 py-3 text-sm text-[#0F1932] focus:outline-none focus:border-[#B5C7EB] transition-colors appearance-none">
                         <option value="">{t("contact.form.doctorPlaceholder")}</option>
-                        {doctorOptions.map((d) => <option key={d.value} value={d.value}>{d.label}</option>)}
+                        {doctorOptions.map((d) => (
+                          <option key={d.value} value={d.value}>
+                            {t(`doctors.items.${d.nameKey}.name`)} - {t(`doctors.filter.${d.specialtyKey}`)}
+                          </option>
+                        ))}
                         <option value="none">{t("contact.form.noPreference")}</option>
                       </select>
                     </div>
@@ -157,7 +161,7 @@ export function Contact() {
                     <div>
                       <div className="text-white/50 text-xs mb-0.5">{t(labelKey)}</div>
                       {hrefKey ? (
-                        <a href={hrefKey} className="text-sm text-white hover:text-[#B5C7EB] transition-colors whitespace-pre-line">{t(contentKey)}</a>
+                        <a href={hrefKey} aria-label={t(labelKey)} className="text-sm text-white hover:text-[#B5C7EB] transition-colors whitespace-pre-line">{t(contentKey)}</a>
                       ) : (
                         <span className="text-sm text-white/80 whitespace-pre-line">{t(contentKey)}</span>
                       )}
@@ -192,7 +196,7 @@ export function Contact() {
                 {t("contact.emergency.title")}
               </div>
               <p className="text-[#0F1932]/70 text-sm mb-4">{t("contact.emergency.desc")}</p>
-              <a href="tel:+18005551234" className="inline-flex items-center gap-2 px-5 py-3 bg-[#0F1932] text-white rounded-xl text-sm hover:bg-[#0F1932]/90 transition-colors" style={{ fontWeight: 600 }}>
+              <a href="tel:+18005551234" aria-label={t("contact.emergency.callAria")} className="inline-flex items-center gap-2 px-5 py-3 bg-[#0F1932] text-white rounded-xl text-sm hover:bg-[#0F1932]/90 transition-colors" style={{ fontWeight: 600 }}>
                 <Phone className="w-4 h-4" />
                 {t("contact.emergency.button")}
               </a>

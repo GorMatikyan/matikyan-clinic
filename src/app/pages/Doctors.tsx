@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { NavLink } from "react-router";
 import { ArrowRight, Star, GraduationCap, Stethoscope } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useSanityData } from "../../hooks/useSanityData";
 import { DOCTORS_QUERY } from "../../lib/queries";
 import type { SanityDoctor } from "../../lib/sanityTypes";
+import { LocalizedNavLink } from "../routing";
 
-const specialties = ["All", "Implantology", "Orthodontics", "Cosmetic", "Periodontics", "Endodontics", "Pediatric"];
+const specialtyKeys = ["all", "implantology", "orthodontics", "cosmetic", "periodontics", "endodontics", "pediatric"] as const;
 
 const doctors = [
   {
@@ -50,8 +50,34 @@ const doctors = [
 export function Doctors() {
   const { t } = useTranslation();
   const { data: doctorList } = useSanityData<SanityDoctor[]>(DOCTORS_QUERY, doctors);
-  const [activeSpecialty, setActiveSpecialty] = useState("All");
-  const filtered = activeSpecialty === "All" ? doctorList : doctorList.filter((d) => d.specialty === activeSpecialty);
+  const [activeSpecialty, setActiveSpecialty] = useState<(typeof specialtyKeys)[number]>("all");
+
+  const localizedDoctors = doctorList.map((doctor) => {
+    const doctorKey = {
+      "Dr. Anna Kovalenko": "annaKovalenko",
+      "Dr. Marcus Reid": "marcusReid",
+      "Dr. Sofia Marchetti": "sofiaMarchetti",
+      "Dr. Ethan Brooks": "ethanBrooks",
+      "Dr. Nadia Okonkwo": "nadiaOkonkwo",
+      "Dr. Liam Chen": "liamChen",
+    }[doctor.name];
+
+    if (!doctorKey) {
+      return doctor;
+    }
+
+    return {
+      ...doctor,
+      name: t(`doctors.items.${doctorKey}.name`),
+      title: t(`doctors.items.${doctorKey}.title`),
+      specialty: t(`doctors.items.${doctorKey}.specialty`),
+      experience: t(`doctors.items.${doctorKey}.experience`),
+      education: t(`doctors.items.${doctorKey}.education`),
+      desc: t(`doctors.items.${doctorKey}.desc`),
+    };
+  });
+
+  const filtered = activeSpecialty === "all" ? localizedDoctors : localizedDoctors.filter((d) => d.specialty === t(`doctors.filter.${activeSpecialty}`));
 
   return (
     <div>
@@ -73,18 +99,18 @@ export function Doctors() {
       {/* Filter */}
       <section className="py-6 bg-[#0F1932] border-t border-white/8 sticky top-18 z-30">
         <div className="max-w-7xl mx-auto px-6 flex flex-wrap gap-2 justify-center">
-          {specialties.map((s) => (
+          {specialtyKeys.map((specialtyKey) => (
             <button
-              key={s}
-              onClick={() => setActiveSpecialty(s)}
+              key={specialtyKey}
+              onClick={() => setActiveSpecialty(specialtyKey)}
               className={`px-5 py-2 rounded-full text-sm transition-colors ${
-                activeSpecialty === s
+                activeSpecialty === specialtyKey
                   ? "bg-[#B5C7EB] text-[#0F1932]"
                   : "bg-white/8 border border-white/10 text-white/65 hover:bg-[#B5C7EB]/20 hover:text-[#B5C7EB]"
               }`}
-              style={{ fontWeight: activeSpecialty === s ? 600 : 400 }}
+              style={{ fontWeight: activeSpecialty === specialtyKey ? 600 : 400 }}
             >
-              {s}
+              {t(`doctors.filter.${specialtyKey}`)}
             </button>
           ))}
         </div>
@@ -93,13 +119,21 @@ export function Doctors() {
       {/* Doctors grid */}
       <section className="py-16 bg-[#F7FAFC]">
         <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-3xl mb-10">
+            <h2 className="text-[#0F1932] mb-3" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.7rem, 3vw, 2.4rem)", fontWeight: 800 }}>
+              {t("doctors.intro.title")}
+            </h2>
+            <p className="text-[#5B6475] leading-relaxed">
+              {t("doctors.intro.desc")}
+            </p>
+          </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
             {filtered.map((doc) => (
               <div key={doc.name} className="group bg-white rounded-2xl overflow-hidden border border-[#0F1932]/8 hover:shadow-xl hover:border-[#B5C7EB]/40 transition-all duration-300">
                 <div className="relative overflow-hidden bg-[#eef1f8] h-64">
                   <img
                     src={doc.photo}
-                    alt={doc.name}
+                    alt={t("doctors.card.photoAlt", { name: doc.name })}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Sage specialty badge */}
@@ -134,13 +168,14 @@ export function Doctors() {
 
                   <p className="text-[#5B6475] text-sm leading-relaxed mb-5">{doc.desc}</p>
 
-                  <NavLink
+                  <LocalizedNavLink
                     to="/contact"
+                    aria-label={t("doctors.card.bookDoctor", { name: doc.name })}
                     className="w-full flex items-center justify-center gap-2 py-2.5 bg-[#0F1932] text-white rounded-xl text-sm hover:bg-[#B5C7EB] hover:text-[#0F1932] transition-colors"
                     style={{ fontWeight: 500 }}
                   >
                     {t("doctors.card.bookAppointment")} <ArrowRight className="w-4 h-4" />
-                  </NavLink>
+                  </LocalizedNavLink>
                 </div>
               </div>
             ))}

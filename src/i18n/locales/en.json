@@ -8,9 +8,19 @@
     "blog": "Blog",
     "contact": "Contact",
     "bookAppointment": "Book Appointment",
-    "phone": "+1 800 555 1234"
+    "phone": "+1 800 555 1234",
+    "logoAlt": "Matikyan Dental Clinic",
+    "toggleMenu": "Toggle menu",
+    "languageNames": {
+      "en": "English",
+      "hy": "Armenian",
+      "ru": "Russian"
+    },
+    "switchLanguage": "Switch language to {{language}}",
+    "callClinic": "Call the clinic"
   },
   "footer": {
+    "logoAlt": "Matikyan Dental Clinic",
     "description": "Modern dental care with a personal touch. Our team of specialists is dedicated to your smile and long-term oral health.",
     "pages": "Pages",
     "ourDoctors": "Our Doctors",
@@ -33,7 +43,10 @@
     "hours3": "Sun: Closed",
     "copyright": "© 2026 Matikyan Stomatology Center. All rights reserved.",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "about": "About",
+    "phoneLinkAria": "Call the clinic",
+    "emailLinkAria": "Email the clinic"
   },
   "home": {
     "stats": {
@@ -48,26 +61,57 @@
       "viewAll": "All Services",
       "learnMore": "Learn more",
       "items": {
-        "implants": { "title": "Dental Implants", "desc": "Permanent, natural-looking tooth replacements using titanium implants." },
-        "whitening": { "title": "Teeth Whitening", "desc": "Professional whitening treatments that brighten your smile up to 8 shades." },
-        "ortho": { "title": "Orthodontics", "desc": "Braces and clear aligners for perfectly aligned teeth at any age." },
-        "veneers": { "title": "Cosmetic Veneers", "desc": "Ultra-thin porcelain veneers for a flawless, Hollywood-worthy smile." },
-        "rootCanal": { "title": "Root Canal", "desc": "Pain-free endodontic treatment to save your natural tooth." },
-        "pediatric": { "title": "Pediatric Dentistry", "desc": "Gentle, friendly dental care tailored for children of all ages." }
+        "implants": {
+          "title": "Dental Implants",
+          "desc": "Permanent, natural-looking tooth replacements using titanium implants."
+        },
+        "whitening": {
+          "title": "Teeth Whitening",
+          "desc": "Professional whitening treatments that brighten your smile up to 8 shades."
+        },
+        "ortho": {
+          "title": "Orthodontics",
+          "desc": "Braces and clear aligners for perfectly aligned teeth at any age."
+        },
+        "veneers": {
+          "title": "Cosmetic Veneers",
+          "desc": "Ultra-thin porcelain veneers for a flawless, Hollywood-worthy smile."
+        },
+        "rootCanal": {
+          "title": "Root Canal",
+          "desc": "Pain-free endodontic treatment to save your natural tooth."
+        },
+        "pediatric": {
+          "title": "Pediatric Dentistry",
+          "desc": "Gentle, friendly dental care tailored for children of all ages."
+        }
       }
     },
     "whyUs": {
       "badge": "Why Choose Us",
       "title": "Where Advanced Technology Meets Gentle Care",
       "desc": "Our clinic combines cutting-edge dental technology with a warm, patient-first approach. Every treatment is personalized to your unique needs and comfort level.",
+      "imageAlt": "Modern dental clinic interior",
       "learnMore": "Learn About Us",
       "rating": "Rated 5.0 on Google",
       "ratingBase": "Based on 1,240 reviews",
       "features": {
-        "painFree": { "title": "Pain-Free Treatments", "desc": "Advanced anesthesia for a comfortable experience." },
-        "certified": { "title": "Certified Specialists", "desc": "Board-certified dentists with international training." },
-        "family": { "title": "Family Friendly", "desc": "Welcoming environment for patients of all ages." },
-        "hours": { "title": "Flexible Hours", "desc": "Evening and weekend appointments available." }
+        "painFree": {
+          "title": "Pain-Free Treatments",
+          "desc": "Advanced anesthesia for a comfortable experience."
+        },
+        "certified": {
+          "title": "Certified Specialists",
+          "desc": "Board-certified dentists with international training."
+        },
+        "family": {
+          "title": "Family Friendly",
+          "desc": "Welcoming environment for patients of all ages."
+        },
+        "hours": {
+          "title": "Flexible Hours",
+          "desc": "Evening and weekend appointments available."
+        }
       }
     },
     "testimonials": {
@@ -75,10 +119,23 @@
       "title": "What Our Patients Say",
       "readAll": "Read all reviews",
       "items": [
-        { "name": "Sarah Mitchell", "service": "Porcelain Veneers", "text": "Absolutely incredible experience. Dr. Kovalenko transformed my smile with veneers and I couldn't be happier. The whole team was warm and professional." },
-        { "name": "James Thornton", "service": "Dental Implants", "text": "I was terrified of dental procedures but the team here made me feel completely at ease. My implants look and feel completely natural." },
-        { "name": "Elena Vasquez", "service": "Teeth Whitening", "text": "Best dental clinic I have ever visited. Modern equipment, kind staff, and results that exceeded my expectations. Highly recommended!" }
-      ]
+        {
+          "name": "Sarah Mitchell",
+          "service": "Porcelain Veneers",
+          "text": "Absolutely incredible experience. Dr. Kovalenko transformed my smile with veneers and I couldn't be happier. The whole team was warm and professional."
+        },
+        {
+          "name": "James Thornton",
+          "service": "Dental Implants",
+          "text": "I was terrified of dental procedures but the team here made me feel completely at ease. My implants look and feel completely natural."
+        },
+        {
+          "name": "Elena Vasquez",
+          "service": "Teeth Whitening",
+          "text": "Best dental clinic I have ever visited. Modern equipment, kind staff, and results that exceeded my expectations. Highly recommended!"
+        }
+      ],
+      "avatarAlt": "Photo of {{name}}"
     },
     "cta": {
       "title": "Ready for a Healthier, Brighter Smile?",
@@ -88,6 +145,9 @@
   },
   "slider": {
     "bookConsultation": "Book Free Consultation",
+    "previousSlide": "Previous slide",
+    "nextSlide": "Next slide",
+    "goToSlide": "Go to slide {{index}}",
     "slides": [
       {
         "tag": "Advanced Implantology",
@@ -119,8 +179,8 @@
     "hero": {
       "badge": "Our Story",
       "title": "Dedicated to Transforming Smiles Since 2012",
-      "desc1": "DentaCare was founded on a simple belief: that dental care should be as comfortable as it is effective. Over the past 12 years, we have grown into one of New York's most trusted stomatology centers, treating over 8,400 patients.",
-      "desc2": "Our clinic brings together a diverse team of specialists — from orthodontists and periodontists to cosmetic and pediatric dentists — all working under one roof to deliver seamless, comprehensive care.",
+      "desc1": "Matikyan Dental Clinic was built on a simple belief: dental care should feel as reassuring as it is effective. Over the years, our clinic has grown into a trusted center for comprehensive oral care and long-term patient relationships.",
+      "desc2": "Our team brings together implantology, orthodontics, restorative, periodontal, cosmetic, and pediatric care under one roof so every patient can receive coordinated treatment with clarity and comfort.",
       "stats": {
         "patients": "Patients",
         "specialists": "Specialists",
@@ -128,30 +188,68 @@
       },
       "meetTeam": "Meet Our Team"
     },
+    "images": {
+      "clinicAlt": "Dental clinic",
+      "consultationAlt": "Doctor consulting a patient",
+      "equipmentAlt": "Modern dental equipment",
+      "interiorAlt": "Clinic interior"
+    },
     "values": {
       "badge": "Our Values",
       "title": "The Principles That Guide Us",
       "items": [
-        { "title": "Patient-First", "desc": "Every decision is guided by what's best for the patient's health and comfort." },
-        { "title": "Clinical Excellence", "desc": "Continuous education and adoption of the latest evidence-based treatments." },
-        { "title": "Inclusivity", "desc": "Welcoming patients of all ages, backgrounds, and dental anxiety levels." },
-        { "title": "Transparency", "desc": "Clear communication, honest pricing, and no surprise fees — ever." }
+        {
+          "title": "Patient-First",
+          "desc": "Every decision is guided by what best supports the patient's comfort, health, and confidence."
+        },
+        {
+          "title": "Clinical Excellence",
+          "desc": "We invest in continuing education, careful planning, and evidence-based treatment at every stage."
+        },
+        {
+          "title": "Inclusivity",
+          "desc": "We welcome patients of different ages, needs, and comfort levels with respectful, individualized care."
+        },
+        {
+          "title": "Transparency",
+          "desc": "We explain treatment options clearly, discuss expectations honestly, and keep communication straightforward."
+        }
       ]
     },
     "milestones": {
       "badge": "Our Journey",
       "title": "Key Milestones",
       "items": [
-        { "year": "2012", "title": "Founded", "desc": "DentaCare opened its doors with a mission to redefine the dental experience in New York." },
-        { "year": "2015", "title": "First Expansion", "desc": "Added a dedicated implantology suite and orthodontics department." },
-        { "year": "2018", "title": "Digital Dentistry", "desc": "Introduced 3D scanning, digital X-rays, and CAD/CAM same-day crowns." },
-        { "year": "2021", "title": "Award of Excellence", "desc": "Recognized as Top Dental Practice by New York Health Magazine." },
-        { "year": "2024", "title": "18 Specialists", "desc": "Grew to a full-service team of 18 board-certified dental specialists." }
+        {
+          "year": "2012",
+          "title": "Clinic Founded",
+          "desc": "Matikyan Dental Clinic opened with a focus on modern diagnostics and patient-centered care."
+        },
+        {
+          "year": "2015",
+          "title": "Expanded Services",
+          "desc": "The clinic broadened into implantology and orthodontics to provide more complete treatment planning."
+        },
+        {
+          "year": "2018",
+          "title": "Digital Workflow",
+          "desc": "Digital imaging and advanced restorative tools became part of everyday clinical workflow."
+        },
+        {
+          "year": "2021",
+          "title": "Advanced Case Growth",
+          "desc": "The team took on more complex multidisciplinary cases with stronger internal coordination."
+        },
+        {
+          "year": "2024",
+          "title": "Specialist Team",
+          "desc": "Our specialist team continued to grow, supporting a broader range of patient needs in one clinic."
+        }
       ]
     },
     "cta": {
       "title": "Come Visit Our Clinic",
-      "desc": "Schedule a tour or book a consultation — we would love to meet you.",
+      "desc": "Schedule a consultation and meet the team behind your treatment plan.",
       "button": "Get In Touch"
     }
   },
@@ -173,7 +271,10 @@
     "card": {
       "learnMore": "Learn more",
       "lessInfo": "Less info",
-      "book": "Book"
+      "book": "Book",
+      "imageAlt": "{{service}}",
+      "learnMoreAria": "Learn more about {{service}}",
+      "bookAria": "Book {{service}}"
     },
     "cta": {
       "title": "Not Sure Which Service You Need?",
@@ -187,11 +288,73 @@
       "title": "Meet Our Specialists",
       "desc": "Board-certified dentists bringing decades of combined expertise and genuine care for every patient's wellbeing."
     },
+    "intro": {
+      "title": "Meet the doctors behind every treatment plan",
+      "desc": "Explore the specialists who provide implant, orthodontic, cosmetic, restorative, periodontal, and pediatric dental care at Matikyan Dental Clinic."
+    },
     "filter": {
-      "all": "All"
+      "all": "All",
+      "implantology": "Implantology",
+      "orthodontics": "Orthodontics",
+      "cosmetic": "Cosmetic",
+      "periodontics": "Periodontics",
+      "endodontics": "Endodontics",
+      "pediatric": "Pediatric"
     },
     "card": {
-      "bookAppointment": "Book Appointment"
+      "bookAppointment": "Book Appointment",
+      "photoAlt": "Photo of {{name}}",
+      "bookDoctor": "Book an appointment with {{name}}"
+    },
+    "items": {
+      "annaKovalenko": {
+        "title": "Chief of Implantology",
+        "specialty": "Implantology",
+        "experience": "14 years",
+        "education": "Columbia University, New York",
+        "desc": "Leading expert in full-arch implant restorations and bone grafting with an impeccable record of patient outcomes.",
+        "name": "Dr. Anna Kovalenko"
+      },
+      "marcusReid": {
+        "title": "Senior Orthodontist",
+        "specialty": "Orthodontics",
+        "experience": "11 years",
+        "education": "NYU College of Dentistry",
+        "desc": "Specialist in Invisalign, ceramic braces, and accelerated orthodontics for adults and teenagers.",
+        "name": "Dr. Marcus Reid"
+      },
+      "sofiaMarchetti": {
+        "title": "Cosmetic Dentist",
+        "specialty": "Cosmetic",
+        "experience": "9 years",
+        "education": "University of Pennsylvania",
+        "desc": "Renowned for her artistic approach to smile design, veneers, composite bonding, and full smile makeovers.",
+        "name": "Dr. Sofia Marchetti"
+      },
+      "ethanBrooks": {
+        "title": "Periodontist",
+        "specialty": "Periodontics",
+        "experience": "13 years",
+        "education": "Harvard School of Dental Medicine",
+        "desc": "Expert in gum disease treatment, gum grafting, and regenerative periodontal therapy.",
+        "name": "Dr. Ethan Brooks"
+      },
+      "nadiaOkonkwo": {
+        "title": "Endodontist",
+        "specialty": "Endodontics",
+        "experience": "8 years",
+        "education": "Tufts University School of Dental Medicine",
+        "desc": "Pain-free root canal specialist using the latest rotary and laser-assisted endodontic techniques.",
+        "name": "Dr. Nadia Okonkwo"
+      },
+      "liamChen": {
+        "title": "Pediatric Dentist",
+        "specialty": "Pediatric",
+        "experience": "7 years",
+        "education": "Boston University, Goldman School",
+        "desc": "Focused on making children's dental visits friendly and fear-free, with an emphasis on early orthodontic guidance.",
+        "name": "Dr. Liam Chen"
+      }
     }
   },
   "reviews": {
@@ -200,18 +363,79 @@
       "title": "What Our Patients Say",
       "rating": "4.9 out of 5 — based on 1,240+ reviews"
     },
+    "intro": {
+      "title": "A closer look at patient satisfaction",
+      "desc": "These review summaries reflect how patients describe their communication, comfort, and treatment results across our major services."
+    },
     "stats": {
       "overallRating": "Overall Rating",
       "totalReviews": "Total Reviews",
       "recommend": "Recommend Us",
       "fiveStar": "5-Star Reviews"
-    }
+    },
+    "avatarAlt": "Photo of {{name}}",
+    "items": [
+      {
+        "name": "Sarah Mitchell",
+        "date": "May 2026",
+        "service": "Porcelain Veneers",
+        "text": "Absolutely incredible experience. Dr. Kovalenko transformed my smile with veneers and I couldn't be happier. The whole team was warm, professional, and made me feel at ease from the very first consultation."
+      },
+      {
+        "name": "James Thornton",
+        "date": "April 2026",
+        "service": "Dental Implants",
+        "text": "I was terrified of dental procedures but the team here made me feel completely at ease. My implants look and feel completely natural. The follow-up care was exceptional."
+      },
+      {
+        "name": "Elena Vasquez",
+        "date": "April 2026",
+        "service": "Teeth Whitening",
+        "text": "Best dental clinic I've ever visited. Modern equipment, kind staff, and results that exceeded my expectations. My teeth are 8 shades brighter!"
+      },
+      {
+        "name": "Michael O'Brien",
+        "date": "March 2026",
+        "service": "Invisalign",
+        "text": "Dr. Reid is an Invisalign wizard. 14 months of treatment and my teeth are perfectly straight. The digital scanning was a game changer: zero pain, zero surprises."
+      },
+      {
+        "name": "Priya Nair",
+        "date": "March 2026",
+        "service": "Smile Makeover",
+        "text": "I had a complete smile makeover with Dr. Marchetti. The results are so natural-looking. People keep complimenting my smile. Pure artistry."
+      },
+      {
+        "name": "David Kowalski",
+        "date": "February 2026",
+        "service": "Root Canal",
+        "text": "I know root canals have a bad reputation but Dr. Okonkwo made it completely painless. I barely felt a thing and was back to normal within 24 hours."
+      },
+      {
+        "name": "Lisa Park",
+        "date": "February 2026",
+        "service": "Pediatric Dentistry",
+        "text": "My 6-year-old used to cry at every dentist visit. After one appointment with Dr. Chen, she actually asks when she can go back. Remarkable."
+      },
+      {
+        "name": "Roberto Esposito",
+        "date": "January 2026",
+        "service": "Periodontal Treatment",
+        "text": "Dr. Brooks diagnosed and treated my gum disease with remarkable precision. My gums are healthier now than they've been in years."
+      },
+      {
+        "name": "Amanda Foster",
+        "date": "January 2026",
+        "service": "General Check-up",
+        "text": "Very thorough annual check-up. Digital X-rays and intraoral camera meant I could see exactly what the dentist was talking about. Quality of care is excellent."
+      }
+    ]
   },
   "faq": {
     "header": {
       "badge": "FAQ",
       "title": "Frequently Asked Questions",
-      "desc": "Everything you want to know about our services, treatments, and what to expect at DentaCare."
+      "desc": "Everything you want to know about our services, treatments, and what to expect at Matikyan Dental Clinic."
     },
     "categories": {
       "general": "General",
@@ -219,9 +443,67 @@
       "invisalign": "Invisalign & Braces",
       "payment": "Payment & Insurance"
     },
+    "items": {
+      "general": [
+        {
+          "q": "How often should I visit the dentist?",
+          "a": "We recommend a routine check-up and professional cleaning every 6 months. Patients with gum disease, frequent cavities, or orthodontic appliances may need visits more often."
+        },
+        {
+          "q": "What should I bring to my first appointment?",
+          "a": "Please bring a photo ID, insurance information if applicable, recent dental X-rays if available, and a list of current medications."
+        },
+        {
+          "q": "Do you accept walk-ins?",
+          "a": "We try to accommodate dental emergencies the same day. For planned treatment, booking ahead is the best way to secure your preferred time."
+        }
+      ],
+      "treatments": [
+        {
+          "q": "Is teeth whitening safe?",
+          "a": "Yes. Professional whitening is safe when it is carried out after an appropriate dental assessment and with materials suited to your teeth and gums."
+        },
+        {
+          "q": "How long do dental implants last?",
+          "a": "With proper care, implants can serve for many years. Long-term success depends on oral hygiene, bone support, bite control, and regular follow-up visits."
+        },
+        {
+          "q": "Are veneers reversible?",
+          "a": "Traditional porcelain veneers usually require some enamel preparation, so they are generally considered irreversible. We explain all conservative and restorative options during consultation."
+        },
+        {
+          "q": "How painful is a root canal?",
+          "a": "Modern root canal treatment is typically managed comfortably with effective anesthesia. Most patients describe it as far easier than they expected."
+        }
+      ],
+      "invisalign": [
+        {
+          "q": "Am I a candidate for Invisalign?",
+          "a": "Invisalign is often suitable for mild to moderate crowding, spacing, and selected bite issues. A clinical exam and digital assessment are the best way to confirm whether it fits your case."
+        },
+        {
+          "q": "How long does Invisalign treatment take?",
+          "a": "Treatment time depends on complexity, but many cases fall between 6 and 24 months. Your plan is based on the exact movements required."
+        }
+      ],
+      "payment": [
+        {
+          "q": "Do you accept dental insurance?",
+          "a": "Insurance and reimbursement conditions depend on your provider and treatment type. Our team can review the expected details with you before care begins."
+        },
+        {
+          "q": "Do you offer payment plans?",
+          "a": "For more complex treatment plans, available payment arrangements can be discussed with the clinic team in advance."
+        },
+        {
+          "q": "What is the cost of a consultation?",
+          "a": "Consultation costs depend on what is included in the visit, such as imaging or specialist assessment. We explain this clearly before scheduling."
+        }
+      ]
+    },
     "cta": {
       "title": "Still Have Questions?",
-      "desc": "Our patient care team is available Monday–Saturday to answer any questions you may have.",
+      "desc": "Our team is available to answer practical questions about visits, treatment planning, and next steps.",
       "button": "Contact Us"
     }
   },
@@ -229,7 +511,7 @@
     "header": {
       "badge": "Knowledge Hub",
       "title": "Dental Health Blog",
-      "desc": "Expert advice, treatment guides, and oral health tips from our specialist team."
+      "desc": "Expert advice, treatment guides, and oral health insights from our specialist team."
     },
     "filter": {
       "all": "All",
@@ -241,19 +523,72 @@
     },
     "featured": "Featured",
     "read": "Read",
+    "readAria": "Read article {{title}}",
     "readMore": "Read more",
+    "readMoreAria": "Read more about {{title}}",
     "minRead": "min read",
-    "empty": "No articles in this category yet. Check back soon!"
+    "coverAlt": "{{title}}",
+    "empty": "No articles in this category yet. Check back soon!",
+    "posts": [
+      {
+        "category": "Oral Health",
+        "title": "The right way to brush: a step-by-step guide from our hygienists",
+        "excerpt": "Most people brush every day, but technique makes a significant difference. Our hygiene team explains the small adjustments that matter most.",
+        "author": "Dr. Anna Kovalenko",
+        "date": "June 5, 2026",
+        "readTime": "5 min read"
+      },
+      {
+        "category": "Cosmetic",
+        "title": "Veneers vs. bonding: which smile upgrade is right for you?",
+        "excerpt": "Porcelain veneers and composite bonding can both improve smile aesthetics, but they differ in preparation, durability, and scope.",
+        "author": "Dr. Sofia Marchetti",
+        "date": "May 22, 2026",
+        "readTime": "7 min read"
+      },
+      {
+        "category": "Orthodontics",
+        "title": "Invisalign in 2026: what changed and what patients should know",
+        "excerpt": "Digital planning and aligner systems continue to evolve. We look at what matters clinically when considering Invisalign today.",
+        "author": "Dr. Marcus Reid",
+        "date": "May 10, 2026",
+        "readTime": "6 min read"
+      },
+      {
+        "category": "Nutrition",
+        "title": "10 foods that quietly damage enamel",
+        "excerpt": "Some foods and drinks can affect enamel more than patients expect. Understanding the patterns helps protect teeth long term.",
+        "author": "Dr. Ethan Brooks",
+        "date": "April 28, 2026",
+        "readTime": "4 min read"
+      },
+      {
+        "category": "Technology",
+        "title": "Same-day crowns: how CAD/CAM technology changes restorative care",
+        "excerpt": "Digital scanning and chairside fabrication allow selected crown cases to be completed more efficiently without sacrificing fit.",
+        "author": "Dr. Anna Kovalenko",
+        "date": "April 15, 2026",
+        "readTime": "5 min read"
+      },
+      {
+        "category": "Oral Health",
+        "title": "Understanding gum disease: stages, symptoms, and solutions",
+        "excerpt": "Gum disease often progresses quietly. Early recognition and timely care make a major difference to long-term oral stability.",
+        "author": "Dr. Ethan Brooks",
+        "date": "March 30, 2026",
+        "readTime": "8 min read"
+      }
+    ]
   },
   "contact": {
     "header": {
       "badge": "Get in Touch",
       "title": "Book Your Appointment",
-      "desc": "Free consultations available. Fill out the form below and we'll confirm within 2 hours."
+      "desc": "Consultations are available by appointment. Fill out the form below and our team will contact you to confirm the next available time."
     },
     "success": {
       "title": "Request Received!",
-      "desc": "Thank you, {{name}}! Our team will contact you within 2 business hours to confirm your appointment.",
+      "desc": "Thank you, {{name}}. Our team will contact you soon to confirm your appointment details.",
       "another": "Submit another request"
     },
     "form": {
@@ -275,7 +610,7 @@
       "message": "Message (optional)",
       "messagePlaceholder": "Tell us about your dental concerns or questions...",
       "submit": "Request Appointment",
-      "disclaimer": "By submitting this form you agree to our Privacy Policy. We never share your information.",
+      "disclaimer": "By submitting this form, you agree to be contacted about your appointment request.",
       "services": {
         "implants": "Dental Implants",
         "ortho": "Orthodontics / Invisalign",
@@ -304,8 +639,372 @@
     },
     "emergency": {
       "title": "Dental Emergency?",
-      "desc": "Same-day slots reserved for urgent cases.",
-      "button": "Call Now"
+      "desc": "Urgent cases can be discussed with our team as soon as possible.",
+      "button": "Call Now",
+      "callAria": "Call the clinic for urgent dental care"
+    }
+  },
+  "serviceDetail": {
+    "labels": {
+      "startingFee": "Starting fee",
+      "typicalDuration": "Typical duration",
+      "patientRating": "Patient rating",
+      "keyBenefits": "Key benefits"
+    },
+    "cta": {
+      "title": "Ready to discuss {{service}}?",
+      "desc": "Book a consultation to review your goals, clinical needs, and the most suitable treatment plan for your smile.",
+      "book": "Book a consultation",
+      "back": "Back to all services"
+    },
+    "imageAlt": "{{service}} treatment"
+  },
+  "serviceCatalog": {
+    "categories": {
+      "preventive": "Preventive",
+      "cosmetic": "Cosmetic",
+      "restorative": "Restorative",
+      "orthodontics": "Orthodontics",
+      "surgery": "Surgery",
+      "pediatric": "Pediatric"
+    },
+    "services": {
+      "dentalCleaningCheckup": {
+        "title": "Dental Cleaning & Check-up",
+        "tagline": "Foundation of a healthy smile",
+        "desc": "Professional teeth cleaning removes tartar and plaque that regular brushing cannot reach. The visit also includes an oral exam, digital imaging review, and gum health assessment.",
+        "price": "From $80",
+        "duration": "60 min",
+        "benefits": [
+          "Removes tartar and staining",
+          "Early cavity detection",
+          "Gum disease screening",
+          "Personalized oral hygiene advice"
+        ],
+        "intro": "Routine preventive visits help keep small issues from turning into complex treatment. At Matikyan Dental Clinic, a cleaning and check-up combines professional hygiene, a full exam, and practical guidance for daily care.",
+        "h2Title": "What to expect during your visit",
+        "h2Description": "Your appointment is designed to assess oral health, clean hard-to-reach buildup, and identify concerns early so treatment can stay conservative.",
+        "processTitle": "What the appointment includes",
+        "process": [
+          "A review of your current symptoms, oral hygiene habits, and dental history.",
+          "Professional cleaning to remove tartar, plaque, and superficial staining.",
+          "Clinical examination of teeth, gums, bite, and existing dental work."
+        ],
+        "candidatesTitle": "Who this service is for",
+        "candidates": [
+          "Patients due for routine preventive care.",
+          "Adults and teens who want a baseline oral health review.",
+          "Anyone noticing bleeding gums, staining, or sensitivity."
+        ]
+      },
+      "teethWhitening": {
+        "title": "Professional Teeth Whitening",
+        "tagline": "Up to 8 shades brighter in one visit",
+        "desc": "In-clinic whitening using a professional-grade gel and controlled light activation for visible, even brightening in a single appointment.",
+        "price": "From $350",
+        "duration": "90 min",
+        "benefits": [
+          "8+ shades lighter",
+          "Single visit treatment",
+          "Minimal sensitivity formula",
+          "Take-home maintenance kit included"
+        ],
+        "intro": "Professional whitening is one of the fastest ways to refresh a smile. Our treatment plan is built around your enamel condition, shade goals, and sensitivity history.",
+        "h2Title": "How whitening is planned",
+        "h2Description": "We evaluate the cause of discoloration first, then use a controlled in-office process to brighten teeth safely and evenly.",
+        "processTitle": "Typical whitening process",
+        "process": [
+          "Shade assessment and suitability check before treatment starts.",
+          "Gum protection and controlled application of professional whitening gel.",
+          "Post-treatment review with maintenance advice for longer-lasting results."
+        ],
+        "candidatesTitle": "Best suited for",
+        "candidates": [
+          "Patients with staining from coffee, tea, wine, or smoking.",
+          "Adults seeking a non-invasive cosmetic refresh.",
+          "Patients who want brighter teeth before weddings or events."
+        ]
+      },
+      "veneers": {
+        "title": "Porcelain Veneers",
+        "tagline": "The Hollywood smile, perfected",
+        "desc": "Ultra-thin porcelain shells crafted to improve color, shape, gaps, and chips while keeping the result balanced and natural-looking.",
+        "price": "From $900/tooth",
+        "duration": "2 appointments",
+        "benefits": [
+          "Natural-looking results",
+          "Stain-resistant porcelain",
+          "15–20 year lifespan",
+          "Custom color matching"
+        ],
+        "intro": "Porcelain veneers can reshape the visible smile line with a highly controlled cosmetic result. Treatment is planned around facial balance, tooth proportion, and a natural finish.",
+        "h2Title": "Why patients choose veneers",
+        "h2Description": "Veneers are commonly used to improve chipped edges, uneven spacing, stubborn discoloration, and shape irregularities in the front teeth.",
+        "processTitle": "How veneer treatment works",
+        "process": [
+          "Cosmetic consultation and smile planning to define the final look.",
+          "Preparation and impressions or digital records for laboratory fabrication.",
+          "Final fitting and bonding of custom porcelain veneers."
+        ],
+        "candidatesTitle": "Often recommended for",
+        "candidates": [
+          "Patients with front teeth affected by chips, spacing, or uneven form.",
+          "Adults seeking a longer-term cosmetic solution than whitening alone.",
+          "Patients willing to invest in custom cosmetic treatment planning."
+        ]
+      },
+      "compositeBonding": {
+        "title": "Composite Bonding",
+        "tagline": "Single-visit smile enhancement",
+        "desc": "Tooth-colored composite resin used to repair chips, close gaps, and refine tooth shape without extensive preparation.",
+        "price": "From $250/tooth",
+        "duration": "60–90 min",
+        "benefits": [
+          "No enamel removal",
+          "Same-day results",
+          "Reversible treatment",
+          "Seamlessly color-matched"
+        ],
+        "intro": "Composite bonding is a conservative cosmetic option for patients who want visible improvement without a laboratory-made restoration. It works especially well for small defects and same-day smile refinement.",
+        "h2Title": "When bonding works well",
+        "h2Description": "Bonding is often selected for modest cosmetic corrections where preserving natural tooth structure is a priority.",
+        "processTitle": "What happens during treatment",
+        "process": [
+          "Shade selection and planning of the desired contour changes.",
+          "Layering and sculpting of tooth-colored composite resin.",
+          "Finishing and polishing to blend the restoration with surrounding teeth."
+        ],
+        "candidatesTitle": "Common reasons to choose bonding",
+        "candidates": [
+          "Minor chips, uneven edges, and narrow gaps.",
+          "Patients who want a more affordable cosmetic option than veneers.",
+          "Patients looking for same-day cosmetic enhancement."
+        ]
+      },
+      "dentalImplants": {
+        "title": "Dental Implants",
+        "tagline": "Permanent tooth replacement",
+        "desc": "Titanium implants support stable, natural-looking restorations and help preserve bone structure after tooth loss.",
+        "price": "From $2,400",
+        "duration": "3–6 months",
+        "benefits": [
+          "Permanent solution",
+          "Preserves jawbone",
+          "No impact on adjacent teeth",
+          "Lifetime durability with care"
+        ],
+        "intro": "Dental implants replace missing teeth with a stable, long-term solution that supports both appearance and function. Planning focuses on bone support, bite stability, and the final prosthetic result.",
+        "h2Title": "Why implant planning matters",
+        "h2Description": "Successful implant treatment depends on diagnostics, surgical planning, and restoration design, not just implant placement alone.",
+        "processTitle": "Typical implant treatment stages",
+        "process": [
+          "Consultation with imaging to evaluate bone levels and restoration goals.",
+          "Implant placement with healing time based on the clinical case.",
+          "Final crown or prosthetic restoration after integration is complete."
+        ],
+        "candidatesTitle": "Often suitable for",
+        "candidates": [
+          "Patients missing one or more teeth.",
+          "Patients wanting a fixed alternative to removable solutions.",
+          "Cases where preserving adjacent healthy teeth is important."
+        ]
+      },
+      "sameDayCrowns": {
+        "title": "Same-Day Crowns (CEREC)",
+        "tagline": "Crown in a single appointment",
+        "desc": "Digital scanning and in-clinic milling make it possible to place a ceramic crown in one visit for selected restorative cases.",
+        "price": "From $1,100",
+        "duration": "2 hours",
+        "benefits": [
+          "Single-visit treatment",
+          "Digital precision fit",
+          "Metal-free ceramic",
+          "No temporary crowns"
+        ],
+        "intro": "Same-day crowns are designed for patients who need strength, fit, and efficiency without multiple restoration appointments. Digital design helps reduce delays while maintaining restorative precision.",
+        "h2Title": "Single-visit crown restoration",
+        "h2Description": "Digital scanning and in-house fabrication allow the tooth to be prepared, designed, and restored in a single clinical session.",
+        "processTitle": "How the appointment is structured",
+        "process": [
+          "Preparation of the tooth and digital scanning instead of traditional impressions.",
+          "In-house design and milling of the crown based on the digital model.",
+          "Try-in, adjustment, and final placement during the same visit."
+        ],
+        "candidatesTitle": "Best for patients who need",
+        "candidates": [
+          "A crown after fracture, decay, or root canal treatment.",
+          "A faster restorative timeline with fewer appointments.",
+          "A metal-free ceramic restoration with digital precision."
+        ]
+      },
+      "rootCanalTreatment": {
+        "title": "Root Canal Treatment",
+        "tagline": "Save your natural tooth, pain-free",
+        "desc": "Modern endodontic treatment removes infection from inside the tooth and helps preserve your natural tooth comfortably.",
+        "price": "From $700",
+        "duration": "60–90 min",
+        "benefits": [
+          "Saves natural tooth",
+          "Pain-free procedure",
+          "Laser-assisted option",
+          "High success rate"
+        ],
+        "intro": "Root canal treatment is used to save a tooth affected by deep infection or inflammation. The goal is to remove the diseased pulp, seal the canals, and keep the natural tooth functional.",
+        "h2Title": "When a root canal is recommended",
+        "h2Description": "Treatment is commonly advised when pain, deep decay, trauma, or infection has affected the inner nerve space of the tooth.",
+        "processTitle": "How treatment is performed",
+        "process": [
+          "Diagnosis and imaging to confirm the affected tooth and canal anatomy.",
+          "Cleaning and shaping of the root canals under local anesthesia.",
+          "Sealing of the canals and planning for final restoration if needed."
+        ],
+        "candidatesTitle": "Common signs and situations",
+        "candidates": [
+          "Persistent toothache, pressure pain, or prolonged sensitivity.",
+          "Deep decay or infection close to the tooth nerve.",
+          "Teeth that can be preserved instead of extracted."
+        ]
+      },
+      "invisalign": {
+        "title": "Invisalign Clear Aligners",
+        "tagline": "Straighten teeth discreetly",
+        "desc": "Clear removable aligners designed with digital planning for discreet correction of crowding, spacing, and selected bite issues.",
+        "price": "From $3,200",
+        "duration": "6–24 months",
+        "benefits": [
+          "Virtually invisible",
+          "Removable for eating",
+          "3D result preview",
+          "No dietary restrictions"
+        ],
+        "intro": "Invisalign offers a discreet orthodontic option for patients who want straighter teeth without fixed brackets. Treatment planning is guided by digital records and staged aligner movement.",
+        "h2Title": "What Invisalign treatment focuses on",
+        "h2Description": "Clear aligner therapy is designed to correct crowding, spacing, and selected bite concerns while fitting more easily into daily routines.",
+        "processTitle": "What the treatment plan includes",
+        "process": [
+          "Digital scanning and orthodontic assessment of alignment goals.",
+          "A staged aligner sequence designed around the desired tooth movement.",
+          "Progress reviews and refinements during treatment when needed."
+        ],
+        "candidatesTitle": "Often a fit for",
+        "candidates": [
+          "Adults and teens wanting a low-visibility orthodontic solution.",
+          "Mild to moderate crowding or spacing cases.",
+          "Patients able to wear aligners consistently each day."
+        ]
+      },
+      "ceramicBraces": {
+        "title": "Ceramic Braces",
+        "tagline": "Effective and discreet correction",
+        "desc": "Tooth-colored braces provide reliable control for more complex alignment and bite correction with a subtler appearance than metal braces.",
+        "price": "From $2,800",
+        "duration": "12–24 months",
+        "benefits": [
+          "Tooth-colored brackets",
+          "Handles complex cases",
+          "Adults and teens",
+          "Precise bite correction"
+        ],
+        "intro": "Ceramic braces combine the control of fixed orthodontics with a more discreet appearance than traditional metal brackets. They are often chosen when a case needs detailed tooth movement.",
+        "h2Title": "Why ceramic braces are used",
+        "h2Description": "Ceramic braces are useful for patients who need comprehensive orthodontic correction but prefer a subtler appearance during treatment.",
+        "processTitle": "How treatment usually progresses",
+        "process": [
+          "Orthodontic assessment and treatment planning for alignment and bite goals.",
+          "Placement of ceramic brackets and regular adjustment visits.",
+          "Monitoring through active movement until the final result is reached."
+        ],
+        "candidatesTitle": "Frequently chosen by",
+        "candidates": [
+          "Adults and teens needing fixed orthodontic treatment.",
+          "Patients with moderate to complex bite or alignment issues.",
+          "Cases where aligners may not offer enough control."
+        ]
+      },
+      "periodontalTreatment": {
+        "title": "Periodontal Treatment",
+        "tagline": "Advanced gum disease therapy",
+        "desc": "Targeted care for gum inflammation, recession, and periodontal disease, from deep cleaning to specialist follow-up support.",
+        "price": "From $450",
+        "duration": "Varies by stage",
+        "benefits": [
+          "All gum disease stages",
+          "Laser-assisted option",
+          "Bone regeneration available",
+          "Maintenance program included"
+        ],
+        "intro": "Periodontal treatment addresses inflammation, gum recession, and bone loss caused by gum disease. Early intervention helps preserve both teeth and supporting structures.",
+        "h2Title": "How gum disease is managed",
+        "h2Description": "Treatment depends on disease stage, pocket depth, and tissue response, with the goal of controlling infection and stabilizing long-term oral health.",
+        "processTitle": "Treatment may include",
+        "process": [
+          "Clinical periodontal assessment and charting of gum health.",
+          "Deep cleaning, scaling, or targeted periodontal therapy.",
+          "Maintenance planning to reduce recurrence and monitor healing."
+        ],
+        "candidatesTitle": "Consider treatment if you have",
+        "candidates": [
+          "Bleeding gums, persistent bad breath, or gum tenderness.",
+          "Diagnosed gum disease or deep periodontal pockets.",
+          "Recession or bone loss that needs specialist attention."
+        ]
+      },
+      "wisdomToothExtraction": {
+        "title": "Wisdom Tooth Extraction",
+        "tagline": "Safe, comfortable removal",
+        "desc": "Removal of impacted or problematic wisdom teeth with careful planning, comfort measures, and aftercare guidance.",
+        "price": "From $300/tooth",
+        "duration": "45–90 min",
+        "benefits": [
+          "Sedation available",
+          "Same-day procedure",
+          "Minimal recovery time",
+          "Detailed aftercare support"
+        ],
+        "intro": "Wisdom tooth extraction is recommended when third molars cause pain, crowding, inflammation, or repeated infection. Planning focuses on comfort, safety, and predictable healing.",
+        "h2Title": "When removal is recommended",
+        "h2Description": "Impacted, partially erupted, or poorly positioned wisdom teeth can affect adjacent teeth and gum health, making timely removal the better long-term option.",
+        "processTitle": "What the procedure involves",
+        "process": [
+          "Examination and imaging to assess tooth position and complexity.",
+          "Removal under local anesthesia with sedation options if appropriate.",
+          "Aftercare instructions and recovery monitoring after the procedure."
+        ],
+        "candidatesTitle": "Common reasons for extraction",
+        "candidates": [
+          "Pain, swelling, repeated infection, or food trapping around wisdom teeth.",
+          "Impacted teeth affecting neighboring molars.",
+          "Orthodontic or preventive reasons based on clinical assessment."
+        ]
+      },
+      "pediatricDentistry": {
+        "title": "Pediatric Dentistry",
+        "tagline": "Gentle care for little smiles",
+        "desc": "Child-friendly preventive and restorative dental care designed to build healthy habits and confident early visits.",
+        "price": "From $60",
+        "duration": "30–60 min",
+        "benefits": [
+          "Age 1+ welcome",
+          "Fear-free approach",
+          "Sealants and fluoride",
+          "Early ortho assessment"
+        ],
+        "intro": "Pediatric dentistry focuses on prevention, healthy habits, and positive early dental experiences. Visits are structured to help children feel comfortable while giving parents clear guidance.",
+        "h2Title": "Why early dental visits matter",
+        "h2Description": "Regular pediatric dental care supports healthy development, early cavity prevention, and timely monitoring of bite and tooth eruption patterns.",
+        "processTitle": "What families can expect",
+        "process": [
+          "A child-friendly exam adapted to age and comfort level.",
+          "Preventive care such as cleaning, fluoride, and sealant recommendations.",
+          "Guidance for parents on hygiene, diet, habits, and early orthodontic concerns."
+        ],
+        "candidatesTitle": "Designed for",
+        "candidates": [
+          "Children from first visits through adolescence.",
+          "Families who want preventive monitoring and education.",
+          "Children who benefit from a gentler, confidence-building dental approach."
+        ]
+      }
     }
   }
 }

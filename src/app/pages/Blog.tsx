@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Clock, ArrowRight, Tag } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useSanityData } from "../../hooks/useSanityData";
@@ -6,8 +6,6 @@ import { BLOG_POSTS_QUERY } from "../../lib/queries";
 import type { SanityBlogPost } from "../../lib/sanityTypes";
 
 const categoryKeys = ["all", "oralHealth", "cosmetic", "orthodontics", "nutrition", "technology"] as const;
-const categoryValues = ["All", "Oral Health", "Cosmetic", "Orthodontics", "Nutrition", "Technology"];
-
 const posts = [
   {
     category: "Oral Health", featured: true,
@@ -56,10 +54,24 @@ const posts = [
 export function Blog() {
   const { t } = useTranslation();
   const { data: postList } = useSanityData<SanityBlogPost[]>(BLOG_POSTS_QUERY, posts);
-  const [activeCategory, setActiveCategory] = useState("All");
-  const featured = postList[0];
-  const allFiltered = activeCategory === "All" ? postList : postList.filter((p) => p.category === activeCategory);
-  const showFeatured = !!featured && (activeCategory === "All" || featured.category === activeCategory);
+  const [activeCategory, setActiveCategory] = useState<(typeof categoryKeys)[number]>("all");
+  const categoryLabels = useMemo(
+    () => Object.fromEntries(categoryKeys.map((key) => [key, t(`blog.filter.${key}`)])) as Record<(typeof categoryKeys)[number], string>,
+    [t],
+  );
+  const localizedPosts = postList.map((post, index) => ({
+    ...post,
+    category: t(`blog.posts.${index}.category`, { defaultValue: post.category }),
+    title: t(`blog.posts.${index}.title`, { defaultValue: post.title }),
+    excerpt: t(`blog.posts.${index}.excerpt`, { defaultValue: post.excerpt }),
+    author: t(`blog.posts.${index}.author`, { defaultValue: post.author }),
+    date: t(`blog.posts.${index}.date`, { defaultValue: post.date }),
+    readTime: t(`blog.posts.${index}.readTime`, { defaultValue: post.readTime }),
+  }));
+  const featured = localizedPosts[0];
+  const activeCategoryLabel = categoryLabels[activeCategory];
+  const allFiltered = activeCategory === "all" ? localizedPosts : localizedPosts.filter((p) => p.category === activeCategoryLabel);
+  const showFeatured = !!featured && (activeCategory === "all" || featured.category === activeCategoryLabel);
   const grid = showFeatured ? allFiltered.slice(1) : allFiltered;
 
   return (
@@ -85,15 +97,15 @@ export function Blog() {
           {categoryKeys.map((key, i) => (
             <button
               key={key}
-              onClick={() => setActiveCategory(categoryValues[i])}
+              onClick={() => setActiveCategory(key)}
               className={`px-5 py-2 rounded-full text-sm transition-colors ${
-                activeCategory === categoryValues[i]
+                activeCategory === key
                   ? "bg-[#B5C7EB] text-[#0F1932]"
                   : "bg-white/8 border border-white/10 text-white/65 hover:bg-[#B5C7EB]/20 hover:text-[#B5C7EB]"
               }`}
-              style={{ fontWeight: activeCategory === categoryValues[i] ? 600 : 400 }}
+              style={{ fontWeight: activeCategory === key ? 600 : 400 }}
             >
-              {t(`blog.filter.${key}`)}
+              {categoryLabels[key]}
             </button>
           ))}
         </div>
@@ -106,7 +118,7 @@ export function Blog() {
             <div className="mb-12">
               <div className="grid lg:grid-cols-2 gap-0 bg-[#0F1932] rounded-2xl overflow-hidden">
                 <div className="relative overflow-hidden bg-[#eef1f8] min-h-72">
-                  <img src={featured.cover} alt={featured.title} className="w-full h-full object-cover" style={{ minHeight: "320px" }} />
+                  <img src={featured.cover} alt={t("blog.coverAlt", { title: featured.title })} className="w-full h-full object-cover" style={{ minHeight: "320px" }} />
                   <div className="absolute top-5 left-5 bg-[#B5C7EB] text-[#0F1932] text-xs px-3 py-1.5 rounded-full" style={{ fontWeight: 700 }}>
                     {t("blog.featured")}
                   </div>
@@ -130,7 +142,7 @@ export function Blog() {
                         <span>{featured.readTime}</span>
                       </div>
                     </div>
-                    <button className="flex items-center gap-2 text-[#B5C7EB] text-sm hover:gap-3 transition-all" style={{ fontWeight: 600 }}>
+                    <button aria-label={t("blog.readAria", { title: featured.title })} className="flex items-center gap-2 text-[#B5C7EB] text-sm hover:gap-3 transition-all" style={{ fontWeight: 600 }}>
                       {t("blog.read")} <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>
@@ -144,7 +156,7 @@ export function Blog() {
             {grid.map((post) => (
               <div key={post.title} className="group bg-white rounded-2xl overflow-hidden border border-[#0F1932]/8 hover:shadow-lg hover:border-[#B5C7EB]/40 transition-all duration-300 cursor-pointer">
                 <div className="relative overflow-hidden bg-[#eef1f8] h-48">
-                  <img src={post.cover} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={post.cover} alt={t("blog.coverAlt", { title: post.title })} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute top-4 left-4 bg-[#B5C7EB]/90 text-[#0F1932] text-xs px-2.5 py-1 rounded-full" style={{ fontWeight: 600 }}>
                     {post.category}
                   </div>
@@ -159,7 +171,7 @@ export function Blog() {
                       <Clock className="w-3 h-3 text-[#B5C7EB]" />
                       <span>{post.readTime}</span>
                     </div>
-                    <span className="text-[#0F1932] text-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1" style={{ fontWeight: 600 }}>
+                    <span className="text-[#0F1932] text-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1" style={{ fontWeight: 600 }} aria-label={t("blog.readMoreAria", { title: post.title })}>
                       {t("blog.readMore")} <ArrowRight className="w-3 h-3" />
                     </span>
                   </div>

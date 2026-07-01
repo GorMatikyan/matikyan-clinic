@@ -1,6 +1,6 @@
-import { NavLink } from "react-router";
 import { ArrowRight, CheckCircle2, Award, Globe, Heart } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { LocalizedNavLink } from "../routing";
 
 const milestoneColors = [true, false, true, false, true];
 const valueIcons = [Heart, Award, Globe, CheckCircle2];
@@ -36,16 +36,16 @@ export function About() {
               ))}
             </div>
 
-            <NavLink to="/doctors" className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#B5C7EB] text-[#0F1932] rounded-xl hover:bg-[#B5C7EB]/90 transition-colors" style={{ fontWeight: 600 }}>
+            <LocalizedNavLink to="/doctors" className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#B5C7EB] text-[#0F1932] rounded-xl hover:bg-[#B5C7EB]/90 transition-colors" style={{ fontWeight: 600 }}>
               {t("about.hero.meetTeam")} <ArrowRight className="w-4 h-4" />
-            </NavLink>
+            </LocalizedNavLink>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=400&h=480&fit=crop&auto=format" alt="Dental clinic" className="rounded-2xl object-cover w-full h-64" />
-            <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&h=280&fit=crop&auto=format" alt="Doctor consulting" className="rounded-2xl object-cover w-full h-48 self-end" />
-            <img src="https://images.unsplash.com/photo-1588776814546-1ffbb172601e?w=400&h=280&fit=crop&auto=format" alt="Modern equipment" className="rounded-2xl object-cover w-full h-48" />
-            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=480&fit=crop&auto=format" alt="Clinic interior" className="rounded-2xl object-cover w-full h-64 self-start" />
+            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=400&h=480&fit=crop&auto=format" alt={t("about.images.clinicAlt")} className="rounded-2xl object-cover w-full h-64" />
+            <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&h=280&fit=crop&auto=format" alt={t("about.images.consultationAlt")} className="rounded-2xl object-cover w-full h-48 self-end" />
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffbb172601e?w=400&h=280&fit=crop&auto=format" alt={t("about.images.equipmentAlt")} className="rounded-2xl object-cover w-full h-48" />
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=480&fit=crop&auto=format" alt={t("about.images.interiorAlt")} className="rounded-2xl object-cover w-full h-64 self-start" />
           </div>
         </div>
       </section>
@@ -120,9 +120,9 @@ export function About() {
             {t("about.cta.title")}
           </h2>
           <p className="text-white/55 mb-8 text-lg">{t("about.cta.desc")}</p>
-          <NavLink to="/contact" className="inline-flex items-center gap-2 px-7 py-4 bg-[#B5C7EB] text-[#0F1932] rounded-xl hover:bg-[#B5C7EB]/90 transition-colors" style={{ fontWeight: 600 }}>
+          <LocalizedNavLink to="/contact" className="inline-flex items-center gap-2 px-7 py-4 bg-[#B5C7EB] text-[#0F1932] rounded-xl hover:bg-[#B5C7EB]/90 transition-colors" style={{ fontWeight: 600 }}>
             {t("about.cta.button")} <ArrowRight className="w-4 h-4" />
-          </NavLink>
+          </LocalizedNavLink>
         </div>
       </section>
     </div>

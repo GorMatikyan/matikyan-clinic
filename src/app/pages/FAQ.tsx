@@ -1,10 +1,10 @@
 import { useMemo, useState } from "react";
-import { NavLink } from "react-router";
 import { ChevronDown, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useSanityData } from "../../hooks/useSanityData";
 import { FAQ_QUERY } from "../../lib/queries";
 import type { SanityFaqItem } from "../../lib/sanityTypes";
+import { LocalizedNavLink } from "../routing";
 
 const categoryKeys = ["general", "treatments", "invisalign", "payment"] as const;
 
@@ -49,7 +49,17 @@ export function FAQ() {
   const [activeKey, setActiveKey] = useState<typeof categoryKeys[number]>("general");
   const { data: faqItems } = useSanityData<SanityFaqItem[]>(FAQ_QUERY, []);
   const faqData = useMemo(() => {
-    if (!faqItems.length) return questionsData;
+    if (!faqItems.length) {
+      return Object.fromEntries(
+        categoryKeys.map((key) => [
+          key,
+          questionsData[key].map((item, index) => ({
+            q: t(`faq.items.${key}.${index}.q`, { defaultValue: item.q }),
+            a: t(`faq.items.${key}.${index}.a`, { defaultValue: item.a }),
+          })),
+        ]),
+      ) as typeof questionsData;
+    }
 
     const grouped: Partial<typeof questionsData> = {};
     faqItems.forEach(({ question, answer, category }) => {
@@ -61,12 +71,28 @@ export function FAQ() {
     });
 
     return {
-      ...questionsData,
       ...Object.fromEntries(
-        Object.entries(grouped).filter(([, items]) => items && items.length > 0),
+        categoryKeys.map((key) => [
+          key,
+          questionsData[key].map((item, index) => ({
+            q: t(`faq.items.${key}.${index}.q`, { defaultValue: item.q }),
+            a: t(`faq.items.${key}.${index}.a`, { defaultValue: item.a }),
+          })),
+        ]),
+      ),
+      ...Object.fromEntries(
+        Object.entries(grouped)
+          .filter(([, items]) => items && items.length > 0)
+          .map(([key, items]) => [
+            key,
+            (items ?? []).map((item, index) => ({
+              q: t(`faq.items.${key}.${index}.q`, { defaultValue: item.q }),
+              a: t(`faq.items.${key}.${index}.a`, { defaultValue: item.a }),
+            })),
+          ]),
       ),
     } as typeof questionsData;
-  }, [faqItems]);
+  }, [faqItems, t]);
 
   return (
     <div>
@@ -127,9 +153,9 @@ export function FAQ() {
             {t("faq.cta.title")}
           </h2>
           <p className="text-white/55 mb-8">{t("faq.cta.desc")}</p>
-          <NavLink to="/contact" className="inline-flex items-center gap-2 px-7 py-4 bg-[#B5C7EB] text-[#0F1932] rounded-xl hover:bg-[#B5C7EB]/90 transition-colors" style={{ fontWeight: 600 }}>
+          <LocalizedNavLink to="/contact" className="inline-flex items-center gap-2 px-7 py-4 bg-[#B5C7EB] text-[#0F1932] rounded-xl hover:bg-[#B5C7EB]/90 transition-colors" style={{ fontWeight: 600 }}>
             {t("faq.cta.button")} <ArrowRight className="w-4 h-4" />
-          </NavLink>
+          </LocalizedNavLink>
         </div>
       </section>
     </div>

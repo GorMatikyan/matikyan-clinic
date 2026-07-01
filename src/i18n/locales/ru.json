@@ -1,311 +1,1010 @@
 {
   "nav": {
-    "about": "About",
-    "doctors": "Doctors",
-    "services": "Services",
-    "reviews": "Reviews",
-    "faq": "FAQ",
-    "blog": "Blog",
-    "contact": "Contact",
-    "bookAppointment": "Book Appointment",
-    "phone": "+1 800 555 1234"
+    "about": "О нас",
+    "doctors": "Врачи",
+    "services": "Услуги",
+    "reviews": "Отзывы",
+    "faq": "Частые вопросы",
+    "blog": "Блог",
+    "contact": "Контакты",
+    "bookAppointment": "Записаться",
+    "phone": "+1 800 555 1234",
+    "logoAlt": "Стоматологическая клиника Matikyan",
+    "toggleMenu": "Открыть меню",
+    "languageNames": {
+      "en": "английский",
+      "hy": "армянский",
+      "ru": "русский"
+    },
+    "switchLanguage": "Переключить язык на {{language}}",
+    "callClinic": "Позвонить в клинику"
   },
   "footer": {
-    "description": "Modern dental care with a personal touch. Our team of specialists is dedicated to your smile and long-term oral health.",
-    "pages": "Pages",
-    "ourDoctors": "Our Doctors",
-    "patientReviews": "Patient Reviews",
-    "services": "Services",
-    "contact": "Contact",
+    "description": "Современная стоматология с внимательным подходом. Наша команда специалистов заботится о вашей улыбке и здоровье полости рта в долгосрочной перспективе.",
+    "pages": "Страницы",
+    "ourDoctors": "Наши врачи",
+    "patientReviews": "Отзывы пациентов",
+    "services": "Услуги",
+    "contact": "Контакты",
     "servicesList": {
-      "whitening": "Teeth Whitening",
-      "implants": "Dental Implants",
-      "orthodontics": "Orthodontics",
-      "veneers": "Veneers",
-      "rootCanal": "Root Canal",
-      "pediatric": "Pediatric Dentistry",
-      "cosmetic": "Cosmetic Dentistry"
+      "whitening": "Отбеливание зубов",
+      "implants": "Дентальные импланты",
+      "orthodontics": "Ортодонтия",
+      "veneers": "Виниры",
+      "rootCanal": "Лечение каналов",
+      "pediatric": "Детская стоматология",
+      "cosmetic": "Эстетическая стоматология"
     },
     "address": "123 Medical Plaza, Suite 400\nNew York, NY 10001",
     "email": "hello@matikyan.com",
-    "hours1": "Mon – Fri: 8:00 – 20:00",
-    "hours2": "Sat: 9:00 – 17:00",
-    "hours3": "Sun: Closed",
-    "copyright": "© 2026 Matikyan Stomatology Center. All rights reserved.",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "hours1": "Пн - Пт: 8:00 – 20:00",
+    "hours2": "Сб: 9:00 – 17:00",
+    "hours3": "Вс: выходной",
+    "copyright": "© 2026 Стоматологический центр Matikyan. Все права защищены.",
+    "privacy": "Политика конфиденциальности",
+    "terms": "Условия использования",
+    "logoAlt": "Стоматологическая клиника Matikyan",
+    "about": "О нас",
+    "phoneLinkAria": "Позвонить в клинику",
+    "emailLinkAria": "Написать в клинику"
   },
   "home": {
     "stats": {
-      "years": "Years of Excellence",
-      "patients": "Happy Patients",
-      "doctors": "Specialist Doctors",
-      "satisfaction": "Satisfaction Rate"
+      "years": "Лет опыта",
+      "patients": "Довольных пациентов",
+      "doctors": "Профильных врачей",
+      "satisfaction": "Уровень удовлетворенности"
     },
     "services": {
-      "badge": "What We Offer",
-      "title": "Comprehensive Dental Services",
-      "viewAll": "All Services",
-      "learnMore": "Learn more",
+      "badge": "Что мы предлагаем",
+      "title": "Комплексные стоматологические услуги",
+      "viewAll": "Все услуги",
+      "learnMore": "Подробнее",
       "items": {
-        "implants": { "title": "Dental Implants", "desc": "Permanent, natural-looking tooth replacements using titanium implants." },
-        "whitening": { "title": "Teeth Whitening", "desc": "Professional whitening treatments that brighten your smile up to 8 shades." },
-        "ortho": { "title": "Orthodontics", "desc": "Braces and clear aligners for perfectly aligned teeth at any age." },
-        "veneers": { "title": "Cosmetic Veneers", "desc": "Ultra-thin porcelain veneers for a flawless, Hollywood-worthy smile." },
-        "rootCanal": { "title": "Root Canal", "desc": "Pain-free endodontic treatment to save your natural tooth." },
-        "pediatric": { "title": "Pediatric Dentistry", "desc": "Gentle, friendly dental care tailored for children of all ages." }
+        "implants": {
+          "title": "Дентальные импланты",
+          "desc": "Надежное и естественное восстановление отсутствующих зубов."
+        },
+        "whitening": {
+          "title": "Отбеливание зубов",
+          "desc": "Профессиональное отбеливание для заметно более светлой улыбки."
+        },
+        "ortho": {
+          "title": "Ортодонтия",
+          "desc": "Брекеты и прозрачные элайнеры для правильного положения зубов."
+        },
+        "veneers": {
+          "title": "Эстетические виниры",
+          "desc": "Тонкие виниры для гармоничной и естественной улыбки."
+        },
+        "rootCanal": {
+          "title": "Лечение каналов",
+          "desc": "Современное эндодонтическое лечение для сохранения зуба."
+        },
+        "pediatric": {
+          "title": "Детская стоматология",
+          "desc": "Бережный подход к уходу за детской улыбкой в любом возрасте."
+        }
       }
     },
     "whyUs": {
-      "badge": "Why Choose Us",
-      "title": "Where Advanced Technology Meets Gentle Care",
-      "desc": "Our clinic combines cutting-edge dental technology with a warm, patient-first approach. Every treatment is personalized to your unique needs and comfort level.",
-      "learnMore": "Learn About Us",
-      "rating": "Rated 5.0 on Google",
-      "ratingBase": "Based on 1,240 reviews",
+      "badge": "Почему выбирают нас",
+      "title": "Современные технологии и бережный подход в одной клинике",
+      "desc": "В нашей клинике передовые стоматологические технологии сочетаются с внимательным и спокойным отношением к каждому пациенту.",
+      "imageAlt": "Интерьер современной стоматологической клиники",
+      "learnMore": "Узнать о нас",
+      "rating": "Оценка 5.0 в Google",
+      "ratingBase": "На основе 1 240 отзывов",
       "features": {
-        "painFree": { "title": "Pain-Free Treatments", "desc": "Advanced anesthesia for a comfortable experience." },
-        "certified": { "title": "Certified Specialists", "desc": "Board-certified dentists with international training." },
-        "family": { "title": "Family Friendly", "desc": "Welcoming environment for patients of all ages." },
-        "hours": { "title": "Flexible Hours", "desc": "Evening and weekend appointments available." }
+        "painFree": {
+          "title": "Комфортное лечение",
+          "desc": "Современная анестезия для максимально спокойного приема."
+        },
+        "certified": {
+          "title": "Квалифицированные специалисты",
+          "desc": "Опытные врачи с постоянным профессиональным развитием."
+        },
+        "family": {
+          "title": "Для всей семьи",
+          "desc": "Доброжелательная атмосфера для пациентов любого возраста."
+        },
+        "hours": {
+          "title": "Удобный график",
+          "desc": "Прием в удобное время в будни и выходные."
+        }
       }
     },
     "testimonials": {
-      "badge": "Patient Stories",
-      "title": "What Our Patients Say",
-      "readAll": "Read all reviews",
+      "badge": "Истории пациентов",
+      "title": "Что говорят наши пациенты",
+      "readAll": "Читать все отзывы",
+      "avatarAlt": "Фотография {{name}}",
       "items": [
-        { "name": "Sarah Mitchell", "service": "Porcelain Veneers", "text": "Absolutely incredible experience. Dr. Kovalenko transformed my smile with veneers and I couldn't be happier. The whole team was warm and professional." },
-        { "name": "James Thornton", "service": "Dental Implants", "text": "I was terrified of dental procedures but the team here made me feel completely at ease. My implants look and feel completely natural." },
-        { "name": "Elena Vasquez", "service": "Teeth Whitening", "text": "Best dental clinic I have ever visited. Modern equipment, kind staff, and results that exceeded my expectations. Highly recommended!" }
+        {
+          "name": "Сара Митчелл",
+          "service": "Фарфоровые виниры",
+          "text": "Результат после виниров выглядит очень естественно, а вся команда была внимательной и профессиональной."
+        },
+        {
+          "name": "Джеймс Торнтон",
+          "service": "Дентальные импланты",
+          "text": "На всех этапах лечения я чувствовал себя спокойно, а результат с имплантами выглядит абсолютно естественно."
+        },
+        {
+          "name": "Елена Васкес",
+          "service": "Отбеливание зубов",
+          "text": "Очень хорошо организованная клиника с современным оборудованием и заботливым персоналом. Результат превзошел мои ожидания."
+        }
       ]
     },
     "cta": {
-      "title": "Ready for a Healthier, Brighter Smile?",
-      "desc": "Book your free consultation today. Our specialists will assess your needs and create a personalized treatment plan just for you.",
-      "button": "Schedule Free Consultation"
+      "title": "Готовы к более здоровой и яркой улыбке?",
+      "desc": "Запишитесь на бесплатную консультацию, и наши специалисты подберут для вас персональный план лечения.",
+      "button": "Записаться на бесплатную консультацию"
     }
   },
   "slider": {
-    "bookConsultation": "Book Free Consultation",
+    "bookConsultation": "Записаться на бесплатную консультацию",
     "slides": [
       {
-        "tag": "Advanced Implantology",
-        "title": "Restore Your Smile\nWith Dental Implants",
-        "desc": "Permanent, natural-looking tooth replacements — from single implants to full-arch restorations.",
-        "cta": "Our Services"
+        "tag": "Современная имплантология",
+        "title": "Восстановите улыбку\nс помощью имплантов",
+        "desc": "Надежные и естественные решения: от одного зуба до полной реабилитации.",
+        "cta": "Наши услуги"
       },
       {
-        "tag": "Modern Equipment",
-        "title": "State-of-the-Art\nClinic & Technology",
-        "desc": "3D scanning, digital X-rays, CAD/CAM same-day crowns — precision dentistry in a comfortable setting.",
-        "cta": "About Us"
+        "tag": "Современное оборудование",
+        "title": "Передовая\nклиника и технологии",
+        "desc": "Цифровое сканирование, рентген и CAD/CAM решения для точного и комфортного лечения.",
+        "cta": "О нас"
       },
       {
-        "tag": "Cosmetic Dentistry",
-        "title": "Your Dream Smile\nStarts Here",
-        "desc": "Veneers, whitening, bonding and full smile makeovers performed by award-winning cosmetic specialists.",
-        "cta": "Our Services"
+        "tag": "Эстетическая стоматология",
+        "title": "Улыбка вашей мечты\nначинается здесь",
+        "desc": "Виниры, отбеливание, бондинг и комплексное преображение улыбки у опытных специалистов.",
+        "cta": "Наши услуги"
       },
       {
-        "tag": "Orthodontics",
-        "title": "Straighter Teeth,\nClearer Confidence",
-        "desc": "Invisalign and ceramic braces tailored to adults and teens — start with a free 3D simulation.",
-        "cta": "Meet Our Doctors"
+        "tag": "Ортодонтия",
+        "title": "Более ровные зубы,\nбольше уверенности",
+        "desc": "Invisalign и керамические брекеты с индивидуальным планом для взрослых и подростков.",
+        "cta": "Наши врачи"
       }
-    ]
+    ],
+    "previousSlide": "Предыдущий слайд",
+    "nextSlide": "Следующий слайд",
+    "goToSlide": "Перейти к слайду {{index}}"
   },
   "about": {
     "hero": {
-      "badge": "Our Story",
-      "title": "Dedicated to Transforming Smiles Since 2012",
-      "desc1": "DentaCare was founded on a simple belief: that dental care should be as comfortable as it is effective. Over the past 12 years, we have grown into one of New York's most trusted stomatology centers, treating over 8,400 patients.",
-      "desc2": "Our clinic brings together a diverse team of specialists — from orthodontists and periodontists to cosmetic and pediatric dentists — all working under one roof to deliver seamless, comprehensive care.",
+      "badge": "Наша история",
+      "title": "Помогаем возвращать улыбки с 2012 года",
+      "desc1": "Matikyan Dental Clinic была создана с простой идеей: стоматологическая помощь должна быть не только эффективной, но и спокойной для пациента. Со временем клиника стала надежным центром комплексного ухода за полостью рта.",
+      "desc2": "Мы объединяем имплантологию, ортодонтию, восстановительную, пародонтологическую, эстетическую и детскую стоматологию в одной клинике, чтобы лечение было последовательным и понятным.",
       "stats": {
-        "patients": "Patients",
-        "specialists": "Specialists",
-        "satisfaction": "Satisfaction"
+        "patients": "Пациентов",
+        "specialists": "Специалистов",
+        "satisfaction": "Удовлетворенность"
       },
-      "meetTeam": "Meet Our Team"
+      "meetTeam": "Познакомиться с командой"
+    },
+    "images": {
+      "clinicAlt": "Стоматологическая клиника",
+      "consultationAlt": "Врач проводит консультацию",
+      "equipmentAlt": "Современное стоматологическое оборудование",
+      "interiorAlt": "Интерьер клиники"
     },
     "values": {
-      "badge": "Our Values",
-      "title": "The Principles That Guide Us",
+      "badge": "Наши ценности",
+      "title": "Принципы, которыми мы руководствуемся",
       "items": [
-        { "title": "Patient-First", "desc": "Every decision is guided by what's best for the patient's health and comfort." },
-        { "title": "Clinical Excellence", "desc": "Continuous education and adoption of the latest evidence-based treatments." },
-        { "title": "Inclusivity", "desc": "Welcoming patients of all ages, backgrounds, and dental anxiety levels." },
-        { "title": "Transparency", "desc": "Clear communication, honest pricing, and no surprise fees — ever." }
+        {
+          "title": "Пациент в центре внимания",
+          "desc": "Каждое решение принимается с учетом комфорта, здоровья и уверенности пациента."
+        },
+        {
+          "title": "Клиническое качество",
+          "desc": "Мы опираемся на постоянное обучение, точное планирование и современный доказательный подход."
+        },
+        {
+          "title": "Уважительное отношение",
+          "desc": "Мы принимаем пациентов разного возраста и с разными потребностями, сохраняя индивидуальный подход."
+        },
+        {
+          "title": "Прозрачное общение",
+          "desc": "Мы ясно объясняем варианты лечения, ожидания и этапы без лишней неопределенности."
+        }
       ]
     },
     "milestones": {
-      "badge": "Our Journey",
-      "title": "Key Milestones",
+      "badge": "Наш путь",
+      "title": "Ключевые этапы",
       "items": [
-        { "year": "2012", "title": "Founded", "desc": "DentaCare opened its doors with a mission to redefine the dental experience in New York." },
-        { "year": "2015", "title": "First Expansion", "desc": "Added a dedicated implantology suite and orthodontics department." },
-        { "year": "2018", "title": "Digital Dentistry", "desc": "Introduced 3D scanning, digital X-rays, and CAD/CAM same-day crowns." },
-        { "year": "2021", "title": "Award of Excellence", "desc": "Recognized as Top Dental Practice by New York Health Magazine." },
-        { "year": "2024", "title": "18 Specialists", "desc": "Grew to a full-service team of 18 board-certified dental specialists." }
+        {
+          "year": "2012",
+          "title": "Основание клиники",
+          "desc": "Matikyan Dental Clinic начала работу с акцентом на современную диагностику и ориентированную на пациента помощь."
+        },
+        {
+          "year": "2015",
+          "title": "Расширение услуг",
+          "desc": "Клиника усилила направления имплантологии и ортодонтии, чтобы предлагать более полный план лечения."
+        },
+        {
+          "year": "2018",
+          "title": "Цифровой рабочий процесс",
+          "desc": "Цифровая визуализация и современные восстановительные технологии стали частью ежедневной практики."
+        },
+        {
+          "year": "2021",
+          "title": "Рост сложных случаев",
+          "desc": "Команда стала системно вести более сложные междисциплинарные клинические случаи."
+        },
+        {
+          "year": "2024",
+          "title": "Команда специалистов",
+          "desc": "Состав специалистов расширился, чтобы закрывать больше потребностей пациентов в одной клинике."
+        }
       ]
     },
     "cta": {
-      "title": "Come Visit Our Clinic",
-      "desc": "Schedule a tour or book a consultation — we would love to meet you.",
-      "button": "Get In Touch"
+      "title": "Посетите нашу клинику",
+      "desc": "Запишитесь на консультацию и познакомьтесь с командой, которая будет вести ваш план лечения.",
+      "button": "Связаться с нами"
     }
   },
   "services": {
     "header": {
-      "badge": "What We Offer",
-      "title": "Our Dental Services",
-      "desc": "Comprehensive dental care under one roof — from routine check-ups to complex full-arch restorations."
+      "badge": "Что мы предлагаем",
+      "title": "Наши стоматологические услуги",
+      "desc": "Полный спектр стоматологической помощи в одной клинике: от профилактики до сложного восстановления."
     },
     "filter": {
-      "all": "All",
-      "preventive": "Preventive",
-      "cosmetic": "Cosmetic",
-      "restorative": "Restorative",
-      "orthodontics": "Orthodontics",
-      "surgery": "Surgery",
-      "pediatric": "Pediatric"
+      "all": "Все",
+      "preventive": "Профилактика",
+      "cosmetic": "Эстетика",
+      "restorative": "Восстановление",
+      "orthodontics": "Ортодонтия",
+      "surgery": "Хирургия",
+      "pediatric": "Детям"
     },
     "card": {
-      "learnMore": "Learn more",
-      "lessInfo": "Less info",
-      "book": "Book"
+      "learnMore": "Подробнее",
+      "lessInfo": "Свернуть",
+      "book": "Записаться",
+      "imageAlt": "{{service}}",
+      "learnMoreAria": "Подробнее об услуге {{service}}",
+      "bookAria": "Записаться на услугу {{service}}"
     },
     "cta": {
-      "title": "Not Sure Which Service You Need?",
-      "desc": "Book a free consultation and our specialists will assess your needs and recommend the best treatment plan for you.",
-      "button": "Book Free Consultation"
+      "title": "Не уверены, какая услуга вам нужна?",
+      "desc": "Запишитесь на бесплатную консультацию, и наши специалисты помогут определить оптимальный план лечения.",
+      "button": "Записаться на бесплатную консультацию"
     }
   },
   "doctors": {
     "header": {
-      "badge": "Our Team",
-      "title": "Meet Our Specialists",
-      "desc": "Board-certified dentists bringing decades of combined expertise and genuine care for every patient's wellbeing."
+      "badge": "Наша команда",
+      "title": "Познакомьтесь с нашими специалистами",
+      "desc": "Опытные врачи, которые сочетают клиническую точность и внимательное отношение к каждому пациенту."
+    },
+    "intro": {
+      "title": "Врачи, которые ведут ваш план лечения на каждом этапе",
+      "desc": "Познакомьтесь со специалистами по имплантологии, ортодонтии, эстетической, восстановительной, пародонтологической и детской стоматологии."
     },
     "filter": {
-      "all": "All"
+      "all": "Все",
+      "implantology": "Имплантология",
+      "orthodontics": "Ортодонтия",
+      "cosmetic": "Эстетика",
+      "periodontics": "Пародонтология",
+      "endodontics": "Эндодонтия",
+      "pediatric": "Детская стоматология"
     },
     "card": {
-      "bookAppointment": "Book Appointment"
+      "bookAppointment": "Записаться",
+      "photoAlt": "Фотография {{name}}",
+      "bookDoctor": "Записаться к врачу {{name}}"
+    },
+    "items": {
+      "annaKovalenko": {
+        "name": "Др. Анна Коваленко",
+        "title": "Руководитель имплантологии",
+        "specialty": "Имплантология",
+        "experience": "14 лет опыта",
+        "education": "Колумбийский университет, Нью-Йорк",
+        "desc": "Специалист по полным имплантационным реабилитациям и костной пластике со стабильными клиническими результатами."
+      },
+      "marcusReid": {
+        "name": "Др. Маркус Рид",
+        "title": "Старший ортодонт",
+        "specialty": "Ортодонтия",
+        "experience": "11 лет опыта",
+        "education": "Стоматологический колледж NYU",
+        "desc": "Специализируется на Invisalign, керамических брекетах и ортодонтическом лечении взрослых и подростков."
+      },
+      "sofiaMarchetti": {
+        "name": "Др. София Маркетти",
+        "title": "Эстетический стоматолог",
+        "specialty": "Эстетика",
+        "experience": "9 лет опыта",
+        "education": "Пенсильванский университет",
+        "desc": "Известна внимательным подходом к дизайну улыбки, винирам, бондингу и комплексным эстетическим коррекциям."
+      },
+      "ethanBrooks": {
+        "name": "Др. Итан Брукс",
+        "title": "Пародонтолог",
+        "specialty": "Пародонтология",
+        "experience": "13 лет опыта",
+        "education": "Гарвардская школа стоматологии",
+        "desc": "Занимается лечением заболеваний десен, пластикой мягких тканей и поддерживающей пародонтологической терапией."
+      },
+      "nadiaOkonkwo": {
+        "name": "Др. Надия Оконкво",
+        "title": "Эндодонтист",
+        "specialty": "Эндодонтия",
+        "experience": "8 лет опыта",
+        "education": "Стоматологическая школа Тафтса",
+        "desc": "Специалист по комфортному лечению каналов с применением современных ротационных и лазерных технологий."
+      },
+      "liamChen": {
+        "name": "Др. Лиам Чен",
+        "title": "Детский стоматолог",
+        "specialty": "Детская стоматология",
+        "experience": "7 лет опыта",
+        "education": "Бостонский университет, Goldman School",
+        "desc": "Помогает детям проходить стоматологическое лечение спокойно и уверенно, уделяя внимание ранней ортодонтической профилактике."
+      }
     }
   },
   "reviews": {
     "header": {
-      "badge": "Patient Reviews",
-      "title": "What Our Patients Say",
-      "rating": "4.9 out of 5 — based on 1,240+ reviews"
+      "badge": "Отзывы пациентов",
+      "title": "Что говорят наши пациенты",
+      "rating": "4.9 из 5 — на основе более 1 240 отзывов"
+    },
+    "intro": {
+      "title": "Более детальный взгляд на удовлетворенность пациентов",
+      "desc": "Эти отзывы показывают, как пациенты оценивают комфорт, общение и результат лечения по основным направлениям нашей работы."
     },
     "stats": {
-      "overallRating": "Overall Rating",
-      "totalReviews": "Total Reviews",
-      "recommend": "Recommend Us",
-      "fiveStar": "5-Star Reviews"
-    }
+      "overallRating": "Общая оценка",
+      "totalReviews": "Количество отзывов",
+      "recommend": "Рекомендуют нас",
+      "fiveStar": "5-звездочные отзывы"
+    },
+    "avatarAlt": "Фотография {{name}}",
+    "items": [
+      {
+        "name": "Сара Митчелл",
+        "date": "Май 2026",
+        "service": "Фарфоровые виниры",
+        "text": "Впечатления просто отличные. Др. Коваленко преобразила мою улыбку с помощью виниров, а вся команда была внимательной, профессиональной и очень поддерживающей."
+      },
+      {
+        "name": "Джеймс Торнтон",
+        "date": "Апрель 2026",
+        "service": "Дентальные импланты",
+        "text": "Я очень боялся стоматологических процедур, но команда помогла мне чувствовать себя спокойно на каждом этапе. Импланты выглядят и ощущаются совершенно естественно."
+      },
+      {
+        "name": "Елена Васкес",
+        "date": "Апрель 2026",
+        "service": "Отбеливание зубов",
+        "text": "Лучшая стоматологическая клиника, где я бывала. Современное оборудование, доброжелательный персонал и результат, который превзошел мои ожидания."
+      },
+      {
+        "name": "Майкл О’Брайен",
+        "date": "Март 2026",
+        "service": "Invisalign",
+        "text": "Др. Рид отлично работает с Invisalign. За 14 месяцев лечения зубы выровнялись идеально, а цифровое сканирование сделало процесс очень понятным и комфортным."
+      },
+      {
+        "name": "Прия Наир",
+        "date": "Март 2026",
+        "service": "Полное преображение улыбки",
+        "text": "Я прошла полное эстетическое преображение улыбки у др. Маркетти. Результат выглядит очень естественно, и я постоянно получаю комплименты."
+      },
+      {
+        "name": "Давид Ковальски",
+        "date": "Февраль 2026",
+        "service": "Лечение каналов",
+        "text": "Несмотря на плохую репутацию лечения каналов, др. Оконкво провела все очень комфортно. Я почти ничего не почувствовал и быстро вернулся к обычной жизни."
+      },
+      {
+        "name": "Лиза Парк",
+        "date": "Февраль 2026",
+        "service": "Детская стоматология",
+        "text": "Моя шестилетняя дочь раньше плакала перед каждым визитом к стоматологу. После одного приема у др. Чена она уже сама спрашивает, когда мы снова придем."
+      },
+      {
+        "name": "Роберто Эспозито",
+        "date": "Январь 2026",
+        "service": "Пародонтологическое лечение",
+        "text": "Др. Брукс очень точно диагностировал и пролечил заболевание моих десен. Сейчас состояние десен лучше, чем было за многие годы."
+      },
+      {
+        "name": "Аманда Фостер",
+        "date": "Январь 2026",
+        "service": "Общий осмотр",
+        "text": "Ежегодный осмотр был очень тщательным. Благодаря цифровому рентгену и внутриротовой камере я четко понимала, что именно объясняет врач."
+      }
+    ]
   },
   "faq": {
     "header": {
-      "badge": "FAQ",
-      "title": "Frequently Asked Questions",
-      "desc": "Everything you want to know about our services, treatments, and what to expect at DentaCare."
+      "badge": "Частые вопросы",
+      "title": "Часто задаваемые вопросы",
+      "desc": "Здесь собраны вопросы, которые пациенты чаще всего задают о лечении, визитах и том, чего ожидать в клинике."
     },
     "categories": {
-      "general": "General",
-      "treatments": "Treatments",
-      "invisalign": "Invisalign & Braces",
-      "payment": "Payment & Insurance"
+      "general": "Общие",
+      "treatments": "Лечение",
+      "invisalign": "Invisalign и брекеты",
+      "payment": "Оплата и условия"
+    },
+    "items": {
+      "general": [
+        {
+          "q": "Как часто нужно посещать стоматолога?",
+          "a": "Обычно профилактический осмотр и профессиональная чистка рекомендуются каждые 6 месяцев. В отдельных случаях визиты могут быть более частыми."
+        },
+        {
+          "q": "Что взять с собой на первый прием?",
+          "a": "Желательно иметь документ, удостоверяющий личность, предыдущие исследования, если они есть, и список принимаемых лекарств."
+        },
+        {
+          "q": "Принимаете ли вы без предварительной записи?",
+          "a": "При срочных ситуациях мы стараемся предложить время в тот же день, а для планового лечения лучше записываться заранее."
+        }
+      ],
+      "treatments": [
+        {
+          "q": "Безопасно ли отбеливание зубов?",
+          "a": "Да, если процедура проводится после стоматологической оценки и с учетом состояния зубов и десен."
+        },
+        {
+          "q": "Сколько служат импланты?",
+          "a": "При правильном уходе и регулярном наблюдении импланты могут служить много лет."
+        },
+        {
+          "q": "Обратимы ли виниры?",
+          "a": "Классические фарфоровые виниры обычно требуют определенной подготовки зуба, поэтому не считаются полностью обратимыми."
+        },
+        {
+          "q": "Насколько болезненно лечение каналов?",
+          "a": "При современной анестезии лечение каналов обычно проходит комфортно, и большинство пациентов переносит его легче, чем ожидало."
+        }
+      ],
+      "invisalign": [
+        {
+          "q": "Подхожу ли я для Invisalign?",
+          "a": "Invisalign часто подходит при легкой и средней скученности, промежутках и некоторых нарушениях прикуса. Окончательно это определяется на консультации."
+        },
+        {
+          "q": "Сколько длится лечение Invisalign?",
+          "a": "Срок зависит от сложности случая, но многие планы лечения укладываются в период от 6 до 24 месяцев."
+        }
+      ],
+      "payment": [
+        {
+          "q": "Принимаете ли вы страховку?",
+          "a": "Возможность страхового покрытия зависит от вашего полиса и вида лечения. Наша команда поможет заранее разобраться в условиях."
+        },
+        {
+          "q": "Есть ли варианты поэтапной оплаты?",
+          "a": "Для более объемных планов лечения возможные варианты оплаты можно обсудить с командой клиники заранее."
+        },
+        {
+          "q": "Сколько стоит консультация?",
+          "a": "Стоимость консультации зависит от того, что входит в визит, например, требуется ли дополнительная визуализация или осмотр специалиста."
+        }
+      ]
     },
     "cta": {
-      "title": "Still Have Questions?",
-      "desc": "Our patient care team is available Monday–Saturday to answer any questions you may have.",
-      "button": "Contact Us"
+      "title": "Остались вопросы?",
+      "desc": "Наша команда готова ответить на вопросы о визитах, планировании лечения и дальнейших шагах.",
+      "button": "Связаться с нами"
     }
   },
   "blog": {
     "header": {
-      "badge": "Knowledge Hub",
-      "title": "Dental Health Blog",
-      "desc": "Expert advice, treatment guides, and oral health tips from our specialist team."
+      "badge": "Раздел знаний",
+      "title": "Стоматологический блог",
+      "desc": "Профессиональные советы, клинические разборы и полезные материалы о здоровье полости рта."
     },
     "filter": {
-      "all": "All",
-      "oralHealth": "Oral Health",
-      "cosmetic": "Cosmetic",
-      "orthodontics": "Orthodontics",
-      "nutrition": "Nutrition",
-      "technology": "Technology"
+      "all": "Все",
+      "oralHealth": "Здоровье полости рта",
+      "cosmetic": "Эстетика",
+      "orthodontics": "Ортодонтия",
+      "nutrition": "Питание",
+      "technology": "Технологии"
     },
-    "featured": "Featured",
-    "read": "Read",
-    "readMore": "Read more",
-    "minRead": "min read",
-    "empty": "No articles in this category yet. Check back soon!"
+    "featured": "Главное",
+    "read": "Читать",
+    "readAria": "Читать статью {{title}}",
+    "readMore": "Подробнее",
+    "readMoreAria": "Подробнее о статье {{title}}",
+    "minRead": "мин",
+    "coverAlt": "{{title}}",
+    "empty": "В этой категории пока нет статей. Загляните позже.",
+    "posts": [
+      {
+        "category": "Здоровье полости рта",
+        "title": "Как правильно чистить зубы: пошаговое руководство",
+        "excerpt": "Зубы чистят почти все, но именно техника часто определяет результат. Наши гигиенисты объясняют, на что стоит обратить внимание.",
+        "author": "Др. Анна Коваленко",
+        "date": "5 июня 2026",
+        "readTime": "5 мин"
+      },
+      {
+        "category": "Эстетика",
+        "title": "Виниры или бондинг: что лучше подойдет вашей улыбке?",
+        "excerpt": "Фарфоровые виниры и композитный бондинг помогают улучшить эстетику улыбки, но отличаются по задачам и объему подготовки.",
+        "author": "Др. София Маркетти",
+        "date": "22 мая 2026",
+        "readTime": "7 мин"
+      },
+      {
+        "category": "Ортодонтия",
+        "title": "Invisalign в 2026 году: что изменилось и что важно знать",
+        "excerpt": "Цифровое планирование и системы элайнеров продолжают развиваться. Разбираем, что действительно важно при выборе Invisalign сегодня.",
+        "author": "Др. Маркус Рид",
+        "date": "10 мая 2026",
+        "readTime": "6 мин"
+      },
+      {
+        "category": "Питание",
+        "title": "10 продуктов, которые незаметно повреждают эмаль",
+        "excerpt": "Некоторые продукты и напитки влияют на эмаль сильнее, чем пациенты обычно предполагают.",
+        "author": "Др. Итан Брукс",
+        "date": "28 апреля 2026",
+        "readTime": "4 мин"
+      },
+      {
+        "category": "Технологии",
+        "title": "Коронки за один день: как CAD/CAM меняет восстановительное лечение",
+        "excerpt": "Цифровое сканирование и изготовление в клинике позволяют в ряде случаев выполнить коронку за одно посещение.",
+        "author": "Др. Анна Коваленко",
+        "date": "15 апреля 2026",
+        "readTime": "5 мин"
+      },
+      {
+        "category": "Здоровье полости рта",
+        "title": "Заболевания десен: стадии, симптомы и решения",
+        "excerpt": "Проблемы с деснами часто развиваются незаметно. Раннее выявление и своевременное лечение серьезно влияют на результат.",
+        "author": "Др. Итан Брукс",
+        "date": "30 марта 2026",
+        "readTime": "8 мин"
+      }
+    ]
   },
   "contact": {
     "header": {
-      "badge": "Get in Touch",
-      "title": "Book Your Appointment",
-      "desc": "Free consultations available. Fill out the form below and we'll confirm within 2 hours."
+      "badge": "Связаться с нами",
+      "title": "Запишитесь на прием",
+      "desc": "Консультации доступны по предварительной записи. Заполните форму, и наша команда свяжется с вами, чтобы подтвердить ближайшее доступное время."
     },
     "success": {
-      "title": "Request Received!",
-      "desc": "Thank you, {{name}}! Our team will contact you within 2 business hours to confirm your appointment.",
-      "another": "Submit another request"
+      "title": "Запрос получен",
+      "desc": "Спасибо, {{name}}. Наша команда скоро свяжется с вами, чтобы подтвердить детали визита.",
+      "another": "Отправить еще один запрос"
     },
     "form": {
-      "title": "Appointment Request",
-      "firstName": "First Name",
-      "firstNamePlaceholder": "Jane",
-      "lastName": "Last Name",
-      "lastNamePlaceholder": "Smith",
-      "email": "Email",
-      "emailPlaceholder": "jane@example.com",
-      "phone": "Phone",
-      "phonePlaceholder": "+1 (555) 000-0000",
-      "service": "Service Needed",
-      "servicePlaceholder": "Select a service...",
-      "doctor": "Preferred Doctor",
-      "doctorPlaceholder": "Select a doctor...",
-      "noPreference": "No preference",
-      "date": "Preferred Date",
-      "message": "Message (optional)",
-      "messagePlaceholder": "Tell us about your dental concerns or questions...",
-      "submit": "Request Appointment",
-      "disclaimer": "By submitting this form you agree to our Privacy Policy. We never share your information.",
+      "title": "Запрос на прием",
+      "firstName": "Имя",
+      "firstNamePlaceholder": "Анна",
+      "lastName": "Фамилия",
+      "lastNamePlaceholder": "Мартиросян",
+      "email": "Эл. почта",
+      "emailPlaceholder": "anna@example.com",
+      "phone": "Телефон",
+      "phonePlaceholder": "+374 00 00 00 00",
+      "service": "Нужная услуга",
+      "servicePlaceholder": "Выберите услугу...",
+      "doctor": "Предпочтительный врач",
+      "doctorPlaceholder": "Выберите врача...",
+      "noPreference": "Без предпочтений",
+      "date": "Предпочтительная дата",
+      "message": "Сообщение (по желанию)",
+      "messagePlaceholder": "Опишите ваш вопрос или жалобу...",
+      "submit": "Отправить запрос",
+      "disclaimer": "Отправляя форму, вы соглашаетесь на связь с нашей командой для организации визита։",
       "services": {
-        "implants": "Dental Implants",
-        "ortho": "Orthodontics / Invisalign",
-        "whitening": "Teeth Whitening",
-        "veneers": "Porcelain Veneers",
-        "rootCanal": "Root Canal",
-        "perio": "Periodontal Treatment",
-        "checkup": "General Check-up",
-        "pediatric": "Pediatric Dentistry",
-        "cosmetic": "Cosmetic Consultation",
-        "other": "Other"
+        "implants": "Дентальные импланты",
+        "ortho": "Ортодонтия / Invisalign",
+        "whitening": "Отбеливание зубов",
+        "veneers": "Фарфоровые виниры",
+        "rootCanal": "Лечение каналов",
+        "perio": "Пародонтологическое лечение",
+        "checkup": "Общий осмотр",
+        "pediatric": "Детская стоматология",
+        "cosmetic": "Эстетическая консультация",
+        "other": "Другое"
       }
     },
     "info": {
-      "title": "Clinic Information",
-      "address": "Address",
+      "title": "Информация о клинике",
+      "address": "Адрес",
       "addressValue": "123 Medical Plaza, Suite 400\nNew York, NY 10001",
-      "phone": "Phone",
-      "email": "Email",
+      "phone": "Телефон",
+      "email": "Эл. почта",
       "emailValue": "hello@dentacare.com",
-      "hours": "Hours",
-      "hours1": "Mon – Fri: 8:00 – 20:00",
-      "hours2": "Saturday: 9:00 – 17:00",
-      "hours3": "Sunday: Closed",
+      "hours": "Часы работы",
+      "hours1": "Пн - Пт: 8:00 – 20:00",
+      "hours2": "Суббота: 9:00 – 17:00",
+      "hours3": "Воскресенье: выходной",
       "mapPlaceholder": "123 Medical Plaza, NY"
     },
     "emergency": {
-      "title": "Dental Emergency?",
-      "desc": "Same-day slots reserved for urgent cases.",
-      "button": "Call Now"
+      "title": "Срочная стоматологическая ситуация?",
+      "desc": "Если у вас неотложная проблема, свяжитесь с нашей командой как можно скорее.",
+      "button": "Позвонить сейчас",
+      "callAria": "Позвонить в клинику по срочному стоматологическому вопросу"
+    }
+  },
+  "serviceDetail": {
+    "labels": {
+      "startingFee": "Стоимость от",
+      "typicalDuration": "Длительность",
+      "patientRating": "Оценка пациентов",
+      "keyBenefits": "Ключевые преимущества"
+    },
+    "cta": {
+      "title": "Готовы обсудить {{service}}?",
+      "desc": "Запишитесь на консультацию, чтобы обсудить ваши цели, клиническую ситуацию и оптимальный план лечения.",
+      "book": "Записаться на консультацию",
+      "back": "Вернуться ко всем услугам"
+    },
+    "imageAlt": "Услуга {{service}}"
+  },
+  "serviceCatalog": {
+    "categories": {
+      "preventive": "Профилактика",
+      "cosmetic": "Эстетика",
+      "restorative": "Восстановление",
+      "orthodontics": "Ортодонтия",
+      "surgery": "Хирургия",
+      "pediatric": "Детям"
+    },
+    "services": {
+      "dentalCleaningCheckup": {
+        "title": "Профессиональная чистка и осмотр",
+        "tagline": "Основа здоровой улыбки",
+        "desc": "Профессиональная чистка удаляет зубной камень и налет, а осмотр помогает заметить проблемы на ранней стадии.",
+        "price": "От $80",
+        "duration": "60 мин",
+        "benefits": [
+          "Удаляет налет и пигментацию",
+          "Помогает рано выявить кариес",
+          "Оценивает состояние десен",
+          "Дает персональные рекомендации по гигиене"
+        ],
+        "intro": "Профилактические визиты помогают остановить небольшие проблемы до того, как они потребуют сложного лечения.",
+        "h2Title": "Что входит в прием",
+        "h2Description": "Во время визита оценивается состояние полости рта, проводится чистка и даются рекомендации по дальнейшему уходу.",
+        "processTitle": "Основные этапы приема",
+        "process": [
+          "Обсуждаются жалобы, привычки ухода и предыдущие лечения.",
+          "Проводится профессиональная чистка для удаления зубного камня и налета.",
+          "Врач осматривает зубы, десны, прикус и имеющиеся реставрации."
+        ],
+        "candidatesTitle": "Кому подходит услуга",
+        "candidates": [
+          "Пациентам, которым нужен плановый профилактический осмотр.",
+          "Взрослым и подросткам, желающим получить общую оценку состояния полости рта.",
+          "Тем, кто замечает кровоточивость десен, чувствительность или изменение цвета зубов."
+        ]
+      },
+      "teethWhitening": {
+        "title": "Профессиональное отбеливание зубов",
+        "tagline": "До 8 оттенков светлее за один визит",
+        "desc": "Клиническое отбеливание под контролем врача для равномерного и безопасного осветления зубов.",
+        "price": "От $350",
+        "duration": "90 мин",
+        "benefits": [
+          "Осветление до 8+ оттенков",
+          "Лечение за один визит",
+          "Деликатный подход к чувствительности",
+          "Рекомендации для поддержания результата"
+        ],
+        "intro": "Профессиональное отбеливание является одним из самых быстрых способов освежить улыбку.",
+        "h2Title": "Как планируется отбеливание",
+        "h2Description": "Сначала мы оцениваем причину изменения цвета, а затем подбираем безопасную и равномерную схему отбеливания.",
+        "processTitle": "Как проходит процедура",
+        "process": [
+          "Оценивается исходный оттенок и возможность проведения процедуры.",
+          "Десны защищаются, затем наносится профессиональный гель.",
+          "После завершения вы получаете рекомендации по сохранению эффекта."
+        ],
+        "candidatesTitle": "Особенно подходит",
+        "candidates": [
+          "Пациентам с потемнением зубов от кофе, чая или курения.",
+          "Тем, кто хочет неинвазивно улучшить эстетику улыбки.",
+          "Тем, кто хочет осветлить зубы перед важным событием."
+        ]
+      },
+      "veneers": {
+        "title": "Фарфоровые виниры",
+        "tagline": "Гармоничная и естественная улыбка",
+        "desc": "Тонкие фарфоровые накладки улучшают цвет, форму и общий вид передних зубов.",
+        "price": "От $900 за зуб",
+        "duration": "2 визита",
+        "benefits": [
+          "Естественный вид",
+          "Износостойкая керамика",
+          "Долговременный результат",
+          "Индивидуальный подбор оттенка"
+        ],
+        "intro": "Виниры позволяют очень точно изменить видимую линию улыбки и получить аккуратный эстетический результат.",
+        "h2Title": "Почему выбирают виниры",
+        "h2Description": "Виниры часто применяются при сколах, неровных краях, промежутках и стойком изменении цвета передних зубов.",
+        "processTitle": "Как проходит лечение",
+        "process": [
+          "Проводится эстетическая консультация и планирование улыбки.",
+          "Подготавливаются зубы и снимаются цифровые или лабораторные данные.",
+          "Готовые виниры примеряются и фиксируются."
+        ],
+        "candidatesTitle": "Часто рекомендуются",
+        "candidates": [
+          "При сколах, промежутках и неровной форме передних зубов.",
+          "Тем, кто хочет более долгосрочное эстетическое решение.",
+          "Пациентам, готовым к индивидуально спланированному лечению."
+        ]
+      },
+      "compositeBonding": {
+        "title": "Композитный бондинг",
+        "tagline": "Коррекция улыбки за один визит",
+        "desc": "Композит в цвет зуба помогает закрыть сколы, уменьшить промежутки и скорректировать форму.",
+        "price": "От $250 за зуб",
+        "duration": "60–90 мин",
+        "benefits": [
+          "Без снятия эмали",
+          "Результат в тот же день",
+          "Щадящий подход",
+          "Естественное совпадение по цвету"
+        ],
+        "intro": "Композитный бондинг хорошо подходит, когда нужно заметное улучшение без большой инвазии.",
+        "h2Title": "Когда бондинг особенно эффективен",
+        "h2Description": "Его выбирают для небольших эстетических коррекций, когда важно сохранить собственные ткани зуба.",
+        "processTitle": "Что происходит во время лечения",
+        "process": [
+          "Подбирается оттенок и планируется желаемая форма.",
+          "Композит послойно моделируется на зубе.",
+          "Проводится финальная шлифовка и полировка."
+        ],
+        "candidatesTitle": "Когда выбирают бондинг",
+        "candidates": [
+          "При небольших сколах, неровных краях и узких промежутках.",
+          "Тем, кто ищет более доступное эстетическое решение.",
+          "Пациентам, которые хотят получить результат в тот же день."
+        ]
+      },
+      "dentalImplants": {
+        "title": "Дентальные импланты",
+        "tagline": "Надежная замена утраченного зуба",
+        "desc": "Импланты восстанавливают отсутствующие зубы, обеспечивая стабильность, функцию и естественный вид.",
+        "price": "От $2,400",
+        "duration": "3–6 месяцев",
+        "benefits": [
+          "Долговременное решение",
+          "Сохраняют костную ткань",
+          "Не затрагивают соседние зубы",
+          "Высокая долговечность"
+        ],
+        "intro": "Импланты предназначены для долгосрочного восстановления отсутствующих зубов с учетом функции и эстетики.",
+        "h2Title": "Почему важно правильное планирование",
+        "h2Description": "Успешная имплантация строится на точной диагностике, хирургическом планировании и грамотной финальной реставрации.",
+        "processTitle": "Основные этапы лечения",
+        "process": [
+          "Консультация и обследование для оценки костной ткани и клинических целей.",
+          "Установка импланта с учетом плана лечения и срока заживления.",
+          "Фиксация коронки или протезной конструкции после интеграции импланта."
+        ],
+        "candidatesTitle": "Часто подходит",
+        "candidates": [
+          "Пациентам с отсутствием одного или нескольких зубов.",
+          "Тем, кто хочет фиксированное решение вместо съемного.",
+          "В случаях, когда важно сохранить соседние здоровые зубы."
+        ]
+      },
+      "sameDayCrowns": {
+        "title": "Коронки за один день (CEREC)",
+        "tagline": "Коронка за один визит",
+        "desc": "Цифровое сканирование и изготовление керамической коронки в клинике позволяют выполнить восстановление за один прием.",
+        "price": "От $1,100",
+        "duration": "2 часа",
+        "benefits": [
+          "Лечение за один визит",
+          "Цифровая точность",
+          "Безметалловая керамика",
+          "Без временных коронок"
+        ],
+        "intro": "Коронки за один день подходят в ситуациях, когда важны скорость, точность и отсутствие нескольких посещений.",
+        "h2Title": "Восстановление коронкой за один визит",
+        "h2Description": "Цифровые технологии позволяют подготовить зуб, изготовить и установить керамическую коронку в один прием.",
+        "processTitle": "Как организован прием",
+        "process": [
+          "Подготавливается зуб и выполняется цифровое сканирование вместо классического слепка.",
+          "Коронка проектируется и изготавливается в клинике по цифровой модели.",
+          "В тот же день проводится примерка, коррекция и окончательная фиксация."
+        ],
+        "candidatesTitle": "Особенно подходит",
+        "candidates": [
+          "Зубам, которым нужна коронка после скола, кариеса или лечения каналов.",
+          "Тем, кто хочет сократить сроки восстановительного лечения.",
+          "Пациентам, предпочитающим безметалловую керамику и цифровую точность."
+        ]
+      },
+      "rootCanalTreatment": {
+        "title": "Лечение корневых каналов",
+        "tagline": "Сохраните собственный зуб",
+        "desc": "Современное эндодонтическое лечение для удаления инфицированных тканей и сохранения зуба.",
+        "price": "От $700",
+        "duration": "60–90 мин",
+        "benefits": [
+          "Сохраняет естественный зуб",
+          "Комфортное лечение",
+          "Современные технологии",
+          "Высокая успешность"
+        ],
+        "intro": "Лечение каналов проводится, когда инфекция или воспаление затронули внутренние ткани зуба.",
+        "h2Title": "Когда лечение рекомендуется",
+        "h2Description": "Оно часто необходимо при глубоком кариесе, травме, боли или воспалении нерва.",
+        "processTitle": "Как проходит лечение",
+        "process": [
+          "Проводится диагностика и рентгенологическая оценка.",
+          "Под местной анестезией очищаются и обрабатываются каналы.",
+          "Затем каналы герметизируются и планируется окончательное восстановление зуба."
+        ],
+        "candidatesTitle": "Распространенные показания",
+        "candidates": [
+          "Постоянная боль, давление или длительная чувствительность.",
+          "Глубокий кариес или инфекция внутри зуба.",
+          "Ситуации, когда зуб можно сохранить вместо удаления."
+        ]
+      },
+      "invisalign": {
+        "title": "Прозрачные элайнеры Invisalign",
+        "tagline": "Выравнивание зубов незаметно",
+        "desc": "Прозрачные съемные элайнеры помогают скорректировать положение зубов и некоторые нарушения прикуса.",
+        "price": "От $3,200",
+        "duration": "6–24 месяца",
+        "benefits": [
+          "Почти незаметны",
+          "Снимаются во время еды",
+          "Цифровой предварительный прогноз",
+          "Нет ограничений по питанию"
+        ],
+        "intro": "Invisalign подходит тем, кто хочет выровнять зубы без фиксированных брекетов.",
+        "h2Title": "На чем сфокусировано лечение Invisalign",
+        "h2Description": "Прозрачные элайнеры помогают скорректировать скученность, промежутки и некоторые нарушения прикуса, оставаясь удобными в повседневной жизни.",
+        "processTitle": "Что включает план лечения",
+        "process": [
+          "Проводится цифровое сканирование и ортодонтическая оценка.",
+          "Создается поэтапный план перемещения зубов.",
+          "Проводятся регулярные проверки и при необходимости коррекции."
+        ],
+        "candidatesTitle": "Часто подходит",
+        "candidates": [
+          "Взрослым и подросткам, которым нужен малозаметный вариант.",
+          "При легкой и средней скученности или промежутках.",
+          "Тем, кто готов носить элайнеры регулярно каждый день."
+        ]
+      },
+      "ceramicBraces": {
+        "title": "Керамические брекеты",
+        "tagline": "Эффективное и более деликатное выравнивание",
+        "desc": "Керамические брекеты обеспечивают надежный контроль в более сложных ортодонтических случаях и выглядят менее заметно.",
+        "price": "От $2,800",
+        "duration": "12–24 месяца",
+        "benefits": [
+          "Брекеты, близкие к цвету зубов",
+          "Подходят для сложных случаев",
+          "Для взрослых и подростков",
+          "Точная коррекция прикуса"
+        ],
+        "intro": "Керамические брекеты сочетают эффективность фиксированной ортодонтии и более деликатный внешний вид.",
+        "h2Title": "Почему выбирают керамические брекеты",
+        "h2Description": "Они подходят, когда нужна полноценная ортодонтическая коррекция, но пациент хочет более сдержанный внешний вид.",
+        "processTitle": "Как проходит лечение",
+        "process": [
+          "Проводится ортодонтическая диагностика и планирование.",
+          "Устанавливаются керамические брекеты и назначаются контрольные визиты.",
+          "На протяжении лечения врач отслеживает движение зубов до финального результата."
+        ],
+        "candidatesTitle": "Часто выбирают",
+        "candidates": [
+          "Взрослые и подростки, которым необходимо фиксированное ортодонтическое лечение.",
+          "Пациенты со средними и сложными нарушениями прикуса или положения зубов.",
+          "Случаи, когда элайнеры не дают достаточного контроля."
+        ]
+      },
+      "periodontalTreatment": {
+        "title": "Пародонтологическое лечение",
+        "tagline": "Целенаправленное лечение заболеваний десен",
+        "desc": "Профессиональная помощь при воспалении десен, рецессии и пародонтологических проблемах.",
+        "price": "От $450",
+        "duration": "Зависит от стадии",
+        "benefits": [
+          "Подходит при разных стадиях заболеваний десен",
+          "Доступны современные методы лечения",
+          "Предусмотрено дальнейшее наблюдение",
+          "Включает поддерживающий этап"
+        ],
+        "intro": "Пародонтологическое лечение помогает контролировать воспаление десен, рецессию и потерю костной ткани, сохраняя опорные структуры.",
+        "h2Title": "Как контролируется заболевание десен",
+        "h2Description": "Тактика лечения зависит от стадии процесса, глубины карманов и реакции тканей.",
+        "processTitle": "Лечение может включать",
+        "process": [
+          "Подробный пародонтологический осмотр и оценку состояния десен.",
+          "Глубокую чистку или целенаправленное профессиональное вмешательство.",
+          "План дальнейшего наблюдения и поддерживающих визитов."
+        ],
+        "candidatesTitle": "Стоит рассмотреть лечение, если есть",
+        "candidates": [
+          "Кровоточивость десен, неприятный запах или болезненность.",
+          "Диагностированное заболевание десен или глубокие пародонтальные карманы.",
+          "Рецессия десны или потеря поддерживающих тканей."
+        ]
+      },
+      "wisdomToothExtraction": {
+        "title": "Удаление зуба мудрости",
+        "tagline": "Безопасное и комфортное удаление",
+        "desc": "Удаление проблемных или ретинированных зубов мудрости с продуманным планом и послеоперационным сопровождением.",
+        "price": "От $300 за зуб",
+        "duration": "45–90 мин",
+        "benefits": [
+          "Возможна седация",
+          "Проводится в тот же день",
+          "Короткий период восстановления",
+          "Подробные рекомендации после удаления"
+        ],
+        "intro": "Удаление часто рекомендуется, когда зуб мудрости вызывает боль, воспаление или влияет на соседние зубы.",
+        "h2Title": "Когда удаление оправдано",
+        "h2Description": "Частично прорезавшиеся или неправильно расположенные зубы мудрости могут влиять на десны и соседние зубы.",
+        "processTitle": "Что включает процедура",
+        "process": [
+          "Проводится осмотр и диагностика, чтобы оценить сложность случая.",
+          "Удаление выполняется под местной анестезией, при необходимости с седацией.",
+          "Пациент получает подробные рекомендации по восстановлению и уходу."
+        ],
+        "candidatesTitle": "Распространенные причины",
+        "candidates": [
+          "Боль, отек, воспаление или застревание пищи вокруг зубов мудрости.",
+          "Ретинированные зубы, влияющие на соседние моляры.",
+          "Ортодонтические или профилактические показания по результатам осмотра."
+        ]
+      },
+      "pediatricDentistry": {
+        "title": "Детская стоматология",
+        "tagline": "Бережный уход для маленьких улыбок",
+        "desc": "Профилактическая и лечебная помощь для детей, направленная на формирование здоровых привычек.",
+        "price": "От $60",
+        "duration": "30–60 мин",
+        "benefits": [
+          "Прием детей от 1 года",
+          "Подход без страха",
+          "Профилактическая защита",
+          "Раннее ортодонтическое наблюдение"
+        ],
+        "intro": "Детская стоматология сосредоточена на профилактике, здоровых привычках и позитивном первом опыте у ребенка.",
+        "h2Title": "Почему ранние визиты важны",
+        "h2Description": "Регулярные детские осмотры помогают правильному развитию, ранней профилактике кариеса и контролю прикуса.",
+        "processTitle": "Что могут ожидать семьи",
+        "process": [
+          "Мягкий осмотр с учетом возраста и уровня комфорта ребенка.",
+          "Чистка, фторирование и профилактические рекомендации при необходимости.",
+          "Советы родителям по гигиене, питанию и повседневным привычкам."
+        ],
+        "candidatesTitle": "Предназначено для",
+        "candidates": [
+          "Детей от первого визита до подросткового возраста.",
+          "Семей, которым важно регулярное профилактическое наблюдение.",
+          "Детей, которым нужен особенно бережный и поддерживающий подход."
+        ]
+      }
     }
   }
 }

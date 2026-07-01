@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { NavLink } from "react-router";
 import { useTranslation } from "react-i18next";
 import { useSanityData } from "../../hooks/useSanityData";
 import { SLIDES_QUERY } from "../../lib/queries";
 import type { SanitySlide } from "../../lib/sanityTypes";
+import { LocalizedNavLink } from "../routing";
 
 const fallbackSlides = [
   {
@@ -30,6 +30,7 @@ export function PhotoSlider() {
   const { data: sanitySlides } = useSanityData<SanitySlide[]>(SLIDES_QUERY, []);
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [loadedSlides, setLoadedSlides] = useState<number[]>([0]);
 
   const useSanity = Array.isArray(sanitySlides) && sanitySlides.length > 0;
   const localizedFallbackSlides = useMemo(() => {
@@ -73,6 +74,41 @@ export function PhotoSlider() {
     setCurrent((value) => (value >= totalSlides ? 0 : value));
   }, [totalSlides]);
 
+  useEffect(() => {
+    setLoadedSlides((previous) => {
+      const next = new Set(previous);
+      next.add(current);
+      return Array.from(next).sort((a, b) => a - b);
+    });
+  }, [current]);
+
+  useEffect(() => {
+    if (totalSlides <= 1) return;
+
+    const nextSlideIndex = (current + 1) % totalSlides;
+    const schedulePreload = () => {
+      setLoadedSlides((previous) => {
+        if (previous.includes(nextSlideIndex)) {
+          return previous;
+        }
+
+        return [...previous, nextSlideIndex].sort((a, b) => a - b);
+      });
+    };
+
+    if (typeof window.requestIdleCallback === "function") {
+      const idleId = window.requestIdleCallback(() => schedulePreload(), { timeout: 1500 });
+      return () => {
+        if (typeof window.cancelIdleCallback === "function") {
+          window.cancelIdleCallback(idleId);
+        }
+      };
+    }
+
+    const timer = window.setTimeout(schedulePreload, 800);
+    return () => window.clearTimeout(timer);
+  }, [current, totalSlides]);
+
   const slide = slides[current];
 
   return (
@@ -84,12 +120,24 @@ export function PhotoSlider() {
     >
       {Array.from({ length: totalSlides }).map((_, i) => {
         const s = slides[i];
+        const isLoaded = loadedSlides.includes(i);
         return (
           <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{ opacity: i === current ? 1 : 0 }}>
-            <div
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-[6000ms] ease-out"
-              style={{ backgroundImage: `url(${s.image})`, transform: i === current ? "scale(1)" : "scale(1.06)" }}
-            />
+            {isLoaded ? (
+              <img
+                src={s.image}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[6000ms] ease-out"
+                style={{ transform: i === current ? "scale(1)" : "scale(1.06)" }}
+                fetchPriority={i === 0 ? "high" : undefined}
+                loading={i === 0 ? "eager" : "lazy"}
+                decoding="async"
+                sizes="100vw"
+              />
+            ) : (
+              <div className="absolute inset-0 bg-[#0F1932]" />
+            )}
           </div>
         );
       })}
@@ -113,36 +161,36 @@ export function PhotoSlider() {
             <p className="text-white/65 text-lg leading-relaxed mb-10 max-w-lg">{slide.desc}</p>
 
             <div className="flex flex-wrap gap-4">
-              <NavLink
+              <LocalizedNavLink
                 to={slide.link || "/services"}
                 className="inline-flex items-center gap-2 px-7 py-4 bg-[#B5C7EB] text-[#0F1932] rounded-xl hover:bg-[#B5C7EB]/85 transition-colors"
                 style={{ fontWeight: 700 }}
               >
                 {slide.cta} <ChevronRight className="w-4 h-4" />
-              </NavLink>
-              <NavLink
+              </LocalizedNavLink>
+              <LocalizedNavLink
                 to="/contact"
                 className="inline-flex items-center gap-2 px-7 py-4 bg-white/10 border border-white/20 text-white rounded-xl hover:bg-white/18 transition-colors"
                 style={{ fontWeight: 500 }}
               >
                 {t("slider.bookConsultation")}
-              </NavLink>
+              </LocalizedNavLink>
             </div>
           </div>
         </div>
       </div>
 
-      <button onClick={prev} className="absolute left-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-[#B5C7EB] hover:border-[#B5C7EB] transition-all group" aria-label="Previous slide">
+      <button onClick={prev} className="absolute left-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-[#B5C7EB] hover:border-[#B5C7EB] transition-all group" aria-label={t("slider.previousSlide")}>
         <ChevronLeft className="w-5 h-5 text-white group-hover:text-[#0F1932]" />
       </button>
-      <button onClick={next} className="absolute right-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-[#B5C7EB] hover:border-[#B5C7EB] transition-all group" aria-label="Next slide">
+      <button onClick={next} className="absolute right-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-[#B5C7EB] hover:border-[#B5C7EB] transition-all group" aria-label={t("slider.nextSlide")}>
         <ChevronRight className="w-5 h-5 text-white group-hover:text-[#0F1932]" />
       </button>
 
       <div className="absolute bottom-8 left-0 right-0 z-30 flex items-center justify-between px-10 lg:px-16">
         <div className="flex items-center gap-2">
           {Array.from({ length: totalSlides }).map((_, i) => (
-            <button key={i} onClick={() => setCurrent(i)} aria-label={`Go to slide ${i + 1}`}
+            <button key={i} onClick={() => setCurrent(i)} aria-label={t("slider.goToSlide", { index: i + 1 })}
               style={{ height: "8px", borderRadius: "4px", background: i === current ? "#B5C7EB" : "rgba(255,255,255,0.3)", transition: "width 0.4s ease, background 0.4s ease", width: i === current ? "28px" : "8px" }}
             />
           ))}

@@ -1,7 +1,8 @@
-import { NavLink } from "react-router";
-import { Phone, Mail, MapPin, Clock, Instagram, Facebook, Youtube } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import logoImg from "../../imports/matikyan-clinic-logo-am.png";
+import { getServiceSlugByTitle } from "../serviceData";
+import { LocalizedNavLink } from "../routing";
 
 export function Footer() {
   const { t } = useTranslation();
@@ -17,13 +18,13 @@ export function Footer() {
   ] as const;
 
   const serviceLinks = [
-    { key: "footer.servicesList.whitening", path: "/services" },
-    { key: "footer.servicesList.implants", path: "/services" },
-    { key: "footer.servicesList.orthodontics", path: "/services" },
-    { key: "footer.servicesList.veneers", path: "/services" },
-    { key: "footer.servicesList.rootCanal", path: "/services" },
-    { key: "footer.servicesList.pediatric", path: "/services" },
-    { key: "footer.servicesList.cosmetic", path: "/services" },
+    { key: "footer.servicesList.whitening", path: getServiceSlugByTitle("Professional Teeth Whitening") },
+    { key: "footer.servicesList.implants", path: getServiceSlugByTitle("Dental Implants") },
+    { key: "footer.servicesList.orthodontics", path: getServiceSlugByTitle("Invisalign Clear Aligners") },
+    { key: "footer.servicesList.veneers", path: getServiceSlugByTitle("Porcelain Veneers") },
+    { key: "footer.servicesList.rootCanal", path: getServiceSlugByTitle("Root Canal Treatment") },
+    { key: "footer.servicesList.pediatric", path: getServiceSlugByTitle("Pediatric Dentistry") },
+    { key: "footer.servicesList.cosmetic", path: getServiceSlugByTitle("Composite Bonding") },
   ] as const;
 
   return (
@@ -35,16 +36,9 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-5">
-              <img src={logoImg} alt="Matikyan Clinic" className="h-12 w-auto object-contain" />
+              <img src={logoImg} alt={t("footer.logoAlt")} className="h-12 w-auto object-contain" />
             </div>
             <p className="text-white/55 text-sm leading-relaxed mb-6">{t("footer.description")}</p>
-            <div className="flex gap-3">
-              {[Instagram, Facebook, Youtube].map((Icon, i) => (
-                <a key={i} href="#" className="w-9 h-9 rounded-xl bg-white/8 hover:bg-[#B5C7EB] transition-all flex items-center justify-center group">
-                  <Icon className="w-4 h-4 text-white group-hover:text-[#0F1932]" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Navigation */}
@@ -53,7 +47,7 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               {navLinks.map(({ key, path }) => (
                 <li key={path}>
-                  <NavLink to={path} className="text-sm text-white/55 hover:text-[#B5C7EB] transition-colors">{t(key)}</NavLink>
+                  <LocalizedNavLink to={path} className="text-sm text-white/55 hover:text-[#B5C7EB] transition-colors">{t(key)}</LocalizedNavLink>
                 </li>
               ))}
             </ul>
@@ -65,7 +59,7 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               {serviceLinks.map(({ key, path }) => (
                 <li key={key}>
-                  <NavLink to={path} className="text-sm text-white/55 hover:text-[#B5C7EB] transition-colors cursor-pointer">{t(key)}</NavLink>
+                  <LocalizedNavLink to={path} className="text-sm text-white/55 hover:text-[#B5C7EB] transition-colors cursor-pointer">{t(key)}</LocalizedNavLink>
                 </li>
               ))}
             </ul>
@@ -81,11 +75,23 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#B5C7EB] shrink-0" />
-                <a href="tel:+18005551234" className="text-sm text-white/55 hover:text-[#B5C7EB] transition-colors">{t("nav.phone")}</a>
+                <a
+                  href="tel:+18005551234"
+                  aria-label={t("footer.phoneLinkAria")}
+                  className="text-sm text-white/55 hover:text-[#B5C7EB] transition-colors"
+                >
+                  {t("nav.phone")}
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#B5C7EB] shrink-0" />
-                <a href="mailto:hello@matikyan.com" className="text-sm text-white/55 hover:text-[#B5C7EB] transition-colors">{t("footer.email")}</a>
+                <a
+                  href="mailto:hello@matikyan.com"
+                  aria-label={t("footer.emailLinkAria")}
+                  className="text-sm text-white/55 hover:text-[#B5C7EB] transition-colors"
+                >
+                  {t("footer.email")}
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-4 h-4 text-[#B5C7EB] mt-0.5 shrink-0" />
@@ -103,10 +109,6 @@ export function Footer() {
       <div className="border-t border-white/8">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-white/30">{t("footer.copyright")}</p>
-          <div className="flex gap-5">
-            <a href="#" className="text-xs text-white/30 hover:text-[#B5C7EB] transition-colors">{t("footer.privacy")}</a>
-            <a href="#" className="text-xs text-white/30 hover:text-[#B5C7EB] transition-colors">{t("footer.terms")}</a>
-          </div>
         </div>
       </div>
     </footer>

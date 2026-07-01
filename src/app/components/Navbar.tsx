@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { Menu, X, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import logoImg from "../../imports/matikyan-clinic-logo-am.png";
+import { getLocalizedPathForLanguage, LocalizedNavLink, type AppLanguage, useCurrentLanguage } from "../routing";
 
 const navKeys = [
   { key: "nav.about", path: "/about" },
@@ -12,18 +13,20 @@ const navKeys = [
   { key: "nav.faq", path: "/faq" },
   { key: "nav.blog", path: "/blog" },
   { key: "nav.contact", path: "/contact" },
-];
+] as const;
 
 const langs = [
   { code: "en", label: "EN" },
   { code: "hy", label: "ՀՅ" },
   { code: "ru", label: "РУ" },
-];
+] as const satisfies ReadonlyArray<{ code: AppLanguage; label: string }>;
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
   const location = useLocation();
+  const currentLanguage = useCurrentLanguage();
   const { t, i18n } = useTranslation();
 
   useEffect(() => { setOpen(false); }, [location.pathname]);
@@ -34,9 +37,11 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
-  const changeLang = (code: string) => {
-    i18n.changeLanguage(code);
+  const changeLang = (code: AppLanguage) => {
     localStorage.setItem("lang", code);
+    const localizedPath = getLocalizedPathForLanguage(location.pathname, code);
+    void i18n.changeLanguage(code);
+    void navigate(`${localizedPath}${location.search}${location.hash}`);
   };
 
   return (
@@ -46,19 +51,19 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-18">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center">
+          <LocalizedNavLink to="/" className="flex items-center">
             <img
               src={logoImg}
-              alt="Matikyan Clinic"
+              alt={t("nav.logoAlt")}
               className="h-14 w-auto object-contain"
               style={{ filter: "brightness(0) saturate(100%) invert(9%) sepia(40%) saturate(800%) hue-rotate(194deg) brightness(95%)" }}
             />
-          </NavLink>
+          </LocalizedNavLink>
 
           {/* Desktop nav */}
           <nav className="hidden xl:flex items-center gap-0.5">
             {navKeys.map((item) => (
-              <NavLink
+              <LocalizedNavLink
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
@@ -71,7 +76,7 @@ export function Navbar() {
                 style={{ fontWeight: 500 }}
               >
                 {t(item.key)}
-              </NavLink>
+              </LocalizedNavLink>
             ))}
           </nav>
 
@@ -83,8 +88,9 @@ export function Navbar() {
                 <button
                   key={lang.code}
                   onClick={() => changeLang(lang.code)}
+                  aria-label={t("nav.switchLanguage", { language: t(`nav.languageNames.${lang.code}`) })}
                   className={`px-2.5 py-1.5 text-xs transition-colors ${
-                    i18n.language === lang.code
+                    currentLanguage === lang.code
                       ? "bg-[#0F1932] text-white"
                       : "text-[#5B6475] hover:bg-[#B5C7EB]/15 hover:text-[#0F1932]"
                   }`}
@@ -95,24 +101,28 @@ export function Navbar() {
               ))}
             </div>
 
-            <a href="tel:+18005551234" className="flex items-center gap-2 text-sm text-[#5B6475] hover:text-[#0F1932] transition-colors">
+            <a
+              href="tel:+18005551234"
+              aria-label={t("nav.callClinic")}
+              className="flex items-center gap-2 text-sm text-[#5B6475] hover:text-[#0F1932] transition-colors"
+            >
               <Phone className="w-4 h-4 text-[#B5C7EB]" />
               <span>{t("nav.phone")}</span>
             </a>
-            <NavLink
+            <LocalizedNavLink
               to="/contact"
               className="px-5 py-2.5 bg-[#0F1932] text-white rounded-xl text-sm hover:bg-[#0F1932]/90 transition-colors"
               style={{ fontWeight: 500 }}
             >
               {t("nav.bookAppointment")}
-            </NavLink>
+            </LocalizedNavLink>
           </div>
 
           {/* Mobile toggle */}
           <button
             className="xl:hidden p-2 rounded-lg text-[#5B6475] hover:bg-[#B5C7EB]/10"
             onClick={() => setOpen(!open)}
-            aria-label="Toggle menu"
+            aria-label={t("nav.toggleMenu")}
           >
             {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -123,7 +133,7 @@ export function Navbar() {
       {open && (
         <div className="xl:hidden bg-white border-t border-[#0F1932]/8 px-6 py-4 flex flex-col gap-1">
           {navKeys.map((item) => (
-            <NavLink
+            <LocalizedNavLink
               key={item.path}
               to={item.path}
               className={({ isActive }) =>
@@ -136,7 +146,7 @@ export function Navbar() {
               style={{ fontWeight: 500 }}
             >
               {t(item.key)}
-            </NavLink>
+            </LocalizedNavLink>
           ))}
           {/* Mobile language switcher */}
           <div className="flex items-center gap-1 pt-3 border-t border-[#0F1932]/8 mt-2">
@@ -144,8 +154,9 @@ export function Navbar() {
               <button
                 key={lang.code}
                 onClick={() => changeLang(lang.code)}
+                aria-label={t("nav.switchLanguage", { language: t(`nav.languageNames.${lang.code}`) })}
                 className={`flex-1 py-2 text-xs rounded-lg transition-colors ${
-                  i18n.language === lang.code
+                  currentLanguage === lang.code
                     ? "bg-[#0F1932] text-white"
                     : "border border-[#0F1932]/10 text-[#5B6475] hover:bg-[#B5C7EB]/15"
                 }`}
@@ -155,13 +166,13 @@ export function Navbar() {
               </button>
             ))}
           </div>
-          <NavLink
+          <LocalizedNavLink
             to="/contact"
             className="mt-2 px-5 py-3 bg-[#0F1932] text-white rounded-xl text-sm text-center"
             style={{ fontWeight: 500 }}
           >
             {t("nav.bookAppointment")}
-          </NavLink>
+          </LocalizedNavLink>
         </div>
       )}
     </header>

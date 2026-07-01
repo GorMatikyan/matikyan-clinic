@@ -1,4 +1,3 @@
-import { NavLink } from "react-router";
 import { useTranslation } from "react-i18next";
 import {
   ArrowRight, Shield, Award, Users, Clock, Star, ChevronRight,
@@ -6,6 +5,8 @@ import {
   Zap, Sparkles, Smile, Gem, Activity, Heart,
 } from "lucide-react";
 import { PhotoSlider } from "../components/PhotoSlider";
+import { getServiceSlugByTitle } from "../serviceData";
+import { LocalizedNavLink } from "../routing";
 
 const statIcons = [Trophy, UserCheck, Stethoscope, ThumbsUp];
 const statValues = ["12+", "8,400+", "18", "99%"];
@@ -13,6 +14,14 @@ const statKeys = ["home.stats.years", "home.stats.patients", "home.stats.doctors
 
 const serviceIcons = [Zap, Sparkles, Smile, Gem, Activity, Heart];
 const serviceKeys = ["implants", "whitening", "ortho", "veneers", "rootCanal", "pediatric"] as const;
+const servicePaths = [
+  getServiceSlugByTitle("Dental Implants"),
+  getServiceSlugByTitle("Professional Teeth Whitening"),
+  getServiceSlugByTitle("Invisalign Clear Aligners"),
+  getServiceSlugByTitle("Porcelain Veneers"),
+  getServiceSlugByTitle("Root Canal Treatment"),
+  getServiceSlugByTitle("Pediatric Dentistry"),
+];
 
 const featureIcons = [Shield, Award, Users, Clock];
 const featureKeys = ["painFree", "certified", "family", "hours"] as const;
@@ -67,17 +76,17 @@ export function Home() {
                 {t("home.services.title")}
               </h2>
             </div>
-            <NavLink to="/services" className="inline-flex items-center gap-2 text-[#0F1932] text-sm hover:gap-3 transition-all shrink-0" style={{ fontWeight: 500 }}>
+            <LocalizedNavLink to="/services" className="inline-flex items-center gap-2 text-[#0F1932] text-sm hover:gap-3 transition-all shrink-0" style={{ fontWeight: 500 }}>
               {t("home.services.viewAll")} <ChevronRight className="w-4 h-4" />
-            </NavLink>
+            </LocalizedNavLink>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {serviceKeys.map((key, i) => {
               const Icon = serviceIcons[i];
               return (
-                <NavLink
-                  to="/services"
+                <LocalizedNavLink
+                  to={servicePaths[i]}
                   key={key}
                   className="group bg-white rounded-2xl p-7 border border-[#0F1932]/8 hover:border-[#B5C7EB]/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
                   style={{ borderLeft: "3px solid #B5C7EB" }}
@@ -92,7 +101,7 @@ export function Home() {
                   <div className="mt-5 flex items-center gap-2 text-[#B5C7EB] text-sm opacity-0 group-hover:opacity-100 transition-opacity" style={{ fontWeight: 500 }}>
                     {t("home.services.learnMore")} <ArrowRight className="w-3.5 h-3.5" />
                   </div>
-                </NavLink>
+                </LocalizedNavLink>
               );
             })}
           </div>
@@ -105,9 +114,11 @@ export function Home() {
           <div className="relative">
             <img
               src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=700&h=600&fit=crop&auto=format"
-              alt="Modern dental clinic interior"
+              alt={t("home.whyUs.imageAlt")}
               className="w-full rounded-2xl object-cover shadow-xl"
               style={{ height: "460px" }}
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute bottom-6 left-6 bg-[#0F1932] text-white rounded-2xl px-5 py-4 shadow-xl">
               <div className="flex items-center gap-1 mb-1">
@@ -146,9 +157,9 @@ export function Home() {
               })}
             </div>
 
-            <NavLink to="/about" className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#0F1932] text-white rounded-xl hover:bg-[#0F1932]/90 transition-colors" style={{ fontWeight: 500 }}>
+            <LocalizedNavLink to="/about" className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#0F1932] text-white rounded-xl hover:bg-[#0F1932]/90 transition-colors" style={{ fontWeight: 500 }}>
               {t("home.whyUs.learnMore")} <ArrowRight className="w-4 h-4" />
-            </NavLink>
+            </LocalizedNavLink>
           </div>
         </div>
       </section>
@@ -180,7 +191,13 @@ export function Home() {
                   "{t(`home.testimonials.items.${i}.text`)}"
                 </p>
                 <div className={`flex items-center gap-3 pt-5 border-t ${i === 1 ? "border-[#0F1932]/10" : "border-white/8"}`}>
-                  <img src={testimonialAvatars[i]} alt={t(`home.testimonials.items.${i}.name`)} className="w-10 h-10 rounded-full object-cover" />
+                  <img
+                    src={testimonialAvatars[i]}
+                    alt={t("home.testimonials.avatarAlt", { name: t(`home.testimonials.items.${i}.name`) })}
+                    className="w-10 h-10 rounded-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <div>
                     <div className={`text-sm ${i === 1 ? "text-[#0F1932]" : "text-white"}`} style={{ fontWeight: 600 }}>
                       {t(`home.testimonials.items.${i}.name`)}
@@ -195,9 +212,9 @@ export function Home() {
           </div>
 
           <div className="text-center mt-10">
-            <NavLink to="/reviews" className="inline-flex items-center gap-2 text-[#B5C7EB] hover:gap-3 transition-all" style={{ fontWeight: 500 }}>
+            <LocalizedNavLink to="/reviews" className="inline-flex items-center gap-2 text-[#B5C7EB] hover:gap-3 transition-all" style={{ fontWeight: 500 }}>
               {t("home.testimonials.readAll")} <ChevronRight className="w-4 h-4" />
-            </NavLink>
+            </LocalizedNavLink>
           </div>
         </div>
       </section>
@@ -212,9 +229,9 @@ export function Home() {
             {t("home.cta.title")}
           </h2>
           <p className="text-white/60 text-lg mb-8">{t("home.cta.desc")}</p>
-          <NavLink to="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#B5C7EB] text-[#0F1932] rounded-xl hover:bg-[#B5C7EB]/90 transition-colors" style={{ fontWeight: 600 }}>
+          <LocalizedNavLink to="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-[#B5C7EB] text-[#0F1932] rounded-xl hover:bg-[#B5C7EB]/90 transition-colors" style={{ fontWeight: 600 }}>
             {t("home.cta.button")} <ArrowRight className="w-4 h-4" />
-          </NavLink>
+          </LocalizedNavLink>
         </div>
       </section>
     </div>

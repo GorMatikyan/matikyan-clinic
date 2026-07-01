@@ -70,6 +70,13 @@ const sourceStyle: Record<string, string> = {
 export function Reviews() {
   const { t } = useTranslation();
   const { data: reviewList } = useSanityData<SanityReview[]>(REVIEWS_QUERY, reviews);
+  const localizedReviews = reviewList.map((review, index) => ({
+    ...review,
+    name: t(`reviews.items.${index}.name`, { defaultValue: review.name }),
+    date: t(`reviews.items.${index}.date`, { defaultValue: review.date }),
+    service: t(`reviews.items.${index}.service`, { defaultValue: review.service }),
+    text: t(`reviews.items.${index}.text`, { defaultValue: review.text }),
+  }));
   return (
     <div>
       {/* Header — navy */}
@@ -92,7 +99,16 @@ export function Reviews() {
 
       {/* Stats — clean clinical band */}
       <section className="py-12 bg-white border-b border-[#0F1932]/8">
-        <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-8">
+            <h2 className="text-[#0F1932] mb-3" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.7rem, 3vw, 2.4rem)", fontWeight: 800 }}>
+              {t("reviews.intro.title")}
+            </h2>
+            <p className="text-[#5B6475] max-w-2xl mx-auto leading-relaxed">
+              {t("reviews.intro.desc")}
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { value: "4.9 / 5.0", labelKey: "reviews.stats.overallRating" },
             { value: "1,240+", labelKey: "reviews.stats.totalReviews" },
@@ -104,6 +120,7 @@ export function Reviews() {
               <div className="text-[#5B6475] text-sm">{t(s.labelKey)}</div>
             </div>
           ))}
+          </div>
         </div>
       </section>
 
@@ -111,7 +128,7 @@ export function Reviews() {
       <section className="py-16 pb-24 bg-[#F7FAFC]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {reviewList.map((r) => (
+            {localizedReviews.map((r) => (
               <div
                 key={r.name}
                 className={`rounded-2xl p-7 border flex flex-col ${
@@ -132,7 +149,7 @@ export function Reviews() {
                 <p className={`text-sm leading-relaxed flex-1 mb-5 ${r.featured ? "text-white/70" : "text-[#5B6475]"}`}>"{r.text}"</p>
                 <div className={`border-t pt-5 flex items-center justify-between ${r.featured ? "border-white/10" : "border-[#0F1932]/8"}`}>
                   <div className="flex items-center gap-3">
-                    <img src={r.avatar} alt={r.name} className="w-10 h-10 rounded-full object-cover" />
+                    <img src={r.avatar} alt={t("reviews.avatarAlt", { name: r.name })} className="w-10 h-10 rounded-full object-cover" />
                     <div>
                       <div className={`text-sm ${r.featured ? "text-white" : "text-[#0F1932]"}`} style={{ fontWeight: 600 }}>{r.name}</div>
                       <div className={`text-xs ${r.featured ? "text-white/45" : "text-[#5B6475]"}`}>{r.service} · {r.date}</div>

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import {
-  ArrowRight, Shield, Award, Users, Clock, Star, ChevronRight,
+  ArrowRight, Shield, Award, Users, Clock, ChevronRight,
   Trophy, UserCheck, Stethoscope, ThumbsUp,
   Zap, Sparkles, Smile, Gem, Activity, Heart,
 } from "lucide-react";
@@ -9,28 +9,22 @@ import { getServiceSlugByTitle } from "../serviceData";
 import { LocalizedNavLink } from "../routing";
 
 const statIcons = [Trophy, UserCheck, Stethoscope, ThumbsUp];
-const statValues = ["12+", "8,400+", "18", "99%"];
+const statValues = ["20+", "8,400+", "18", "99%"];
 const statKeys = ["home.stats.years", "home.stats.patients", "home.stats.doctors", "home.stats.satisfaction"] as const;
 
 const serviceIcons = [Zap, Sparkles, Smile, Gem, Activity, Heart];
 const serviceKeys = ["implants", "whitening", "ortho", "veneers", "rootCanal", "pediatric"] as const;
 const servicePaths = [
   getServiceSlugByTitle("Dental Implants"),
-  getServiceSlugByTitle("Professional Teeth Whitening"),
-  getServiceSlugByTitle("Invisalign Clear Aligners"),
-  getServiceSlugByTitle("Porcelain Veneers"),
-  getServiceSlugByTitle("Root Canal Treatment"),
-  getServiceSlugByTitle("Pediatric Dentistry"),
+  getServiceSlugByTitle("Teeth Whitening"),
+  getServiceSlugByTitle("Clear Aligners"),
+  getServiceSlugByTitle("Dental Veneers"),
+  getServiceSlugByTitle("Endodontic Treatment"),
+  getServiceSlugByTitle("Diagnostics & Consultation"),
 ];
 
 const featureIcons = [Shield, Award, Users, Clock];
 const featureKeys = ["painFree", "certified", "family", "hours"] as const;
-
-const testimonialAvatars = [
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&auto=format",
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&auto=format",
-  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&auto=format",
-];
 
 export function Home() {
   const { t } = useTranslation();
@@ -120,15 +114,6 @@ export function Home() {
               loading="lazy"
               decoding="async"
             />
-            <div className="absolute bottom-6 left-6 bg-[#0F1932] text-white rounded-2xl px-5 py-4 shadow-xl">
-              <div className="flex items-center gap-1 mb-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-[#B5C7EB] text-[#B5C7EB]" />
-                ))}
-              </div>
-              <div className="text-white text-sm" style={{ fontWeight: 600 }}>{t("home.whyUs.rating")}</div>
-              <div className="text-white/50 text-xs mt-0.5">{t("home.whyUs.ratingBase")}</div>
-            </div>
           </div>
 
           <div>
@@ -159,61 +144,6 @@ export function Home() {
 
             <LocalizedNavLink to="/about" className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#0F1932] text-white rounded-xl hover:bg-[#0F1932]/90 transition-colors" style={{ fontWeight: 500 }}>
               {t("home.whyUs.learnMore")} <ArrowRight className="w-4 h-4" />
-            </LocalizedNavLink>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Testimonials ── */}
-      <section className="py-24 bg-[#0F1932]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 bg-[#B5C7EB]/15 rounded-full px-4 py-1.5 mb-4">
-              <span className="text-[#B5C7EB] text-xs tracking-widest uppercase" style={{ fontWeight: 700 }}>{t("home.testimonials.badge")}</span>
-            </div>
-            <h2 className="text-white" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.8rem, 3vw, 2.6rem)", fontWeight: 800 }}>
-              {t("home.testimonials.title")}
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {([0, 1, 2] as const).map((i) => (
-              <div
-                key={i}
-                className={`rounded-2xl p-7 border ${i === 1 ? "bg-white border-white shadow-2xl" : "bg-white/5 border-white/10"}`}
-              >
-                <div className="flex gap-1 mb-5">
-                  {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 fill-[#B5C7EB] text-[#B5C7EB]" />
-                  ))}
-                </div>
-                <p className={`text-sm leading-relaxed mb-6 ${i === 1 ? "text-[#0F1932]/80" : "text-white/65"}`}>
-                  "{t(`home.testimonials.items.${i}.text`)}"
-                </p>
-                <div className={`flex items-center gap-3 pt-5 border-t ${i === 1 ? "border-[#0F1932]/10" : "border-white/8"}`}>
-                  <img
-                    src={testimonialAvatars[i]}
-                    alt={t("home.testimonials.avatarAlt", { name: t(`home.testimonials.items.${i}.name`) })}
-                    className="w-10 h-10 rounded-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div>
-                    <div className={`text-sm ${i === 1 ? "text-[#0F1932]" : "text-white"}`} style={{ fontWeight: 600 }}>
-                      {t(`home.testimonials.items.${i}.name`)}
-                    </div>
-                    <div className={`text-xs ${i === 1 ? "text-[#5B6475]" : "text-white/40"}`}>
-                      {t(`home.testimonials.items.${i}.service`)}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <LocalizedNavLink to="/reviews" className="inline-flex items-center gap-2 text-[#B5C7EB] hover:gap-3 transition-all" style={{ fontWeight: 500 }}>
-              {t("home.testimonials.readAll")} <ChevronRight className="w-4 h-4" />
             </LocalizedNavLink>
           </div>
         </div>

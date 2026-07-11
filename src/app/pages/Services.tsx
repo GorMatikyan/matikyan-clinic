@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, Clock, Star, ShieldCheck, Sparkles, Gem, Palette, Wrench, Crown, Microscope, Smile, Layers, HeartPulse, Scissors, Baby } from "lucide-react";
+import { ArrowRight, Star, ShieldCheck, Sparkles, Gem, Palette, Wrench, Crown, Microscope, Smile, Layers, HeartPulse, Scissors, Baby } from "lucide-react";
 import { useSanityData } from "../../hooks/useSanityData";
 import { SERVICES_QUERY } from "../../lib/queries";
 import { useTranslation } from "react-i18next";
@@ -22,15 +22,15 @@ const serviceIcons: Record<string, React.ElementType> = {
   "/pediatric-dentistry": Baby,
 };
 
-const categoryKeys = ["all", "preventive", "cosmetic", "restorative", "orthodontics", "surgery", "pediatric"] as const;
+const categoryKeys = ["all", "therapy", "periodontology", "orthopedics", "surgery", "orthodontics", "diagnostics"] as const;
 const categoryValues = {
   all: "All",
-  preventive: "Preventive",
-  cosmetic: "Cosmetic",
-  restorative: "Restorative",
+  therapy: "Therapy",
+  periodontology: "Periodontology",
+  orthopedics: "Orthopedics",
   orthodontics: "Orthodontics",
   surgery: "Surgery",
-  pediatric: "Pediatric",
+  diagnostics: "Diagnostics",
 } as const;
 
 export function Services() {
@@ -121,15 +121,6 @@ export function Services() {
                       <p className="text-[#5B6475] text-sm leading-relaxed mb-4 line-clamp-2">{service.desc}</p>
                     </div>
                   </LocalizedNavLink>
-
-                    {/* Meta row */}
-                    <div className="flex items-center gap-4 py-3 border-y border-[#0F1932]/8 mb-4">
-                      <div className="text-[#0F1932] text-sm" style={{ fontWeight: 700 }}>{service.price}</div>
-                      <div className="flex items-center gap-1 text-xs text-[#5B6475]">
-                        <Clock className="w-3.5 h-3.5 text-[#B5C7EB]" />
-                        {service.duration}
-                      </div>
-                    </div>
 
                     {/* Actions */}
                     <div className="flex gap-2">

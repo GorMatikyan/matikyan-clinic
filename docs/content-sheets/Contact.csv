@@ -23,17 +23,19 @@ contact.form.submit,Form,Submit button,Request Appointment,,,Form CTA,src/i18n/l
 contact.form.disclaimer,Form,Disclaimer,By submitting this form you agree to our Privacy Policy. We never share your information.,,,Form legal note,src/i18n/locales/en.json
 contact.info.title,Info,Clinic information title,Clinic Information,,,Info card title,src/i18n/locales/en.json
 contact.info.address,Info,Address label,Address,,,Info card label,src/i18n/locales/en.json
-contact.info.addressValue,Info,Address value,"123 Medical Plaza, Suite 400
-New York, NY 10001",,,Replace with real address,src/i18n/locales/en.json
+contact.info.addressValue,Info,Address value,"5 Aram Khachatryan St.
+Yerevan 0033
+Armenia",,,Verified clinic address,src/i18n/locales/en.json
 contact.info.phone,Info,Phone label,Phone,,,Info card label,src/i18n/locales/en.json
-nav.phone,Info,Phone value,+1 800 555 1234,,,Replace with real phone,src/i18n/locales/en.json
-contact.info.email,Info,Email label,Email,,,Info card label,src/i18n/locales/en.json
-contact.info.emailValue,Info,Email value,hello@dentacare.com,,,Replace with real email,src/i18n/locales/en.json
+nav.phone,Info,Phone value,+374 10 210122,,,Verified clinic phone,src/i18n/locales/en.json
+contact.info.website,Info,Website label,Website,,,Info card label,src/i18n/locales/en.json
+contact.info.websiteValue,Info,Website value,https://matikyan.am,,,Verified clinic website,src/i18n/locales/en.json
 contact.info.hours,Info,Hours label,Hours,,,Info card label,src/i18n/locales/en.json
-contact.info.hours1,Info,Hours row 1,Mon – Fri: 8:00 – 20:00,,,Replace with real hours,src/i18n/locales/en.json
-contact.info.hours2,Info,Hours row 2,Saturday: 9:00 – 17:00,,,Replace with real hours,src/i18n/locales/en.json
-contact.info.hours3,Info,Hours row 3,Sunday: Closed,,,Replace with real hours,src/i18n/locales/en.json
-contact.info.mapPlaceholder,Info,Map placeholder,123 Medical Plaza NY,,,Replace with real map/embed later,src/i18n/locales/en.json
+contact.info.hours1,Info,Hours row 1,Monday-Friday: 10:00-20:00,,,Verified business hours,src/i18n/locales/en.json
+contact.info.hours2,Info,Hours row 2,Saturday: 10:00-14:00,,,Verified business hours,src/i18n/locales/en.json
+contact.info.hours3,Info,Hours row 3,Sunday: Closed,,,Verified business hours,src/i18n/locales/en.json
+contact.info.mapPlaceholder,Info,Map placeholder,"5 Aram Khachatryan St.
+Open in Google Maps",,,Verified clinic location,src/i18n/locales/en.json
 contact.emergency.title,Emergency,Title,Dental Emergency?,,,Emergency block,src/i18n/locales/en.json
 contact.emergency.desc,Emergency,Description,Same-day slots reserved for urgent cases.,,,Emergency block,src/i18n/locales/en.json
 contact.emergency.button,Emergency,Button,Call Now,,,Emergency block,src/i18n/locales/en.json

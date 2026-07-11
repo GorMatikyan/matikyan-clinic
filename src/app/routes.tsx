@@ -15,11 +15,6 @@ const Doctors = lazy(async () => {
   return { default: module.Doctors };
 });
 
-const Reviews = lazy(async () => {
-  const module = await import("./pages/Reviews");
-  return { default: module.Reviews };
-});
-
 const FAQ = lazy(async () => {
   const module = await import("./pages/FAQ");
   return { default: module.FAQ };
@@ -95,7 +90,6 @@ const routeChildren: RouteObject[] = [
   { index: true, Component: Home },
   { path: "about", Component: () => <LazyRoute><About /></LazyRoute> },
   { path: "doctors", Component: () => <LazyRoute><Doctors /></LazyRoute> },
-  { path: "reviews", Component: () => <LazyRoute><Reviews /></LazyRoute> },
   { path: "services", Component: () => <LazyRoute><Services /></LazyRoute> },
   { path: "faq", Component: () => <LazyRoute><FAQ /></LazyRoute> },
   { path: "blog", Component: () => <LazyRoute><Blog /></LazyRoute> },

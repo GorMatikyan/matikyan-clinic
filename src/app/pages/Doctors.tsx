@@ -145,7 +145,6 @@ export function Doctors() {
                   <div className="absolute top-4 right-4 bg-white/95 rounded-full px-3 py-1 flex items-center gap-1">
                     <Star className="w-3.5 h-3.5 fill-[#B5C7EB] text-[#B5C7EB]" />
                     <span className="text-xs text-[#0F1932]" style={{ fontWeight: 700 }}>{doc.rating}</span>
-                    <span className="text-xs text-[#5B6475]">({doc.reviews})</span>
                   </div>
                 </div>
 

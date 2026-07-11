@@ -9,7 +9,6 @@ const navKeys = [
   { key: "nav.about", path: "/about" },
   { key: "nav.doctors", path: "/doctors" },
   { key: "nav.services", path: "/services" },
-  { key: "nav.reviews", path: "/reviews" },
   { key: "nav.faq", path: "/faq" },
   { key: "nav.blog", path: "/blog" },
   { key: "nav.contact", path: "/contact" },
@@ -102,7 +101,7 @@ export function Navbar() {
             </div>
 
             <a
-              href="tel:+18005551234"
+              href="tel:+37410210122"
               aria-label={t("nav.callClinic")}
               className="flex items-center gap-2 text-sm text-[#5B6475] hover:text-[#0F1932] transition-colors"
             >

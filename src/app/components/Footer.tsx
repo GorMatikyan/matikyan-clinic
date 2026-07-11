@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Globe, MapPin, Clock, Facebook, Instagram, Youtube } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import logoImg from "../../imports/matikyan-clinic-logo-am.png";
 import { getServiceSlugByTitle } from "../serviceData";
@@ -6,25 +6,44 @@ import { LocalizedNavLink } from "../routing";
 
 export function Footer() {
   const { t } = useTranslation();
+  const socialLinks = [
+    {
+      href: "https://www.facebook.com/share/1LLcyQvwvZ/?mibextid=wwXIfr",
+      label: t("footer.social.facebook"),
+      ariaLabel: t("footer.social.facebookAria"),
+      Icon: Facebook,
+    },
+    {
+      href: "https://www.instagram.com/matikyandentalclinic?igsh=MTNtbGl1eW04M25ucA==",
+      label: t("footer.social.instagram"),
+      ariaLabel: t("footer.social.instagramAria"),
+      Icon: Instagram,
+    },
+    {
+      href: "https://www.youtube.com/@MatikyanDentalClinic",
+      label: t("footer.social.youtube"),
+      ariaLabel: t("footer.social.youtubeAria"),
+      Icon: Youtube,
+    },
+  ] as const;
 
   const navLinks = [
     { key: "footer.about", path: "/about" },
     { key: "footer.ourDoctors", path: "/doctors" },
     { key: "footer.services", path: "/services" },
-    { key: "footer.patientReviews", path: "/reviews" },
     { key: "nav.faq", path: "/faq" },
     { key: "nav.blog", path: "/blog" },
     { key: "footer.contact", path: "/contact" },
   ] as const;
 
   const serviceLinks = [
-    { key: "footer.servicesList.whitening", path: getServiceSlugByTitle("Professional Teeth Whitening") },
+    { key: "footer.servicesList.whitening", path: getServiceSlugByTitle("Teeth Whitening") },
     { key: "footer.servicesList.implants", path: getServiceSlugByTitle("Dental Implants") },
-    { key: "footer.servicesList.orthodontics", path: getServiceSlugByTitle("Invisalign Clear Aligners") },
-    { key: "footer.servicesList.veneers", path: getServiceSlugByTitle("Porcelain Veneers") },
-    { key: "footer.servicesList.rootCanal", path: getServiceSlugByTitle("Root Canal Treatment") },
-    { key: "footer.servicesList.pediatric", path: getServiceSlugByTitle("Pediatric Dentistry") },
-    { key: "footer.servicesList.cosmetic", path: getServiceSlugByTitle("Composite Bonding") },
+    { key: "footer.servicesList.orthodontics", path: getServiceSlugByTitle("Clear Aligners") },
+    { key: "footer.servicesList.veneers", path: getServiceSlugByTitle("Dental Veneers") },
+    { key: "footer.servicesList.rootCanal", path: getServiceSlugByTitle("Endodontic Treatment") },
+    { key: "footer.servicesList.pediatric", path: getServiceSlugByTitle("Diagnostics & Consultation") },
+    { key: "footer.servicesList.cosmetic", path: getServiceSlugByTitle("Aesthetic Restorations & Build-Up") },
   ] as const;
 
   return (
@@ -76,7 +95,7 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#B5C7EB] shrink-0" />
                 <a
-                  href="tel:+18005551234"
+                  href="tel:+37410210122"
                   aria-label={t("footer.phoneLinkAria")}
                   className="text-sm text-white/55 hover:text-[#B5C7EB] transition-colors"
                 >
@@ -84,13 +103,13 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-[#B5C7EB] shrink-0" />
+                <Globe className="w-4 h-4 text-[#B5C7EB] shrink-0" />
                 <a
-                  href="mailto:hello@matikyan.com"
-                  aria-label={t("footer.emailLinkAria")}
+                  href={t("contact.info.websiteUrl")}
+                  aria-label={t("footer.websiteLinkAria")}
                   className="text-sm text-white/55 hover:text-[#B5C7EB] transition-colors"
                 >
-                  {t("footer.email")}
+                  {t("footer.website")}
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -99,6 +118,26 @@ export function Footer() {
                   <div>{t("footer.hours1")}</div>
                   <div>{t("footer.hours2")}</div>
                   <div>{t("footer.hours3")}</div>
+                </div>
+              </li>
+              <li className="pt-2">
+                <div className="text-[#B5C7EB] mb-3 text-xs tracking-widest uppercase" style={{ fontWeight: 700 }}>
+                  {t("footer.social.title")}
+                </div>
+                <div className="flex items-center gap-3">
+                  {socialLinks.map(({ href, label, ariaLabel, Icon }) => (
+                    <a
+                      key={href}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={ariaLabel}
+                      title={label}
+                      className="w-10 h-10 rounded-xl border border-white/10 bg-white/5 text-white/70 hover:text-[#B5C7EB] hover:border-[#B5C7EB]/40 hover:bg-white/8 transition-colors flex items-center justify-center"
+                    >
+                      <Icon className="w-4 h-4" />
+                    </a>
+                  ))}
                 </div>
               </li>
             </ul>

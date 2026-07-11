@@ -1,30 +1,233 @@
-import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, CheckCircle2 } from "lucide-react";
+import { Phone, Globe, MapPin, Clock, Facebook, Instagram, Youtube } from "lucide-react";
+
+const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=5%20Aram%20Khachatryan%20St%2C%20Yerevan%200033%2C%20Armenia";
+const GOOGLE_MAPS_EMBED_URL = "https://www.google.com/maps?q=5%20Aram%20Khachatryan%20St%2C%20Yerevan%200033%2C%20Armenia&z=16&output=embed";
+const YANDEX_MAPS_URL = "https://yandex.com/maps/?text=5%20Aram%20Khachatryan%20St%2C%20Yerevan%200033%2C%20Armenia";
+const FACEBOOK_URL = "https://www.facebook.com/share/1LLcyQvwvZ/?mibextid=wwXIfr";
+const INSTAGRAM_URL = "https://www.instagram.com/matikyandentalclinic?igsh=MTNtbGl1eW04M25ucA==";
+const YOUTUBE_URL = "https://www.youtube.com/@MatikyanDentalClinic";
 import { useTranslation } from "react-i18next";
+
+const COUNTRIES = [
+  "Armenia",
+  "Russia",
+  "United States",
+  "France",
+  "Belgium",
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Andorra",
+  "Angola",
+  "Antigua and Barbuda",
+  "Argentina",
+  "Aruba",
+  "Australia",
+  "Austria",
+  "Azerbaijan",
+  "Bahamas",
+  "Bahrain",
+  "Bangladesh",
+  "Barbados",
+  "Belarus",
+  "Belize",
+  "Benin",
+  "Bhutan",
+  "Bolivia",
+  "Bosnia and Herzegovina",
+  "Botswana",
+  "Brazil",
+  "Brunei",
+  "Bulgaria",
+  "Burkina Faso",
+  "Burundi",
+  "Cambodia",
+  "Cameroon",
+  "Canada",
+  "Cape Verde",
+  "Central African Republic",
+  "Chad",
+  "Chile",
+  "China",
+  "Colombia",
+  "Comoros",
+  "Congo",
+  "Costa Rica",
+  "Croatia",
+  "Cuba",
+  "Cyprus",
+  "Czech Republic",
+  "Denmark",
+  "Djibouti",
+  "Dominica",
+  "Dominican Republic",
+  "Ecuador",
+  "Egypt",
+  "El Salvador",
+  "Equatorial Guinea",
+  "Eritrea",
+  "Estonia",
+  "Eswatini",
+  "Ethiopia",
+  "Fiji",
+  "Finland",
+  "Gabon",
+  "Gambia",
+  "Georgia",
+  "Germany",
+  "Ghana",
+  "Greece",
+  "Grenada",
+  "Guatemala",
+  "Guinea",
+  "Guinea-Bissau",
+  "Guyana",
+  "Haiti",
+  "Honduras",
+  "Hungary",
+  "Iceland",
+  "India",
+  "Indonesia",
+  "Iran",
+  "Iraq",
+  "Ireland",
+  "Israel",
+  "Italy",
+  "Jamaica",
+  "Japan",
+  "Jordan",
+  "Kazakhstan",
+  "Kenya",
+  "Kiribati",
+  "Kosovo",
+  "Kuwait",
+  "Kyrgyzstan",
+  "Laos",
+  "Latvia",
+  "Lebanon",
+  "Lesotho",
+  "Liberia",
+  "Libya",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Madagascar",
+  "Malawi",
+  "Malaysia",
+  "Maldives",
+  "Mali",
+  "Malta",
+  "Marshall Islands",
+  "Mauritania",
+  "Mauritius",
+  "Mexico",
+  "Micronesia",
+  "Moldova",
+  "Monaco",
+  "Mongolia",
+  "Montenegro",
+  "Morocco",
+  "Mozambique",
+  "Myanmar",
+  "Namibia",
+  "Nauru",
+  "Nepal",
+  "Netherlands",
+  "New Zealand",
+  "Nicaragua",
+  "Niger",
+  "Nigeria",
+  "North Korea",
+  "North Macedonia",
+  "Norway",
+  "Oman",
+  "Pakistan",
+  "Palau",
+  "Panama",
+  "Papua New Guinea",
+  "Paraguay",
+  "Peru",
+  "Philippines",
+  "Poland",
+  "Portugal",
+  "Qatar",
+  "Romania",
+  "Rwanda",
+  "Saint Kitts and Nevis",
+  "Saint Lucia",
+  "Saint Vincent and the Grenadines",
+  "Samoa",
+  "San Marino",
+  "Sao Tome and Principe",
+  "Saudi Arabia",
+  "Senegal",
+  "Serbia",
+  "Seychelles",
+  "Sierra Leone",
+  "Singapore",
+  "Slovakia",
+  "Slovenia",
+  "Solomon Islands",
+  "Somalia",
+  "South Africa",
+  "South Korea",
+  "South Sudan",
+  "Spain",
+  "Sri Lanka",
+  "Sudan",
+  "Suriname",
+  "Sweden",
+  "Switzerland",
+  "Syria",
+  "Taiwan",
+  "Tajikistan",
+  "Tanzania",
+  "Thailand",
+  "Timor-Leste",
+  "Togo",
+  "Tonga",
+  "Trinidad and Tobago",
+  "Tunisia",
+  "Turkey",
+  "Turkmenistan",
+  "Tuvalu",
+  "Uganda",
+  "Ukraine",
+  "United Arab Emirates",
+  "United Kingdom",
+  "Uruguay",
+  "Uzbekistan",
+  "Vanuatu",
+  "Vatican City",
+  "Venezuela",
+  "Vietnam",
+  "Yemen",
+  "Zambia",
+  "Zimbabwe",
+] as const;
 
 export function Contact() {
   const { t } = useTranslation();
-  const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ firstName: "", lastName: "", email: "", phone: "", doctor: "", service: "", message: "", preferredDate: "" });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
-  const serviceOptions = ["implants", "ortho", "whitening", "veneers", "rootCanal", "perio", "checkup", "pediatric", "cosmetic", "other"] as const;
-  const doctorOptions = [
-    { value: "annaKovalenko", nameKey: "annaKovalenko", specialtyKey: "implantology" },
-    { value: "marcusReid", nameKey: "marcusReid", specialtyKey: "orthodontics" },
-    { value: "sofiaMarchetti", nameKey: "sofiaMarchetti", specialtyKey: "cosmetic" },
-    { value: "ethanBrooks", nameKey: "ethanBrooks", specialtyKey: "periodontics" },
-    { value: "nadiaOkonkwo", nameKey: "nadiaOkonkwo", specialtyKey: "endodontics" },
-    { value: "liamChen", nameKey: "liamChen", specialtyKey: "pediatric" },
-  ];
+  const socialLinks = [
+    {
+      href: FACEBOOK_URL,
+      label: t("contact.social.facebook"),
+      ariaLabel: t("contact.social.facebookAria"),
+      Icon: Facebook,
+    },
+    {
+      href: INSTAGRAM_URL,
+      label: t("contact.social.instagram"),
+      ariaLabel: t("contact.social.instagramAria"),
+      Icon: Instagram,
+    },
+    {
+      href: YOUTUBE_URL,
+      label: t("contact.social.youtube"),
+      ariaLabel: t("contact.social.youtubeAria"),
+      Icon: Youtube,
+    },
+  ] as const;
 
   return (
     <div>
@@ -42,104 +245,83 @@ export function Contact() {
 
       <section className="py-16 bg-[#F7FAFC]">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[1fr_360px] gap-10">
-          <div className="bg-white rounded-2xl border border-[#0F1932]/8 p-8 lg:p-10">
-            {submitted ? (
-              <div className="flex flex-col items-center justify-center py-16 text-center">
-                <div className="w-16 h-16 rounded-2xl bg-[#B5C7EB]/20 flex items-center justify-center mb-6">
-                  <CheckCircle2 className="w-8 h-8 text-[#0F1932]" />
-                </div>
-                <h2 className="text-[#0F1932] mb-3" style={{ fontFamily: "var(--font-display)", fontSize: "1.8rem", fontWeight: 800 }}>
-                  {t("contact.success.title")}
+          <div className="flex flex-col gap-6">
+            <div className="bg-white rounded-2xl border border-[#0F1932]/8 p-8 lg:p-10">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-1.5 h-8 rounded-full bg-[#B5C7EB]" />
+                <h2 className="text-[#0F1932]" style={{ fontFamily: "var(--font-display)", fontSize: "1.6rem", fontWeight: 800 }}>
+                  {t("contact.request.title")}
                 </h2>
-                <p className="text-[#5B6475] leading-relaxed max-w-md">
-                  {t("contact.success.desc", { name: form.firstName })}
-                </p>
-                <button onClick={() => setSubmitted(false)} className="mt-8 px-6 py-3 bg-[#0F1932] text-white rounded-xl text-sm hover:bg-[#0F1932]/90 transition-colors" style={{ fontWeight: 500 }}>
-                  {t("contact.success.another")}
-                </button>
               </div>
-            ) : (
-              <>
-                <div className="flex items-center gap-3 mb-8">
-                  <div className="w-1.5 h-8 rounded-full bg-[#B5C7EB]" />
-                  <h2 className="text-[#0F1932]" style={{ fontFamily: "var(--font-display)", fontSize: "1.6rem", fontWeight: 800 }}>
-                    {t("contact.form.title")}
-                  </h2>
+              <p className="text-[#5B6475] leading-relaxed mb-6 max-w-2xl">
+                {t("contact.request.desc")}
+              </p>
+              <form className="grid gap-4" onSubmit={(event) => event.preventDefault()}>
+                <div>
+                  <label htmlFor="contact-country" className="block text-[#0F1932] text-sm mb-2" style={{ fontWeight: 600 }}>
+                    {t("contact.request.country")}
+                  </label>
+                  <select
+                    id="contact-country"
+                    defaultValue={t("contact.request.armenia")}
+                    aria-label={t("contact.request.country")}
+                    className="w-full rounded-xl border border-[#0F1932]/12 bg-[#F7FAFC] px-4 py-3 text-[#0F1932] outline-none focus:border-[#B5C7EB]"
+                  >
+                    <option value={t("contact.request.armenia")}>{t("contact.request.armenia")}</option>
+                    {COUNTRIES.filter((country) => country !== "Armenia").map((country) => (
+                      <option key={country} value={country}>
+                        {country}
+                      </option>
+                    ))}
+                  </select>
                 </div>
-                <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className="text-[#0F1932] text-sm mb-1.5 block" style={{ fontWeight: 500 }}>{t("contact.form.firstName")}</label>
-                      <input name="firstName" value={form.firstName} onChange={handleChange} required placeholder={t("contact.form.firstNamePlaceholder")}
-                        className="w-full bg-[#F7FAFC] border border-[#0F1932]/10 rounded-xl px-4 py-3 text-sm text-[#0F1932] placeholder:text-[#5B6475]/50 focus:outline-none focus:border-[#B5C7EB] transition-colors" />
-                    </div>
-                    <div>
-                      <label className="text-[#0F1932] text-sm mb-1.5 block" style={{ fontWeight: 500 }}>{t("contact.form.lastName")}</label>
-                      <input name="lastName" value={form.lastName} onChange={handleChange} required placeholder={t("contact.form.lastNamePlaceholder")}
-                        className="w-full bg-[#F7FAFC] border border-[#0F1932]/10 rounded-xl px-4 py-3 text-sm text-[#0F1932] placeholder:text-[#5B6475]/50 focus:outline-none focus:border-[#B5C7EB] transition-colors" />
-                    </div>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className="text-[#0F1932] text-sm mb-1.5 block" style={{ fontWeight: 500 }}>{t("contact.form.email")}</label>
-                      <input type="email" name="email" value={form.email} onChange={handleChange} required placeholder={t("contact.form.emailPlaceholder")}
-                        className="w-full bg-[#F7FAFC] border border-[#0F1932]/10 rounded-xl px-4 py-3 text-sm text-[#0F1932] placeholder:text-[#5B6475]/50 focus:outline-none focus:border-[#B5C7EB] transition-colors" />
-                    </div>
-                    <div>
-                      <label className="text-[#0F1932] text-sm mb-1.5 block" style={{ fontWeight: 500 }}>{t("contact.form.phone")}</label>
-                      <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder={t("contact.form.phonePlaceholder")}
-                        className="w-full bg-[#F7FAFC] border border-[#0F1932]/10 rounded-xl px-4 py-3 text-sm text-[#0F1932] placeholder:text-[#5B6475]/50 focus:outline-none focus:border-[#B5C7EB] transition-colors" />
-                    </div>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className="text-[#0F1932] text-sm mb-1.5 block" style={{ fontWeight: 500 }}>{t("contact.form.service")}</label>
-                      <select name="service" value={form.service} onChange={handleChange} required
-                        className="w-full bg-[#F7FAFC] border border-[#0F1932]/10 rounded-xl px-4 py-3 text-sm text-[#0F1932] focus:outline-none focus:border-[#B5C7EB] transition-colors appearance-none">
-                        <option value="">{t("contact.form.servicePlaceholder")}</option>
-                        {serviceOptions.map((key) => (
-                          <option key={key} value={key}>{t(`contact.form.services.${key}`)}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label className="text-[#0F1932] text-sm mb-1.5 block" style={{ fontWeight: 500 }}>{t("contact.form.doctor")}</label>
-                      <select name="doctor" value={form.doctor} onChange={handleChange}
-                        className="w-full bg-[#F7FAFC] border border-[#0F1932]/10 rounded-xl px-4 py-3 text-sm text-[#0F1932] focus:outline-none focus:border-[#B5C7EB] transition-colors appearance-none">
-                        <option value="">{t("contact.form.doctorPlaceholder")}</option>
-                        {doctorOptions.map((d) => (
-                          <option key={d.value} value={d.value}>
-                            {t(`doctors.items.${d.nameKey}.name`)} - {t(`doctors.filter.${d.specialtyKey}`)}
-                          </option>
-                        ))}
-                        <option value="none">{t("contact.form.noPreference")}</option>
-                      </select>
-                    </div>
-                  </div>
-
+                <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-[#0F1932] text-sm mb-1.5 block" style={{ fontWeight: 500 }}>{t("contact.form.date")}</label>
-                    <input type="date" name="preferredDate" value={form.preferredDate} onChange={handleChange}
-                      min={new Date().toISOString().split("T")[0]}
-                      className="w-full bg-[#F7FAFC] border border-[#0F1932]/10 rounded-xl px-4 py-3 text-sm text-[#0F1932] focus:outline-none focus:border-[#B5C7EB] transition-colors" />
+                    <label htmlFor="contact-first-name" className="block text-[#0F1932] text-sm mb-2" style={{ fontWeight: 600 }}>
+                      {t("contact.request.firstName")}
+                    </label>
+                    <input id="contact-first-name" type="text" className="w-full rounded-xl border border-[#0F1932]/12 bg-[#F7FAFC] px-4 py-3 text-[#0F1932] outline-none focus:border-[#B5C7EB]" />
                   </div>
-
                   <div>
-                    <label className="text-[#0F1932] text-sm mb-1.5 block" style={{ fontWeight: 500 }}>{t("contact.form.message")}</label>
-                    <textarea name="message" value={form.message} onChange={handleChange} rows={4}
-                      placeholder={t("contact.form.messagePlaceholder")}
-                      className="w-full bg-[#F7FAFC] border border-[#0F1932]/10 rounded-xl px-4 py-3 text-sm text-[#0F1932] placeholder:text-[#5B6475]/50 focus:outline-none focus:border-[#B5C7EB] transition-colors resize-none" />
+                    <label htmlFor="contact-last-name" className="block text-[#0F1932] text-sm mb-2" style={{ fontWeight: 600 }}>
+                      {t("contact.request.lastName")}
+                    </label>
+                    <input id="contact-last-name" type="text" className="w-full rounded-xl border border-[#0F1932]/12 bg-[#F7FAFC] px-4 py-3 text-[#0F1932] outline-none focus:border-[#B5C7EB]" />
                   </div>
-
-                  <button type="submit" className="w-full py-4 bg-[#0F1932] text-white rounded-xl hover:bg-[#0F1932]/90 transition-colors" style={{ fontWeight: 600 }}>
-                    {t("contact.form.submit")}
+                </div>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="contact-phone" className="block text-[#0F1932] text-sm mb-2" style={{ fontWeight: 600 }}>
+                      {t("contact.request.phone")}
+                    </label>
+                    <input id="contact-phone" type="tel" className="w-full rounded-xl border border-[#0F1932]/12 bg-[#F7FAFC] px-4 py-3 text-[#0F1932] outline-none focus:border-[#B5C7EB]" />
+                  </div>
+                  <div>
+                    <label htmlFor="contact-email" className="block text-[#0F1932] text-sm mb-2" style={{ fontWeight: 600 }}>
+                      {t("contact.request.email")}
+                    </label>
+                    <input id="contact-email" type="email" className="w-full rounded-xl border border-[#0F1932]/12 bg-[#F7FAFC] px-4 py-3 text-[#0F1932] outline-none focus:border-[#B5C7EB]" />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="contact-message" className="block text-[#0F1932] text-sm mb-2" style={{ fontWeight: 600 }}>
+                    {t("contact.request.message")}
+                  </label>
+                  <textarea id="contact-message" rows={5} className="w-full rounded-xl border border-[#0F1932]/12 bg-[#F7FAFC] px-4 py-3 text-[#0F1932] outline-none focus:border-[#B5C7EB] resize-y" />
+                </div>
+                <div className="flex flex-col gap-3 pt-2">
+                  <button
+                    type="submit"
+                    disabled
+                    className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#0F1932]/25 text-white text-sm cursor-not-allowed"
+                    style={{ fontWeight: 600 }}
+                  >
+                    {t("contact.request.submit")}
                   </button>
-                  <p className="text-xs text-[#5B6475] text-center">{t("contact.form.disclaimer")}</p>
-                </form>
-              </>
-            )}
+                </div>
+              </form>
+            </div>
+
           </div>
 
           <div className="flex flex-col gap-5">
@@ -151,8 +333,8 @@ export function Contact() {
               <div className="flex flex-col gap-5">
                 {[
                   { Icon: MapPin, labelKey: "contact.info.address", contentKey: "contact.info.addressValue", hrefKey: null },
-                  { Icon: Phone, labelKey: "contact.info.phone", contentKey: "nav.phone", hrefKey: "tel:+18005551234" },
-                  { Icon: Mail, labelKey: "contact.info.email", contentKey: "contact.info.emailValue", hrefKey: "mailto:hello@dentacare.com" },
+                  { Icon: Phone, labelKey: "contact.info.phone", contentKey: "nav.phone", hrefKey: "tel:+37410210122" },
+                  { Icon: Globe, labelKey: "contact.info.website", contentKey: "contact.info.websiteValue", hrefKey: "https://matikyan.am" },
                 ].map(({ Icon, labelKey, contentKey, hrefKey }) => (
                   <div key={labelKey} className="flex gap-4">
                     <div className="w-9 h-9 rounded-xl bg-[#B5C7EB]/15 flex items-center justify-center shrink-0">
@@ -182,24 +364,60 @@ export function Contact() {
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="rounded-2xl overflow-hidden border border-[#0F1932]/8 bg-[#B5C7EB]/10 h-44 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-8 h-8 text-[#0F1932]/30 mx-auto mb-2" />
-                <p className="text-[#0F1932]/50 text-sm">{t("contact.info.mapPlaceholder")}</p>
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <div className="text-white/50 text-xs mb-3">{t("contact.social.title")}</div>
+                <div className="flex items-center gap-3">
+                  {socialLinks.map(({ href, label, ariaLabel, Icon }) => (
+                    <a
+                      key={href}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={ariaLabel}
+                      title={label}
+                      className="w-10 h-10 rounded-xl bg-[#B5C7EB]/15 text-[#B5C7EB] hover:bg-[#B5C7EB] hover:text-[#0F1932] transition-colors flex items-center justify-center"
+                    >
+                      <Icon className="w-4 h-4" />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
 
-            <div className="bg-[#B5C7EB] rounded-2xl p-6 text-center">
-              <div className="text-[#0F1932] mb-2" style={{ fontFamily: "var(--font-display)", fontSize: "1.2rem", fontWeight: 800 }}>
-                {t("contact.emergency.title")}
+            <div className="rounded-2xl overflow-hidden border border-[#0F1932]/8 bg-white">
+              <iframe
+                src={GOOGLE_MAPS_EMBED_URL}
+                title={t("contact.info.mapFrameTitle")}
+                loading="lazy"
+                className="w-full h-52 border-0"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div className="px-6 py-5 bg-[#B5C7EB]/10 text-center">
+                <div className="flex items-center justify-center gap-2 text-[#0F1932] mb-3">
+                  <MapPin className="w-4 h-4" />
+                  <p className="text-sm">{t("contact.info.addressValue")}</p>
+                </div>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <a
+                    href={GOOGLE_MAPS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-[#0F1932] text-white text-sm hover:bg-[#0F1932]/90 transition-colors"
+                    style={{ fontWeight: 600 }}
+                  >
+                    {t("contact.info.mapPlaceholder")}
+                  </a>
+                  <a
+                    href={YANDEX_MAPS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-[#0F1932] text-white text-sm hover:bg-[#0F1932]/90 transition-colors"
+                    style={{ fontWeight: 600 }}
+                  >
+                    {t("contact.info.yandexMapButton")}
+                  </a>
+                </div>
               </div>
-              <p className="text-[#0F1932]/70 text-sm mb-4">{t("contact.emergency.desc")}</p>
-              <a href="tel:+18005551234" aria-label={t("contact.emergency.callAria")} className="inline-flex items-center gap-2 px-5 py-3 bg-[#0F1932] text-white rounded-xl text-sm hover:bg-[#0F1932]/90 transition-colors" style={{ fontWeight: 600 }}>
-                <Phone className="w-4 h-4" />
-                {t("contact.emergency.button")}
-              </a>
             </div>
           </div>
         </div>

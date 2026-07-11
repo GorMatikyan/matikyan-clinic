@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2, Clock, Star } from "lucide-react";
+import { ArrowRight, CheckCircle2, Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { getLocalizedServiceDetailBySlug } from "../serviceData";
 import { LocalizedNavLink } from "../routing";
@@ -34,17 +34,6 @@ export function ServiceDetail({ serviceSlug }: ServiceDetailProps) {
             <p className="text-white/65 text-lg max-w-2xl">{service.intro}</p>
 
             <div className="flex flex-wrap gap-3 mt-8">
-                <div className="bg-white/8 border border-white/10 rounded-xl px-4 py-3">
-                <div className="text-white/45 text-xs uppercase tracking-[0.18em] mb-1">{t("serviceDetail.labels.startingFee")}</div>
-                <div className="text-white" style={{ fontWeight: 700 }}>{service.price}</div>
-              </div>
-              <div className="bg-white/8 border border-white/10 rounded-xl px-4 py-3">
-                <div className="text-white/45 text-xs uppercase tracking-[0.18em] mb-1">{t("serviceDetail.labels.typicalDuration")}</div>
-                <div className="text-white flex items-center gap-2" style={{ fontWeight: 700 }}>
-                  <Clock className="w-4 h-4 text-[#B5C7EB]" />
-                  {service.duration}
-                </div>
-              </div>
               <div className="bg-white/8 border border-white/10 rounded-xl px-4 py-3">
                 <div className="text-white/45 text-xs uppercase tracking-[0.18em] mb-1">{t("serviceDetail.labels.patientRating")}</div>
                 <div className="text-white flex items-center gap-2" style={{ fontWeight: 700 }}>

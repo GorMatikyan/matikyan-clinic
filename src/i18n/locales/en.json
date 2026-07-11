@@ -8,7 +8,7 @@
     "blog": "Blog",
     "contact": "Contact",
     "bookAppointment": "Book Appointment",
-    "phone": "+1 800 555 1234",
+    "phone": "+374 10 210122",
     "logoAlt": "Matikyan Dental Clinic",
     "toggleMenu": "Toggle menu",
     "languageNames": {
@@ -31,22 +31,32 @@
       "whitening": "Teeth Whitening",
       "implants": "Dental Implants",
       "orthodontics": "Orthodontics",
-      "veneers": "Veneers",
-      "rootCanal": "Root Canal",
-      "pediatric": "Pediatric Dentistry",
-      "cosmetic": "Cosmetic Dentistry"
+      "veneers": "Dental Veneers",
+      "rootCanal": "Endodontic Treatment",
+      "pediatric": "Diagnostics & Consultation",
+      "cosmetic": "Aesthetic Restorations"
     },
-    "address": "123 Medical Plaza, Suite 400\nNew York, NY 10001",
-    "email": "hello@matikyan.com",
-    "hours1": "Mon – Fri: 8:00 – 20:00",
-    "hours2": "Sat: 9:00 – 17:00",
+    "address": "5 Aram Khachatryan St.\nYerevan 0033\nArmenia",
+    "hours1": "Mon - Fri: 10:00 - 20:00",
+    "hours2": "Sat: 10:00 - 14:00",
     "hours3": "Sun: Closed",
-    "copyright": "© 2026 Matikyan Stomatology Center. All rights reserved.",
+    "copyright": "© 2026 Matikyan Dental Clinic. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "about": "About",
     "phoneLinkAria": "Call the clinic",
-    "emailLinkAria": "Email the clinic"
+    "emailLinkAria": "Email the clinic",
+    "website": "matikyan.am",
+    "websiteLinkAria": "Open clinic website",
+    "social": {
+      "title": "Follow Us",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "facebookAria": "Open Matikyan Dental Clinic on Facebook",
+      "instagramAria": "Open Matikyan Dental Clinic on Instagram",
+      "youtubeAria": "Open Matikyan Dental Clinic on YouTube"
+    }
   },
   "home": {
     "stats": {
@@ -57,33 +67,33 @@
     },
     "services": {
       "badge": "What We Offer",
-      "title": "Comprehensive Dental Services",
+      "title": "Dental Services",
       "viewAll": "All Services",
       "learnMore": "Learn more",
       "items": {
         "implants": {
           "title": "Dental Implants",
-          "desc": "Permanent, natural-looking tooth replacements using titanium implants."
+          "desc": "Implant treatment for replacing missing teeth with stable, natural-looking restorative support."
         },
         "whitening": {
           "title": "Teeth Whitening",
-          "desc": "Professional whitening treatments that brighten your smile up to 8 shades."
+          "desc": "Tray-based and light whitening options selected to brighten the smile safely and evenly."
         },
         "ortho": {
-          "title": "Orthodontics",
-          "desc": "Braces and clear aligners for perfectly aligned teeth at any age."
+          "title": "Clear Aligners",
+          "desc": "Transparent orthodontic correction for crowding, spacing, and selected bite issues."
         },
         "veneers": {
-          "title": "Cosmetic Veneers",
-          "desc": "Ultra-thin porcelain veneers for a flawless, Hollywood-worthy smile."
+          "title": "Dental Veneers",
+          "desc": "E.max, ceramic, and composite veneer options for shape, color, and smile-line correction."
         },
         "rootCanal": {
-          "title": "Root Canal",
-          "desc": "Pain-free endodontic treatment to save your natural tooth."
+          "title": "Endodontic Treatment",
+          "desc": "Root canal treatment for pulpitis, infected canals, and preservation of the natural tooth."
         },
         "pediatric": {
-          "title": "Pediatric Dentistry",
-          "desc": "Gentle, friendly dental care tailored for children of all ages."
+          "title": "Diagnostics & Consultation",
+          "desc": "RVG, panoramic imaging, CT, and treatment planning before therapy, surgery, or implants."
         }
       }
     },
@@ -93,8 +103,8 @@
       "desc": "Our clinic combines cutting-edge dental technology with a warm, patient-first approach. Every treatment is personalized to your unique needs and comfort level.",
       "imageAlt": "Modern dental clinic interior",
       "learnMore": "Learn About Us",
-      "rating": "Rated 5.0 on Google",
-      "ratingBase": "Based on 1,240 reviews",
+      "reviewPrompt": "Verified reviews available",
+      "reviewPromptDesc": "Read patient feedback on Google and Yandex.",
       "features": {
         "painFree": {
           "title": "Pain-Free Treatments",
@@ -115,8 +125,18 @@
       }
     },
     "testimonials": {
-      "badge": "Patient Stories",
-      "title": "What Our Patients Say",
+      "badge": "Verified Reviews",
+      "title": "Read Public Reviews",
+      "desc": "For launch, we only link to verified public reviews on Google and Yandex.",
+      "googleView": "View on Google",
+      "googleViewDesc": "Read verified public reviews on Google Maps.",
+      "googleLeave": "Leave on Google",
+      "googleLeaveDesc": "Share your experience directly on Google.",
+      "yandexView": "View on Yandex",
+      "yandexViewDesc": "Read verified public reviews on Yandex Maps.",
+      "yandexLeave": "Leave on Yandex",
+      "yandexLeaveDesc": "Share your experience directly on Yandex Maps.",
+      "note": "Only external public review platforms are shown during the safe-launch phase.",
       "readAll": "Read all reviews",
       "items": [
         {
@@ -178,7 +198,7 @@
   "about": {
     "hero": {
       "badge": "Our Story",
-      "title": "Dedicated to Transforming Smiles Since 2012",
+      "title": "Dedicated to Transforming Smiles Since 2007",
       "desc1": "Matikyan Dental Clinic was built on a simple belief: dental care should feel as reassuring as it is effective. Over the years, our clinic has grown into a trusted center for comprehensive oral care and long-term patient relationships.",
       "desc2": "Our team brings together implantology, orthodontics, restorative, periodontal, cosmetic, and pediatric care under one roof so every patient can receive coordinated treatment with clarity and comfort.",
       "stats": {
@@ -221,7 +241,7 @@
       "title": "Key Milestones",
       "items": [
         {
-          "year": "2012",
+          "year": "2007",
           "title": "Clinic Founded",
           "desc": "Matikyan Dental Clinic opened with a focus on modern diagnostics and patient-centered care."
         },
@@ -257,16 +277,16 @@
     "header": {
       "badge": "What We Offer",
       "title": "Our Dental Services",
-      "desc": "Comprehensive dental care under one roof — from routine check-ups to complex full-arch restorations."
+      "desc": "Therapy, periodontology, orthopedics, surgery, orthodontics, and diagnostics — all planned around the patient’s clinical needs."
     },
     "filter": {
       "all": "All",
-      "preventive": "Preventive",
-      "cosmetic": "Cosmetic",
-      "restorative": "Restorative",
+      "therapy": "Therapy",
+      "periodontology": "Periodontology",
+      "orthopedics": "Orthopedics",
       "orthodontics": "Orthodontics",
       "surgery": "Surgery",
-      "pediatric": "Pediatric"
+      "diagnostics": "Diagnostics"
     },
     "card": {
       "learnMore": "Learn more",
@@ -359,19 +379,33 @@
   },
   "reviews": {
     "header": {
-      "badge": "Patient Reviews",
-      "title": "What Our Patients Say",
-      "rating": "4.9 out of 5 — based on 1,240+ reviews"
+      "badge": "Verified Reviews",
+      "title": "Read Public Reviews",
+      "desc": "We do not publish internal review cards at launch. Please read or leave verified reviews on Google and Yandex."
     },
     "intro": {
-      "title": "A closer look at patient satisfaction",
-      "desc": "These review summaries reflect how patients describe their communication, comfort, and treatment results across our major services."
+      "title": "Use Verified Review Platforms",
+      "desc": "For a production-safe launch, reviews are available only through public external platforms."
     },
-    "stats": {
-      "overallRating": "Overall Rating",
-      "totalReviews": "Total Reviews",
-      "recommend": "Recommend Us",
-      "fiveStar": "5-Star Reviews"
+    "openLink": "Open link",
+    "note": "Google and Yandex review pages open in a new tab.",
+    "actions": {
+      "googleView": {
+        "title": "View Google Reviews",
+        "desc": "Open the clinic listing in Google Maps and read verified public reviews."
+      },
+      "googleLeave": {
+        "title": "Leave a Google Review",
+        "desc": "Share your experience with Matikyan Dental Clinic on Google."
+      },
+      "yandexView": {
+        "title": "View Yandex Reviews",
+        "desc": "Open the clinic listing in Yandex Maps and read verified public reviews."
+      },
+      "yandexLeave": {
+        "title": "Leave a Yandex Review",
+        "desc": "Share your experience with Matikyan Dental Clinic on Yandex Maps."
+      }
     },
     "avatarAlt": "Photo of {{name}}",
     "items": [
@@ -583,13 +617,38 @@
   "contact": {
     "header": {
       "badge": "Get in Touch",
-      "title": "Book Your Appointment",
-      "desc": "Consultations are available by appointment. Fill out the form below and our team will contact you to confirm the next available time."
+      "title": "Contact the Clinic",
+      "desc": "Call the clinic, leave your contact details and message, or open our location in Google Maps."
+    },
+    "cta": {
+      "title": "Choose a Reliable Contact Method",
+      "desc": "Online request submission is not available yet. Please use one of the verified contact options below.",
+      "callTitle": "Call the Clinic",
+      "callDesc": "Speak with the clinic team during working hours.",
+      "callAria": "Call Matikyan Dental Clinic",
+      "mapTitle": "Open the Location",
+      "mapDesc": "Get directions to the clinic in Google Maps.",
+      "mapButton": "Open in Google Maps",
+      "mapAria": "Open Matikyan Dental Clinic in Google Maps",
+      "websiteTitle": "Visit the Website",
+      "websiteAria": "Open the Matikyan Dental Clinic website"
     },
     "success": {
       "title": "Request Received!",
       "desc": "Thank you, {{name}}. Our team will contact you soon to confirm your appointment details.",
       "another": "Submit another request"
+    },
+    "request": {
+      "title": "Book an Appointment",
+      "desc": "For the fastest appointment, please call the clinic directly. Or leave your contact details and message below, and our team will contact you.",
+      "country": "Country *",
+      "armenia": "Armenia",
+      "firstName": "First name *",
+      "lastName": "Last name *",
+      "phone": "Phone",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Request"
     },
     "form": {
       "title": "Appointment Request",
@@ -613,35 +672,47 @@
       "disclaimer": "By submitting this form, you agree to be contacted about your appointment request.",
       "services": {
         "implants": "Dental Implants",
-        "ortho": "Orthodontics / Invisalign",
+        "ortho": "Orthodontics / Clear Aligners",
         "whitening": "Teeth Whitening",
-        "veneers": "Porcelain Veneers",
-        "rootCanal": "Root Canal",
+        "veneers": "Dental Veneers",
+        "rootCanal": "Endodontic Treatment",
         "perio": "Periodontal Treatment",
-        "checkup": "General Check-up",
-        "pediatric": "Pediatric Dentistry",
-        "cosmetic": "Cosmetic Consultation",
+        "checkup": "Professional Oral Hygiene",
+        "pediatric": "Diagnostics & Consultation",
+        "cosmetic": "Aesthetic Restorations",
         "other": "Other"
       }
     },
     "info": {
       "title": "Clinic Information",
       "address": "Address",
-      "addressValue": "123 Medical Plaza, Suite 400\nNew York, NY 10001",
+      "addressValue": "5 Aram Khachatryan St., Yerevan 0033, Armenia",
       "phone": "Phone",
-      "email": "Email",
-      "emailValue": "hello@dentacare.com",
       "hours": "Hours",
-      "hours1": "Mon – Fri: 8:00 – 20:00",
-      "hours2": "Saturday: 9:00 – 17:00",
+      "hours1": "Monday-Friday: 10:00-20:00",
+      "hours2": "Saturday: 10:00-14:00",
       "hours3": "Sunday: Closed",
-      "mapPlaceholder": "123 Medical Plaza, NY"
+      "mapPlaceholder": "Open in Google Maps",
+      "yandexMapButton": "Open in Yandex Maps",
+      "mapFrameTitle": "Matikyan Dental Clinic location on Google Maps",
+      "website": "Website",
+      "websiteValue": "https://matikyan.am",
+      "websiteUrl": "https://matikyan.am"
     },
     "emergency": {
       "title": "Dental Emergency?",
       "desc": "Urgent cases can be discussed with our team as soon as possible.",
       "button": "Call Now",
       "callAria": "Call the clinic for urgent dental care"
+    },
+    "social": {
+      "title": "Follow us",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "facebookAria": "Open Matikyan Dental Clinic Facebook page",
+      "instagramAria": "Open Matikyan Dental Clinic Instagram page",
+      "youtubeAria": "Open Matikyan Dental Clinic YouTube channel"
     }
   },
   "serviceDetail": {
@@ -661,232 +732,232 @@
   },
   "serviceCatalog": {
     "categories": {
-      "preventive": "Preventive",
-      "cosmetic": "Cosmetic",
-      "restorative": "Restorative",
+      "therapy": "Therapy",
+      "periodontology": "Periodontology",
+      "orthopedics": "Orthopedics",
       "orthodontics": "Orthodontics",
       "surgery": "Surgery",
-      "pediatric": "Pediatric"
+      "diagnostics": "Diagnostics"
     },
     "services": {
       "dentalCleaningCheckup": {
-        "title": "Dental Cleaning & Check-up",
-        "tagline": "Foundation of a healthy smile",
-        "desc": "Professional teeth cleaning removes tartar and plaque that regular brushing cannot reach. The visit also includes an oral exam, digital imaging review, and gum health assessment.",
+        "title": "Professional Oral Hygiene",
+        "tagline": "Ultrasonic scaling, AirFlow, and preventive care",
+        "desc": "Professional oral hygiene helps remove plaque, tartar, and surface stains using ultrasonic cleaning and AirFlow, while supporting healthier gums and cleaner teeth.",
         "price": "From $80",
         "duration": "60 min",
         "benefits": [
-          "Removes tartar and staining",
-          "Early cavity detection",
-          "Gum disease screening",
-          "Personalized oral hygiene advice"
+          "Ultrasonic tartar removal",
+          "AirFlow polishing",
+          "Cleaner tooth surfaces",
+          "Prevention-focused care"
         ],
-        "intro": "Routine preventive visits help keep small issues from turning into complex treatment. At Matikyan Dental Clinic, a cleaning and check-up combines professional hygiene, a full exam, and practical guidance for daily care.",
-        "h2Title": "What to expect during your visit",
-        "h2Description": "Your appointment is designed to assess oral health, clean hard-to-reach buildup, and identify concerns early so treatment can stay conservative.",
-        "processTitle": "What the appointment includes",
+        "intro": "Professional hygiene is one of the core therapeutic services at the clinic. It combines deposit removal, polishing, and preventive assessment to reduce inflammation and maintain oral health.",
+        "h2Title": "What this service includes",
+        "h2Description": "The visit is designed to remove hard and soft deposits, improve hygiene access, and reduce factors that contribute to gum irritation and unpleasant breath.",
+        "processTitle": "Typical hygiene appointment",
         "process": [
-          "A review of your current symptoms, oral hygiene habits, and dental history.",
-          "Professional cleaning to remove tartar, plaque, and superficial staining.",
-          "Clinical examination of teeth, gums, bite, and existing dental work."
-        ],
-        "candidatesTitle": "Who this service is for",
-        "candidates": [
-          "Patients due for routine preventive care.",
-          "Adults and teens who want a baseline oral health review.",
-          "Anyone noticing bleeding gums, staining, or sensitivity."
-        ]
-      },
-      "teethWhitening": {
-        "title": "Professional Teeth Whitening",
-        "tagline": "Up to 8 shades brighter in one visit",
-        "desc": "In-clinic whitening using a professional-grade gel and controlled light activation for visible, even brightening in a single appointment.",
-        "price": "From $350",
-        "duration": "90 min",
-        "benefits": [
-          "8+ shades lighter",
-          "Single visit treatment",
-          "Minimal sensitivity formula",
-          "Take-home maintenance kit included"
-        ],
-        "intro": "Professional whitening is one of the fastest ways to refresh a smile. Our treatment plan is built around your enamel condition, shade goals, and sensitivity history.",
-        "h2Title": "How whitening is planned",
-        "h2Description": "We evaluate the cause of discoloration first, then use a controlled in-office process to brighten teeth safely and evenly.",
-        "processTitle": "Typical whitening process",
-        "process": [
-          "Shade assessment and suitability check before treatment starts.",
-          "Gum protection and controlled application of professional whitening gel.",
-          "Post-treatment review with maintenance advice for longer-lasting results."
-        ],
-        "candidatesTitle": "Best suited for",
-        "candidates": [
-          "Patients with staining from coffee, tea, wine, or smoking.",
-          "Adults seeking a non-invasive cosmetic refresh.",
-          "Patients who want brighter teeth before weddings or events."
-        ]
-      },
-      "veneers": {
-        "title": "Porcelain Veneers",
-        "tagline": "The Hollywood smile, perfected",
-        "desc": "Ultra-thin porcelain shells crafted to improve color, shape, gaps, and chips while keeping the result balanced and natural-looking.",
-        "price": "From $900/tooth",
-        "duration": "2 appointments",
-        "benefits": [
-          "Natural-looking results",
-          "Stain-resistant porcelain",
-          "15–20 year lifespan",
-          "Custom color matching"
-        ],
-        "intro": "Porcelain veneers can reshape the visible smile line with a highly controlled cosmetic result. Treatment is planned around facial balance, tooth proportion, and a natural finish.",
-        "h2Title": "Why patients choose veneers",
-        "h2Description": "Veneers are commonly used to improve chipped edges, uneven spacing, stubborn discoloration, and shape irregularities in the front teeth.",
-        "processTitle": "How veneer treatment works",
-        "process": [
-          "Cosmetic consultation and smile planning to define the final look.",
-          "Preparation and impressions or digital records for laboratory fabrication.",
-          "Final fitting and bonding of custom porcelain veneers."
+          "Assessment of plaque, tartar, staining, and gum condition.",
+          "Ultrasonic removal of calculus and professional cleaning of tooth surfaces.",
+          "AirFlow polishing and hygiene recommendations based on your needs."
         ],
         "candidatesTitle": "Often recommended for",
         "candidates": [
-          "Patients with front teeth affected by chips, spacing, or uneven form.",
-          "Adults seeking a longer-term cosmetic solution than whitening alone.",
-          "Patients willing to invest in custom cosmetic treatment planning."
+          "Patients with tartar buildup, staining, or bleeding gums.",
+          "Adults and teens due for professional oral hygiene.",
+          "Anyone preparing for restorative, orthodontic, or whitening treatment."
+        ]
+      },
+      "teethWhitening": {
+        "title": "Teeth Whitening",
+        "tagline": "Tray-based and light whitening options",
+        "desc": "Clinical whitening helps brighten teeth after shade assessment, using dentist-guided tray-based or light-activated methods depending on the case.",
+        "price": "From $350",
+        "duration": "90 min",
+        "benefits": [
+          "Visible brightening",
+          "In-clinic supervision",
+          "Tray whitening option",
+          "Light whitening option"
+        ],
+        "intro": "Whitening is offered after checking enamel condition, gum health, and the type of discoloration. The goal is safer, more even brightening with an approach suited to the patient.",
+        "h2Title": "How whitening is planned",
+        "h2Description": "Whitening planning starts with an examination and shade review so the method matches the condition of the teeth and the expected result.",
+        "processTitle": "Whitening options may include",
+        "process": [
+          "Clinical shade assessment and suitability evaluation.",
+          "Tray-based whitening or light-activated whitening depending on indication.",
+          "Post-treatment advice to help maintain a brighter result."
+        ],
+        "candidatesTitle": "Often suitable for",
+        "candidates": [
+          "Patients with external discoloration or age-related darkening.",
+          "Adults seeking a non-invasive aesthetic improvement.",
+          "Cases where existing restorations do not limit color matching."
+        ]
+      },
+      "veneers": {
+        "title": "Dental Veneers",
+        "tagline": "E.max, ceramic, and composite veneer options",
+        "desc": "Veneers are used to improve the color, shape, and symmetry of visible teeth with ceramic or composite restorative solutions.",
+        "price": "From $900/tooth",
+        "duration": "2 appointments",
+        "benefits": [
+          "E.max veneers",
+          "Ceramic veneers",
+          "Composite veneers",
+          "Smile design improvement"
+        ],
+        "intro": "Veneers are part of the clinic’s orthopedic and aesthetic treatment options. They are selected when the patient needs a controlled change in shape, color, or front-tooth appearance.",
+        "h2Title": "When veneers are considered",
+        "h2Description": "They are commonly used when front teeth need aesthetic correction for shape, discoloration, minor irregularity, or visible wear.",
+        "processTitle": "Treatment planning may include",
+        "process": [
+          "Aesthetic consultation and shade or shape planning.",
+          "Digital records or impressions depending on the chosen veneer type.",
+          "Try-in and final bonding of the selected restoration."
+        ],
+        "candidatesTitle": "Frequently chosen for",
+        "candidates": [
+          "Visible chips, spacing, uneven contours, or discoloration.",
+          "Patients comparing ceramic and composite aesthetic options.",
+          "Cases where smile symmetry and front-tooth appearance are priorities."
         ]
       },
       "compositeBonding": {
-        "title": "Composite Bonding",
-        "tagline": "Single-visit smile enhancement",
-        "desc": "Tooth-colored composite resin used to repair chips, close gaps, and refine tooth shape without extensive preparation.",
+        "title": "Aesthetic Restorations & Build-Up",
+        "tagline": "Caries treatment, restorations, and core build-up",
+        "desc": "Therapeutic restorations are used to treat decay, rebuild damaged tooth structure, and restore function and appearance with modern filling materials.",
         "price": "From $250/tooth",
         "duration": "60–90 min",
         "benefits": [
-          "No enamel removal",
-          "Same-day results",
-          "Reversible treatment",
-          "Seamlessly color-matched"
+          "Caries treatment",
+          "Tooth-colored restorations",
+          "Core build-up under crowns",
+          "Functional reconstruction"
         ],
-        "intro": "Composite bonding is a conservative cosmetic option for patients who want visible improvement without a laboratory-made restoration. It works especially well for small defects and same-day smile refinement.",
-        "h2Title": "When bonding works well",
-        "h2Description": "Bonding is often selected for modest cosmetic corrections where preserving natural tooth structure is a priority.",
-        "processTitle": "What happens during treatment",
+        "intro": "This therapeutic group includes caries treatment, pulp-related restorative stages, aesthetic restorations, and build-up of the tooth stump when a crown is planned.",
+        "h2Title": "What this therapeutic service covers",
+        "h2Description": "The aim is to remove diseased tissue, restore shape and function, and create a stable base for further restorative or prosthetic treatment when needed.",
+        "processTitle": "Treatment may include",
         "process": [
-          "Shade selection and planning of the desired contour changes.",
-          "Layering and sculpting of tooth-colored composite resin.",
-          "Finishing and polishing to blend the restoration with surrounding teeth."
+          "Removal of caries and preparation of the cavity or damaged tooth area.",
+          "Aesthetic restoration with tooth-colored filling materials.",
+          "Build-up of the tooth core when support is needed under a future crown."
         ],
-        "candidatesTitle": "Common reasons to choose bonding",
+        "candidatesTitle": "Common indications",
         "candidates": [
-          "Minor chips, uneven edges, and narrow gaps.",
-          "Patients who want a more affordable cosmetic option than veneers.",
-          "Patients looking for same-day cosmetic enhancement."
+          "Caries, fractures, worn edges, or lost filling material.",
+          "Teeth that need aesthetic reconstruction after treatment.",
+          "Teeth that require stump build-up before orthopedic restoration."
         ]
       },
       "dentalImplants": {
         "title": "Dental Implants",
-        "tagline": "Permanent tooth replacement",
-        "desc": "Titanium implants support stable, natural-looking restorations and help preserve bone structure after tooth loss.",
+        "tagline": "Implant placement with bone support options",
+        "desc": "Implant treatment restores missing teeth with surgical planning, implant placement, and supportive procedures such as bone grafting when indicated.",
         "price": "From $2,400",
         "duration": "3–6 months",
         "benefits": [
-          "Permanent solution",
-          "Preserves jawbone",
-          "No impact on adjacent teeth",
-          "Lifetime durability with care"
+          "Implant placement",
+          "Mini-implant options",
+          "Bone support planning",
+          "Long-term tooth replacement"
         ],
-        "intro": "Dental implants replace missing teeth with a stable, long-term solution that supports both appearance and function. Planning focuses on bone support, bite stability, and the final prosthetic result.",
-        "h2Title": "Why implant planning matters",
-        "h2Description": "Successful implant treatment depends on diagnostics, surgical planning, and restoration design, not just implant placement alone.",
-        "processTitle": "Typical implant treatment stages",
+        "intro": "Implantology is part of the clinic’s surgical services. Treatment planning focuses on bone volume, implant position, soft tissues, and the future prosthetic restoration.",
+        "h2Title": "What implant treatment may involve",
+        "h2Description": "Successful implant treatment depends on diagnostics, surgical planning, healing conditions, and the quality of the final restoration.",
+        "processTitle": "Typical treatment stages",
         "process": [
-          "Consultation with imaging to evaluate bone levels and restoration goals.",
-          "Implant placement with healing time based on the clinical case.",
-          "Final crown or prosthetic restoration after integration is complete."
+          "Clinical evaluation and imaging to assess bone and implant feasibility.",
+          "Placement of a dental implant or mini-implant when indicated.",
+          "Restorative phase after healing, with additional support procedures if needed."
         ],
-        "candidatesTitle": "Often suitable for",
+        "candidatesTitle": "Often considered for",
         "candidates": [
           "Patients missing one or more teeth.",
-          "Patients wanting a fixed alternative to removable solutions.",
-          "Cases where preserving adjacent healthy teeth is important."
+          "Patients seeking a fixed alternative to removable prosthetics.",
+          "Cases that may also require bone augmentation before restoration."
         ]
       },
       "sameDayCrowns": {
-        "title": "Same-Day Crowns (CEREC)",
-        "tagline": "Crown in a single appointment",
-        "desc": "Digital scanning and in-clinic milling make it possible to place a ceramic crown in one visit for selected restorative cases.",
+        "title": "Prosthetics & Crowns",
+        "tagline": "Fixed, removable, and digitally planned restorations",
+        "desc": "Orthopedic treatment includes crowns, removable prosthetics, and digitally planned restorative options for rebuilding chewing function and smile aesthetics.",
         "price": "From $1,100",
         "duration": "2 hours",
         "benefits": [
-          "Single-visit treatment",
-          "Digital precision fit",
-          "Metal-free ceramic",
-          "No temporary crowns"
+          "Removable prosthetics",
+          "Metal-ceramic crowns",
+          "Zirconia and E.max options",
+          "Digital scanning and CAD/CAM"
         ],
-        "intro": "Same-day crowns are designed for patients who need strength, fit, and efficiency without multiple restoration appointments. Digital design helps reduce delays while maintaining restorative precision.",
-        "h2Title": "Single-visit crown restoration",
-        "h2Description": "Digital scanning and in-house fabrication allow the tooth to be prepared, designed, and restored in a single clinical session.",
-        "processTitle": "How the appointment is structured",
+        "intro": "Orthopedic care covers both removable and fixed prosthetic solutions, from partial dentures to ceramic crowns and digitally planned restorations.",
+        "h2Title": "What orthopedic treatment includes",
+        "h2Description": "The choice of restoration depends on the number of missing teeth, the condition of supporting teeth, bite requirements, and the desired material.",
+        "processTitle": "Available treatment directions",
         "process": [
-          "Preparation of the tooth and digital scanning instead of traditional impressions.",
-          "In-house design and milling of the crown based on the digital model.",
-          "Try-in, adjustment, and final placement during the same visit."
+          "Removable prosthetics including rigid, soft, partial, non-acrylic, or clasp-based options.",
+          "Fixed restorations such as metal-ceramic, zirconia, zirconia-ceramic, and E.max crowns.",
+          "Digital orthopedics with 3Shape scanning and CAD/CAM-based planning."
         ],
-        "candidatesTitle": "Best for patients who need",
+        "candidatesTitle": "Often recommended for",
         "candidates": [
-          "A crown after fracture, decay, or root canal treatment.",
-          "A faster restorative timeline with fewer appointments.",
-          "A metal-free ceramic restoration with digital precision."
+          "Patients who need crowns, prosthetic rehabilitation, or material replacement.",
+          "Cases requiring removable or fixed restorative planning.",
+          "Patients who benefit from digital scanning and prosthetic design."
         ]
       },
       "rootCanalTreatment": {
-        "title": "Root Canal Treatment",
-        "tagline": "Save your natural tooth, pain-free",
-        "desc": "Modern endodontic treatment removes infection from inside the tooth and helps preserve your natural tooth comfortably.",
+        "title": "Endodontic Treatment",
+        "tagline": "Root canal treatment under magnification",
+        "desc": "Endodontic treatment is used to manage pulpitis, infected canals, and internal tooth damage with cleaning, shaping, filling, and microscope-assisted precision when indicated.",
         "price": "From $700",
         "duration": "60–90 min",
         "benefits": [
-          "Saves natural tooth",
-          "Pain-free procedure",
-          "Laser-assisted option",
-          "High success rate"
+          "Pulpitis management",
+          "Canal filling",
+          "Microscope-assisted treatment",
+          "Tooth preservation"
         ],
-        "intro": "Root canal treatment is used to save a tooth affected by deep infection or inflammation. The goal is to remove the diseased pulp, seal the canals, and keep the natural tooth functional.",
-        "h2Title": "When a root canal is recommended",
-        "h2Description": "Treatment is commonly advised when pain, deep decay, trauma, or infection has affected the inner nerve space of the tooth.",
-        "processTitle": "How treatment is performed",
+        "intro": "This service covers endodontic diagnosis and treatment of root canal systems when inflammation or infection has reached the inner tissues of the tooth.",
+        "h2Title": "What endodontic treatment covers",
+        "h2Description": "The aim is to disinfect and fill the canals thoroughly while preserving the tooth whenever a predictable restorative result is possible.",
+        "processTitle": "Treatment may include",
         "process": [
-          "Diagnosis and imaging to confirm the affected tooth and canal anatomy.",
-          "Cleaning and shaping of the root canals under local anesthesia.",
-          "Sealing of the canals and planning for final restoration if needed."
+          "Diagnosis of pulpitis or canal infection with imaging and clinical testing.",
+          "Mechanical and chemical cleaning of the root canal system.",
+          "Filling and sealing of the canals, including treatment under a microscope when indicated."
         ],
-        "candidatesTitle": "Common signs and situations",
+        "candidatesTitle": "Common indications",
         "candidates": [
-          "Persistent toothache, pressure pain, or prolonged sensitivity.",
-          "Deep decay or infection close to the tooth nerve.",
-          "Teeth that can be preserved instead of extracted."
+          "Deep caries, pulpitis, or previously treated canals needing retreatment.",
+          "Pain, lingering sensitivity, or infection around the tooth root.",
+          "Teeth that need canal treatment before restoration or prosthetics."
         ]
       },
       "invisalign": {
-        "title": "Invisalign Clear Aligners",
-        "tagline": "Straighten teeth discreetly",
-        "desc": "Clear removable aligners designed with digital planning for discreet correction of crowding, spacing, and selected bite issues.",
+        "title": "Clear Aligners",
+        "tagline": "Transparent orthodontic correction",
+        "desc": "Aligners provide removable orthodontic correction for crowding, spacing, and selected bite issues using digital planning and staged movement.",
         "price": "From $3,200",
         "duration": "6–24 months",
         "benefits": [
-          "Virtually invisible",
-          "Removable for eating",
-          "3D result preview",
-          "No dietary restrictions"
+          "Discreet correction",
+          "Removable design",
+          "Digital planning",
+          "Step-by-step tooth movement"
         ],
-        "intro": "Invisalign offers a discreet orthodontic option for patients who want straighter teeth without fixed brackets. Treatment planning is guided by digital records and staged aligner movement.",
-        "h2Title": "What Invisalign treatment focuses on",
-        "h2Description": "Clear aligner therapy is designed to correct crowding, spacing, and selected bite concerns while fitting more easily into daily routines.",
-        "processTitle": "What the treatment plan includes",
+        "intro": "Aligner therapy is used for patients who prefer a removable and more discreet orthodontic option. Planning is based on digital records and controlled staged movement.",
+        "h2Title": "How aligner treatment is planned",
+        "h2Description": "The treatment plan is designed around the type of crowding, spacing, and bite correction needed, with attention to consistent wear and periodic review.",
+        "processTitle": "Typical aligner workflow",
         "process": [
           "Digital scanning and orthodontic assessment of alignment goals.",
           "A staged aligner sequence designed around the desired tooth movement.",
           "Progress reviews and refinements during treatment when needed."
         ],
-        "candidatesTitle": "Often a fit for",
+        "candidatesTitle": "Often suitable for",
         "candidates": [
           "Adults and teens wanting a low-visibility orthodontic solution.",
           "Mild to moderate crowding or spacing cases.",
@@ -894,27 +965,27 @@
         ]
       },
       "ceramicBraces": {
-        "title": "Ceramic Braces",
-        "tagline": "Effective and discreet correction",
-        "desc": "Tooth-colored braces provide reliable control for more complex alignment and bite correction with a subtler appearance than metal braces.",
+        "title": "Braces Systems",
+        "tagline": "Reliable correction for more complex cases",
+        "desc": "Bracket systems help correct crowding, tooth position, and bite discrepancies when fixed orthodontic control is needed.",
         "price": "From $2,800",
         "duration": "12–24 months",
         "benefits": [
-          "Tooth-colored brackets",
-          "Handles complex cases",
-          "Adults and teens",
-          "Precise bite correction"
+          "Fixed orthodontic control",
+          "Effective bite correction",
+          "Suitable for teens and adults",
+          "Detailed tooth movement"
         ],
-        "intro": "Ceramic braces combine the control of fixed orthodontics with a more discreet appearance than traditional metal brackets. They are often chosen when a case needs detailed tooth movement.",
-        "h2Title": "Why ceramic braces are used",
-        "h2Description": "Ceramic braces are useful for patients who need comprehensive orthodontic correction but prefer a subtler appearance during treatment.",
-        "processTitle": "How treatment usually progresses",
+        "intro": "Bracket systems remain important for cases that require strong, continuous control of tooth movement and more comprehensive orthodontic correction.",
+        "h2Title": "When braces are recommended",
+        "h2Description": "Braces are often chosen when the case is more complex or when fixed mechanics can provide more predictable control than removable appliances.",
+        "processTitle": "Treatment usually includes",
         "process": [
           "Orthodontic assessment and treatment planning for alignment and bite goals.",
           "Placement of ceramic brackets and regular adjustment visits.",
           "Monitoring through active movement until the final result is reached."
         ],
-        "candidatesTitle": "Frequently chosen by",
+        "candidatesTitle": "Commonly recommended for",
         "candidates": [
           "Adults and teens needing fixed orthodontic treatment.",
           "Patients with moderate to complex bite or alignment issues.",
@@ -923,86 +994,86 @@
       },
       "periodontalTreatment": {
         "title": "Periodontal Treatment",
-        "tagline": "Advanced gum disease therapy",
-        "desc": "Targeted care for gum inflammation, recession, and periodontal disease, from deep cleaning to specialist follow-up support.",
+        "tagline": "Gingivitis and periodontitis management",
+        "desc": "Periodontal care focuses on diagnosing and treating gum inflammation and supporting structures, from non-surgical therapy to periodontal surgery when required.",
         "price": "From $450",
         "duration": "Varies by stage",
         "benefits": [
-          "All gum disease stages",
-          "Laser-assisted option",
-          "Bone regeneration available",
-          "Maintenance program included"
+          "Gingivitis treatment",
+          "Closed and open curettage",
+          "Splinting and surgical care",
+          "Supportive follow-up"
         ],
-        "intro": "Periodontal treatment addresses inflammation, gum recession, and bone loss caused by gum disease. Early intervention helps preserve both teeth and supporting structures.",
-        "h2Title": "How gum disease is managed",
-        "h2Description": "Treatment depends on disease stage, pocket depth, and tissue response, with the goal of controlling infection and stabilizing long-term oral health.",
-        "processTitle": "Treatment may include",
+        "intro": "This department treats gingivitis, periodontitis, and the consequences of periodontal inflammation using both conservative and surgical approaches based on the case.",
+        "h2Title": "What periodontal treatment may include",
+        "h2Description": "Management depends on the stage of inflammation, pocket depth, tooth mobility, and the response of surrounding tissues to treatment.",
+        "processTitle": "Care options may include",
         "process": [
-          "Clinical periodontal assessment and charting of gum health.",
-          "Deep cleaning, scaling, or targeted periodontal therapy.",
-          "Maintenance planning to reduce recurrence and monitor healing."
+          "Assessment of gum inflammation, periodontal pockets, and tooth stability.",
+          "Closed or open curettage, splinting, and supportive periodontal therapy.",
+          "Periodontal surgical procedures and adjunctive care such as plasma therapy when indicated."
         ],
-        "candidatesTitle": "Consider treatment if you have",
+        "candidatesTitle": "Often indicated for",
         "candidates": [
-          "Bleeding gums, persistent bad breath, or gum tenderness.",
-          "Diagnosed gum disease or deep periodontal pockets.",
-          "Recession or bone loss that needs specialist attention."
+          "Bleeding gums, swelling, bad breath, or gum recession.",
+          "Diagnosed gingivitis or periodontitis.",
+          "Teeth with mobility or supporting tissue loss that require specialist care."
         ]
       },
       "wisdomToothExtraction": {
-        "title": "Wisdom Tooth Extraction",
-        "tagline": "Safe, comfortable removal",
-        "desc": "Removal of impacted or problematic wisdom teeth with careful planning, comfort measures, and aftercare guidance.",
+        "title": "Oral Surgery",
+        "tagline": "Extractions, apicoectomy, sinus lift, and bone grafting",
+        "desc": "Oral surgical care includes tooth extractions, root-end surgery, sinus lift procedures, and bone grafting based on the patient’s clinical needs.",
         "price": "From $300/tooth",
         "duration": "45–90 min",
         "benefits": [
-          "Sedation available",
-          "Same-day procedure",
-          "Minimal recovery time",
-          "Detailed aftercare support"
+          "Tooth extractions",
+          "Apicoectomy",
+          "Sinus lift",
+          "Bone grafting"
         ],
-        "intro": "Wisdom tooth extraction is recommended when third molars cause pain, crowding, inflammation, or repeated infection. Planning focuses on comfort, safety, and predictable healing.",
-        "h2Title": "When removal is recommended",
-        "h2Description": "Impacted, partially erupted, or poorly positioned wisdom teeth can affect adjacent teeth and gum health, making timely removal the better long-term option.",
-        "processTitle": "What the procedure involves",
+        "intro": "Surgical treatment is planned according to the tooth position, bone condition, infection status, and the future restorative goal, including implant preparation when needed.",
+        "h2Title": "What oral surgery may include",
+        "h2Description": "The surgical plan depends on whether the case involves extraction, apical surgery, sinus augmentation, or reconstruction of bone volume before restoration.",
+        "processTitle": "Common surgical directions",
         "process": [
-          "Examination and imaging to assess tooth position and complexity.",
-          "Removal under local anesthesia with sedation options if appropriate.",
-          "Aftercare instructions and recovery monitoring after the procedure."
+          "Simple or complex tooth extraction based on tooth position and anatomy.",
+          "Apicoectomy for selected endodontic cases involving the root apex.",
+          "Sinus lift and bone grafting when additional bone support is needed."
         ],
-        "candidatesTitle": "Common reasons for extraction",
+        "candidatesTitle": "Common indications",
         "candidates": [
-          "Pain, swelling, repeated infection, or food trapping around wisdom teeth.",
-          "Impacted teeth affecting neighboring molars.",
-          "Orthodontic or preventive reasons based on clinical assessment."
+          "Teeth that cannot be predictably preserved.",
+          "Surgical endodontic cases or chronic apical pathology.",
+          "Implant cases requiring sinus augmentation or bone reconstruction."
         ]
       },
       "pediatricDentistry": {
-        "title": "Pediatric Dentistry",
-        "tagline": "Gentle care for little smiles",
-        "desc": "Child-friendly preventive and restorative dental care designed to build healthy habits and confident early visits.",
+        "title": "Diagnostics & Consultation",
+        "tagline": "RVG, panoramic imaging, CT, and treatment planning",
+        "desc": "Dental diagnostics support treatment planning with targeted imaging and consultation, including RVG, panoramic imaging, and 3D CT when indicated.",
         "price": "From $60",
         "duration": "30–60 min",
         "benefits": [
-          "Age 1+ welcome",
-          "Fear-free approach",
-          "Sealants and fluoride",
-          "Early ortho assessment"
+          "Free consultation",
+          "RVG imaging",
+          "Panoramic imaging",
+          "3D CT diagnostics"
         ],
-        "intro": "Pediatric dentistry focuses on prevention, healthy habits, and positive early dental experiences. Visits are structured to help children feel comfortable while giving parents clear guidance.",
-        "h2Title": "Why early dental visits matter",
-        "h2Description": "Regular pediatric dental care supports healthy development, early cavity prevention, and timely monitoring of bite and tooth eruption patterns.",
-        "processTitle": "What families can expect",
+        "intro": "Diagnostics help define the condition of teeth, roots, bone, and surrounding structures before therapy, surgery, orthodontics, implants, or prosthetic work begins.",
+        "h2Title": "How diagnostic planning works",
+        "h2Description": "The choice of imaging depends on the clinical question. The goal is to gather the information needed for a precise and safer treatment plan.",
+        "processTitle": "Diagnostic services may include",
         "process": [
-          "A child-friendly exam adapted to age and comfort level.",
-          "Preventive care such as cleaning, fluoride, and sealant recommendations.",
-          "Guidance for parents on hygiene, diet, habits, and early orthodontic concerns."
+          "Clinical consultation and review of complaints, history, and treatment goals.",
+          "RVG imaging or panoramic radiography depending on the indication.",
+          "3D CT imaging for complex endodontic, surgical, implant, or orthopedic planning."
         ],
-        "candidatesTitle": "Designed for",
+        "candidatesTitle": "Often useful for",
         "candidates": [
-          "Children from first visits through adolescence.",
-          "Families who want preventive monitoring and education.",
-          "Children who benefit from a gentler, confidence-building dental approach."
+          "Patients starting new treatment or comparing treatment options.",
+          "Cases that need image-based evaluation before surgery or implants.",
+          "Situations where detailed tooth, root, or bone assessment is important."
         ]
       }
     }

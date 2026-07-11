@@ -13,6 +13,14 @@ const structuredData = [
     "@id": ORGANIZATION_ID,
     name: "Matikyan Dental Clinic",
     url: BASE_URL,
+    telephone: "+37410210122",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "5 Aram Khachatryan St.",
+      addressLocality: "Yerevan",
+      postalCode: "0033",
+      addressCountry: "AM",
+    },
     logo: {
       "@type": "ImageObject",
       url: LOGO_URL,
@@ -36,6 +44,34 @@ const structuredData = [
     url: BASE_URL,
     image: LOGO_URL,
     logo: LOGO_URL,
+    telephone: "+37410210122",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "5 Aram Khachatryan St.",
+      addressLocality: "Yerevan",
+      postalCode: "0033",
+      addressCountry: "AM",
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "https://schema.org/Monday",
+          "https://schema.org/Tuesday",
+          "https://schema.org/Wednesday",
+          "https://schema.org/Thursday",
+          "https://schema.org/Friday",
+        ],
+        opens: "10:00",
+        closes: "20:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "https://schema.org/Saturday",
+        opens: "10:00",
+        closes: "14:00",
+      },
+    ],
     parentOrganization: {
       "@id": ORGANIZATION_ID,
     },

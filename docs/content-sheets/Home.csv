@@ -7,7 +7,7 @@ nav.faq,Navigation,Main menu - FAQ,FAQ,,,,Shared top navigation,src/i18n/locales
 nav.blog,Navigation,Main menu - Blog,Blog,,,,Shared top navigation,src/i18n/locales/en.json
 nav.contact,Navigation,Main menu - Contact,Contact,,,,Shared top navigation,src/i18n/locales/en.json
 nav.bookAppointment,Navigation,CTA button,Book Appointment,,,,Shared top navigation CTA,src/i18n/locales/en.json
-nav.phone,Navigation,Phone number,+1 800 555 1234,,,,Replace with real clinic number,src/i18n/locales/en.json
+nav.phone,Navigation,Phone number,+374 10 210122,,,,Verified clinic number,src/i18n/locales/en.json
 slider.slides.0.image,Hero Slider — Slide 1,Background image,,,,https://images.unsplash.com/photo-1643660527098-559f89e45a92?w=1600&h=900&fit=crop&auto=format,Replace with approved clinic image,src/app/components/PhotoSlider.tsx
 slider.slides.0.tag,Hero Slider — Slide 1,Tag / badge label,Advanced Implantology,,,,Slide 1 copy,src/i18n/locales/en.json
 slider.slides.0.title.line1,Hero Slider — Slide 1,Main title line 1,Restore Your Smile,,,,Slide 1 copy,src/i18n/locales/en.json
@@ -88,10 +88,11 @@ home.cta.title,CTA Banner,Title,Ready for a Healthier Brighter Smile?,,,,Bottom 
 home.cta.desc,CTA Banner,Description,Book your free consultation today. Our specialists will assess your needs and create a personalized treatment plan just for you.,,,,Bottom CTA section,src/i18n/locales/en.json
 home.cta.button,CTA Banner,Button,Schedule Free Consultation,,,,Link goes to /contact,src/i18n/locales/en.json
 footer.description,Footer,Brand description,Modern dental care with a personal touch. Our team of specialists is dedicated to your smile and long-term oral health.,,,,Shared footer text,src/i18n/locales/en.json
-footer.address,Footer,Address,"123 Medical Plaza, Suite 400
-New York, NY 10001",,,,Replace with real address,src/i18n/locales/en.json
-footer.email,Footer,Email,hello@matikyan.com,,,,Replace with real email,src/i18n/locales/en.json
-footer.hours1,Footer,Hours - weekdays,Mon – Fri: 8:00 – 20:00,,,,Replace with real hours,src/i18n/locales/en.json
-footer.hours2,Footer,Hours - Saturday,Sat: 9:00 – 17:00,,,,Replace with real hours,src/i18n/locales/en.json
-footer.hours3,Footer,Hours - Sunday,Sun: Closed,,,,Replace with real hours,src/i18n/locales/en.json
+footer.address,Footer,Address,"5 Aram Khachatryan St.
+Yerevan 0033
+Armenia",,,,Verified clinic address,src/i18n/locales/en.json
+footer.website,Footer,Website,matikyan.am,,,,Verified clinic website,src/i18n/locales/en.json
+footer.hours1,Footer,Hours - weekdays,Mon - Fri: 10:00 - 20:00,,,,Verified business hours,src/i18n/locales/en.json
+footer.hours2,Footer,Hours - Saturday,Sat: 10:00 - 14:00,,,,Verified business hours,src/i18n/locales/en.json
+footer.hours3,Footer,Hours - Sunday,Sun: Closed,,,,Verified business hours,src/i18n/locales/en.json
 footer.copyright,Footer,Copyright,© 2026 Matikyan Stomatology Center. All rights reserved.,,,,Shared footer legal text,src/i18n/locales/en.json

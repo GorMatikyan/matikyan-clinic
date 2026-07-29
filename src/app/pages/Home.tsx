@@ -7,6 +7,7 @@ import {
 import { PhotoSlider } from "../components/PhotoSlider";
 import { getServiceSlugByTitle } from "../serviceData";
 import { LocalizedNavLink } from "../routing";
+import { siteImages } from "../siteImages";
 
 const statIcons = [Trophy, UserCheck, Stethoscope, ThumbsUp];
 const statValues = ["20+", "8,400+", "18", "99%"];
@@ -107,7 +108,7 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=700&h=600&fit=crop&auto=format"
+              src={siteImages.clinicFacade}
               alt={t("home.whyUs.imageAlt")}
               className="w-full rounded-2xl object-cover shadow-xl"
               style={{ height: "460px" }}

@@ -5,22 +5,23 @@ import { useSanityData } from "../../hooks/useSanityData";
 import { SLIDES_QUERY } from "../../lib/queries";
 import type { SanitySlide } from "../../lib/sanityTypes";
 import { LocalizedNavLink } from "../routing";
+import { siteImages } from "../siteImages";
 
 const fallbackSlides = [
   {
-    image: "https://images.unsplash.com/photo-1643660527098-559f89e45a92?w=1600&h=900&fit=crop&auto=format",
+    image: siteImages.heroSlides[0],
     tag: "", title: "", desc: "", cta: "", link: "/services",
   },
   {
-    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1600&h=900&fit=crop&auto=format",
+    image: siteImages.heroSlides[1],
     tag: "", title: "", desc: "", cta: "", link: "/about",
   },
   {
-    image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=1600&h=900&fit=crop&auto=format",
+    image: siteImages.heroSlides[2],
     tag: "", title: "", desc: "", cta: "", link: "/services",
   },
   {
-    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=1600&h=900&fit=crop&auto=format",
+    image: siteImages.heroSlides[3],
     tag: "", title: "", desc: "", cta: "", link: "/doctors",
   },
 ];

@@ -306,11 +306,18 @@
     "header": {
       "badge": "Our Team",
       "title": "Meet Our Specialists",
-      "desc": "Board-certified dentists bringing decades of combined expertise and genuine care for every patient's wellbeing."
+      "desc": "Board-certified dentists bringing decades of combined expertise and genuine care for every patient's wellbeing.",
+      "founder": "The clinic was founded in 2007 by Dr. Karo Matikyan."
     },
     "intro": {
       "title": "Meet the doctors behind every treatment plan",
       "desc": "Explore the specialists who provide implant, orthodontic, cosmetic, restorative, periodontal, and pediatric dental care at Matikyan Dental Clinic."
+    },
+    "founder": {
+      "badge": "Founder",
+      "name": "Dr. Karo Matikyan",
+      "title": "Founder of the Clinic",
+      "desc": "Matikyan Dental Clinic was founded in 2007 by Dr. Karo Matikyan. His decades of professional experience shaped the clinic’s medical approach and core values."
     },
     "filter": {
       "all": "All",

@@ -242,7 +242,7 @@ const routeSeo: Record<string, LocalizedSeoEntry> = {
       ru: "Matikyan Dental Clinic | Современная стоматология в Армении",
     },
     {
-      hy: "Matikyan Dental Clinic-ը առաջարկում է կանխարգելիչ, էսթետիկ, վերականգնողական, օրթոդոնտիկ և վիրաբուժական ստոմատոլոգիական խնամք՝ պացիենտակենտրոն մոտեցմամբ։",
+      hy: "Matikyan Dental Clinic-ը առաջարկում է կանխարգելիչ, էսթետիկ, վերականգնողական, օրթոդոնտիկ և վիրաբուժական ստոմատոլոգիական խնամք՝ բուժառուակենտրոն մոտեցմամբ։",
       en: "Matikyan Dental Clinic offers preventive, cosmetic, restorative, orthodontic, and surgical dental care with a modern patient-focused approach.",
       ru: "Matikyan Dental Clinic предлагает профилактическое, эстетическое, восстановительное, ортодонтическое и хирургическое стоматологическое лечение с вниманием к каждому пациенту.",
     },
@@ -265,7 +265,7 @@ const routeSeo: Record<string, LocalizedSeoEntry> = {
       ru: "О Matikyan Dental Clinic | Команда и подход",
     },
     {
-      hy: "Ծանոթացեք Matikyan Dental Clinic-ի պատմությանը, բուժական փիլիսոփայությանը, փորձառու թիմին և պացիենտակենտրոն մոտեցմանը։",
+      hy: "Ծանոթացեք Matikyan Dental Clinic-ի պատմությանը, բուժական փիլիսոփայությանը, փորձառու թիմին և բուժառուակենտրոն մոտեցմանը։",
       en: "Learn about Matikyan Dental Clinic, our clinical philosophy, experienced team, and commitment to precise, patient-centered dental care.",
       ru: "Узнайте больше о Matikyan Dental Clinic, нашей клинической философии, опытной команде и внимательном подходе к лечению.",
     },
@@ -304,7 +304,7 @@ const routeSeo: Record<string, LocalizedSeoEntry> = {
       ru: "Часто задаваемые вопросы | Matikyan Dental Clinic",
     },
     {
-      hy: "Ստացեք պատասխաններ խորհրդատվությունների, բուժումների, Invisalign-ի, գների, վճարման և պացիենտական խնամքի վերաբերյալ ամենատարածված հարցերին։",
+      hy: "Ստացեք պատասխաններ խորհրդատվությունների, բուժումների, Invisalign-ի, գների, վճարման և բուժառուի խնամքի վերաբերյալ ամենատարածված հարցերին։",
       en: "Find answers to common questions about consultations, dental treatments, Invisalign, pricing, insurance, and patient care at Matikyan Dental Clinic.",
       ru: "Найдите ответы на частые вопросы о консультациях, лечении, Invisalign, стоимости, оплате и заботе о пациентах в Matikyan Dental Clinic.",
     },

@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2, Award, Globe, Heart } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { LocalizedNavLink } from "../routing";
+import { siteImages } from "../siteImages";
 
 const milestoneColors = [true, false, true, false, true];
 const valueIcons = [Heart, Award, Globe, CheckCircle2];
@@ -42,10 +43,10 @@ export function About() {
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=400&h=480&fit=crop&auto=format" alt={t("about.images.clinicAlt")} className="rounded-2xl object-cover w-full h-64" />
-            <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=400&h=280&fit=crop&auto=format" alt={t("about.images.consultationAlt")} className="rounded-2xl object-cover w-full h-48 self-end" />
-            <img src="https://images.unsplash.com/photo-1588776814546-1ffbb172601e?w=400&h=280&fit=crop&auto=format" alt={t("about.images.equipmentAlt")} className="rounded-2xl object-cover w-full h-48" />
-            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=480&fit=crop&auto=format" alt={t("about.images.interiorAlt")} className="rounded-2xl object-cover w-full h-64 self-start" />
+            <img src={siteImages.aboutImages.main} alt={t("about.images.clinicAlt")} className="rounded-2xl object-cover w-full h-64" />
+            <img src={siteImages.aboutImages.consultation} alt={t("about.images.consultationAlt")} className="rounded-2xl object-cover w-full h-48 self-end" />
+            <img src={siteImages.aboutImages.equipment} alt={t("about.images.equipmentAlt")} className="rounded-2xl object-cover w-full h-48" />
+            <img src={siteImages.aboutImages.interior} alt={t("about.images.interiorAlt")} className="rounded-2xl object-cover w-full h-64 self-start" />
           </div>
         </div>
       </section>

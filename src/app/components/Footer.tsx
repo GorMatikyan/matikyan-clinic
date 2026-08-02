@@ -31,6 +31,8 @@ export function Footer() {
     { key: "footer.about", path: "/about" },
     { key: "footer.ourDoctors", path: "/doctors" },
     { key: "footer.services", path: "/services" },
+    { key: "nav.warranty", path: "/warranty" },
+    { key: "nav.dentalTourism", path: "/dental-tourism" },
     { key: "nav.faq", path: "/faq" },
     { key: "nav.blog", path: "/blog" },
     { key: "footer.contact", path: "/contact" },
@@ -39,11 +41,11 @@ export function Footer() {
   const serviceLinks = [
     { key: "footer.servicesList.whitening", path: getServiceSlugByTitle("Teeth Whitening") },
     { key: "footer.servicesList.implants", path: getServiceSlugByTitle("Dental Implants") },
-    { key: "footer.servicesList.orthodontics", path: getServiceSlugByTitle("Clear Aligners") },
-    { key: "footer.servicesList.veneers", path: getServiceSlugByTitle("Dental Veneers") },
+    { key: "footer.servicesList.orthodontics", path: getServiceSlugByTitle("Orthodontics") },
+    { key: "footer.servicesList.veneers", path: getServiceSlugByTitle("Dental Veneers & Aesthetic Restorations") },
     { key: "footer.servicesList.rootCanal", path: getServiceSlugByTitle("Endodontic Treatment") },
-    { key: "footer.servicesList.pediatric", path: getServiceSlugByTitle("Diagnostics & Consultation") },
-    { key: "footer.servicesList.cosmetic", path: getServiceSlugByTitle("Aesthetic Restorations & Build-Up") },
+    { key: "footer.servicesList.pediatric", path: getServiceSlugByTitle("Diagnostics & Digital Dentistry") },
+    { key: "footer.servicesList.cosmetic", path: getServiceSlugByTitle("Dental Veneers & Aesthetic Restorations") },
   ] as const;
 
   return (
@@ -55,7 +57,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-5">
-              <img src={logoImg} alt={t("footer.logoAlt")} className="h-12 w-auto object-contain" />
+              <img src={logoImg} alt={t("footer.logoAlt")} className="h-14 w-auto object-contain" />
             </div>
             <p className="text-white/55 text-sm leading-relaxed mb-6">{t("footer.description")}</p>
           </div>

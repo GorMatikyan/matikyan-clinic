@@ -1,5 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { PageHero } from "../components/PageHero";
+import { siteImages } from "../siteImages";
 const GOOGLE_VIEW_REVIEWS_URL = "https://www.google.com/maps/search/?api=1&query=Matikyan%20Dental%20Clinic%2C%205%20Aram%20Khachatryan%20St%2C%20Yerevan";
 const GOOGLE_LEAVE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJExZLM0-9akAR5hTveAafjSA";
 const YANDEX_VIEW_REVIEWS_URL = "https://yandex.com/maps/org/matikyan_dental_and_contemporary_implantology_clinic/43591875663/reviews/";
@@ -16,17 +18,13 @@ export function Reviews() {
 
   return (
     <div>
-      <section className="py-20 bg-[#0F1932]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-[#B5C7EB]/15 rounded-full px-4 py-1.5 mb-5">
-            <span className="text-[#B5C7EB] text-xs tracking-widest uppercase" style={{ fontWeight: 700 }}>{t("reviews.header.badge")}</span>
-          </div>
-          <h1 className="text-white mb-5" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 800 }}>
-            {t("reviews.header.title")}
-          </h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">{t("reviews.header.desc")}</p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={t("reviews.header.badge")}
+        title={t("reviews.header.title")}
+        description={t("reviews.header.desc")}
+        imageSrc={siteImages.heroSlides[3]}
+        imageAlt={t("home.hero.slideAlt", { index: 4 })}
+      />
 
       <section className="py-16 pb-24 bg-[#F7FAFC]">
         <div className="max-w-5xl mx-auto px-6">

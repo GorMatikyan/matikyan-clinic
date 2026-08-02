@@ -1,25 +1,22 @@
 import { useState } from "react";
-import { ArrowRight, Star, ShieldCheck, Sparkles, Gem, Palette, Wrench, Crown, Microscope, Smile, Layers, HeartPulse, Scissors, Baby } from "lucide-react";
-import { useSanityData } from "../../hooks/useSanityData";
-import { SERVICES_QUERY } from "../../lib/queries";
+import { ArrowRight, ShieldCheck, Sparkles, Gem, Wrench, Crown, Microscope, Smile, HeartPulse, Scissors, Baby } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import type { SanityService } from "../../lib/sanityTypes";
-import { fallbackServices, localizeServiceListItem, getServiceSlugByTitle } from "../serviceData";
+import { getLocalizedFallbackServices, getServiceSlugByTitle } from "../serviceData";
 import { LocalizedNavLink } from "../routing";
+import { PageHero } from "../components/PageHero";
+import { siteImages } from "../siteImages";
 
 const serviceIcons: Record<string, React.ElementType> = {
-  "/dental-cleaning-check-up": ShieldCheck,
-  "/teeth-whitening": Sparkles,
-  "/veneers": Gem,
-  "/composite-bonding": Palette,
-  "/dental-implants": Wrench,
-  "/same-day-crowns": Crown,
-  "/root-canal-treatment": Microscope,
-  "/invisalign": Smile,
-  "/ceramic-braces": Layers,
-  "/periodontal-treatment": HeartPulse,
-  "/wisdom-tooth-extraction": Scissors,
-  "/pediatric-dentistry": Baby,
+  "/services/dental-cleaning-check-up": ShieldCheck,
+  "/services/teeth-whitening": Sparkles,
+  "/services/veneers": Gem,
+  "/services/dental-implants": Wrench,
+  "/services/prosthetics-crowns": Crown,
+  "/services/root-canal-treatment": Microscope,
+  "/services/orthodontics": Smile,
+  "/services/periodontal-treatment": HeartPulse,
+  "/services/oral-surgery": Scissors,
+  "/services/digital-diagnostics": Baby,
 };
 
 const categoryKeys = ["all", "therapy", "periodontology", "orthopedics", "surgery", "orthodontics", "diagnostics"] as const;
@@ -35,28 +32,22 @@ const categoryValues = {
 
 export function Services() {
   const { t } = useTranslation();
-  const { data: serviceList } = useSanityData<SanityService[]>(SERVICES_QUERY, fallbackServices);
   const [active, setActive] = useState<keyof typeof categoryValues>("all");
-  const localizedServices = serviceList.map(localizeServiceListItem);
+  const localizedServices = getLocalizedFallbackServices();
 
   const filtered = active === "all" ? localizedServices : localizedServices.filter((s) => s.category === t(`serviceCatalog.categories.${active}`));
 
   return (
     <div>
       {/* Header */}
-      <section className="py-20 bg-[#0F1932]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-[#B5C7EB]/15 rounded-full px-4 py-1.5 mb-5">
-            <span className="text-[#B5C7EB] text-xs tracking-widest uppercase" style={{ fontWeight: 700 }}>{t("services.header.badge")}</span>
-          </div>
-          <h1 className="text-white mb-5" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 800 }}>
-            {t("services.header.title")}
-          </h1>
-          <p className="text-white/55 text-lg max-w-2xl mx-auto">
-            {t("services.header.desc")}
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={t("services.header.badge")}
+        title={t("services.header.title")}
+        description={t("services.header.desc")}
+        imageSrc={siteImages.aboutImages.interior}
+        imageAlt={t("about.images.interiorAlt")}
+        primaryAction={{ label: t("nav.bookAppointment"), to: "/contact" }}
+      />
 
       {/* Filter */}
       <section className="py-6 bg-[#0F1932] border-t border-white/8 sticky top-18 z-30">
@@ -103,10 +94,6 @@ export function Services() {
                       <div className="absolute top-4 left-4 bg-[#B5C7EB] text-[#0F1932] text-xs px-3 py-1 rounded-full" style={{ fontWeight: 600 }}>
                         {service.category}
                       </div>
-                      <div className="absolute top-4 right-4 bg-white/95 rounded-full px-2.5 py-1 flex items-center gap-1">
-                        <Star className="w-3.5 h-3.5 fill-[#B5C7EB] text-[#B5C7EB]" />
-                        <span className="text-xs text-[#0F1932]" style={{ fontWeight: 700 }}>{service.rating}</span>
-                      </div>
                     </div>
 
                     {/* Content */}
@@ -123,7 +110,7 @@ export function Services() {
                   </LocalizedNavLink>
 
                     {/* Actions */}
-                    <div className="flex gap-2">
+                    <div>
                       <LocalizedNavLink
                         to={serviceSlug}
                         aria-label={t("services.card.learnMoreAria", { service: service.title })}
@@ -131,14 +118,6 @@ export function Services() {
                         style={{ fontWeight: 500 }}
                       >
                         {t("services.card.learnMore")}
-                      </LocalizedNavLink>
-                      <LocalizedNavLink
-                        to="/contact"
-                        aria-label={t("services.card.bookAria", { service: service.title })}
-                        className="flex-1 py-2.5 rounded-xl bg-[#0F1932] text-white text-sm text-center hover:bg-[#B5C7EB] hover:text-[#0F1932] transition-colors flex items-center justify-center gap-1.5"
-                        style={{ fontWeight: 600 }}
-                      >
-                        {t("services.card.book")} <ArrowRight className="w-3.5 h-3.5" />
                       </LocalizedNavLink>
                     </div>
                 </div>

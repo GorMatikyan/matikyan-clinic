@@ -7,6 +7,7 @@ const FACEBOOK_URL = "https://www.facebook.com/share/1LLcyQvwvZ/?mibextid=wwXIfr
 const INSTAGRAM_URL = "https://www.instagram.com/matikyandentalclinic?igsh=MTNtbGl1eW04M25ucA==";
 const YOUTUBE_URL = "https://www.youtube.com/@MatikyanDentalClinic";
 import { useTranslation } from "react-i18next";
+import { PageHero } from "../components/PageHero";
 
 const COUNTRIES = [
   "Armenia",
@@ -231,17 +232,11 @@ export function Contact() {
 
   return (
     <div>
-      <section className="py-20 bg-[#0F1932]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-[#B5C7EB]/15 rounded-full px-4 py-1.5 mb-5">
-            <span className="text-[#B5C7EB] text-xs tracking-widest uppercase" style={{ fontWeight: 700 }}>{t("contact.header.badge")}</span>
-          </div>
-          <h1 className="text-white mb-5" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 800 }}>
-            {t("contact.header.title")}
-          </h1>
-          <p className="text-white/55 text-lg max-w-2xl mx-auto">{t("contact.header.desc")}</p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={t("contact.header.badge")}
+        title={t("contact.header.title")}
+        description={t("contact.header.desc")}
+      />
 
       <section className="py-16 bg-[#F7FAFC]">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[1fr_360px] gap-10">

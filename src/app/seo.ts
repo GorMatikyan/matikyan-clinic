@@ -87,149 +87,45 @@ const serviceSeoCopy: Record<
     ru: { title: string; description: string };
   }
 > = {
-  "/dental-cleaning-check-up": {
-    hy: {
-      title: "Մասնագիտական բերանի հիգիենա | Matikyan Dental Clinic",
-      description:
-        "Ամրագրեք մասնագիտական բերանի հիգիենա Matikyan Dental Clinic-ում՝ ուլտրաձայնային մաքրման, AirFlow-ի և կանխարգելիչ խնամքի համար։",
-    },
-    ru: {
-      title: "Профессиональная гигиена полости рта | Matikyan Dental Clinic",
-      description:
-        "Запишитесь на профессиональную гигиену полости рта в Matikyan Dental Clinic для ультразвуковой чистки, AirFlow и профилактического ухода.",
-    },
+  "/services/dental-cleaning-check-up": {
+    hy: { title: "Մասնագիտական բերանի հիգիենա | Matikyan Dental Clinic", description: "Ամրագրեք մասնագիտական բերանի հիգիենա Matikyan Dental Clinic-ում՝ ուլտրաձայնային մաքրման, AirFlow-ի և կանխարգելիչ խնամքի համար։" },
+    ru: { title: "Профессиональная гигиена полости рта | Matikyan Dental Clinic", description: "Запишитесь на профессиональную гигиену полости рта в Matikyan Dental Clinic для ультразвуковой чистки, AirFlow и профилактического ухода." },
   },
-  "/teeth-whitening": {
-    hy: {
-      title: "Ատամների սպիտակեցում | Matikyan Dental Clinic",
-      description:
-        "Պայծառացրեք ժպիտը Matikyan Dental Clinic-ում՝ կապպային կամ լուսային սպիտակեցման տարբերակներով՝ ըստ ձեր կլինիկական կարիքի։",
-    },
-    ru: {
-      title: "Отбеливание зубов | Matikyan Dental Clinic",
-      description:
-        "Осветлите улыбку в Matikyan Dental Clinic с помощью каппового или светового отбеливания, подобранного по показаниям.",
-    },
+  "/services/teeth-whitening": {
+    hy: { title: "Ատամների սպիտակեցում | Matikyan Dental Clinic", description: "Պայծառացրեք ժպիտը Matikyan Dental Clinic-ում՝ կապպային կամ լուսային սպիտակեցման տարբերակներով՝ ըստ ձեր կլինիկական կարիքի։" },
+    ru: { title: "Отбеливание зубов | Matikyan Dental Clinic", description: "Осветлите улыбку в Matikyan Dental Clinic с помощью каппового или светового отбеливания, подобранного по показаниям." },
   },
-  "/veneers": {
-    hy: {
-      title: "Ատամնային վինիրներ | Matikyan Dental Clinic",
-      description:
-        "Ծանոթացեք ատամնային վինիրներին Matikyan Dental Clinic-ում՝ E.max, կերամիկական և կոմպոզիտ տարբերակներով՝ ժպիտի ձևի ու գույնի շտկման համար։",
-    },
-    ru: {
-      title: "Стоматологические виниры | Matikyan Dental Clinic",
-      description:
-        "Узнайте о винирах в Matikyan Dental Clinic: E.max, керамические и композитные варианты для коррекции формы и цвета зубов.",
-    },
+  "/services/veneers": {
+    hy: { title: "Վինիրներ և էսթետիկ վերականգնումներ | Matikyan Dental Clinic", description: "Ծանոթացեք վինիրներին, կոմպոզիտ վերականգնումներին և կուլտի վերականգնմանը Matikyan Dental Clinic-ում՝ ժպիտի գեղագիտության և ատամի կառուցվածքի վերականգնման համար։" },
+    ru: { title: "Виниры и эстетические реставрации | Matikyan Dental Clinic", description: "Узнайте о винирах, композитных реставрациях и build-up в Matikyan Dental Clinic для эстетики улыбки и восстановления структуры зуба." },
   },
-  "/composite-bonding": {
-    hy: {
-      title: "Էսթետիկ վերականգնում և build-up | Matikyan Dental Clinic",
-      description:
-        "Բուժեք կարիեսը, վերականգնեք ատամի կառուցվածքը և պատրաստեք այն պսակի համար Matikyan Dental Clinic-ում կատարվող էսթետիկ վերականգնումներով։",
-    },
-    ru: {
-      title: "Эстетические реставрации и build-up | Matikyan Dental Clinic",
-      description:
-        "Лечите кариес, восстанавливайте форму зуба и подготавливайте его под коронку с эстетическими реставрациями в Matikyan Dental Clinic.",
-    },
+  "/services/dental-implants": {
+    hy: { title: "Ատամնային իմպլանտներ | Matikyan Dental Clinic", description: "Վերականգնեք բացակայող ատամները Matikyan Dental Clinic-ում ատամնային իմպլանտների միջոցով՝ ճշգրիտ պլանավորմամբ և երկարաժամկետ վերականգնողական լուծմամբ։" },
+    ru: { title: "Зубные импланты | Matikyan Dental Clinic", description: "Восстановите отсутствующие зубы с помощью имплантов в Matikyan Dental Clinic благодаря точному планированию и долговременному восстановительному решению." },
   },
-  "/dental-implants": {
-    hy: {
-      title: "Ատամնային իմպլանտներ | Matikyan Dental Clinic",
-      description:
-        "Վերականգնեք բացակայող ատամները Matikyan Dental Clinic-ում ատամնային իմպլանտների միջոցով՝ ճշգրիտ պլանավորմամբ և երկարաժամկետ վերականգնողական լուծմամբ։",
-    },
-    ru: {
-      title: "Зубные импланты | Matikyan Dental Clinic",
-      description:
-        "Восстановите отсутствующие зубы с помощью имплантов в Matikyan Dental Clinic благодаря точному планированию и долговременному восстановительному решению.",
-    },
+  "/services/prosthetics-crowns": {
+    hy: { title: "Պրոթեզավորում և պսակներ | Matikyan Dental Clinic", description: "Վերականգնեք ծամելու ֆունկցիան և ժպիտի գեղագիտությունը Matikyan Dental Clinic-ում՝ պսակներով, շարժական պրոթեզներով և թվային օրթոպեդիկ պլանավորմամբ։" },
+    ru: { title: "Протезирование и коронки | Matikyan Dental Clinic", description: "Восстановите жевательную функцию и эстетику улыбки в Matikyan Dental Clinic с помощью коронок, съемного протезирования и цифрового планирования." },
   },
-  "/same-day-crowns": {
-    hy: {
-      title: "Պրոթեզավորում և պսակներ | Matikyan Dental Clinic",
-      description:
-        "Վերականգնեք ծամելու ֆունկցիան և ժպիտի գեղագիտությունը Matikyan Dental Clinic-ում՝ պսակներով, շարժական պրոթեզներով և թվային օրթոպեդիկ պլանավորմամբ։",
-    },
-    ru: {
-      title: "Протезирование и коронки | Matikyan Dental Clinic",
-      description:
-        "Восстановите жевательную функцию и эстетику улыбки в Matikyan Dental Clinic с помощью коронок, съемного протезирования и цифрового планирования.",
-    },
+  "/services/root-canal-treatment": {
+    hy: { title: "Էնդոդոնտիկ բուժում | Matikyan Dental Clinic", description: "Բուժեք պուլպիտը և արմատախողովակային վարակները Matikyan Dental Clinic-ում՝ ժամանակակից էնդոդոնտիկ մոտեցմամբ և մանրակրկիտ մշակումով։" },
+    ru: { title: "Эндодонтическое лечение | Matikyan Dental Clinic", description: "Лечите пульпит и инфекции корневых каналов в Matikyan Dental Clinic с современным эндодонтическим подходом и точной обработкой каналов." },
   },
-  "/root-canal-treatment": {
-    hy: {
-      title: "Էնդոդոնտիկ բուժում | Matikyan Dental Clinic",
-      description:
-        "Բուժեք պուլպիտը և արմատախողովակային վարակները Matikyan Dental Clinic-ում՝ ժամանակակից էնդոդոնտիկ մոտեցմամբ և մանրակրկիտ մշակումով։",
-    },
-    ru: {
-      title: "Эндодонтическое лечение | Matikyan Dental Clinic",
-      description:
-        "Лечите пульпит и инфекции корневых каналов в Matikyan Dental Clinic с современным эндодонтическим подходом и точной обработкой каналов.",
-    },
+  "/services/orthodontics": {
+    hy: { title: "Օրթոդոնտիա | Matikyan Dental Clinic", description: "Ծանոթացեք օրթոդոնտիկ բուժմանը Matikyan Dental Clinic-ում՝ թափանցիկ կապաններ և բրեկետներ ատամների դասավորության ու կծվածքի շտկման համար։" },
+    ru: { title: "Ортодонтия | Matikyan Dental Clinic", description: "Узнайте об ортодонтическом лечении в Matikyan Dental Clinic: прозрачные элайнеры и брекеты для коррекции положения зубов и прикуса." },
   },
-  "/invisalign": {
-    hy: {
-      title: "Թափանցիկ կապաններ | Matikyan Dental Clinic",
-      description:
-        "Ուղղեք ատամները թափանցիկ կապաններով Matikyan Dental Clinic-ում՝ թվային պլանավորմամբ և փուլային օրթոդոնտիկ շարժումով։",
-    },
-    ru: {
-      title: "Прозрачные элайнеры | Matikyan Dental Clinic",
-      description:
-        "Выравнивайте зубы прозрачными элайнерами в Matikyan Dental Clinic с цифровым планированием и поэтапной ортодонтической коррекцией.",
-    },
+  "/services/periodontal-treatment": {
+    hy: { title: "Պերիոդոնտալ բուժում | Matikyan Dental Clinic", description: "Վերահսկեք լնդերի հիվանդությունները Matikyan Dental Clinic-ում իրականացվող պերիոդոնտալ բուժմամբ՝ խորը մաքրումով, մասնագիտական խնամքով և հսկողությամբ։" },
+    ru: { title: "Пародонтологическое лечение | Matikyan Dental Clinic", description: "Контролируйте заболевания десен с помощью пародонтологического лечения в Matikyan Dental Clinic, включая глубокую чистку, специализированный уход и наблюдение." },
   },
-  "/ceramic-braces": {
-    hy: {
-      title: "Բրեկետ համակարգեր | Matikyan Dental Clinic",
-      description:
-        "Շտկեք կծվածքն ու ատամների շարքը Matikyan Dental Clinic-ում՝ բրեկետ համակարգերի միջոցով՝ միջինից բարդ օրթոդոնտիկ դեպքերի համար։",
-    },
-    ru: {
-      title: "Брекет-системы | Matikyan Dental Clinic",
-      description:
-        "Исправьте прикус и положение зубов в Matikyan Dental Clinic с помощью брекет-систем для надежного контроля в более сложных случаях.",
-    },
+  "/services/oral-surgery": {
+    hy: { title: "Բերանի խոռոչի վիրաբուժություն | Matikyan Dental Clinic", description: "Ծանոթացեք բերանի խոռոչի վիրաբուժական ծառայություններին Matikyan Dental Clinic-ում՝ հեռացումներ, ապիկոէկտոմիա, սինուս-լիֆտ և ոսկրային պլաստիկա։" },
+    ru: { title: "Хирургическая стоматология | Matikyan Dental Clinic", description: "Узнайте о хирургических услугах Matikyan Dental Clinic: удаление зубов, апикоэктомия, синус-лифтинг и костная пластика." },
   },
-  "/periodontal-treatment": {
-    hy: {
-      title: "Պերիոդոնտալ բուժում | Matikyan Dental Clinic",
-      description:
-        "Վերահսկեք լնդերի հիվանդությունները Matikyan Dental Clinic-ում իրականացվող պերիոդոնտալ բուժմամբ՝ խորը մաքրումով, մասնագիտական խնամքով և հսկողությամբ։",
-    },
-    ru: {
-      title: "Пародонтологическое лечение | Matikyan Dental Clinic",
-      description:
-        "Контролируйте заболевания десен с помощью пародонтологического лечения в Matikyan Dental Clinic, включая глубокую чистку, специализированный уход и наблюдение.",
-    },
-  },
-  "/wisdom-tooth-extraction": {
-    hy: {
-      title: "Բերանի խոռոչի վիրաբուժություն | Matikyan Dental Clinic",
-      description:
-        "Ծանոթացեք բերանի խոռոչի վիրաբուժական ծառայություններին Matikyan Dental Clinic-ում՝ հեռացումներ, ապիկոէկտոմիա, սինուս-լիֆտ և ոսկրային պլաստիկա։",
-    },
-    ru: {
-      title: "Хирургическая стоматология | Matikyan Dental Clinic",
-      description:
-        "Узнайте о хирургических услугах Matikyan Dental Clinic: удаление зубов, апикоэктомия, синус-лифтинг и костная пластика.",
-    },
-  },
-  "/pediatric-dentistry": {
-    hy: {
-      title: "Ախտորոշում և խորհրդատվություն | Matikyan Dental Clinic",
-      description:
-        "Ամրագրեք ախտորոշում և խորհրդատվություն Matikyan Dental Clinic-ում՝ RVG, պանորամային նկար, 3D CT և բուժման պլանավորում։",
-    },
-    ru: {
-      title: "Диагностика и консультация | Matikyan Dental Clinic",
-      description:
-        "Запишитесь на диагностику и консультацию в Matikyan Dental Clinic: RVG, панорамный снимок, 3D КТ и планирование лечения.",
-    },
+  "/services/digital-diagnostics": {
+    hy: { title: "Ախտորոշում և թվային ստոմատոլոգիա | Matikyan Dental Clinic", description: "Ամրագրեք թվային ախտորոշում Matikyan Dental Clinic-ում՝ RVG, պանորամային նկար, 3D CT, խորհրդատվություն և բուժման պլանավորում։" },
+    ru: { title: "Диагностика и цифровая стоматология | Matikyan Dental Clinic", description: "Запишитесь на цифровую диагностику в Matikyan Dental Clinic: RVG, панорамный снимок, 3D КТ, консультация и планирование лечения." },
   },
 };
 
@@ -291,9 +187,9 @@ const routeSeo: Record<string, LocalizedSeoEntry> = {
       ru: "Стоматологические услуги | Matikyan Dental Clinic",
     },
     {
-      hy: "Դիտարկեք Matikyan Dental Clinic-ի ծառայությունները՝ ներառյալ իմպլանտներ, սպիտակեցում, վինիրներ, արմատախողովակային բուժում, օրթոդոնտիա և մանկական ստոմատոլոգիա։",
-      en: "Explore dental services at Matikyan Dental Clinic including implants, whitening, veneers, root canal treatment, orthodontics, and pediatric dentistry.",
-      ru: "Ознакомьтесь с услугами Matikyan Dental Clinic: имплантация, отбеливание, виниры, лечение каналов, ортодонтия и детская стоматология.",
+      hy: "Դիտարկեք Matikyan Dental Clinic-ի ծառայությունները՝ ներառյալ հիգիենա, սպիտակեցում, վինիրներ, իմպլանտներ, էնդոդոնտիա, օրթոդոնտիա և թվային ախտորոշում։",
+      en: "Explore dental services at Matikyan Dental Clinic including hygiene, whitening, veneers, implants, endodontics, orthodontics, and digital diagnostics.",
+      ru: "Ознакомьтесь с услугами Matikyan Dental Clinic: гигиена, отбеливание, виниры, имплантация, эндодонтия, ортодонтия и цифровая диагностика.",
     },
   ),
   "/faq": createSeoEntry(
@@ -333,6 +229,32 @@ const routeSeo: Record<string, LocalizedSeoEntry> = {
       hy: "Կապվեք Matikyan Dental Clinic-ի հետ՝ խորհրդատվություն ամրագրելու, բուժումների մասին հարցեր տալու և կլինիկայի կոնտակտային տվյալները տեսնելու համար։",
       en: "Contact Matikyan Dental Clinic to book a consultation, ask about treatments, and find clinic details including phone, email, and opening hours.",
       ru: "Свяжитесь с Matikyan Dental Clinic, чтобы записаться на консультацию, задать вопросы о лечении и посмотреть контакты клиники.",
+    },
+  ),
+  "/warranty": createSeoEntry(
+    "/warranty",
+    {
+      hy: "Երաշխիքային քաղաքականություն | Matikyan Dental Clinic",
+      en: "Warranty Policy | Matikyan Dental Clinic",
+      ru: "Гарантийная политика | Matikyan Dental Clinic",
+    },
+    {
+      hy: "Ծանոթացեք Matikyan Dental Clinic-ի երաշխիքային քաղաքականությանը, երաշխիքային ժամկետներին և պայմաններին տարբեր ստոմատոլոգիական աշխատանքների համար։",
+      en: "Review the Matikyan Dental Clinic warranty policy, warranty periods, and conditions for different dental treatments.",
+      ru: "Ознакомьтесь с гарантийной политикой Matikyan Dental Clinic, сроками гарантии и условиями для разных стоматологических работ.",
+    },
+  ),
+  "/dental-tourism": createSeoEntry(
+    "/dental-tourism",
+    {
+      hy: "Ստոմատոլոգիական տուրիզմ Հայաստանում | Matikyan Dental Clinic",
+      en: "Dental Tourism in Armenia | Matikyan Dental Clinic",
+      ru: "Стомтуризм в Армении | Matikyan Dental Clinic",
+    },
+    {
+      hy: "Matikyan Dental Clinic-ը օգնում է արտերկրից ժամանող բուժառուներին համադրել ստոմատոլոգիական բուժումը Հայաստանում հանգստի և ուղևորության կազմակերպման հետ։",
+      en: "Matikyan Dental Clinic helps international patients combine dental treatment in Armenia with travel support, translation, and sightseeing.",
+      ru: "Matikyan Dental Clinic помогает иностранным пациентам совместить стоматологическое лечение в Армении с трансфером, переводом и экскурсиями.",
     },
   ),
   ...Object.fromEntries(

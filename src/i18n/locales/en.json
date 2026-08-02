@@ -6,6 +6,8 @@
     "reviews": "Reviews",
     "faq": "FAQ",
     "blog": "Blog",
+    "warranty": "Warranty",
+    "dentalTourism": "Dental Tourism",
     "contact": "Contact",
     "bookAppointment": "Book Appointment",
     "phone": "+374 10 210122",
@@ -31,9 +33,9 @@
       "whitening": "Teeth Whitening",
       "implants": "Dental Implants",
       "orthodontics": "Orthodontics",
-      "veneers": "Dental Veneers",
+      "veneers": "Veneers & Restorations",
       "rootCanal": "Endodontic Treatment",
-      "pediatric": "Diagnostics & Consultation",
+      "pediatric": "Digital Diagnostics",
       "cosmetic": "Aesthetic Restorations"
     },
     "address": "5 Aram Khachatryan St.\nYerevan 0033\nArmenia",
@@ -58,13 +60,82 @@
       "youtubeAria": "Open Matikyan Dental Clinic on YouTube"
     }
   },
-  "home": {
-    "stats": {
-      "years": "Years of Excellence",
-      "patients": "Happy Patients",
-      "doctors": "Specialist Doctors",
-      "satisfaction": "Satisfaction Rate"
+  "warranty": {
+    "header": {
+      "badge": "Patient information",
+      "title": "Warranty",
+      "desc": "Warranty terms for dental treatment performed at Matikyan Dental Clinic."
     },
+    "policyTitle": "The guarantee policy of Matikyan Dental Clinic",
+    "imageAlt": "Dentist and patient reviewing warranty and treatment information at Matikyan Dental Clinic",
+    "sections": [
+      {
+        "items": [
+          "Any warranty-related procedures are performed only in our clinic.",
+          "When warranty-related procedures are performed, the clinic does not cover accommodation in the country or transportation expenses.",
+          "Warranty for implantation is provided after prosthetic restoration."
+        ]
+      },
+      {
+        "title": "Warranty periods for different works",
+        "items": [
+          "Restoration or rebuilding of a tooth with composite materials: 1 year.",
+          "Crowns and bridge prostheses: 3 years, except metal-plastic constructions.",
+          "Veneers and inlays: 2 years.",
+          "Full removable dentures: 2 years.",
+          "Clasp dentures: 3 years.",
+          "Implants after prosthetic restoration: 5 years."
+        ]
+      },
+      {
+        "title": "Full or partial suspension of warranty obligations",
+        "items": [
+          "Insufficient or complete absence of oral hygiene.",
+          "The patient did not attend preventive check-ups twice a year.",
+          "Rules for using partial or removable dentures were not followed, including independent adjustment of the prosthesis.",
+          "Sudden changes in the patient's weight.",
+          "Trauma in the maxillofacial area.",
+          "Systemic diseases acquired during the warranty period, including diabetes, osteoporosis, or chemotherapy.",
+          "Violation of financial obligations to the clinic."
+        ]
+      }
+    ],
+    "noteTitle": "P.S.",
+    "note": "Patients wearing metal-ceramic constructions should be careful when eating hard and dry food such as crackers and walnuts, should not bite electrical wires, and should avoid consuming hot immediately after cold or cold immediately after hot.",
+    "cta": {
+      "contact": "Contact the clinic",
+      "services": "View services"
+    }
+  },
+  "dentalTourism": {
+    "header": {
+      "badge": "International patients",
+      "title": "Dental Tourism",
+      "desc": "Combine dental treatment at Matikyan Dental Clinic with a visit to Armenia."
+    },
+    "title": "Dental Tourism",
+    "body": {
+      "p1": "Matikyan Dental Clinic gives international patients the opportunity to visit Armenia and combine dental treatment with rest.",
+      "p2": "The length of stay in Armenia depends on the treatment plan. If an online consultation is needed, you can contact us in advance with a detailed description of your oral health concerns, and our team will answer your questions."
+    },
+    "included": {
+      "title": "Support may include",
+      "items": [
+        "Transportation from the airport to your hotel.",
+        "Guide-translator support.",
+        "Sightseeing tours in Armenia."
+      ]
+    },
+    "consultation": {
+      "title": "Online consultation before arrival",
+      "desc": "Before traveling, you may send information about your dental concerns so the clinic can advise on possible treatment steps and timing."
+    },
+    "cta": {
+      "contact": "Contact the clinic",
+      "services": "View services"
+    }
+  },
+  "home": {
     "services": {
       "badge": "What We Offer",
       "title": "Dental Services",
@@ -80,11 +151,11 @@
           "desc": "Tray-based and light whitening options selected to brighten the smile safely and evenly."
         },
         "ortho": {
-          "title": "Clear Aligners",
-          "desc": "Transparent orthodontic correction for crowding, spacing, and selected bite issues."
+          "title": "Orthodontics",
+          "desc": "Clear aligners and braces planned for tooth alignment, spacing, crowding, and bite correction."
         },
         "veneers": {
-          "title": "Dental Veneers",
+          "title": "Veneers & Restorations",
           "desc": "E.max, ceramic, and composite veneer options for shape, color, and smile-line correction."
         },
         "rootCanal": {
@@ -92,7 +163,7 @@
           "desc": "Root canal treatment for pulpitis, infected canals, and preservation of the natural tooth."
         },
         "pediatric": {
-          "title": "Diagnostics & Consultation",
+          "title": "Digital Diagnostics",
           "desc": "RVG, panoramic imaging, CT, and treatment planning before therapy, surgery, or implants."
         }
       }
@@ -201,11 +272,6 @@
       "title": "Dedicated to Transforming Smiles Since 2007",
       "desc1": "Matikyan Dental Clinic was built on a simple belief: dental care should feel as reassuring as it is effective. Over the years, our clinic has grown into a trusted center for comprehensive oral care and long-term patient relationships.",
       "desc2": "Our team brings together implantology, orthodontics, restorative, periodontal, cosmetic, and pediatric care under one roof so every patient can receive coordinated treatment with clarity and comfort.",
-      "stats": {
-        "patients": "Patients",
-        "specialists": "Specialists",
-        "satisfaction": "Satisfaction"
-      },
       "meetTeam": "Meet Our Team"
     },
     "images": {
@@ -481,8 +547,8 @@
     "categories": {
       "general": "General",
       "treatments": "Treatments",
-      "invisalign": "Invisalign & Braces",
-      "payment": "Payment & Insurance"
+      "payment": "Payment & Insurance",
+      "orthodontics": "Orthodontics, Aligners & Braces"
     },
     "items": {
       "general": [
@@ -517,16 +583,6 @@
           "a": "Modern root canal treatment is typically managed comfortably with effective anesthesia. Most patients describe it as far easier than they expected."
         }
       ],
-      "invisalign": [
-        {
-          "q": "Am I a candidate for Invisalign?",
-          "a": "Invisalign is often suitable for mild to moderate crowding, spacing, and selected bite issues. A clinical exam and digital assessment are the best way to confirm whether it fits your case."
-        },
-        {
-          "q": "How long does Invisalign treatment take?",
-          "a": "Treatment time depends on complexity, but many cases fall between 6 and 24 months. Your plan is based on the exact movements required."
-        }
-      ],
       "payment": [
         {
           "q": "Do you accept dental insurance?",
@@ -539,6 +595,16 @@
         {
           "q": "What is the cost of a consultation?",
           "a": "Consultation costs depend on what is included in the visit, such as imaging or specialist assessment. We explain this clearly before scheduling."
+        }
+      ],
+      "orthodontics": [
+        {
+          "q": "Am I a candidate for Invisalign?",
+          "a": "Invisalign is often suitable for mild to moderate crowding, spacing, and selected bite issues. A clinical exam and digital assessment are the best way to confirm whether it fits your case."
+        },
+        {
+          "q": "How long does Invisalign treatment take?",
+          "a": "Treatment time depends on complexity, but many cases fall between 6 and 24 months. Your plan is based on the exact movements required."
         }
       ]
     },
@@ -729,6 +795,59 @@
       "patientRating": "Patient rating",
       "keyBenefits": "Key benefits"
     },
+    "sections": {
+      "introduction": {
+        "eyebrow": "Overview"
+      },
+      "benefits": {
+        "eyebrow": "Benefits",
+        "title": "Benefits of this treatment"
+      },
+      "recommended": {
+        "eyebrow": "Indications"
+      },
+      "process": {
+        "eyebrow": "Treatment process"
+      },
+      "technology": {
+        "eyebrow": "Technology",
+        "title": "Technology used during treatment"
+      },
+      "faq": {
+        "eyebrow": "FAQ",
+        "title": "Questions about {{service}}"
+      },
+      "treatmentOptions": {
+        "eyebrow": "Treatment options",
+        "title": "Treatment options available"
+      }
+    },
+    "technology": {
+      "items": [
+        "Digital diagnostics and imaging are used when they help clarify the treatment plan.",
+        "Magnification, modern restorative materials, and controlled protocols support precision.",
+        "Treatment planning considers function, aesthetics, comfort, and long-term maintenance."
+      ]
+    },
+    "whyClinic": {
+      "title": "Why choose Matikyan Dental Clinic",
+      "items": [
+        "Treatment is planned by experienced doctors with a multidisciplinary approach.",
+        "The clinic combines modern dental technology with careful clinical assessment.",
+        "Recommendations are explained clearly before treatment begins.",
+        "The goal is predictable care, patient comfort, and long-term oral health."
+      ]
+    },
+    "faq": {
+      "items": [
+        "Is {{service}} suitable for every patient?::Suitability depends on the clinical examination, dental history, imaging when needed, and the patient’s goals.",
+        "How is the treatment plan selected?::The doctor evaluates the current condition, explains realistic options, and recommends the safest predictable approach.",
+        "Will I need follow-up visits?::Most dental treatments benefit from follow-up or preventive visits so the result can be monitored and maintained."
+      ]
+    },
+    "related": {
+      "title": "Related services"
+    },
     "cta": {
       "title": "Ready to discuss {{service}}?",
       "desc": "Book a consultation to review your goals, clinical needs, and the most suitable treatment plan for your smile.",
@@ -773,6 +892,21 @@
           "Patients with tartar buildup, staining, or bleeding gums.",
           "Adults and teens due for professional oral hygiene.",
           "Anyone preparing for restorative, orthodontic, or whitening treatment."
+        ],
+        "treatmentOptions": [
+          "Ultrasonic scaling for hard deposits.",
+          "AirFlow polishing for surface stains and biofilm.",
+          "Personal hygiene guidance based on plaque and gum findings."
+        ],
+        "technology": [
+          "Ultrasonic instruments are used to remove calculus from tooth surfaces.",
+          "AirFlow polishing helps clean surface staining and hard-to-reach areas.",
+          "Clinical assessment helps decide whether gum follow-up or related treatment is needed."
+        ],
+        "faqs": [
+          "How often should I book professional oral hygiene?::The interval depends on plaque control, gum condition, tartar buildup, and any planned treatment.",
+          "Is AirFlow the same as whitening?::No. AirFlow removes external staining and biofilm, while whitening changes tooth shade with a separate clinical method.",
+          "Can hygiene help before implants or whitening?::Yes. Clean tooth and gum surfaces help make restorative, implant, orthodontic, or whitening planning more predictable."
         ]
       },
       "teethWhitening": {
@@ -801,62 +935,64 @@
           "Patients with external discoloration or age-related darkening.",
           "Adults seeking a non-invasive aesthetic improvement.",
           "Cases where existing restorations do not limit color matching."
+        ],
+        "treatmentOptions": [
+          "Tray-based whitening after clinical assessment.",
+          "Light-activated whitening when it is suitable for the case.",
+          "Shade review and maintenance guidance after treatment."
+        ],
+        "technology": [
+          "Shade assessment supports realistic whitening planning.",
+          "Dentist-supervised systems are selected according to enamel and gum condition.",
+          "Protective protocols help reduce unnecessary irritation during whitening."
+        ],
+        "faqs": [
+          "Is teeth whitening suitable for everyone?::Suitability depends on enamel condition, gum health, sensitivity, restorations, and the type of discoloration.",
+          "Will fillings, crowns, or veneers whiten too?::No. Existing restorations do not change shade like natural enamel, so color matching may need planning.",
+          "How do I maintain the whitening result?::Maintenance depends on hygiene, diet, smoking habits, and follow-up advice from the dentist."
         ]
       },
       "veneers": {
-        "title": "Dental Veneers",
-        "tagline": "E.max, ceramic, and composite veneer options",
-        "desc": "Veneers are used to improve the color, shape, and symmetry of visible teeth with ceramic or composite restorative solutions.",
+        "title": "Dental Veneers & Aesthetic Restorations",
+        "tagline": "Veneers, composite restorations, and tooth build-up",
+        "desc": "Aesthetic dentistry improves visible tooth shape, color, and structure with veneers, composite restorations, and build-up when a tooth needs support before a crown.",
         "price": "From $900/tooth",
         "duration": "2 appointments",
         "benefits": [
-          "E.max veneers",
-          "Ceramic veneers",
-          "Composite veneers",
-          "Smile design improvement"
+          "E.max and ceramic veneers",
+          "Composite veneers and bonding",
+          "Aesthetic tooth-colored restorations",
+          "Tooth build-up under crowns"
         ],
-        "intro": "Veneers are part of the clinic’s orthopedic and aesthetic treatment options. They are selected when the patient needs a controlled change in shape, color, or front-tooth appearance.",
-        "h2Title": "When veneers are considered",
-        "h2Description": "They are commonly used when front teeth need aesthetic correction for shape, discoloration, minor irregularity, or visible wear.",
+        "intro": "This service combines dental veneers with aesthetic restorations and tooth build-up. It is used when visible teeth need shape or color improvement, when damaged tooth structure must be restored, or when a tooth requires a stable base before prosthetic treatment.",
+        "h2Title": "Veneers, restorations, and build-up planning",
+        "h2Description": "The treatment plan depends on enamel condition, remaining tooth structure, bite load, aesthetic goals, and whether a ceramic or composite solution is more appropriate.",
         "processTitle": "Treatment planning may include",
         "process": [
-          "Aesthetic consultation and shade or shape planning.",
-          "Digital records or impressions depending on the chosen veneer type.",
-          "Try-in and final bonding of the selected restoration."
+          "Aesthetic consultation, shade review, and assessment of tooth structure.",
+          "Selection of ceramic veneers, composite veneers, tooth-colored restorations, or build-up.",
+          "Try-in, restoration, bonding, or preparation for the next prosthetic stage when needed."
         ],
         "candidatesTitle": "Frequently chosen for",
         "candidates": [
-          "Visible chips, spacing, uneven contours, or discoloration.",
-          "Patients comparing ceramic and composite aesthetic options.",
-          "Cases where smile symmetry and front-tooth appearance are priorities."
-        ]
-      },
-      "compositeBonding": {
-        "title": "Aesthetic Restorations & Build-Up",
-        "tagline": "Caries treatment, restorations, and core build-up",
-        "desc": "Therapeutic restorations are used to treat decay, rebuild damaged tooth structure, and restore function and appearance with modern filling materials.",
-        "price": "From $250/tooth",
-        "duration": "60–90 min",
-        "benefits": [
-          "Caries treatment",
-          "Tooth-colored restorations",
-          "Core build-up under crowns",
-          "Functional reconstruction"
+          "Visible chips, spacing, discoloration, worn edges, or uneven contours.",
+          "Caries, fractures, old filling loss, or damaged tooth surfaces requiring aesthetic restoration.",
+          "Teeth that need build-up before a crown or broader prosthetic plan."
         ],
-        "intro": "This therapeutic group includes caries treatment, pulp-related restorative stages, aesthetic restorations, and build-up of the tooth stump when a crown is planned.",
-        "h2Title": "What this therapeutic service covers",
-        "h2Description": "The aim is to remove diseased tissue, restore shape and function, and create a stable base for further restorative or prosthetic treatment when needed.",
-        "processTitle": "Treatment may include",
-        "process": [
-          "Removal of caries and preparation of the cavity or damaged tooth area.",
-          "Aesthetic restoration with tooth-colored filling materials.",
-          "Build-up of the tooth core when support is needed under a future crown."
+        "treatmentOptions": [
+          "E.max, ceramic, and composite veneers for front-tooth aesthetics.",
+          "Composite bonding and tooth-colored restorations for selected defects.",
+          "Core build-up when a tooth needs support before a crown."
         ],
-        "candidatesTitle": "Common indications",
-        "candidates": [
-          "Caries, fractures, worn edges, or lost filling material.",
-          "Teeth that need aesthetic reconstruction after treatment.",
-          "Teeth that require stump build-up before orthopedic restoration."
+        "technology": [
+          "Digital records or impressions support smile and restoration planning.",
+          "Adhesive restorative materials support conservative reconstruction when clinically possible.",
+          "Material selection considers bite, tooth structure, aesthetics, and future prosthetic needs."
+        ],
+        "faqs": [
+          "When are veneers or aesthetic restorations recommended?::They are considered for visible discoloration, chips, spacing, worn edges, caries damage, or tooth structure loss.",
+          "Are ceramic veneers and composite restorations the same?::No. They differ in material, preparation, repair options, aesthetics, and long-term maintenance.",
+          "What is tooth build-up before a crown?::Build-up restores missing tooth structure so a future crown can have better support when the tooth is suitable for restoration."
         ]
       },
       "dentalImplants": {
@@ -885,9 +1021,24 @@
           "Patients missing one or more teeth.",
           "Patients seeking a fixed alternative to removable prosthetics.",
           "Cases that may also require bone augmentation before restoration."
+        ],
+        "treatmentOptions": [
+          "Single-tooth implant placement after diagnostic planning.",
+          "Mini-implant options when clinically indicated.",
+          "Bone support procedures such as grafting when additional volume is required."
+        ],
+        "technology": [
+          "Imaging helps evaluate bone volume, root anatomy, and implant position.",
+          "Surgical planning connects implant placement with the future crown or prosthesis.",
+          "Follow-up checks monitor healing before the restorative phase begins."
+        ],
+        "faqs": [
+          "Who may need a dental implant?::Implants are considered for patients missing one or more teeth when bone, gum, and general conditions are suitable.",
+          "Why is diagnostics important before implants?::Diagnostics help evaluate bone volume, nearby anatomy, infection risk, and the future prosthetic plan.",
+          "Will I need a crown after the implant?::Usually the implant is restored with a crown, bridge, or prosthetic solution after the healing and planning stages."
         ]
       },
-      "sameDayCrowns": {
+      "prostheticsCrowns": {
         "title": "Prosthetics & Crowns",
         "tagline": "Fixed, removable, and digitally planned restorations",
         "desc": "Orthopedic treatment includes crowns, removable prosthetics, and digitally planned restorative options for rebuilding chewing function and smile aesthetics.",
@@ -913,6 +1064,21 @@
           "Patients who need crowns, prosthetic rehabilitation, or material replacement.",
           "Cases requiring removable or fixed restorative planning.",
           "Patients who benefit from digital scanning and prosthetic design."
+        ],
+        "treatmentOptions": [
+          "Metal-ceramic, zirconia, zirconia-ceramic, and E.max crown options.",
+          "Partial, clasp-based, non-acrylic, rigid, or soft removable prosthetics.",
+          "Digitally planned prosthetic restorations with scanning and CAD/CAM workflows."
+        ],
+        "technology": [
+          "Digital scanning can improve records for prosthetic planning.",
+          "CAD/CAM modeling supports restoration design when used for the case.",
+          "Material selection considers bite, aesthetics, remaining teeth, and hygiene access."
+        ],
+        "faqs": [
+          "When is a crown recommended?::A crown may be recommended when a tooth needs stronger coverage after damage, endodontic treatment, or structural loss.",
+          "How are crown materials selected?::Material choice depends on tooth location, bite load, aesthetics, opposing teeth, and clinical indications.",
+          "Are removable prosthetics still used?::Yes. Removable options may be appropriate when fixed treatment is not suitable or when several teeth require replacement."
         ]
       },
       "rootCanalTreatment": {
@@ -941,62 +1107,21 @@
           "Deep caries, pulpitis, or previously treated canals needing retreatment.",
           "Pain, lingering sensitivity, or infection around the tooth root.",
           "Teeth that need canal treatment before restoration or prosthetics."
-        ]
-      },
-      "invisalign": {
-        "title": "Clear Aligners",
-        "tagline": "Transparent orthodontic correction",
-        "desc": "Aligners provide removable orthodontic correction for crowding, spacing, and selected bite issues using digital planning and staged movement.",
-        "price": "From $3,200",
-        "duration": "6–24 months",
-        "benefits": [
-          "Discreet correction",
-          "Removable design",
-          "Digital planning",
-          "Step-by-step tooth movement"
         ],
-        "intro": "Aligner therapy is used for patients who prefer a removable and more discreet orthodontic option. Planning is based on digital records and controlled staged movement.",
-        "h2Title": "How aligner treatment is planned",
-        "h2Description": "The treatment plan is designed around the type of crowding, spacing, and bite correction needed, with attention to consistent wear and periodic review.",
-        "processTitle": "Typical aligner workflow",
-        "process": [
-          "Digital scanning and orthodontic assessment of alignment goals.",
-          "A staged aligner sequence designed around the desired tooth movement.",
-          "Progress reviews and refinements during treatment when needed."
+        "treatmentOptions": [
+          "Treatment of pulpitis and infected root canals.",
+          "Cleaning, shaping, and filling of root canal systems.",
+          "Microscope-assisted treatment or retreatment when indicated."
         ],
-        "candidatesTitle": "Often suitable for",
-        "candidates": [
-          "Adults and teens wanting a low-visibility orthodontic solution.",
-          "Mild to moderate crowding or spacing cases.",
-          "Patients able to wear aligners consistently each day."
-        ]
-      },
-      "ceramicBraces": {
-        "title": "Braces Systems",
-        "tagline": "Reliable correction for more complex cases",
-        "desc": "Bracket systems help correct crowding, tooth position, and bite discrepancies when fixed orthodontic control is needed.",
-        "price": "From $2,800",
-        "duration": "12–24 months",
-        "benefits": [
-          "Fixed orthodontic control",
-          "Effective bite correction",
-          "Suitable for teens and adults",
-          "Detailed tooth movement"
+        "technology": [
+          "Imaging helps evaluate canal anatomy and infection around the root.",
+          "Magnification can support more detailed canal access and cleaning in selected cases.",
+          "Canal sealing aims to preserve the tooth when restoration remains predictable."
         ],
-        "intro": "Bracket systems remain important for cases that require strong, continuous control of tooth movement and more comprehensive orthodontic correction.",
-        "h2Title": "When braces are recommended",
-        "h2Description": "Braces are often chosen when the case is more complex or when fixed mechanics can provide more predictable control than removable appliances.",
-        "processTitle": "Treatment usually includes",
-        "process": [
-          "Orthodontic assessment and treatment planning for alignment and bite goals.",
-          "Placement of ceramic brackets and regular adjustment visits.",
-          "Monitoring through active movement until the final result is reached."
-        ],
-        "candidatesTitle": "Commonly recommended for",
-        "candidates": [
-          "Adults and teens needing fixed orthodontic treatment.",
-          "Patients with moderate to complex bite or alignment issues.",
-          "Cases where aligners may not offer enough control."
+        "faqs": [
+          "When is root canal treatment needed?::It may be needed when inflammation or infection reaches the pulp or root canal system.",
+          "Can root canal treatment save every tooth?::No. Prognosis depends on tooth structure, infection, cracks, bone support, and restorative options.",
+          "Why might a crown be discussed after endodontics?::A tooth treated endodontically may need additional structural protection depending on remaining tooth tissue."
         ]
       },
       "periodontalTreatment": {
@@ -1025,9 +1150,24 @@
           "Bleeding gums, swelling, bad breath, or gum recession.",
           "Diagnosed gingivitis or periodontitis.",
           "Teeth with mobility or supporting tissue loss that require specialist care."
+        ],
+        "treatmentOptions": [
+          "Gingivitis and periodontitis assessment and management.",
+          "Closed or open curettage when clinically indicated.",
+          "Splinting, periodontal surgery, or adjunctive care based on tissue condition."
+        ],
+        "technology": [
+          "Periodontal assessment evaluates pocket depth, bleeding, mobility, and tissue response.",
+          "Imaging may help assess bone support around teeth.",
+          "Maintenance planning helps reduce recurrence risk after active treatment."
+        ],
+        "faqs": [
+          "What signs may indicate gum disease?::Bleeding, swelling, bad breath, gum recession, sensitivity, or tooth mobility can indicate periodontal problems.",
+          "Is professional hygiene enough for periodontitis?::Not always. Periodontitis may require deeper periodontal therapy, monitoring, and maintenance care.",
+          "Can periodontal health affect implants?::Yes. Gum and bone health are important before and after implant treatment."
         ]
       },
-      "wisdomToothExtraction": {
+      "oralSurgery": {
         "title": "Oral Surgery",
         "tagline": "Extractions, apicoectomy, sinus lift, and bone grafting",
         "desc": "Oral surgical care includes tooth extractions, root-end surgery, sinus lift procedures, and bone grafting based on the patient’s clinical needs.",
@@ -1053,16 +1193,74 @@
           "Teeth that cannot be predictably preserved.",
           "Surgical endodontic cases or chronic apical pathology.",
           "Implant cases requiring sinus augmentation or bone reconstruction."
+        ],
+        "treatmentOptions": [
+          "Simple or complex tooth extraction.",
+          "Apicoectomy for selected root-end problems.",
+          "Sinus lift or bone grafting when needed for future restoration or implants."
+        ],
+        "technology": [
+          "Imaging helps evaluate tooth position, roots, bone, and nearby structures.",
+          "Surgical planning is adapted to infection status, anatomy, and future restoration needs.",
+          "Postoperative instructions support healing and reduce avoidable complications."
+        ],
+        "faqs": [
+          "When is oral surgery recommended?::Surgery may be recommended for teeth that cannot be preserved, root-end pathology, bone reconstruction, or implant preparation.",
+          "Is every wisdom tooth removed?::No. Removal depends on position, symptoms, infection risk, and the effect on nearby teeth or tissues.",
+          "Why might bone grafting be needed?::Bone grafting may be considered when additional bone support is needed for healing or future implant planning."
         ]
       },
-      "pediatricDentistry": {
-        "title": "Diagnostics & Consultation",
-        "tagline": "RVG, panoramic imaging, CT, and treatment planning",
-        "desc": "Dental diagnostics support treatment planning with targeted imaging and consultation, including RVG, panoramic imaging, and 3D CT when indicated.",
-        "price": "From $60",
-        "duration": "30–60 min",
+      "orthodontics": {
+        "title": "Orthodontics",
+        "tagline": "Clear aligners and braces for guided tooth movement",
+        "desc": "Orthodontic treatment helps correct tooth alignment, spacing, crowding, and selected bite problems using clear aligners or fixed braces depending on the case.",
+        "price": "Consultation required",
+        "duration": "Varies by case",
         "benefits": [
-          "Free consultation",
+          "Clear aligner options",
+          "Braces systems",
+          "Digital orthodontic planning",
+          "Guided tooth movement"
+        ],
+        "intro": "Orthodontics combines diagnosis, planning, and staged tooth movement to improve alignment and bite function. The treatment approach may involve removable clear aligners or fixed braces depending on the clinical situation.",
+        "h2Title": "Orthodontic treatment options",
+        "h2Description": "The choice between aligners and braces depends on crowding, spacing, bite correction needs, oral hygiene, and the level of movement control required.",
+        "processTitle": "Orthodontic planning process",
+        "process": [
+          "Clinical assessment and digital records to define alignment and bite goals.",
+          "Selection of clear aligners or braces based on the complexity and required control.",
+          "Regular progress checks and refinements or adjustments during active treatment."
+        ],
+        "candidatesTitle": "Often recommended for",
+        "candidates": [
+          "Adults and teens with crowding, spacing, or tooth-position concerns.",
+          "Patients comparing clear aligners with fixed braces.",
+          "Cases where bite correction and long-term stability need orthodontic planning."
+        ],
+        "treatmentOptions": [
+          "Clear aligners for selected crowding, spacing, and low-visibility treatment needs.",
+          "Braces systems for fixed orthodontic control and more complex movement.",
+          "Regular monitoring, refinements, or adjustments during active treatment."
+        ],
+        "technology": [
+          "Digital scanning supports orthodontic records and planning.",
+          "Staged planning helps define the sequence of tooth movement.",
+          "Progress visits help evaluate fit, wear compliance, bracket adjustments, and treatment response."
+        ],
+        "faqs": [
+          "Are clear aligners or braces better?::The better option depends on bite, crowding, spacing, treatment complexity, and how much fixed control is needed.",
+          "Are aligners suitable for every case?::No. Some cases need braces or a different orthodontic plan for predictable movement.",
+          "Does orthodontic treatment require special hygiene?::Yes. Both aligners and braces require careful home care, and professional hygiene helps reduce plaque during treatment."
+        ]
+      },
+      "digitalDiagnostics": {
+        "title": "Diagnostics & Digital Dentistry",
+        "tagline": "RVG, panoramic imaging, 3D CT, and digital treatment planning",
+        "desc": "Digital diagnostics support precise dental treatment planning with targeted imaging and consultation, including RVG, panoramic imaging, and 3D CT when indicated.",
+        "price": "Consultation required",
+        "duration": "Varies by case",
+        "benefits": [
+          "Clinical consultation",
           "RVG imaging",
           "Panoramic imaging",
           "3D CT diagnostics"
@@ -1074,13 +1272,28 @@
         "process": [
           "Clinical consultation and review of complaints, history, and treatment goals.",
           "RVG imaging or panoramic radiography depending on the indication.",
-          "3D CT imaging for complex endodontic, surgical, implant, or orthopedic planning."
+          "3D CT imaging for complex endodontic, surgical, implant, orthodontic, or prosthetic planning."
         ],
         "candidatesTitle": "Often useful for",
         "candidates": [
           "Patients starting new treatment or comparing treatment options.",
-          "Cases that need image-based evaluation before surgery or implants.",
+          "Cases that need image-based evaluation before surgery, orthodontics, or implants.",
           "Situations where detailed tooth, root, or bone assessment is important."
+        ],
+        "treatmentOptions": [
+          "Clinical consultation and treatment planning.",
+          "RVG or panoramic imaging when indicated.",
+          "3D CT diagnostics for complex surgical, implant, endodontic, orthodontic, or prosthetic planning."
+        ],
+        "technology": [
+          "RVG imaging provides targeted dental information with focused imaging.",
+          "Panoramic imaging helps review the broader dental and jaw situation.",
+          "3D CT can support more complex planning when two-dimensional imaging is not enough."
+        ],
+        "faqs": [
+          "When is digital diagnostics needed?::It is used when clinical examination alone does not provide enough information for treatment planning.",
+          "Is every patient sent for 3D CT?::No. CT is used only when the clinical question requires three-dimensional information.",
+          "How does consultation help before treatment?::Consultation helps clarify diagnosis, compare treatment options, and plan the next step safely."
         ]
       }
     }

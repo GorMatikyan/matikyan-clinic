@@ -4,6 +4,34 @@ DirectoryIndex index.html
   RewriteEngine On
   RewriteBase /
 
+  RewriteRule ^(en/|ru/)?dental-cleaning-check-up/?$ /$1services/dental-cleaning-check-up [R=301,L]
+  RewriteRule ^(en/|ru/)?teeth-whitening/?$ /$1services/teeth-whitening [R=301,L]
+  RewriteRule ^(en/|ru/)?veneers/?$ /$1services/veneers [R=301,L]
+  RewriteRule ^(en/|ru/)?composite-bonding/?$ /$1services/veneers [R=301,L]
+  RewriteRule ^(en/|ru/)?dental-implants/?$ /$1services/dental-implants [R=301,L]
+  RewriteRule ^(en/|ru/)?same-day-crowns/?$ /$1services/prosthetics-crowns [R=301,L]
+  RewriteRule ^(en/|ru/)?prosthetics-crowns/?$ /$1services/prosthetics-crowns [R=301,L]
+  RewriteRule ^(en/|ru/)?root-canal-treatment/?$ /$1services/root-canal-treatment [R=301,L]
+  RewriteRule ^(en/|ru/)?invisalign/?$ /$1services/orthodontics [R=301,L]
+  RewriteRule ^(en/|ru/)?ceramic-braces/?$ /$1services/orthodontics [R=301,L]
+  RewriteRule ^(en/|ru/)?orthodontics/?$ /$1services/orthodontics [R=301,L]
+  RewriteRule ^(en/|ru/)?periodontal-treatment/?$ /$1services/periodontal-treatment [R=301,L]
+  RewriteRule ^(en/|ru/)?wisdom-tooth-extraction/?$ /$1services/oral-surgery [R=301,L]
+  RewriteRule ^(en/|ru/)?oral-surgery/?$ /$1services/oral-surgery [R=301,L]
+  RewriteRule ^(en/|ru/)?pediatric-dentistry/?$ - [G,L]
+  RewriteRule ^(en/|ru/)?digital-diagnostics/?$ /$1services/digital-diagnostics [R=301,L]
+  RewriteRule ^warranty\.html$ /en/warranty [R=301,L]
+  RewriteRule ^warrantyRu\.html$ /ru/warranty [R=301,L]
+  RewriteRule ^dentalTourism\.html$ /en/dental-tourism [R=301,L]
+  RewriteRule ^dentalTourismRu\.html$ /ru/dental-tourism [R=301,L]
+
+  RewriteRule ^(en/|ru/)?services/composite-bonding/?$ /$1services/veneers [R=301,L]
+  RewriteRule ^(en/|ru/)?services/same-day-crowns/?$ /$1services/prosthetics-crowns [R=301,L]
+  RewriteRule ^(en/|ru/)?services/invisalign/?$ /$1services/orthodontics [R=301,L]
+  RewriteRule ^(en/|ru/)?services/ceramic-braces/?$ /$1services/orthodontics [R=301,L]
+  RewriteRule ^(en/|ru/)?services/wisdom-tooth-extraction/?$ /$1services/oral-surgery [R=301,L]
+  RewriteRule ^(en/|ru/)?services/pediatric-dentistry/?$ - [G,L]
+
   RewriteRule ^index\.html$ - [L]
 
   RewriteCond %{REQUEST_FILENAME} -f [OR]

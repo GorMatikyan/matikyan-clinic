@@ -1,28 +1,28 @@
 import { useTranslation } from "react-i18next";
 import {
   ArrowRight, Shield, Award, Users, Clock, ChevronRight,
-  Trophy, UserCheck, Stethoscope, ThumbsUp,
-  Zap, Sparkles, Smile, Gem, Activity, Heart,
+  Smile,
 } from "lucide-react";
 import { PhotoSlider } from "../components/PhotoSlider";
-import { getServiceSlugByTitle } from "../serviceData";
+import { getServiceDetailBySlug, getServiceSlugByTitle } from "../serviceData";
 import { LocalizedNavLink } from "../routing";
 import { siteImages } from "../siteImages";
 
-const statIcons = [Trophy, UserCheck, Stethoscope, ThumbsUp];
-const statValues = ["20+", "8,400+", "18", "99%"];
-const statKeys = ["home.stats.years", "home.stats.patients", "home.stats.doctors", "home.stats.satisfaction"] as const;
-
-const serviceIcons = [Zap, Sparkles, Smile, Gem, Activity, Heart];
-const serviceKeys = ["implants", "whitening", "ortho", "veneers", "rootCanal", "pediatric"] as const;
-const servicePaths = [
-  getServiceSlugByTitle("Dental Implants"),
-  getServiceSlugByTitle("Teeth Whitening"),
-  getServiceSlugByTitle("Clear Aligners"),
-  getServiceSlugByTitle("Dental Veneers"),
-  getServiceSlugByTitle("Endodontic Treatment"),
-  getServiceSlugByTitle("Diagnostics & Consultation"),
-];
+const servicePreviewItems = [
+  { key: "implants", title: "Dental Implants" },
+  { key: "whitening", title: "Teeth Whitening" },
+  { key: "ortho", title: "Orthodontics" },
+  { key: "veneers", title: "Dental Veneers & Aesthetic Restorations" },
+  { key: "rootCanal", title: "Endodontic Treatment" },
+  { key: "pediatric", title: "Diagnostics & Digital Dentistry" },
+].map((item) => {
+  const path = getServiceSlugByTitle(item.title);
+  return {
+    ...item,
+    path,
+    image: getServiceDetailBySlug(path)?.image,
+  };
+});
 
 const featureIcons = [Shield, Award, Users, Clock];
 const featureKeys = ["painFree", "certified", "family", "hours"] as const;
@@ -34,28 +34,6 @@ export function Home() {
     <div>
       {/* ── Hero Slider ── */}
       <PhotoSlider />
-
-      {/* ── Stats bar ── */}
-      <section className="bg-[#0F1932]">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/8 divide-y lg:divide-y-0 border-b border-white/8">
-            {statKeys.map((key, i) => {
-              const Icon = statIcons[i];
-              return (
-                <div key={key} className="flex flex-col items-center px-6 py-10 gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#B5C7EB]/15 flex items-center justify-center">
-                    <Icon className="w-5 h-5 text-[#B5C7EB]" />
-                  </div>
-                  <div className="text-[#B5C7EB] leading-none" style={{ fontFamily: "var(--font-display)", fontSize: "2rem", fontWeight: 800 }}>
-                    {statValues[i]}
-                  </div>
-                  <div className="text-white/50 text-sm text-center">{t(key)}</div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* ── Services overview ── */}
       <section className="py-24 bg-[#F7FAFC]">
@@ -77,24 +55,35 @@ export function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {serviceKeys.map((key, i) => {
-              const Icon = serviceIcons[i];
+            {servicePreviewItems.map(({ key, path, image }) => {
+              const serviceTitle = t(`home.services.items.${key}.title`);
               return (
                 <LocalizedNavLink
-                  to={servicePaths[i]}
+                  to={path}
                   key={key}
-                  className="group bg-white rounded-2xl p-7 border border-[#0F1932]/8 hover:border-[#B5C7EB]/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
-                  style={{ borderLeft: "3px solid #B5C7EB" }}
+                  className="group block overflow-hidden rounded-2xl bg-white border border-[#0F1932]/8 shadow-sm hover:border-[#B5C7EB]/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-[#B5C7EB]/10 flex items-center justify-center mb-5">
-                    <Icon className="w-6 h-6 text-[#B5C7EB]" />
+                  <div className="h-44 overflow-hidden bg-[#eef1f8]">
+                    {image ? (
+                      <img
+                        src={image}
+                        alt={t("services.card.imageAlt", { service: serviceTitle })}
+                        width={1536}
+                        height={1024}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                      />
+                    ) : null}
                   </div>
-                  <h3 className="text-[#0F1932] mb-3" style={{ fontFamily: "var(--font-display)", fontSize: "1.15rem", fontWeight: 700 }}>
-                    {t(`home.services.items.${key}.title`)}
-                  </h3>
-                  <p className="text-[#5B6475] text-sm leading-relaxed">{t(`home.services.items.${key}.desc`)}</p>
-                  <div className="mt-5 flex items-center gap-2 text-[#B5C7EB] text-sm opacity-0 group-hover:opacity-100 transition-opacity" style={{ fontWeight: 500 }}>
-                    {t("home.services.learnMore")} <ArrowRight className="w-3.5 h-3.5" />
+                  <div className="p-7">
+                    <h3 className="text-[#0F1932] mb-3" style={{ fontFamily: "var(--font-display)", fontSize: "1.25rem", fontWeight: 800 }}>
+                      {serviceTitle}
+                    </h3>
+                    <p className="text-[#5B6475] text-sm leading-relaxed line-clamp-3">{t(`home.services.items.${key}.desc`)}</p>
+                    <div className="mt-5 flex items-center gap-2 text-[#7890BF] text-sm transition-colors group-hover:text-[#0F1932]" style={{ fontWeight: 700 }}>
+                      {t("home.services.learnMore")} <ArrowRight className="w-3.5 h-3.5" />
+                    </div>
                   </div>
                 </LocalizedNavLink>
               );

@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { useSanityData } from "../../hooks/useSanityData";
 import { BLOG_POSTS_QUERY } from "../../lib/queries";
 import type { SanityBlogPost } from "../../lib/sanityTypes";
+import { PageHero } from "../components/PageHero";
+import { siteImages } from "../siteImages";
 
 const categoryKeys = ["all", "oralHealth", "cosmetic", "orthodontics", "nutrition", "technology"] as const;
 const posts = [
@@ -77,19 +79,13 @@ export function Blog() {
   return (
     <div>
       {/* Header — navy */}
-      <section className="py-20 bg-[#0F1932]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-[#B5C7EB]/15 rounded-full px-4 py-1.5 mb-5">
-            <span className="text-[#B5C7EB] text-xs tracking-widest uppercase" style={{ fontWeight: 700 }}>{t("blog.header.badge")}</span>
-          </div>
-          <h1 className="text-white mb-5" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 800 }}>
-            {t("blog.header.title")}
-          </h1>
-          <p className="text-white/55 text-lg max-w-2xl mx-auto">
-            {t("blog.header.desc")}
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={t("blog.header.badge")}
+        title={t("blog.header.title")}
+        description={t("blog.header.desc")}
+        imageSrc={siteImages.heroSlides[2]}
+        imageAlt={t("home.hero.slideAlt", { index: 3 })}
+      />
 
       {/* Filter */}
       <section className="py-6 bg-[#0F1932] border-t border-white/8 sticky top-18 z-30">

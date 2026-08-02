@@ -1,6 +1,4 @@
-import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { LocalizedNavLink } from "../routing";
 
 import doctorAlexanArshamyan from "../../../images/doctors/doctor-aleksan-arshamyan.jpg";
 import doctorAramMuradyan from "../../../images/doctors/doctor-aram-muradyan.jpg";
@@ -13,6 +11,7 @@ import doctorHovhannesRapyan from "../../../images/doctors/doctor-hovhannes-rapy
 import doctorKaroMatikyan from "../../../images/doctors/doctor-karo-matikyan.jpg";
 import doctorMartinYezoyan from "../../../images/doctors/doctor-martin-yezoyan.jpg";
 import doctorNarekMatikyan from "../../../images/doctors/doctor-narek-matikyan.jpg";
+import { LocalizedNavLink, useCurrentLanguage } from "../routing";
 
 const doctors = [
   { name: "Գագիկ Եղիազարյան", photo: doctorGagikYeghiazaryan },
@@ -29,23 +28,81 @@ const doctors = [
 
 export function Doctors() {
   const { t } = useTranslation();
+  const currentLanguage = useCurrentLanguage();
+  const eyebrowTracking = currentLanguage === "hy" ? "tracking-[0.08em]" : "tracking-widest uppercase";
 
   return (
     <div>
-      <section className="py-20 bg-[#0F1932]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-[#B5C7EB]/15 rounded-full px-4 py-1.5 mb-5">
-            <span className="text-[#B5C7EB] text-xs tracking-widest uppercase" style={{ fontWeight: 700 }}>{t("doctors.header.badge")}</span>
+      <section className="relative overflow-hidden bg-[#0F1932] pb-12 pt-[calc(80px+2rem)] lg:pb-14 lg:pt-[calc(80px+2.5rem)]">
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(15,25,50,0.54)_0%,rgba(15,25,50,0)_34%),radial-gradient(circle_at_78%_32%,rgba(181,199,235,0.22)_0%,rgba(181,199,235,0.08)_30%,rgba(15,25,50,0)_58%),radial-gradient(circle_at_18%_82%,rgba(120,144,191,0.18)_0%,rgba(120,144,191,0)_48%)]" />
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="relative grid lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-14 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-white/8 rounded-full px-3.5 py-1 mb-4 ring-1 ring-white/12">
+                <span className={`text-[#B5C7EB] text-xs ${eyebrowTracking}`} style={{ fontWeight: 700 }}>{t("doctors.header.badge")}</span>
+              </div>
+              <h1 className="text-white mb-5 max-w-[600px]" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.05rem, 3.8vw, 3.35rem)", fontWeight: 800, lineHeight: 1.04 }}>
+                {t("doctors.header.title")}
+              </h1>
+              <p className="text-white/68 text-lg max-w-[560px] leading-relaxed">
+                {t("doctors.header.desc")}
+              </p>
+              <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
+                <LocalizedNavLink
+                  to="/contact"
+                  className="inline-flex items-center justify-center rounded-xl bg-[#B5C7EB] px-6 py-3.5 text-[#0F1932] shadow-[0_16px_36px_rgba(0,0,0,0.18)] transition-colors hover:bg-white"
+                  style={{ fontWeight: 700 }}
+                >
+                  {t("nav.bookAppointment")}
+                </LocalizedNavLink>
+                <span className="inline-flex items-center text-sm text-white/72" style={{ fontWeight: 600 }}>
+                  <span className="mr-2 text-[#B5C7EB]" aria-hidden="true">✓</span>
+                  {t("doctors.header.founder")}
+                </span>
+              </div>
+            </div>
+
+            <div className="relative min-h-[430px] sm:min-h-[500px] lg:min-h-[420px]" aria-hidden="true">
+              <div className="absolute left-[14%] top-[10%] h-72 w-72 rounded-full bg-[#B5C7EB]/18 blur-3xl" />
+              <div className="absolute right-[4%] bottom-[8%] h-56 w-56 rounded-full bg-white/14 blur-3xl" />
+
+              <div className="absolute left-[2%] top-[9%] z-20 w-[39%] overflow-hidden rounded-[1.75rem] border-[5px] border-white/92 bg-[#eef1f8] shadow-[0_26px_70px_rgba(0,0,0,0.3)]">
+                <img
+                  src={doctorKaroMatikyan}
+                  alt=""
+                  className="h-[270px] w-full object-cover object-top brightness-[1.03] saturate-[0.96] sm:h-[320px] lg:h-[300px]"
+                  loading="eager"
+                />
+              </div>
+
+              <div className="absolute right-[16%] top-[0%] z-10 w-[28%] overflow-hidden rounded-[1.5rem] border-[5px] border-white/92 bg-[#eef1f8] shadow-[0_18px_48px_rgba(0,0,0,0.24)]">
+                <img
+                  src={doctorGagikYeghiazaryan}
+                  alt=""
+                  className="h-[185px] w-full object-cover object-top brightness-[1.03] saturate-[0.96] sm:h-[225px] lg:h-[205px]"
+                  loading="eager"
+                />
+              </div>
+
+              <div className="absolute right-[1%] bottom-[7%] z-30 w-[35%] overflow-hidden rounded-[1.6rem] border-[5px] border-white/92 bg-[#eef1f8] shadow-[0_24px_62px_rgba(0,0,0,0.28)]">
+                <img
+                  src={doctorZhannaSafaryan}
+                  alt=""
+                  className="h-[230px] w-full object-cover object-top brightness-[1.03] saturate-[0.96] sm:h-[275px] lg:h-[255px]"
+                  loading="eager"
+                />
+              </div>
+
+              <div className="absolute left-[33%] bottom-[0%] z-40 w-[32%] overflow-hidden rounded-[1.5rem] border-[5px] border-white/92 bg-[#eef1f8] shadow-[0_20px_54px_rgba(0,0,0,0.26)]">
+                <img
+                  src={doctorNarekMatikyan}
+                  alt=""
+                  className="h-[205px] w-full object-contain object-top brightness-[1.03] saturate-[0.96] sm:h-[250px] lg:h-[230px]"
+                  loading="eager"
+                />
+              </div>
+            </div>
           </div>
-          <h1 className="text-white mb-5" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 800 }}>
-            {t("doctors.header.title")}
-          </h1>
-          <p className="text-white/55 text-lg max-w-2xl mx-auto">
-            {t("doctors.header.desc")}
-          </p>
-          <p className="text-[#B5C7EB] text-sm max-w-2xl mx-auto mt-4">
-            {t("doctors.header.founder")}
-          </p>
         </div>
       </section>
 
@@ -84,14 +141,6 @@ export function Doctors() {
                 <p className="text-[#5B6475] leading-relaxed mb-6">
                   {t("doctors.founder.desc")}
                 </p>
-                <LocalizedNavLink
-                  to="/contact"
-                  aria-label={t("doctors.card.bookDoctor", { name: t("doctors.founder.name") })}
-                  className="w-fit flex items-center justify-center gap-2 px-5 py-3 bg-[#0F1932] text-white rounded-xl text-sm hover:bg-[#B5C7EB] hover:text-[#0F1932] transition-colors"
-                  style={{ fontWeight: 500 }}
-                >
-                  {t("doctors.card.bookAppointment")} <ArrowRight className="w-4 h-4" />
-                </LocalizedNavLink>
               </div>
             </div>
           </div>
@@ -108,18 +157,9 @@ export function Doctors() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-[#0F1932] mb-5 text-center" style={{ fontFamily: "var(--font-display)", fontSize: "1.15rem", fontWeight: 700 }}>
+                  <h3 className="text-[#0F1932] text-center" style={{ fontFamily: "var(--font-display)", fontSize: "1.15rem", fontWeight: 700 }}>
                     {doc.name}
                   </h3>
-
-                  <LocalizedNavLink
-                    to="/contact"
-                    aria-label={t("doctors.card.bookDoctor", { name: doc.name })}
-                    className="w-full flex items-center justify-center gap-2 py-2.5 bg-[#0F1932] text-white rounded-xl text-sm hover:bg-[#B5C7EB] hover:text-[#0F1932] transition-colors"
-                    style={{ fontWeight: 500 }}
-                  >
-                    {t("doctors.card.bookAppointment")} <ArrowRight className="w-4 h-4" />
-                  </LocalizedNavLink>
                 </div>
               </div>
             ))}

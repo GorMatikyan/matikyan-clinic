@@ -5,8 +5,9 @@ import { useSanityData } from "../../hooks/useSanityData";
 import { FAQ_QUERY } from "../../lib/queries";
 import type { SanityFaqItem } from "../../lib/sanityTypes";
 import { LocalizedNavLink } from "../routing";
+import { PageHero } from "../components/PageHero";
 
-const categoryKeys = ["general", "treatments", "invisalign", "payment"] as const;
+const categoryKeys = ["general", "treatments", "orthodontics", "payment"] as const;
 
 const questionsData: Record<string, Array<{ q: string; a: string }>> = {
   general: [
@@ -20,7 +21,7 @@ const questionsData: Record<string, Array<{ q: string; a: string }>> = {
     { q: "Are veneers reversible?", a: "Traditional porcelain veneers require a small amount of enamel removal and are therefore considered irreversible. However, ultra-thin 'no-prep' veneers exist in some cases. During your consultation, Dr. Marchetti will discuss all options and help you decide what's best for your situation." },
     { q: "How painful is a root canal?", a: "Modern root canal therapy is no more uncomfortable than getting a filling. We use advanced local anesthesia and, where appropriate, sedation dentistry to ensure you feel nothing during the procedure. Most patients are surprised by how routine the experience is." },
   ],
-  invisalign: [
+  orthodontics: [
     { q: "Am I a candidate for Invisalign?", a: "Invisalign can treat mild to moderate crowding, spacing, and bite issues in both adults and teenagers. Severe malocclusions may still require traditional braces. The best way to determine candidacy is with a free consultation — Dr. Reid can show you a 3D simulation of your expected results." },
     { q: "How long does Invisalign treatment take?", a: "Treatment time varies from 6 to 24 months depending on complexity. The average full-arch case at DentaCare takes 12–14 months. Minor corrections can sometimes be completed in as little as 6 months." },
   ],
@@ -96,17 +97,12 @@ export function FAQ() {
 
   return (
     <div>
-      <section className="py-20 bg-[#0F1932]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-[#B5C7EB]/15 rounded-full px-4 py-1.5 mb-5">
-            <span className="text-[#B5C7EB] text-xs tracking-widest uppercase" style={{ fontWeight: 700 }}>{t("faq.header.badge")}</span>
-          </div>
-          <h1 className="text-white mb-5" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 800 }}>
-            {t("faq.header.title")}
-          </h1>
-          <p className="text-white/55 text-lg max-w-2xl mx-auto">{t("faq.header.desc")}</p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={t("faq.header.badge")}
+        title={t("faq.header.title")}
+        description={t("faq.header.desc")}
+        primaryAction={{ label: t("faq.cta.button"), to: "/contact" }}
+      />
 
       <section className="py-16 bg-[#F7FAFC]">
         <div className="max-w-5xl mx-auto px-6 grid lg:grid-cols-[220px_1fr] gap-10">

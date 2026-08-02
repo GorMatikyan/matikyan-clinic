@@ -10,9 +10,6 @@
     <loc>https://matikyan.am/doctors</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/reviews</loc>
-  </url>
-  <url>
     <loc>https://matikyan.am/services</loc>
   </url>
   <url>
@@ -25,40 +22,40 @@
     <loc>https://matikyan.am/contact</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/dental-cleaning-check-up</loc>
+    <loc>https://matikyan.am/warranty</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/teeth-whitening</loc>
+    <loc>https://matikyan.am/dental-tourism</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/veneers</loc>
+    <loc>https://matikyan.am/services/dental-cleaning-check-up</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/composite-bonding</loc>
+    <loc>https://matikyan.am/services/teeth-whitening</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/dental-implants</loc>
+    <loc>https://matikyan.am/services/veneers</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/same-day-crowns</loc>
+    <loc>https://matikyan.am/services/dental-implants</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/root-canal-treatment</loc>
+    <loc>https://matikyan.am/services/prosthetics-crowns</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/invisalign</loc>
+    <loc>https://matikyan.am/services/root-canal-treatment</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/ceramic-braces</loc>
+    <loc>https://matikyan.am/services/orthodontics</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/periodontal-treatment</loc>
+    <loc>https://matikyan.am/services/periodontal-treatment</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/wisdom-tooth-extraction</loc>
+    <loc>https://matikyan.am/services/oral-surgery</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/pediatric-dentistry</loc>
+    <loc>https://matikyan.am/services/digital-diagnostics</loc>
   </url>
   <url>
     <loc>https://matikyan.am/en</loc>
@@ -68,9 +65,6 @@
   </url>
   <url>
     <loc>https://matikyan.am/en/doctors</loc>
-  </url>
-  <url>
-    <loc>https://matikyan.am/en/reviews</loc>
   </url>
   <url>
     <loc>https://matikyan.am/en/services</loc>
@@ -85,40 +79,40 @@
     <loc>https://matikyan.am/en/contact</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/en/dental-cleaning-check-up</loc>
+    <loc>https://matikyan.am/en/warranty</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/en/teeth-whitening</loc>
+    <loc>https://matikyan.am/en/dental-tourism</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/en/veneers</loc>
+    <loc>https://matikyan.am/en/services/dental-cleaning-check-up</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/en/composite-bonding</loc>
+    <loc>https://matikyan.am/en/services/teeth-whitening</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/en/dental-implants</loc>
+    <loc>https://matikyan.am/en/services/veneers</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/en/same-day-crowns</loc>
+    <loc>https://matikyan.am/en/services/dental-implants</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/en/root-canal-treatment</loc>
+    <loc>https://matikyan.am/en/services/prosthetics-crowns</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/en/invisalign</loc>
+    <loc>https://matikyan.am/en/services/root-canal-treatment</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/en/ceramic-braces</loc>
+    <loc>https://matikyan.am/en/services/orthodontics</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/en/periodontal-treatment</loc>
+    <loc>https://matikyan.am/en/services/periodontal-treatment</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/en/wisdom-tooth-extraction</loc>
+    <loc>https://matikyan.am/en/services/oral-surgery</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/en/pediatric-dentistry</loc>
+    <loc>https://matikyan.am/en/services/digital-diagnostics</loc>
   </url>
   <url>
     <loc>https://matikyan.am/ru</loc>
@@ -128,9 +122,6 @@
   </url>
   <url>
     <loc>https://matikyan.am/ru/doctors</loc>
-  </url>
-  <url>
-    <loc>https://matikyan.am/ru/reviews</loc>
   </url>
   <url>
     <loc>https://matikyan.am/ru/services</loc>
@@ -145,39 +136,39 @@
     <loc>https://matikyan.am/ru/contact</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/ru/dental-cleaning-check-up</loc>
+    <loc>https://matikyan.am/ru/warranty</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/ru/teeth-whitening</loc>
+    <loc>https://matikyan.am/ru/dental-tourism</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/ru/veneers</loc>
+    <loc>https://matikyan.am/ru/services/dental-cleaning-check-up</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/ru/composite-bonding</loc>
+    <loc>https://matikyan.am/ru/services/teeth-whitening</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/ru/dental-implants</loc>
+    <loc>https://matikyan.am/ru/services/veneers</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/ru/same-day-crowns</loc>
+    <loc>https://matikyan.am/ru/services/dental-implants</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/ru/root-canal-treatment</loc>
+    <loc>https://matikyan.am/ru/services/prosthetics-crowns</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/ru/invisalign</loc>
+    <loc>https://matikyan.am/ru/services/root-canal-treatment</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/ru/ceramic-braces</loc>
+    <loc>https://matikyan.am/ru/services/orthodontics</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/ru/periodontal-treatment</loc>
+    <loc>https://matikyan.am/ru/services/periodontal-treatment</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/ru/wisdom-tooth-extraction</loc>
+    <loc>https://matikyan.am/ru/services/oral-surgery</loc>
   </url>
   <url>
-    <loc>https://matikyan.am/ru/pediatric-dentistry</loc>
+    <loc>https://matikyan.am/ru/services/digital-diagnostics</loc>
   </url>
 </urlset>

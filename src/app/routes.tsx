@@ -30,6 +30,16 @@ const Contact = lazy(async () => {
   return { default: module.Contact };
 });
 
+const Warranty = lazy(async () => {
+  const module = await import("./pages/Warranty");
+  return { default: module.Warranty };
+});
+
+const DentalTourism = lazy(async () => {
+  const module = await import("./pages/DentalTourism");
+  return { default: module.DentalTourism };
+});
+
 const Services = lazy(async () => {
   const module = await import("./pages/Services");
   return { default: module.Services };
@@ -94,6 +104,8 @@ const routeChildren: RouteObject[] = [
   { path: "faq", Component: () => <LazyRoute><FAQ /></LazyRoute> },
   { path: "blog", Component: () => <LazyRoute><Blog /></LazyRoute> },
   { path: "contact", Component: () => <LazyRoute><Contact /></LazyRoute> },
+  { path: "warranty", Component: () => <LazyRoute><Warranty /></LazyRoute> },
+  { path: "dental-tourism", Component: () => <LazyRoute><DentalTourism /></LazyRoute> },
   ...serviceDetails.map((service) => ({
     path: stripLanguagePrefix(service.slug).slice(1),
     Component: () => (

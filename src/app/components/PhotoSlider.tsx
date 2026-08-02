@@ -115,7 +115,7 @@ export function PhotoSlider() {
   return (
     <div
       className="relative overflow-hidden bg-[#0F1932]"
-      style={{ height: "calc(100vh - 72px)", minHeight: "560px" }}
+      style={{ height: "100vh", minHeight: "640px" }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -144,10 +144,11 @@ export function PhotoSlider() {
       })}
 
       <div className="absolute inset-0 bg-gradient-to-r from-[#0F1932]/90 via-[#0F1932]/55 to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0F1932]/72 via-transparent to-transparent z-10" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0F1932]/55 via-transparent to-transparent z-10" />
       <div className="absolute top-0 left-0 w-1 h-full bg-[#B5C7EB] z-20" />
 
-      <div className="absolute inset-0 z-20 flex items-center">
+      <div className="absolute inset-0 z-20 flex items-center pt-[80px]">
         <div className="max-w-7xl mx-auto w-full px-10 lg:px-16">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 bg-[#B5C7EB]/15 border border-[#B5C7EB]/30 rounded-full px-4 py-2 mb-7">

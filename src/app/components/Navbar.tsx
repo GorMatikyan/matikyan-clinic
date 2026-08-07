@@ -1,9 +1,22 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Mail, Facebook, Instagram, Youtube, Share2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import logoImg from "../../imports/matikyan-clinic-logo-am.png";
-import { getLocalizedPathForLanguage, LocalizedNavLink, type AppLanguage, useCurrentLanguage } from "../routing";
+import { getLocalizedPathForLanguage, LocalizedNavLink, stripLanguagePrefix, type AppLanguage, useCurrentLanguage } from "../routing";
+import { useSiteSettings } from "../../hooks/useSiteSettings";
+import { parseSocialLinks, type SocialPlatform } from "../../lib/socialLinks";
+import { SiteSearch } from "./SiteSearch";
+
+const DEFAULT_PHONE = "+37410210122";
+const DEFAULT_EMAIL = "info@matikyan.am";
+
+const socialIcons: Record<SocialPlatform, typeof Facebook> = {
+  facebook: Facebook,
+  instagram: Instagram,
+  youtube: Youtube,
+  other: Share2,
+};
 
 const navKeys = [
   { key: "nav.about", path: "/about" },
@@ -29,8 +42,17 @@ export function Navbar() {
   const location = useLocation();
   const currentLanguage = useCurrentLanguage();
   const { t, i18n } = useTranslation();
+  // Transparent-over-dark-then-white-on-scroll everywhere: Home has its photo hero directly
+  // under the fixed navbar, and every other route has the dark #0F1932 Breadcrumbs bar (see
+  // Breadcrumbs.tsx) leading straight into that page's own dark hero section, so the white-logo
+  // overlay has good contrast at the top of every page, not just Home.
   const isOverlay = !scrolled && !open;
   const isArmenian = currentLanguage === "hy";
+  const settings = useSiteSettings();
+  const phone = settings?.phoneNumber ?? DEFAULT_PHONE;
+  const phoneHref = `tel:${phone.replace(/\s+/g, "")}`;
+  const email = settings?.email ?? DEFAULT_EMAIL;
+  const socialLinks = parseSocialLinks(settings?.socialLinksJson);
 
   useEffect(() => {
     setOpen(false);
@@ -119,6 +141,8 @@ export function Navbar() {
 
           {/* Right side */}
           <div className={`${isArmenian ? "hidden min-[1360px]:flex" : "hidden xl:flex"} shrink-0 items-center justify-end gap-[clamp(0.55rem,0.75vw,0.875rem)]`}>
+            <SiteSearch overlay={isOverlay} />
+
             {/* Language switcher */}
             <div className={`flex items-center gap-0.5 rounded-lg overflow-hidden ${isOverlay ? "border border-white/14 bg-white/6" : "border border-[#0F1932]/10"}`}>
               {langs.map((lang) => (
@@ -142,15 +166,43 @@ export function Navbar() {
               ))}
             </div>
 
+            <div className="hidden 2xl:flex items-center gap-1">
+              {socialLinks.map(({ url, platform }) => {
+                const Icon = socialIcons[platform];
+                return (
+                  <a
+                    key={url}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={platform}
+                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl transition-colors ${
+                      isOverlay ? "text-white/72 hover:bg-white/8 hover:text-white" : "text-[#5B6475] hover:bg-[#B5C7EB]/10 hover:text-[#0F1932]"
+                    }`}
+                  >
+                    <Icon className="w-4 h-4" />
+                  </a>
+                );
+              })}
+              <a
+                href={`mailto:${email}`}
+                aria-label={email}
+                className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl transition-colors ${
+                  isOverlay ? "text-white/72 hover:bg-white/8 hover:text-white" : "text-[#5B6475] hover:bg-[#B5C7EB]/10 hover:text-[#0F1932]"
+                }`}
+              >
+                <Mail className="w-4 h-4" />
+              </a>
+            </div>
             <a
-              href="tel:+37410210122"
+              href={phoneHref}
               aria-label={t("nav.callClinic")}
               className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-colors 2xl:w-auto 2xl:gap-2 2xl:px-0 ${
                 isOverlay ? "text-white/72 hover:bg-white/8 hover:text-white" : "text-[#5B6475] hover:bg-[#B5C7EB]/10 hover:text-[#0F1932]"
               }`}
             >
               <Phone className="w-4 h-4 text-[#B5C7EB]" />
-              <span className={`${isArmenian ? "hidden" : "hidden 2xl:inline"} whitespace-nowrap text-sm`}>{t("nav.phone")}</span>
+              <span className={`${isArmenian ? "hidden" : "hidden 2xl:inline"} whitespace-nowrap text-sm`}>{phone}</span>
             </a>
             <LocalizedNavLink
               to="/contact"
@@ -162,13 +214,16 @@ export function Navbar() {
           </div>
 
           {/* Mobile toggle */}
-          <button
-            className={`${isArmenian ? "min-[1360px]:hidden" : "xl:hidden"} justify-self-end shrink-0 p-2 rounded-lg transition-colors ${isOverlay ? "text-white hover:bg-white/10" : "text-[#5B6475] hover:bg-[#B5C7EB]/10"}`}
-            onClick={() => setOpen(!open)}
-            aria-label={t("nav.toggleMenu")}
-          >
-            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+          <div className={`${isArmenian ? "min-[1360px]:hidden" : "xl:hidden"} justify-self-end flex items-center gap-1`}>
+            <SiteSearch overlay={isOverlay} />
+            <button
+              className={`shrink-0 p-2 rounded-lg transition-colors ${isOverlay ? "text-white hover:bg-white/10" : "text-[#5B6475] hover:bg-[#B5C7EB]/10"}`}
+              onClick={() => setOpen(!open)}
+              aria-label={t("nav.toggleMenu")}
+            >
+              {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -210,14 +265,41 @@ export function Navbar() {
             ))}
           </div>
           <a
-            href="tel:+37410210122"
+            href={phoneHref}
             aria-label={t("nav.callClinic")}
             className="mt-2 flex items-center justify-center gap-2 rounded-xl border border-[#0F1932]/10 px-5 py-3 text-sm text-[#0F1932]"
             style={{ fontWeight: 500 }}
           >
             <Phone className="h-4 w-4 text-[#7890BF]" />
-            {t("nav.phone")}
+            {phone}
           </a>
+          <a
+            href={`mailto:${email}`}
+            className="flex items-center justify-center gap-2 rounded-xl border border-[#0F1932]/10 px-5 py-3 text-sm text-[#0F1932]"
+            style={{ fontWeight: 500 }}
+          >
+            <Mail className="h-4 w-4 text-[#7890BF]" />
+            {email}
+          </a>
+          {socialLinks.length > 0 && (
+            <div className="flex items-center justify-center gap-2 pt-1">
+              {socialLinks.map(({ url, platform }) => {
+                const Icon = socialIcons[platform];
+                return (
+                  <a
+                    key={url}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={platform}
+                    className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#0F1932]/10 text-[#5B6475]"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                );
+              })}
+            </div>
+          )}
           <LocalizedNavLink
             to="/contact"
             className="mt-2 px-5 py-3 bg-[#0F1932] text-white rounded-xl text-sm text-center whitespace-nowrap"

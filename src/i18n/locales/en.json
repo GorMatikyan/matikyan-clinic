@@ -1,5 +1,6 @@
 {
   "nav": {
+    "home": "Home",
     "about": "About",
     "doctors": "Doctors",
     "services": "Services",
@@ -24,6 +25,7 @@
   "footer": {
     "logoAlt": "Matikyan Dental Clinic",
     "description": "Modern dental care with a personal touch. Our team of specialists is dedicated to your smile and long-term oral health.",
+    "latestPosts": "Latest from the blog",
     "pages": "Pages",
     "ourDoctors": "Our Doctors",
     "patientReviews": "Patient Reviews",
@@ -171,7 +173,7 @@
     "whyUs": {
       "badge": "Why Choose Us",
       "title": "Where Advanced Technology Meets Gentle Care",
-      "desc": "Our clinic combines cutting-edge dental technology with a warm, patient-first approach. Every treatment is personalized to your unique needs and comfort level.",
+      "desc": "Our specialists and the latest technology combine with a caring, trust-inspiring approach to every patient.",
       "imageAlt": "Modern dental clinic interior",
       "learnMore": "Learn About Us",
       "reviewPrompt": "Verified reviews available",
@@ -241,27 +243,27 @@
     "goToSlide": "Go to slide {{index}}",
     "slides": [
       {
+        "tag": "Modern Equipment",
+        "title": "A Dental Clinic\nEquipped With the Latest Technology",
+        "desc": "Digital scanning, X-rays, and CAD/CAM — precise, comfortable treatment for every patient.",
+        "cta": "About Us"
+      },
+      {
+        "tag": "Cosmetic Dentistry",
+        "title": "Your Dream Smile\nStarts Here",
+        "desc": "Veneers, whitening, and full smile makeovers — crafted with the precision of digital dentistry.",
+        "cta": "Our Services"
+      },
+      {
         "tag": "Advanced Implantology",
         "title": "Restore Your Smile\nWith Dental Implants",
         "desc": "Permanent, natural-looking tooth replacements — from single implants to full-arch restorations.",
         "cta": "Our Services"
       },
       {
-        "tag": "Modern Equipment",
-        "title": "State-of-the-Art\nClinic & Technology",
-        "desc": "3D scanning, digital X-rays, CAD/CAM same-day crowns — precision dentistry in a comfortable setting.",
-        "cta": "About Us"
-      },
-      {
-        "tag": "Cosmetic Dentistry",
-        "title": "Your Dream Smile\nStarts Here",
-        "desc": "Veneers, whitening, bonding and full smile makeovers performed by award-winning cosmetic specialists.",
-        "cta": "Our Services"
-      },
-      {
         "tag": "Orthodontics",
-        "title": "Straighter Teeth,\nClearer Confidence",
-        "desc": "Invisalign and ceramic braces tailored to adults and teens — start with a free 3D simulation.",
+        "title": "A More Even Smile,\nMore Confidence",
+        "desc": "Ceramic bracket systems with an individualized orthodontic treatment plan.",
         "cta": "Meet Our Doctors"
       }
     ]
@@ -283,6 +285,7 @@
     "values": {
       "badge": "Our Values",
       "title": "The Principles That Guide Us",
+      "intro": "Every treatment decision follows the same approach: careful diagnostics, clear explanations, and respect for what you choose. These are the principles our team follows every day.",
       "items": [
         {
           "title": "Patient-First",
@@ -620,72 +623,13 @@
       "title": "Dental Health Blog",
       "desc": "Expert advice, treatment guides, and oral health insights from our specialist team."
     },
-    "filter": {
-      "all": "All",
-      "oralHealth": "Oral Health",
-      "cosmetic": "Cosmetic",
-      "orthodontics": "Orthodontics",
-      "nutrition": "Nutrition",
-      "technology": "Technology"
-    },
     "featured": "Featured",
     "read": "Read",
-    "readAria": "Read article {{title}}",
     "readMore": "Read more",
-    "readMoreAria": "Read more about {{title}}",
-    "minRead": "min read",
-    "coverAlt": "{{title}}",
-    "empty": "No articles in this category yet. Check back soon!",
-    "posts": [
-      {
-        "category": "Oral Health",
-        "title": "The right way to brush: a step-by-step guide from our hygienists",
-        "excerpt": "Most people brush every day, but technique makes a significant difference. Our hygiene team explains the small adjustments that matter most.",
-        "author": "Dr. Anna Kovalenko",
-        "date": "June 5, 2026",
-        "readTime": "5 min read"
-      },
-      {
-        "category": "Cosmetic",
-        "title": "Veneers vs. bonding: which smile upgrade is right for you?",
-        "excerpt": "Porcelain veneers and composite bonding can both improve smile aesthetics, but they differ in preparation, durability, and scope.",
-        "author": "Dr. Sofia Marchetti",
-        "date": "May 22, 2026",
-        "readTime": "7 min read"
-      },
-      {
-        "category": "Orthodontics",
-        "title": "Invisalign in 2026: what changed and what patients should know",
-        "excerpt": "Digital planning and aligner systems continue to evolve. We look at what matters clinically when considering Invisalign today.",
-        "author": "Dr. Marcus Reid",
-        "date": "May 10, 2026",
-        "readTime": "6 min read"
-      },
-      {
-        "category": "Nutrition",
-        "title": "10 foods that quietly damage enamel",
-        "excerpt": "Some foods and drinks can affect enamel more than patients expect. Understanding the patterns helps protect teeth long term.",
-        "author": "Dr. Ethan Brooks",
-        "date": "April 28, 2026",
-        "readTime": "4 min read"
-      },
-      {
-        "category": "Technology",
-        "title": "Same-day crowns: how CAD/CAM technology changes restorative care",
-        "excerpt": "Digital scanning and chairside fabrication allow selected crown cases to be completed more efficiently without sacrificing fit.",
-        "author": "Dr. Anna Kovalenko",
-        "date": "April 15, 2026",
-        "readTime": "5 min read"
-      },
-      {
-        "category": "Oral Health",
-        "title": "Understanding gum disease: stages, symptoms, and solutions",
-        "excerpt": "Gum disease often progresses quietly. Early recognition and timely care make a major difference to long-term oral stability.",
-        "author": "Dr. Ethan Brooks",
-        "date": "March 30, 2026",
-        "readTime": "8 min read"
-      }
-    ]
+    "readTimeMinutes": "{{count}} min read",
+    "empty": "No articles published yet. Check back soon!",
+    "loading": "Loading...",
+    "backToBlog": "Back to blog"
   },
   "contact": {
     "header": {
@@ -1297,5 +1241,17 @@
         ]
       }
     }
+  },
+  "search": {
+    "open": "Search",
+    "placeholder": "Search the site...",
+    "close": "Close",
+    "noResults": "No results found.",
+    "categoryPage": "Page",
+    "categoryService": "Service",
+    "categoryBlog": "Blog"
+  },
+  "chat": {
+    "whatsapp": "Chat with us on WhatsApp"
   }
 }

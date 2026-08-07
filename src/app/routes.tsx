@@ -1,9 +1,10 @@
-import { Suspense, lazy, type ReactNode } from "react";
-import { createBrowserRouter, useParams, type RouteObject } from "react-router";
+import { Suspense, lazy, useEffect, useState, type ReactNode } from "react";
+import { createBrowserRouter, useLocation, useNavigate, useParams, type RouteObject } from "react-router";
 import { Layout } from "./components/Layout";
 import { Home } from "./pages/Home";
-import { isSecondaryLanguage, LocalizedNavLink, stripLanguagePrefix } from "./routing";
+import { getLanguageFromPathname, isSecondaryLanguage, localizePath, LocalizedNavLink, stripLanguagePrefix } from "./routing";
 import { serviceDetails } from "./serviceData";
+import { resolveRedirect } from "../lib/cmsApi";
 
 const About = lazy(async () => {
   const module = await import("./pages/About");
@@ -23,6 +24,11 @@ const FAQ = lazy(async () => {
 const Blog = lazy(async () => {
   const module = await import("./pages/Blog");
   return { default: module.Blog };
+});
+
+const BlogDetail = lazy(async () => {
+  const module = await import("./pages/BlogDetail");
+  return { default: module.BlogDetail };
 });
 
 const Contact = lazy(async () => {
@@ -50,7 +56,7 @@ const ServiceDetail = lazy(async () => {
   return { default: module.ServiceDetail };
 });
 
-function NotFound() {
+function NotFoundContent() {
   return (
     <div className="min-h-[60vh] flex items-center justify-center text-center px-6">
       <div>
@@ -63,6 +69,55 @@ function NotFound() {
       </div>
     </div>
   );
+}
+
+/**
+ * The real HTTP 301/302 for unknown paths comes from the generated .htaccess (production, static
+ * hosting). This client-side check is what makes the same redirects module work in `npm run dev`
+ * (which never reads .htaccess) and is a safety net if the host can't run mod_alias.
+ */
+function NotFound() {
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    setChecked(false);
+
+    const language = getLanguageFromPathname(pathname);
+    const routePath = stripLanguagePrefix(pathname);
+
+    resolveRedirect(routePath).then((redirect) => {
+      if (cancelled) return;
+
+      if (redirect) {
+        // Some redirect targets are already language-specific (e.g. an old-site migration
+        // redirect explicitly targeting "/en/..."), others are bare/language-agnostic (e.g.
+        // "/services" from an in-app slug change) and should follow whatever language the
+        // visitor is currently browsing in. Only localize the latter - re-localizing an
+        // already-prefixed target would silently strip/override its explicit language.
+        const targetFirstSegment = redirect.targetPath.split("/").filter(Boolean)[0];
+        const target = isSecondaryLanguage(targetFirstSegment)
+          ? redirect.targetPath
+          : localizePath(redirect.targetPath, language);
+        navigate(target, { replace: true });
+        return;
+      }
+
+      setChecked(true);
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [pathname, navigate]);
+
+  if (!checked) {
+    return <div className="min-h-[60vh]" />;
+  }
+
+  return <NotFoundContent />;
 }
 
 function LocalizedLayout() {
@@ -103,6 +158,7 @@ const routeChildren: RouteObject[] = [
   { path: "services", Component: () => <LazyRoute><Services /></LazyRoute> },
   { path: "faq", Component: () => <LazyRoute><FAQ /></LazyRoute> },
   { path: "blog", Component: () => <LazyRoute><Blog /></LazyRoute> },
+  { path: "blog/:slug", Component: () => <LazyRoute><BlogDetail /></LazyRoute> },
   { path: "contact", Component: () => <LazyRoute><Contact /></LazyRoute> },
   { path: "warranty", Component: () => <LazyRoute><Warranty /></LazyRoute> },
   { path: "dental-tourism", Component: () => <LazyRoute><DentalTourism /></LazyRoute> },

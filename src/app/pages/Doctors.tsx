@@ -1,16 +1,16 @@
 import { useTranslation } from "react-i18next";
 
-import doctorAlexanArshamyan from "../../../images/doctors/doctor-aleksan-arshamyan.jpg";
-import doctorAramMuradyan from "../../../images/doctors/doctor-aram-muradyan.jpg";
-import doctorArtakAdamyan from "../../../images/doctors/doctor-artak-adamyan.jpg";
-import doctorArturGalstyan from "../../../images/doctors/doctor-artur-galstyan.jpg";
-import doctorGagikYeghiazaryan from "../../../images/doctors/doctor-gagik-yeghiazaryan.jpg";
-import doctorZhannaSafaryan from "../../../images/doctors/doctor-zhanna-safaryan.jpg";
-import doctorHasmikRushanyan from "../../../images/doctors/doctor-hasmik-rushanyan.jpg";
-import doctorHovhannesRapyan from "../../../images/doctors/doctor-hovhannes-rapyan.jpg";
-import doctorKaroMatikyan from "../../../images/doctors/doctor-karo-matikyan.jpg";
-import doctorMartinYezoyan from "../../../images/doctors/doctor-martin-yezoyan.jpg";
-import doctorNarekMatikyan from "../../../images/doctors/doctor-narek-matikyan.jpg";
+import doctorAlexanArshamyan from "../../../images/doctors/doctor-aleksan-arshamyan.webp";
+import doctorAramMuradyan from "../../../images/doctors/doctor-aram-muradyan.webp";
+import doctorArtakAdamyan from "../../../images/doctors/doctor-artak-adamyan.webp";
+import doctorArturGalstyan from "../../../images/doctors/doctor-artur-galstyan.webp";
+import doctorGagikYeghiazaryan from "../../../images/doctors/doctor-gagik-yeghiazaryan.webp";
+import doctorZhannaSafaryan from "../../../images/doctors/doctor-zhanna-safaryan.webp";
+import doctorHasmikRushanyan from "../../../images/doctors/doctor-hasmik-rushanyan.webp";
+import doctorHovhannesRapyan from "../../../images/doctors/doctor-hovhannes-rapyan.webp";
+import doctorKaroMatikyan from "../../../images/doctors/doctor-karo-matikyan.webp";
+import doctorMartinYezoyan from "../../../images/doctors/doctor-martin-yezoyan.webp";
+import doctorNarekMatikyan from "../../../images/doctors/doctor-narek-matikyan.webp";
 import { LocalizedNavLink, useCurrentLanguage } from "../routing";
 
 const doctors = [
@@ -33,7 +33,7 @@ export function Doctors() {
 
   return (
     <div>
-      <section className="relative overflow-hidden bg-[#0F1932] pb-12 pt-[calc(80px+2rem)] lg:pb-14 lg:pt-[calc(80px+2.5rem)]">
+      <section className="relative overflow-hidden bg-[#0F1932] pb-12 pt-[2rem] lg:pb-14 lg:pt-[2.5rem]">
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(15,25,50,0.54)_0%,rgba(15,25,50,0)_34%),radial-gradient(circle_at_78%_32%,rgba(181,199,235,0.22)_0%,rgba(181,199,235,0.08)_30%,rgba(15,25,50,0)_58%),radial-gradient(circle_at_18%_82%,rgba(120,144,191,0.18)_0%,rgba(120,144,191,0)_48%)]" />
         <div className="max-w-7xl mx-auto px-6">
           <div className="relative grid lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-14 items-center">

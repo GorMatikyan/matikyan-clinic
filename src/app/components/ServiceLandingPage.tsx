@@ -62,27 +62,10 @@ export function ServiceLandingPage({ service, relatedServices }: ServiceLandingP
 
   return (
     <div className="bg-[#F7FAFC]">
-      <section className="relative overflow-hidden bg-[#0F1932] pb-12 pt-[calc(80px+2rem)] lg:pb-14 lg:pt-[calc(80px+2.5rem)]">
+      <section className="relative overflow-hidden bg-[#0F1932] pb-12 pt-[2rem] lg:pb-14 lg:pt-[2.5rem]">
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(15,25,50,0.54)_0%,rgba(15,25,50,0)_34%),radial-gradient(circle_at_78%_32%,rgba(181,199,235,0.22)_0%,rgba(181,199,235,0.08)_30%,rgba(15,25,50,0)_58%),radial-gradient(circle_at_18%_82%,rgba(120,144,191,0.18)_0%,rgba(120,144,191,0)_48%)]" />
         <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-14 items-center">
           <div>
-            <nav aria-label="breadcrumb" className="mb-6">
-              <ol className="flex flex-wrap items-center gap-2 text-xs text-white/45">
-                <li>
-                  <LocalizedNavLink to="/" className="hover:text-[#B5C7EB] transition-colors">
-                    {t("nav.home")}
-                  </LocalizedNavLink>
-                </li>
-                <li aria-hidden="true">/</li>
-                <li>
-                  <LocalizedNavLink to="/services" className="hover:text-[#B5C7EB] transition-colors">
-                    {t("nav.services")}
-                  </LocalizedNavLink>
-                </li>
-                <li aria-hidden="true">/</li>
-                <li className="text-[#B5C7EB]" aria-current="page">{service.title}</li>
-              </ol>
-            </nav>
             <div className="inline-flex items-center gap-2 bg-white/8 rounded-full px-3.5 py-1 mb-4 ring-1 ring-white/12">
               <span className={`text-[#B5C7EB] text-xs ${eyebrowTracking}`} style={{ fontWeight: 700 }}>
                 {service.category}

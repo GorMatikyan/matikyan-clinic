@@ -1,0 +1,344 @@
+[
+  {
+    "id": 1,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/",
+    "seoFields": {
+      "metaTitle": "Matikyan Dental Clinic | Ժամանակակից ստոմատոլոգիա Հայաստանում",
+      "metaDescription": "Matikyan Dental Clinic-ը առաջարկում է կանխարգելիչ, էսթետիկ, վերականգնողական, օրթոդոնտիկ և վիրաբուժական ստոմատոլոգիական խնամք՝ բուժառուակենտրոն մոտեցմամբ։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 2,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/about",
+    "seoFields": {
+      "metaTitle": "Matikyan Dental Clinic-ի մասին | Մեր թիմն ու մոտեցումը",
+      "metaDescription": "Ծանոթացեք Matikyan Dental Clinic-ի պատմությանը, բուժական փիլիսոփայությանը, փորձառու թիմին և բուժառուակենտրոն մոտեցմանը։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 3,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/doctors",
+    "seoFields": {
+      "metaTitle": "Բժիշկներ և մասնագետներ | Matikyan Dental Clinic",
+      "metaDescription": "Ծանոթացեք Matikyan Dental Clinic-ի բժիշկներին և մասնագետներին՝ իմպլանտոլոգիայի, օրթոդոնտիայի, էսթետիկ, մանկական և վերականգնողական ստոմատոլոգիայի ուղղություններով։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 4,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/services",
+    "seoFields": {
+      "metaTitle": "Ստոմատոլոգիական ծառայություններ | Matikyan Dental Clinic",
+      "metaDescription": "Դիտարկեք Matikyan Dental Clinic-ի ծառայությունները՝ ներառյալ հիգիենա, սպիտակեցում, վինիրներ, իմպլանտներ, էնդոդոնտիա, օրթոդոնտիա և թվային ախտորոշում։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 5,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/faq",
+    "seoFields": {
+      "metaTitle": "Հաճախ տրվող հարցեր | Matikyan Dental Clinic",
+      "metaDescription": "Ստացեք պատասխաններ խորհրդատվությունների, բուժումների, Invisalign-ի, գների, վճարման և բուժառուի խնամքի վերաբերյալ ամենատարածված հարցերին։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 6,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/blog",
+    "seoFields": {
+      "metaTitle": "Ստոմատոլոգիական բլոգ | Matikyan Dental Clinic",
+      "metaDescription": "Կարդացեք Matikyan Dental Clinic-ի խորհուրդներն ու նորությունները բերանի խոռոչի առողջության, էսթետիկ ստոմատոլոգիայի, օրթոդոնտիայի և բուժման տեխնոլոգիաների մասին։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 7,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/contact",
+    "seoFields": {
+      "metaTitle": "Կապ Matikyan Dental Clinic-ի հետ | Ամրագրեք խորհրդատվություն",
+      "metaDescription": "Կապվեք Matikyan Dental Clinic-ի հետ՝ խորհրդատվություն ամրագրելու, բուժումների մասին հարցեր տալու և կլինիկայի կոնտակտային տվյալները տեսնելու համար։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 8,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/warranty",
+    "seoFields": {
+      "metaTitle": "Երաշխիքային քաղաքականություն | Matikyan Dental Clinic",
+      "metaDescription": "Ծանոթացեք Matikyan Dental Clinic-ի երաշխիքային քաղաքականությանը, երաշխիքային ժամկետներին և պայմաններին տարբեր ստոմատոլոգիական աշխատանքների համար։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 9,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/dental-tourism",
+    "seoFields": {
+      "metaTitle": "Ստոմատոլոգիական տուրիզմ Հայաստանում | Matikyan Dental Clinic",
+      "metaDescription": "Matikyan Dental Clinic-ը օգնում է արտերկրից ժամանող բուժառուներին համադրել ստոմատոլոգիական բուժումը Հայաստանում հանգստի և ուղևորության կազմակերպման հետ։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 10,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/services/dental-cleaning-check-up",
+    "seoFields": {
+      "metaTitle": "Մասնագիտական բերանի հիգիենա | Matikyan Dental Clinic",
+      "metaDescription": "Ամրագրեք մասնագիտական բերանի հիգիենա Matikyan Dental Clinic-ում՝ ուլտրաձայնային մաքրման, AirFlow-ի և կանխարգելիչ խնամքի համար։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 11,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/services/teeth-whitening",
+    "seoFields": {
+      "metaTitle": "Ատամների սպիտակեցում | Matikyan Dental Clinic",
+      "metaDescription": "Պայծառացրեք ժպիտը Matikyan Dental Clinic-ում՝ կապպային կամ լուսային սպիտակեցման տարբերակներով՝ ըստ ձեր կլինիկական կարիքի։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 12,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/services/veneers",
+    "seoFields": {
+      "metaTitle": "Վինիրներ և էսթետիկ վերականգնումներ | Matikyan Dental Clinic",
+      "metaDescription": "Ծանոթացեք վինիրներին, կոմպոզիտ վերականգնումներին և կուլտի վերականգնմանը Matikyan Dental Clinic-ում՝ ժպիտի գեղագիտության և ատամի կառուցվածքի վերականգնման համար։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 13,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/services/dental-implants",
+    "seoFields": {
+      "metaTitle": "Ատամնային իմպլանտներ | Matikyan Dental Clinic",
+      "metaDescription": "Վերականգնեք բացակայող ատամները Matikyan Dental Clinic-ում ատամնային իմպլանտների միջոցով՝ ճշգրիտ պլանավորմամբ և երկարաժամկետ վերականգնողական լուծմամբ։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 14,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/services/prosthetics-crowns",
+    "seoFields": {
+      "metaTitle": "Պրոթեզավորում և պսակներ | Matikyan Dental Clinic",
+      "metaDescription": "Վերականգնեք ծամելու ֆունկցիան և ժպիտի գեղագիտությունը Matikyan Dental Clinic-ում՝ պսակներով, շարժական պրոթեզներով և թվային օրթոպեդիկ պլանավորմամբ։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 15,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/services/root-canal-treatment",
+    "seoFields": {
+      "metaTitle": "Էնդոդոնտիկ բուժում | Matikyan Dental Clinic",
+      "metaDescription": "Բուժեք պուլպիտը և արմատախողովակային վարակները Matikyan Dental Clinic-ում՝ ժամանակակից էնդոդոնտիկ մոտեցմամբ և մանրակրկիտ մշակումով։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 16,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/services/orthodontics",
+    "seoFields": {
+      "metaTitle": "Օրթոդոնտիա | Matikyan Dental Clinic",
+      "metaDescription": "Ծանոթացեք օրթոդոնտիկ բուժմանը Matikyan Dental Clinic-ում՝ թափանցիկ կապաններ և բրեկետներ ատամների դասավորության ու կծվածքի շտկման համար։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 17,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/services/periodontal-treatment",
+    "seoFields": {
+      "metaTitle": "Պերիոդոնտալ բուժում | Matikyan Dental Clinic",
+      "metaDescription": "Վերահսկեք լնդերի հիվանդությունները Matikyan Dental Clinic-ում իրականացվող պերիոդոնտալ բուժմամբ՝ խորը մաքրումով, մասնագիտական խնամքով և հսկողությամբ։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 18,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/services/oral-surgery",
+    "seoFields": {
+      "metaTitle": "Բերանի խոռոչի վիրաբուժություն | Matikyan Dental Clinic",
+      "metaDescription": "Ծանոթացեք բերանի խոռոչի վիրաբուժական ծառայություններին Matikyan Dental Clinic-ում՝ հեռացումներ, ապիկոէկտոմիա, սինուս-լիֆտ և ոսկրային պլաստիկա։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  },
+  {
+    "id": 19,
+    "createdAt": "2026-08-05T00:56:09Z",
+    "changedAt": "2026-08-05T00:56:09Z",
+    "path": "/services/digital-diagnostics",
+    "seoFields": {
+      "metaTitle": "Ախտորոշում և թվային ստոմատոլոգիա | Matikyan Dental Clinic",
+      "metaDescription": "Ամրագրեք թվային ախտորոշում Matikyan Dental Clinic-ում՝ RVG, պանորամային նկար, 3D CT, խորհրդատվություն և բուժման պլանավորում։",
+      "canonicalUrl": null,
+      "robotsNoindex": false,
+      "robotsNofollow": false,
+      "ogTitle": null,
+      "ogDescription": null,
+      "ogImageUrl": null,
+      "schemaType": "NONE",
+      "schemaJson": null
+    }
+  }
+]

@@ -7,23 +7,13 @@ import type { SanitySlide } from "../../lib/sanityTypes";
 import { LocalizedNavLink } from "../routing";
 import { siteImages } from "../siteImages";
 
+// Every slide shows the same two buttons - About Us and Services - regardless of the slide's
+// own topic, so every hero rotation reinforces the same two core internal links.
 const fallbackSlides = [
-  {
-    image: siteImages.heroSlides[0],
-    tag: "", title: "", desc: "", cta: "", link: "/services",
-  },
-  {
-    image: siteImages.heroSlides[1],
-    tag: "", title: "", desc: "", cta: "", link: "/about",
-  },
-  {
-    image: siteImages.heroSlides[2],
-    tag: "", title: "", desc: "", cta: "", link: "/services",
-  },
-  {
-    image: siteImages.heroSlides[3],
-    tag: "", title: "", desc: "", cta: "", link: "/doctors",
-  },
+  { image: siteImages.heroSlides[0], tag: "", title: "", desc: "" },
+  { image: siteImages.heroSlides[1], tag: "", title: "", desc: "" },
+  { image: siteImages.heroSlides[2], tag: "", title: "", desc: "" },
+  { image: siteImages.heroSlides[3], tag: "", title: "", desc: "" },
 ];
 
 export function PhotoSlider() {
@@ -53,7 +43,6 @@ export function PhotoSlider() {
         tag: "tag" in translatedSlide && typeof translatedSlide.tag === "string" ? translatedSlide.tag : fallbackSlide.tag,
         title: "title" in translatedSlide && typeof translatedSlide.title === "string" ? translatedSlide.title : fallbackSlide.title,
         desc: "desc" in translatedSlide && typeof translatedSlide.desc === "string" ? translatedSlide.desc : fallbackSlide.desc,
-        cta: "cta" in translatedSlide && typeof translatedSlide.cta === "string" ? translatedSlide.cta : fallbackSlide.cta,
       };
     });
   }, [t]);
@@ -131,7 +120,9 @@ export function PhotoSlider() {
                 aria-hidden="true"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-[6000ms] ease-out"
                 style={{ transform: i === current ? "scale(1)" : "scale(1.06)" }}
-                fetchPriority={i === 0 ? "high" : undefined}
+                // @ts-expect-error React 18's DOM runtime only recognizes the lowercase HTML
+                // attribute; the camelCase `fetchPriority` typing targets React 19.
+                fetchpriority={i === 0 ? "high" : undefined}
                 loading={i === 0 ? "eager" : "lazy"}
                 decoding="async"
                 sizes="100vw"
@@ -143,9 +134,8 @@ export function PhotoSlider() {
         );
       })}
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0F1932]/90 via-[#0F1932]/55 to-transparent z-10" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0F1932]/72 via-transparent to-transparent z-10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0F1932]/55 via-transparent to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0F1932]/88 via-[#0F1932]/40 to-[#0F1932]/5 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0F1932]/60 via-transparent to-transparent z-10" />
       <div className="absolute top-0 left-0 w-1 h-full bg-[#B5C7EB] z-20" />
 
       <div className="absolute inset-0 z-20 flex items-center pt-[80px]">
@@ -164,18 +154,18 @@ export function PhotoSlider() {
 
             <div className="flex flex-wrap gap-4">
               <LocalizedNavLink
-                to={slide.link || "/services"}
+                to="/about"
                 className="inline-flex items-center gap-2 px-7 py-4 bg-[#B5C7EB] text-[#0F1932] rounded-xl hover:bg-[#B5C7EB]/85 transition-colors"
                 style={{ fontWeight: 700 }}
               >
-                {slide.cta} <ChevronRight className="w-4 h-4" />
+                {t("nav.about")} <ChevronRight className="w-4 h-4" />
               </LocalizedNavLink>
               <LocalizedNavLink
-                to="/contact"
+                to="/services"
                 className="inline-flex items-center gap-2 px-7 py-4 bg-white/10 border border-white/20 text-white rounded-xl hover:bg-white/18 transition-colors"
                 style={{ fontWeight: 500 }}
               >
-                {t("slider.bookConsultation")}
+                {t("nav.services")}
               </LocalizedNavLink>
             </div>
           </div>

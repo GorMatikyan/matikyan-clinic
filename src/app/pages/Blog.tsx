@@ -1,84 +1,32 @@
-import { useMemo, useState } from "react";
-import { Clock, ArrowRight, Tag } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowRight, Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useSanityData } from "../../hooks/useSanityData";
-import { BLOG_POSTS_QUERY } from "../../lib/queries";
-import type { SanityBlogPost } from "../../lib/sanityTypes";
+import { fetchPublishedBlogPosts, type CmsBlogPost } from "../../lib/cmsApi";
 import { PageHero } from "../components/PageHero";
+import { LocalizedNavLink } from "../routing";
 import { siteImages } from "../siteImages";
 
-const categoryKeys = ["all", "oralHealth", "cosmetic", "orthodontics", "nutrition", "technology"] as const;
-const posts = [
-  {
-    category: "Oral Health", featured: true,
-    title: "The Right Way to Brush: A Step-by-Step Guide from Our Hygienists",
-    excerpt: "Most people brush their teeth every day — but are they doing it correctly? Our head hygienist walks through the technique that makes all the difference.",
-    author: "Dr. Anna Kovalenko", date: "June 5, 2026", readTime: "5 min read",
-    cover: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&h=380&fit=crop&auto=format",
-  },
-  {
-    category: "Cosmetic", featured: false,
-    title: "Veneers vs. Bonding: Which Smile Upgrade is Right for You?",
-    excerpt: "Both porcelain veneers and composite bonding can dramatically improve your smile, but they serve different purposes and price points.",
-    author: "Dr. Sofia Marchetti", date: "May 22, 2026", readTime: "7 min read",
-    cover: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=600&h=380&fit=crop&auto=format",
-  },
-  {
-    category: "Orthodontics", featured: false,
-    title: "Invisalign in 2026: What's Changed and What You Should Know",
-    excerpt: "With AI-assisted treatment planning and new material science, we look at how Invisalign has evolved and what patients can expect today.",
-    author: "Dr. Marcus Reid", date: "May 10, 2026", readTime: "6 min read",
-    cover: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=380&fit=crop&auto=format",
-  },
-  {
-    category: "Nutrition", featured: false,
-    title: "10 Foods That Are Secretly Destroying Your Enamel",
-    excerpt: "We all know soda is bad for teeth. But some of the worst offenders are foods you might consider healthy.",
-    author: "Dr. Ethan Brooks", date: "April 28, 2026", readTime: "4 min read",
-    cover: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&h=380&fit=crop&auto=format",
-  },
-  {
-    category: "Technology", featured: false,
-    title: "Same-Day Crowns: How CAD/CAM Technology is Changing Dentistry",
-    excerpt: "Our CEREC machine mills a permanent ceramic crown while you wait — here's how it works and why patients love it.",
-    author: "Dr. Anna Kovalenko", date: "April 15, 2026", readTime: "5 min read",
-    cover: "https://images.unsplash.com/photo-1588776814546-1ffbb172601e?w=600&h=380&fit=crop&auto=format",
-  },
-  {
-    category: "Oral Health", featured: false,
-    title: "Understanding Gum Disease: Stages, Symptoms, and Solutions",
-    excerpt: "Periodontal disease affects 47% of adults over 30, yet many don't know they have it. Dr. Brooks explains the four stages and why early intervention is everything.",
-    author: "Dr. Ethan Brooks", date: "March 30, 2026", readTime: "8 min read",
-    cover: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=380&fit=crop&auto=format",
-  },
-];
+function readingTime(bodyHtml: string | null): number {
+  const text = (bodyHtml ?? "").replace(/<[^>]+>/g, " ");
+  const words = text.trim().split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(words / 200));
+}
 
 export function Blog() {
   const { t } = useTranslation();
-  const { data: postList } = useSanityData<SanityBlogPost[]>(BLOG_POSTS_QUERY, posts);
-  const [activeCategory, setActiveCategory] = useState<(typeof categoryKeys)[number]>("all");
-  const categoryLabels = useMemo(
-    () => Object.fromEntries(categoryKeys.map((key) => [key, t(`blog.filter.${key}`)])) as Record<(typeof categoryKeys)[number], string>,
-    [t],
-  );
-  const localizedPosts = postList.map((post, index) => ({
-    ...post,
-    category: t(`blog.posts.${index}.category`, { defaultValue: post.category }),
-    title: t(`blog.posts.${index}.title`, { defaultValue: post.title }),
-    excerpt: t(`blog.posts.${index}.excerpt`, { defaultValue: post.excerpt }),
-    author: t(`blog.posts.${index}.author`, { defaultValue: post.author }),
-    date: t(`blog.posts.${index}.date`, { defaultValue: post.date }),
-    readTime: t(`blog.posts.${index}.readTime`, { defaultValue: post.readTime }),
-  }));
-  const featured = localizedPosts[0];
-  const activeCategoryLabel = categoryLabels[activeCategory];
-  const allFiltered = activeCategory === "all" ? localizedPosts : localizedPosts.filter((p) => p.category === activeCategoryLabel);
-  const showFeatured = !!featured && (activeCategory === "all" || featured.category === activeCategoryLabel);
-  const grid = showFeatured ? allFiltered.slice(1) : allFiltered;
+  const [posts, setPosts] = useState<CmsBlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchPublishedBlogPosts()
+      .then(setPosts)
+      .finally(() => setLoading(false));
+  }, []);
+
+  const [featured, ...rest] = posts;
 
   return (
     <div>
-      {/* Header — navy */}
       <PageHero
         eyebrow={t("blog.header.badge")}
         title={t("blog.header.title")}
@@ -87,75 +35,64 @@ export function Blog() {
         imageAlt={t("home.hero.slideAlt", { index: 3 })}
       />
 
-      {/* Filter */}
-      <section className="py-6 bg-[#0F1932] border-t border-white/8 sticky top-18 z-30">
-        <div className="max-w-7xl mx-auto px-6 flex flex-wrap gap-2 justify-center">
-          {categoryKeys.map((key, i) => (
-            <button
-              key={key}
-              onClick={() => setActiveCategory(key)}
-              className={`px-5 py-2 rounded-full text-sm transition-colors ${
-                activeCategory === key
-                  ? "bg-[#B5C7EB] text-[#0F1932]"
-                  : "bg-white/8 border border-white/10 text-white/65 hover:bg-[#B5C7EB]/20 hover:text-[#B5C7EB]"
-              }`}
-              style={{ fontWeight: activeCategory === key ? 600 : 400 }}
-            >
-              {categoryLabels[key]}
-            </button>
-          ))}
-        </div>
-      </section>
-
       <section className="py-16 bg-[#F7FAFC]">
         <div className="max-w-7xl mx-auto px-6">
-          {/* Featured */}
-          {showFeatured && featured && (
+          {!loading && posts.length === 0 && (
+            <div className="text-center py-16 text-[#5B6475]">{t("blog.empty")}</div>
+          )}
+
+          {featured && (
             <div className="mb-12">
-              <div className="grid lg:grid-cols-2 gap-0 bg-[#0F1932] rounded-2xl overflow-hidden">
+              <LocalizedNavLink to={`/blog/${featured.slug}`} className="grid lg:grid-cols-2 gap-0 bg-[#0F1932] rounded-2xl overflow-hidden block">
                 <div className="relative overflow-hidden bg-[#eef1f8] min-h-72">
-                  <img src={featured.cover} alt={t("blog.coverAlt", { title: featured.title })} className="w-full h-full object-cover" style={{ minHeight: "320px" }} />
+                  {featured.coverImage && (
+                    <img
+                      src={featured.coverImage.url}
+                      alt={featured.coverImage.altText}
+                      className="w-full h-full object-cover"
+                      style={{ minHeight: "320px" }}
+                    />
+                  )}
                   <div className="absolute top-5 left-5 bg-[#B5C7EB] text-[#0F1932] text-xs px-3 py-1.5 rounded-full" style={{ fontWeight: 700 }}>
                     {t("blog.featured")}
                   </div>
                 </div>
                 <div className="p-8 lg:p-10 flex flex-col justify-center">
-                  <div className="flex items-center gap-2 mb-4">
-                    <Tag className="w-3.5 h-3.5 text-[#B5C7EB]" />
-                    <span className="text-[#B5C7EB] text-xs" style={{ fontWeight: 600 }}>{featured.category}</span>
-                  </div>
                   <h2 className="text-white mb-4 leading-snug" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.4rem, 2.5vw, 2rem)", fontWeight: 800 }}>
                     {featured.title}
                   </h2>
                   <p className="text-white/55 text-sm leading-relaxed mb-7">{featured.excerpt}</p>
                   <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-white text-sm" style={{ fontWeight: 600 }}>{featured.author}</div>
-                      <div className="flex items-center gap-2 text-xs text-white/40 mt-1">
-                        <span>{featured.date}</span>
-                        <span>·</span>
-                        <Clock className="w-3 h-3" />
-                        <span>{featured.readTime}</span>
-                      </div>
+                    <div className="flex items-center gap-2 text-xs text-white/40">
+                      {featured.publishedAt && <span>{new Date(featured.publishedAt).toLocaleDateString()}</span>}
+                      <span>·</span>
+                      <Clock className="w-3 h-3" />
+                      <span>{t("blog.readTimeMinutes", { count: readingTime(featured.bodyHtml) })}</span>
                     </div>
-                    <button aria-label={t("blog.readAria", { title: featured.title })} className="flex items-center gap-2 text-[#B5C7EB] text-sm hover:gap-3 transition-all" style={{ fontWeight: 600 }}>
+                    <span className="flex items-center gap-2 text-[#B5C7EB] text-sm" style={{ fontWeight: 600 }}>
                       {t("blog.read")} <ArrowRight className="w-4 h-4" />
-                    </button>
+                    </span>
                   </div>
                 </div>
-              </div>
+              </LocalizedNavLink>
             </div>
           )}
 
-          {/* Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {grid.map((post) => (
-              <div key={post.title} className="group bg-white rounded-2xl overflow-hidden border border-[#0F1932]/8 hover:shadow-lg hover:border-[#B5C7EB]/40 transition-all duration-300 cursor-pointer">
+            {rest.map((post) => (
+              <LocalizedNavLink
+                key={post.id}
+                to={`/blog/${post.slug}`}
+                className="group bg-white rounded-2xl overflow-hidden border border-[#0F1932]/8 hover:shadow-lg hover:border-[#B5C7EB]/40 transition-all duration-300 block"
+              >
                 <div className="relative overflow-hidden bg-[#eef1f8] h-48">
-                  <img src={post.cover} alt={t("blog.coverAlt", { title: post.title })} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute top-4 left-4 bg-[#B5C7EB]/90 text-[#0F1932] text-xs px-2.5 py-1 rounded-full" style={{ fontWeight: 600 }}>
-                    {post.category}
-                  </div>
+                  {post.coverImage && (
+                    <img
+                      src={post.coverImage.url}
+                      alt={post.coverImage.altText}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  )}
                 </div>
                 <div className="p-6">
                   <h3 className="text-[#0F1932] mb-3 leading-snug" style={{ fontFamily: "var(--font-display)", fontSize: "1.05rem", fontWeight: 700 }}>
@@ -165,20 +102,16 @@ export function Blog() {
                   <div className="flex items-center justify-between pt-4 border-t border-[#0F1932]/8">
                     <div className="text-xs text-[#5B6475] flex items-center gap-1.5">
                       <Clock className="w-3 h-3 text-[#B5C7EB]" />
-                      <span>{post.readTime}</span>
+                      <span>{t("blog.readTimeMinutes", { count: readingTime(post.bodyHtml) })}</span>
                     </div>
-                    <span className="text-[#0F1932] text-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1" style={{ fontWeight: 600 }} aria-label={t("blog.readMoreAria", { title: post.title })}>
+                    <span className="text-[#0F1932] text-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1" style={{ fontWeight: 600 }}>
                       {t("blog.readMore")} <ArrowRight className="w-3 h-3" />
                     </span>
                   </div>
                 </div>
-              </div>
+              </LocalizedNavLink>
             ))}
           </div>
-
-          {allFiltered.length === 0 && (
-            <div className="text-center py-16 text-[#5B6475]">{t("blog.empty")}</div>
-          )}
         </div>
       </section>
     </div>

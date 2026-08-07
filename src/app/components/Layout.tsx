@@ -5,6 +5,8 @@ import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import { SeoHead } from "./SeoHead";
 import { StructuredData } from "./StructuredData";
+import { Breadcrumbs } from "./Breadcrumbs";
+import { WhatsAppChat } from "./WhatsAppChat";
 import { getLanguageFromPathname } from "../routing";
 
 export function Layout() {
@@ -33,9 +35,11 @@ export function Layout() {
       <StructuredData />
       <Navbar />
       <main className="flex-1">
+        <Breadcrumbs />
         <Outlet />
       </main>
       <Footer />
+      <WhatsAppChat />
     </div>
   );
 }

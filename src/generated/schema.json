@@ -1,0 +1,32 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Matikyan Dental Clinic",
+      "url": "https://matikyan.am",
+      "telephone": "+37410210122",
+      "email": "info@matikyan.am",
+      "openingHours": "Mon-Fri 10:00-20:00, Sat 10:00-14:00",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5 Aram Khachatryan St., Yerevan 0033, Armenia"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.1872,
+        "longitude": 44.5152
+      },
+      "sameAs": [
+        "https://www.facebook.com/share/1LLcyQvwvZ/?mibextid=wwXIfr",
+        "https://www.instagram.com/matikyandentalclinic?igsh=MTNtbGl1eW04M25ucA==",
+        "https://www.youtube.com/@MatikyanDentalClinic"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "name": "Matikyan Dental Clinic",
+      "url": "https://matikyan.am"
+    }
+  ]
+}

@@ -16,7 +16,7 @@ export function About() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0F1932] pb-16 pt-[calc(80px+1.5rem)] lg:pb-20 lg:pt-[calc(80px+1.75rem)]">
+      <section className="relative overflow-hidden bg-[#0F1932] pb-16 pt-[1.5rem] lg:pb-20 lg:pt-[1.75rem]">
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(15,25,50,0.54)_0%,rgba(15,25,50,0)_34%),radial-gradient(circle_at_78%_32%,rgba(181,199,235,0.22)_0%,rgba(181,199,235,0.08)_30%,rgba(15,25,50,0)_58%),radial-gradient(circle_at_18%_82%,rgba(120,144,191,0.18)_0%,rgba(120,144,191,0)_48%)]" />
         <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-[0.92fr_1.08fr] gap-9 lg:gap-12 items-center">
           <div>
@@ -61,7 +61,7 @@ export function About() {
               {t("about.values.title")}
             </h2>
             <p className="text-[#5B6475] max-w-[590px] leading-relaxed mb-7">
-              {t("about.hero.desc1")}
+              {t("about.values.intro")}
             </p>
 
             <div className="grid gap-4">

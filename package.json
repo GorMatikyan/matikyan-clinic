@@ -4,9 +4,11 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
+    "prebuild": "node scripts/export-seo-files.mjs",
     "build": "vite build",
     "dev": "vite",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "export-seo-files": "node scripts/export-seo-files.mjs"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",

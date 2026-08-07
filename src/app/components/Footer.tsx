@@ -1,31 +1,48 @@
-import { Phone, Globe, MapPin, Clock, Facebook, Instagram, Youtube } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Phone, Globe, MapPin, Clock, Facebook, Instagram, Youtube, Share2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import logoImg from "../../imports/matikyan-clinic-logo-am.png";
 import { getServiceSlugByTitle } from "../serviceData";
 import { LocalizedNavLink } from "../routing";
+import { fetchPublishedBlogPosts, type CmsBlogPost } from "../../lib/cmsApi";
+import { useSiteSettings } from "../../hooks/useSiteSettings";
+import { parseSocialLinks, type SocialPlatform } from "../../lib/socialLinks";
+
+const DEFAULT_PHONE = "+37410210122";
+
+const FALLBACK_SOCIAL_LINKS = [
+  { url: "https://www.facebook.com/share/1LLcyQvwvZ/?mibextid=wwXIfr", platform: "facebook" as const },
+  { url: "https://www.instagram.com/matikyandentalclinic?igsh=MTNtbGl1eW04M25ucA==", platform: "instagram" as const },
+  { url: "https://www.youtube.com/@MatikyanDentalClinic", platform: "youtube" as const },
+];
+
+const socialIcons: Record<SocialPlatform, typeof Facebook> = {
+  facebook: Facebook,
+  instagram: Instagram,
+  youtube: Youtube,
+  other: Share2,
+};
 
 export function Footer() {
   const { t } = useTranslation();
-  const socialLinks = [
-    {
-      href: "https://www.facebook.com/share/1LLcyQvwvZ/?mibextid=wwXIfr",
-      label: t("footer.social.facebook"),
-      ariaLabel: t("footer.social.facebookAria"),
-      Icon: Facebook,
-    },
-    {
-      href: "https://www.instagram.com/matikyandentalclinic?igsh=MTNtbGl1eW04M25ucA==",
-      label: t("footer.social.instagram"),
-      ariaLabel: t("footer.social.instagramAria"),
-      Icon: Instagram,
-    },
-    {
-      href: "https://www.youtube.com/@MatikyanDentalClinic",
-      label: t("footer.social.youtube"),
-      ariaLabel: t("footer.social.youtubeAria"),
-      Icon: Youtube,
-    },
-  ] as const;
+  const [latestPosts, setLatestPosts] = useState<CmsBlogPost[]>([]);
+  const settings = useSiteSettings();
+
+  useEffect(() => {
+    fetchPublishedBlogPosts().then((posts) => setLatestPosts(posts.slice(0, 3)));
+  }, []);
+
+  const phone = settings?.phoneNumber ?? DEFAULT_PHONE;
+  const phoneHref = `tel:${phone.replace(/\s+/g, "")}`;
+  const address = settings?.address ?? t("footer.address");
+
+  const socialLinkEntries = parseSocialLinks(settings?.socialLinksJson);
+  const socialLinks = (socialLinkEntries.length > 0 ? socialLinkEntries : FALLBACK_SOCIAL_LINKS).map(({ url, platform }) => ({
+    href: url,
+    label: t(`footer.social.${platform === "other" ? "share" : platform}`, { defaultValue: "Social" }),
+    ariaLabel: t(`footer.social.${platform === "other" ? "share" : platform}Aria`, { defaultValue: "Social link" }),
+    Icon: socialIcons[platform],
+  }));
 
   const navLinks = [
     { key: "footer.about", path: "/about" },
@@ -60,6 +77,26 @@ export function Footer() {
               <img src={logoImg} alt={t("footer.logoAlt")} className="h-14 w-auto object-contain" />
             </div>
             <p className="text-white/55 text-sm leading-relaxed mb-6">{t("footer.description")}</p>
+
+            {latestPosts.length > 0 && (
+              <div>
+                <h4 className="text-[#B5C7EB] mb-4 text-xs tracking-widest uppercase" style={{ fontWeight: 700 }}>
+                  {t("footer.latestPosts", { defaultValue: "Latest from the blog" })}
+                </h4>
+                <ul className="flex flex-col gap-2">
+                  {latestPosts.map((post) => (
+                    <li key={post.id}>
+                      <LocalizedNavLink
+                        to={`/blog/${post.slug}`}
+                        className="text-sm text-white/55 hover:text-[#B5C7EB] transition-colors line-clamp-1"
+                      >
+                        {post.title}
+                      </LocalizedNavLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
 
           {/* Navigation */}
@@ -92,16 +129,16 @@ export function Footer() {
             <ul className="flex flex-col gap-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#B5C7EB] mt-0.5 shrink-0" />
-                <span className="text-sm text-white/55" style={{ whiteSpace: "pre-line" }}>{t("footer.address")}</span>
+                <span className="text-sm text-white/55" style={{ whiteSpace: "pre-line" }}>{address}</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#B5C7EB] shrink-0" />
                 <a
-                  href="tel:+37410210122"
+                  href={phoneHref}
                   aria-label={t("footer.phoneLinkAria")}
                   className="text-sm text-white/55 hover:text-[#B5C7EB] transition-colors"
                 >
-                  {t("nav.phone")}
+                  {phone}
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -117,9 +154,9 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Clock className="w-4 h-4 text-[#B5C7EB] mt-0.5 shrink-0" />
                 <div className="text-sm text-white/55">
-                  <div>{t("footer.hours1")}</div>
-                  <div>{t("footer.hours2")}</div>
-                  <div>{t("footer.hours3")}</div>
+                  {settings?.openingHours
+                    ? settings.openingHours.split(",").map((line) => <div key={line}>{line.trim()}</div>)
+                    : [t("footer.hours1"), t("footer.hours2"), t("footer.hours3")].map((line) => <div key={line}>{line}</div>)}
                 </div>
               </li>
               <li className="pt-2">

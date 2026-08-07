@@ -2,7 +2,7 @@ import { MapPin, Plane, Languages } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { LocalizedNavLink } from "../routing";
 import { PageHero } from "../components/PageHero";
-import dentalTourismImage from "../../../images/sections/section-dental-tourism.jpg";
+import dentalTourismImage from "../../../images/sections/section-dental-tourism.webp";
 
 function getItems(value: unknown): string[] {
   return Array.isArray(value) ? value.filter((item): item is string => typeof item === "string") : [];

@@ -1,15 +1,15 @@
 import type { SanityService } from "../lib/sanityTypes";
 import i18n from "../i18n";
-import serviceDentalImplants from "../../images/services/service-dental-implants.jpg";
-import serviceDigitalDiagnostics from "../../images/services/service-digital-diagnostics.jpg";
-import serviceEndodonticTreatment from "../../images/services/service-endodontic-treatment.jpg";
-import serviceOralSurgery from "../../images/services/service-oral-surgery.jpg";
-import serviceOrthodontics from "../../images/services/service-orthodontics.jpg";
-import servicePeriodontalTreatment from "../../images/services/service-periodontal-treatment.jpg";
-import serviceProfessionalOralHygiene from "../../images/services/service-professional-oral-hygiene.jpg";
-import serviceProstheticsCrowns from "../../images/services/service-prosthetics-crowns.jpg";
-import serviceTeethWhitening from "../../images/services/service-teeth-whitening.jpg";
-import serviceVeneersRestorations from "../../images/services/service-veneers-restorations.jpg";
+import serviceDentalImplants from "../../images/services/service-dental-implants.webp";
+import serviceDigitalDiagnostics from "../../images/services/service-digital-diagnostics.webp";
+import serviceEndodonticTreatment from "../../images/services/service-endodontic-treatment.webp";
+import serviceOralSurgery from "../../images/services/service-oral-surgery.webp";
+import serviceOrthodontics from "../../images/services/service-orthodontics.webp";
+import servicePeriodontalTreatment from "../../images/services/service-periodontal-treatment.webp";
+import serviceProfessionalOralHygiene from "../../images/services/service-professional-oral-hygiene.webp";
+import serviceProstheticsCrowns from "../../images/services/service-prosthetics-crowns.webp";
+import serviceTeethWhitening from "../../images/services/service-teeth-whitening.webp";
+import serviceVeneersRestorations from "../../images/services/service-veneers-restorations.webp";
 
 export type ServiceDetail = SanityService & {
   slug: string;

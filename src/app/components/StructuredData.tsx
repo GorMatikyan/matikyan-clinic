@@ -1,92 +1,30 @@
 import { useLocation } from "react-router";
 import { useTranslation } from "react-i18next";
-import logoImg from "../../imports/matikyan-clinic-logo-am.png";
+import schemaData from "../../generated/schema.json";
 import { buildCanonicalUrl, getSeoMetadata } from "../seo";
 import { getLocalizedServiceDetailBySlug } from "../serviceData";
 import { getLanguageFromPathname, localizePath, stripLanguagePrefix } from "../routing";
 
 const BASE_URL = "https://matikyan.am";
-const ORGANIZATION_ID = `${BASE_URL}/#organization`;
 const WEBSITE_ID = `${BASE_URL}/#website`;
 const CLINIC_ID = `${BASE_URL}/#clinic`;
-const LOGO_URL = new URL(logoImg, `${BASE_URL}/`).toString();
 type JsonLdEntry = Record<string, unknown> & { "@id": string };
 
-const structuredData = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": ORGANIZATION_ID,
-    name: "Matikyan Dental Clinic",
-    url: BASE_URL,
-    telephone: "+37410210122",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "5 Aram Khachatryan St.",
-      addressLocality: "Yerevan",
-      postalCode: "0033",
-      addressCountry: "AM",
-    },
-    logo: {
-      "@type": "ImageObject",
-      url: LOGO_URL,
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": WEBSITE_ID,
-    url: BASE_URL,
-    name: "Matikyan Dental Clinic",
-    publisher: {
-      "@id": ORGANIZATION_ID,
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Dentist",
-    "@id": CLINIC_ID,
-    name: "Matikyan Dental Clinic",
-    url: BASE_URL,
-    image: LOGO_URL,
-    logo: LOGO_URL,
-    telephone: "+37410210122",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "5 Aram Khachatryan St.",
-      addressLocality: "Yerevan",
-      postalCode: "0033",
-      addressCountry: "AM",
-    },
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "https://schema.org/Monday",
-          "https://schema.org/Tuesday",
-          "https://schema.org/Wednesday",
-          "https://schema.org/Thursday",
-          "https://schema.org/Friday",
-        ],
-        opens: "10:00",
-        closes: "20:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "https://schema.org/Saturday",
-        opens: "10:00",
-        closes: "14:00",
-      },
-    ],
-    parentOrganization: {
-      "@id": ORGANIZATION_ID,
-    },
-  },
-] as const;
+// LocalBusiness + Organization/Logo schema (mandatory spec item 13) comes from
+// src/generated/schema.json, baked at build time from the admin Settings panel - see
+// scripts/export-seo-files.mjs. WebSite rarely changes, so it stays a small static block here.
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": WEBSITE_ID,
+  url: BASE_URL,
+  name: "Matikyan Dental Clinic",
+} as const;
 
 export function StructuredData() {
   const { pathname } = useLocation();
   const { t } = useTranslation();
+
   const currentLanguage = getLanguageFromPathname(pathname);
   const routePath = stripLanguagePrefix(pathname);
   const service = getLocalizedServiceDetailBySlug(routePath);
@@ -108,13 +46,8 @@ export function StructuredData() {
 
   return (
     <>
-      {structuredData.map((entry, index) => (
-        <script
-          key={index}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(entry) }}
-        />
-      ))}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
       {serviceStructuredData.map((entry) => (
         <script
           key={entry["@id"]}

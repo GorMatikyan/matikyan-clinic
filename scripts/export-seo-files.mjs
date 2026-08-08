@@ -18,6 +18,13 @@ import path from "node:path";
 const CMS_API_BASE_URL = process.env.CMS_API_BASE_URL ?? "https://admin-matikyan.com";
 const PUBLIC_DIR = path.resolve(fileURLToPath(new URL("../public", import.meta.url)));
 const GENERATED_DIR = path.resolve(fileURLToPath(new URL("../src/generated", import.meta.url)));
+const ROOT_DIR = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
+
+// Set only for the temporary clinic.matikyan.am staging deploy - never for the real matikyan.am
+// go-live. Blanket-blocks indexing at both the robots.txt and per-page-meta level, independent of
+// whatever the admin's actual robots.txt/per-page noindex settings say, so a staging copy of the
+// site can never get indexed and compete with the real domain for the same content.
+const SITE_STAGING = process.env.SITE_STAGING === "true";
 
 // The real static routes of the site (mirrors the `routeChildren` array in src/app/routes.tsx).
 // The backend's /sitemap.xml only knows about admin-managed page-SEO rows and blog posts - it has
@@ -160,8 +167,24 @@ async function exportRedirectsIntoHtaccess() {
   console.log(`[export-seo-files] wrote ${rules.trim().split("\n").filter(Boolean).length} redirect(s) into public/.htaccess`);
 }
 
+async function applyStagingNoindex() {
+  if (!SITE_STAGING) return;
+
+  await writeFile(path.join(PUBLIC_DIR, "robots.txt"), "User-agent: *\nDisallow: /\n", "utf-8");
+  console.log("[export-seo-files] SITE_STAGING=true: overwrote robots.txt with a blanket Disallow");
+
+  const indexPath = path.join(ROOT_DIR, "index.html");
+  const marker = '<meta name="robots" content="noindex, nofollow" />';
+  const html = await readFile(indexPath, "utf-8");
+  if (!html.includes(marker)) {
+    await writeFile(indexPath, html.replace("<head>", `<head>\n      ${marker}`), "utf-8");
+    console.log("[export-seo-files] SITE_STAGING=true: injected noindex meta tag into index.html");
+  }
+}
+
 await exportFile("/api/public/cms/robots.txt", "robots.txt");
 await exportRedirectsIntoHtaccess();
+await applyStagingNoindex();
 
 await exportGeneratedJson("/api/public/cms/settings", "settings.json");
 await exportGeneratedJson("/api/public/cms/pages/all", "pages.json");

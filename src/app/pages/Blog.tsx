@@ -31,7 +31,7 @@ export function Blog() {
         eyebrow={t("blog.header.badge")}
         title={t("blog.header.title")}
         description={t("blog.header.desc")}
-        imageSrc={siteImages.heroSlides[2]}
+        imageSrc={siteImages.heroSlides[2].full}
         imageAlt={t("home.hero.slideAlt", { index: 3 })}
       />
 

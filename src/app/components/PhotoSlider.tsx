@@ -110,7 +110,8 @@ export function PhotoSlider() {
           <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{ opacity: i === current ? 1 : 0 }}>
             {isLoaded ? (
               <img
-                src={s.image}
+                src={s.image.full}
+                srcSet={`${s.image.mobile} 960w, ${s.image.full} ${s.image.fullWidth}w`}
                 alt=""
                 aria-hidden="true"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-[6000ms] ease-out"

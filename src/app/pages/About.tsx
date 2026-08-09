@@ -40,10 +40,10 @@ export function About() {
             <div className="absolute left-[10%] top-[10%] h-72 w-72 rounded-full bg-[#B5C7EB]/18 blur-3xl" />
             <div className="relative rounded-[2rem] bg-[#17223c]/55 p-4 shadow-[0_28px_78px_rgba(0,0,0,0.24)] ring-1 ring-white/10 sm:p-5">
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                <img src={siteImages.heroSlides[3]} alt={t("about.images.clinicAlt")} className="h-40 w-full rounded-[1.2rem] object-cover object-center shadow-[0_14px_34px_rgba(0,0,0,0.2)] sm:h-52 lg:h-44 xl:h-52" />
+                <img src={siteImages.heroSlides[3].full} alt={t("about.images.clinicAlt")} className="h-40 w-full rounded-[1.2rem] object-cover object-center shadow-[0_14px_34px_rgba(0,0,0,0.2)] sm:h-52 lg:h-44 xl:h-52" />
                 <img src={siteImages.aboutImages.equipment} alt={t("about.images.equipmentAlt")} className="h-40 w-full rounded-[1.2rem] object-cover object-center shadow-[0_14px_34px_rgba(0,0,0,0.2)] sm:h-52 lg:h-44 xl:h-52" />
-                <img src={siteImages.heroSlides[2]} alt={t("about.images.consultationAlt")} className="h-40 w-full rounded-[1.2rem] object-cover object-center shadow-[0_14px_34px_rgba(0,0,0,0.2)] sm:h-52 lg:h-44 xl:h-52" />
-                <img src={siteImages.heroSlides[1]} alt={t("about.images.interiorAlt")} className="h-40 w-full rounded-[1.2rem] object-cover object-center shadow-[0_14px_34px_rgba(0,0,0,0.2)] sm:h-52 lg:h-44 xl:h-52" />
+                <img src={siteImages.heroSlides[2].full} alt={t("about.images.consultationAlt")} className="h-40 w-full rounded-[1.2rem] object-cover object-center shadow-[0_14px_34px_rgba(0,0,0,0.2)] sm:h-52 lg:h-44 xl:h-52" />
+                <img src={siteImages.heroSlides[1].full} alt={t("about.images.interiorAlt")} className="h-40 w-full rounded-[1.2rem] object-cover object-center shadow-[0_14px_34px_rgba(0,0,0,0.2)] sm:h-52 lg:h-44 xl:h-52" />
               </div>
             </div>
           </div>

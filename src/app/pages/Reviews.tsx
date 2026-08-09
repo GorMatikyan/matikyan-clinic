@@ -22,7 +22,7 @@ export function Reviews() {
         eyebrow={t("reviews.header.badge")}
         title={t("reviews.header.title")}
         description={t("reviews.header.desc")}
-        imageSrc={siteImages.heroSlides[3]}
+        imageSrc={siteImages.heroSlides[3].full}
         imageAlt={t("home.hero.slideAlt", { index: 4 })}
       />
 

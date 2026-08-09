@@ -1,17 +1,31 @@
 import type { SanityService } from "../lib/sanityTypes";
 import i18n from "../i18n";
 import serviceDentalImplants from "../../images/services/service-dental-implants.webp";
+import serviceDentalImplantsMobile from "../../images/services/service-dental-implants-mobile.webp";
 import serviceDigitalDiagnostics from "../../images/services/service-digital-diagnostics.webp";
+import serviceDigitalDiagnosticsMobile from "../../images/services/service-digital-diagnostics-mobile.webp";
 import serviceEndodonticTreatment from "../../images/services/service-endodontic-treatment.webp";
+import serviceEndodonticTreatmentMobile from "../../images/services/service-endodontic-treatment-mobile.webp";
 import serviceOralSurgery from "../../images/services/service-oral-surgery.webp";
+import serviceOralSurgeryMobile from "../../images/services/service-oral-surgery-mobile.webp";
 import serviceOrthodontics from "../../images/services/service-orthodontics.webp";
+import serviceOrthodonticsMobile from "../../images/services/service-orthodontics-mobile.webp";
 import servicePeriodontalTreatment from "../../images/services/service-periodontal-treatment.webp";
+import servicePeriodontalTreatmentMobile from "../../images/services/service-periodontal-treatment-mobile.webp";
 import serviceProfessionalOralHygiene from "../../images/services/service-professional-oral-hygiene.webp";
+import serviceProfessionalOralHygieneMobile from "../../images/services/service-professional-oral-hygiene-mobile.webp";
 import serviceProstheticsCrowns from "../../images/services/service-prosthetics-crowns.webp";
+import serviceProstheticsCrownsMobile from "../../images/services/service-prosthetics-crowns-mobile.webp";
 import serviceTeethWhitening from "../../images/services/service-teeth-whitening.webp";
+import serviceTeethWhiteningMobile from "../../images/services/service-teeth-whitening-mobile.webp";
 import serviceVeneersRestorations from "../../images/services/service-veneers-restorations.webp";
+import serviceVeneersRestorationsMobile from "../../images/services/service-veneers-restorations-mobile.webp";
+
+// All source service images are 1536px wide - shared srcset width descriptor for every entry.
+export const SERVICE_IMAGE_FULL_WIDTH = 1536;
 
 export type ServiceDetail = SanityService & {
+  imageMobile: string;
   slug: string;
   intro: string;
   h2Title: string;
@@ -38,6 +52,7 @@ export const serviceDetails: ServiceDetail[] = [
     duration: "60 min",
     rating: 4.9,
     image: serviceProfessionalOralHygiene,
+    imageMobile: serviceProfessionalOralHygieneMobile,
     benefits: [
       "Ultrasonic tartar removal",
       "AirFlow polishing",
@@ -72,6 +87,7 @@ export const serviceDetails: ServiceDetail[] = [
     duration: "90 min",
     rating: 5,
     image: serviceTeethWhitening,
+    imageMobile: serviceTeethWhiteningMobile,
     benefits: [
       "Visible brightening",
       "In-clinic supervision",
@@ -106,6 +122,7 @@ export const serviceDetails: ServiceDetail[] = [
     duration: "2 appointments",
     rating: 5,
     image: serviceVeneersRestorations,
+    imageMobile: serviceVeneersRestorationsMobile,
     benefits: [
       "E.max and ceramic veneers",
       "Composite veneers and bonding",
@@ -155,6 +172,7 @@ export const serviceDetails: ServiceDetail[] = [
     duration: "3–6 months",
     rating: 4.9,
     image: serviceDentalImplants,
+    imageMobile: serviceDentalImplantsMobile,
     benefits: [
       "Implant placement",
       "Mini-implant options",
@@ -189,6 +207,7 @@ export const serviceDetails: ServiceDetail[] = [
     duration: "2 hours",
     rating: 4.9,
     image: serviceProstheticsCrowns,
+    imageMobile: serviceProstheticsCrownsMobile,
     benefits: [
       "Removable prosthetics",
       "Metal-ceramic crowns",
@@ -223,6 +242,7 @@ export const serviceDetails: ServiceDetail[] = [
     duration: "60–90 min",
     rating: 4.9,
     image: serviceEndodonticTreatment,
+    imageMobile: serviceEndodonticTreatmentMobile,
     benefits: [
       "Pulpitis management",
       "Canal filling",
@@ -257,6 +277,7 @@ export const serviceDetails: ServiceDetail[] = [
     duration: "Varies by case",
     rating: 5,
     image: serviceOrthodontics,
+    imageMobile: serviceOrthodonticsMobile,
     benefits: [
       "Clear aligner options",
       "Braces systems",
@@ -306,6 +327,7 @@ export const serviceDetails: ServiceDetail[] = [
     duration: "Varies by stage",
     rating: 4.9,
     image: servicePeriodontalTreatment,
+    imageMobile: servicePeriodontalTreatmentMobile,
     benefits: [
       "Gingivitis treatment",
       "Closed and open curettage",
@@ -340,6 +362,7 @@ export const serviceDetails: ServiceDetail[] = [
     duration: "45–90 min",
     rating: 4.8,
     image: serviceOralSurgery,
+    imageMobile: serviceOralSurgeryMobile,
     benefits: [
       "Tooth extractions",
       "Apicoectomy",
@@ -374,6 +397,7 @@ export const serviceDetails: ServiceDetail[] = [
     duration: "Varies by case",
     rating: 5,
     image: serviceDigitalDiagnostics,
+    imageMobile: serviceDigitalDiagnosticsMobile,
     benefits: [
       "Clinical consultation",
       "RVG imaging",
@@ -415,7 +439,7 @@ export const serviceDetails: ServiceDetail[] = [
   }
 ];
 
-export const fallbackServices: SanityService[] = serviceDetails.map(({ slug, intro, h2Title, h2Description, processTitle, process, candidatesTitle, candidates, metaTitle, metaDescription, ...service }) => service);
+export const fallbackServices = serviceDetails.map(({ slug, intro, h2Title, h2Description, processTitle, process, candidatesTitle, candidates, metaTitle, metaDescription, ...service }) => service);
 
 const serviceByTitle = new Map(serviceDetails.map((service) => [service.title, service]));
 const retiredServiceTitleAliases = new Map<string, string>([
@@ -509,7 +533,7 @@ function localizeServiceDetail(service: ServiceDetail): ServiceDetail {
   };
 }
 
-export function localizeServiceListItem(service: SanityService): SanityService {
+export function localizeServiceListItem<T extends SanityService>(service: T): T {
   const matchingService = serviceByTitle.get(service.title);
 
   if (!matchingService) {

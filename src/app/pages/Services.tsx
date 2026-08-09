@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ArrowRight, ShieldCheck, Sparkles, Gem, Wrench, Crown, Microscope, Smile, HeartPulse, Scissors, Baby } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { getLocalizedFallbackServices, getServiceSlugByTitle } from "../serviceData";
+import { getLocalizedFallbackServices, getServiceSlugByTitle, SERVICE_IMAGE_FULL_WIDTH } from "../serviceData";
 import { LocalizedNavLink } from "../routing";
 import { PageHero } from "../components/PageHero";
 import { siteImages } from "../siteImages";
@@ -44,7 +44,8 @@ export function Services() {
         eyebrow={t("services.header.badge")}
         title={t("services.header.title")}
         description={t("services.header.desc")}
-        imageSrc={siteImages.aboutImages.interior}
+        imageSrc={siteImages.aboutImages.interior.full}
+        imageSrcSet={`${siteImages.aboutImages.interior.mobile} 960w, ${siteImages.aboutImages.interior.full} ${siteImages.aboutImages.interior.fullWidth}w`}
         imageAlt={t("about.images.interiorAlt")}
         primaryAction={{ label: t("nav.bookAppointment"), to: "/contact" }}
       />
@@ -87,7 +88,10 @@ export function Services() {
                     <div className="relative overflow-hidden h-48 bg-[#eef1f8]">
                       <img
                         src={service.image}
+                        srcSet={`${service.imageMobile} 960w, ${service.image} ${SERVICE_IMAGE_FULL_WIDTH}w`}
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         alt={t("services.card.imageAlt", { service: service.title })}
+                        loading="lazy"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0F1932]/60 to-transparent" />

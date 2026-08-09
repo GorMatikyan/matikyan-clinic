@@ -4,7 +4,7 @@ import {
   Smile,
 } from "lucide-react";
 import { PhotoSlider } from "../components/PhotoSlider";
-import { getServiceDetailBySlug, getServiceSlugByTitle } from "../serviceData";
+import { getServiceDetailBySlug, getServiceSlugByTitle, SERVICE_IMAGE_FULL_WIDTH } from "../serviceData";
 import { LocalizedNavLink } from "../routing";
 import { siteImages } from "../siteImages";
 
@@ -17,10 +17,12 @@ const servicePreviewItems = [
   { key: "pediatric", title: "Diagnostics & Digital Dentistry" },
 ].map((item) => {
   const path = getServiceSlugByTitle(item.title);
+  const service = getServiceDetailBySlug(path);
   return {
     ...item,
     path,
-    image: getServiceDetailBySlug(path)?.image,
+    image: service?.image,
+    imageMobile: service?.imageMobile,
   };
 });
 
@@ -55,7 +57,7 @@ export function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {servicePreviewItems.map(({ key, path, image }) => {
+            {servicePreviewItems.map(({ key, path, image, imageMobile }) => {
               const serviceTitle = t(`home.services.items.${key}.title`);
               return (
                 <LocalizedNavLink
@@ -67,6 +69,8 @@ export function Home() {
                     {image ? (
                       <img
                         src={image}
+                        srcSet={imageMobile ? `${imageMobile} 960w, ${image} ${SERVICE_IMAGE_FULL_WIDTH}w` : undefined}
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         alt={t("services.card.imageAlt", { service: serviceTitle })}
                         width={1536}
                         height={1024}
@@ -97,7 +101,9 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <img
-              src={siteImages.clinicFacade}
+              src={siteImages.clinicFacade.full}
+              srcSet={`${siteImages.clinicFacade.mobile} 960w, ${siteImages.clinicFacade.full} ${siteImages.clinicFacade.fullWidth}w`}
+              sizes="(min-width: 1024px) 50vw, 100vw"
               alt={t("home.whyUs.imageAlt")}
               className="w-full rounded-2xl object-cover shadow-xl"
               style={{ height: "460px" }}

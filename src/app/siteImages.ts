@@ -7,17 +7,21 @@ import heroSlide03Mobile from "../../images/hero/hero-treatment-room-01-mobile.w
 import heroSlide04 from "../../images/hero/hero-patient-care-01.webp";
 import heroSlide04Mobile from "../../images/hero/hero-patient-care-01-mobile.webp";
 import aboutClinicPhoto from "../../images/sections/section-about-clinic-01.webp";
+import aboutClinicPhotoMobile from "../../images/sections/section-about-clinic-01-mobile.webp";
 import aboutInteriorPhoto from "../../images/sections/section-about-interior-01.webp";
+import aboutInteriorPhotoMobile from "../../images/sections/section-about-interior-01-mobile.webp";
 import whyUsImage from "../../images/sections/section-why-us-patient.webp";
+import whyUsImageMobile from "../../images/sections/section-why-us-patient-mobile.webp";
 import aboutConsultationPhoto from "../../images/sections/section-about-consultation-01.webp";
+import aboutConsultationPhotoMobile from "../../images/sections/section-about-consultation-01-mobile.webp";
 
 export const siteImages = {
-  clinicFacade: whyUsImage,
+  clinicFacade: { full: whyUsImage, mobile: whyUsImageMobile, fullWidth: 1200 },
   aboutImages: {
-    main: whyUsImage,
-    consultation: aboutConsultationPhoto,
-    equipment: aboutClinicPhoto,
-    interior: aboutInteriorPhoto,
+    main: { full: whyUsImage, mobile: whyUsImageMobile, fullWidth: 1200 },
+    consultation: { full: aboutConsultationPhoto, mobile: aboutConsultationPhotoMobile, fullWidth: 1200 },
+    equipment: { full: aboutClinicPhoto, mobile: aboutClinicPhotoMobile, fullWidth: 1400 },
+    interior: { full: aboutInteriorPhoto, mobile: aboutInteriorPhotoMobile, fullWidth: 1200 },
   },
   heroSlides: [
     { full: heroSlide01, mobile: heroSlide01Mobile, fullWidth: 1672 },

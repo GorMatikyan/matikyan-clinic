@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2, Microscope, ShieldCheck, Sparkles } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import type { ServiceDetail } from "../serviceData";
+import { SERVICE_IMAGE_FULL_WIDTH } from "../serviceData";
 import { LocalizedNavLink, useCurrentLanguage } from "../routing";
 
 type RelatedService = Pick<ServiceDetail, "slug" | "title" | "desc" | "category">;
@@ -101,6 +102,8 @@ export function ServiceLandingPage({ service, relatedServices }: ServiceLandingP
             <div className="relative rounded-[1.8rem] overflow-hidden border border-white/16 shadow-[0_26px_70px_rgba(0,0,0,0.3)]">
             <img
               src={service.image}
+              srcSet={`${service.imageMobile} 960w, ${service.image} ${SERVICE_IMAGE_FULL_WIDTH}w`}
+              sizes="(min-width: 1024px) 45vw, 100vw"
               alt={t("serviceDetail.imageAlt", { service: service.title })}
               className="w-full h-full object-cover min-h-[300px] lg:min-h-[400px] brightness-[1.02] saturate-[0.96]"
             />

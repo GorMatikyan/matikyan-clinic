@@ -12,6 +12,7 @@ type PageHeroProps = {
   title: string;
   description: string;
   imageSrc?: string;
+  imageSrcSet?: string;
   imageAlt?: string;
   primaryAction?: HeroAction;
   secondaryAction?: HeroAction;
@@ -46,6 +47,7 @@ export function PageHero({
   title,
   description,
   imageSrc,
+  imageSrcSet,
   imageAlt = "",
   primaryAction,
   secondaryAction,
@@ -98,6 +100,8 @@ export function PageHero({
               <div className="relative overflow-hidden rounded-[1.8rem] border border-white/16 bg-[#eef1f8] shadow-[0_26px_70px_rgba(0,0,0,0.3)]">
                 <img
                   src={imageSrc}
+                  srcSet={imageSrcSet}
+                  sizes="(min-width: 1024px) 55vw, 100vw"
                   alt={imageAlt}
                   width={1200}
                   height={801}

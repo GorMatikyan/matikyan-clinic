@@ -15,7 +15,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 
-const CMS_API_BASE_URL = process.env.CMS_API_BASE_URL ?? "https://admin-matikyan.com";
+const CMS_API_BASE_URL = process.env.CMS_API_BASE_URL ?? "https://matikyan-admin.am";
 const PUBLIC_DIR = path.resolve(fileURLToPath(new URL("../public", import.meta.url)));
 const GENERATED_DIR = path.resolve(fileURLToPath(new URL("../src/generated", import.meta.url)));
 const ROOT_DIR = path.resolve(fileURLToPath(new URL("..", import.meta.url)));

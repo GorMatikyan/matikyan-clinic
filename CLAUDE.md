@@ -14,12 +14,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev                                          # Vite dev server on :5173
-CMS_API_BASE_URL=http://localhost:8080 npm run build  # prebuild (export-seo-files.mjs) + vite build
+npm run dev                                                                       # Vite dev server on :5173
+CMS_API_BASE_URL=http://localhost:8080 VITE_CMS_API_BASE_URL=http://localhost:8080 npm run build  # prebuild (export-seo-files.mjs, plain Node) + vite build (bundles only VITE_-prefixed vars)
 npx tsc --noEmit                                       # typecheck
 npx vite preview --port 4173                           # serve the last build (does NOT interpret .htaccess)
 ```
-`CMS_API_BASE_URL` defaults to `https://admin-matikyan.com` (prod) if unset — point it at a local backend (`http://localhost:8080`) for local builds.
+Two separate env vars are needed for a full local build, both pointing at the same backend: `CMS_API_BASE_URL` (read by `scripts/export-seo-files.mjs` under plain Node) and `VITE_CMS_API_BASE_URL` (the only prefix Vite exposes to `import.meta.env`, read by `src/lib/cmsApi.ts` at runtime). Both default to `https://matikyan-admin.am` (prod) if unset. This split-naming footgun is exactly what silently broke the deploy pipeline's `cms-api-base-url` setting for months (see `matikyan-website-service` git history) — `SiteBuildRunner` now sets both when triggering a real deploy, so this only matters for manual local builds.
 
 ## Architecture
 

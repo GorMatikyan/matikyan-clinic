@@ -1,4 +1,4 @@
-const CMS_API_BASE_URL = import.meta.env.VITE_CMS_API_BASE_URL ?? "https://admin-matikyan.com";
+const CMS_API_BASE_URL = import.meta.env.VITE_CMS_API_BASE_URL ?? "https://matikyan-admin.am";
 
 export interface CmsSeoFields {
   metaTitle: string | null;

@@ -81,3 +81,39 @@ ErrorDocument 404 /index.html
   # serves index.html so the SPA renders the custom-designed 404 page for it).
   RewriteRule ^ - [R=404,L]
 </IfModule>
+
+# Compression - the host was serving the ~740KB main JS bundle completely uncompressed
+# (no Content-Encoding at all), which was the single largest factor behind an 8s+ LCP.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json application/xml application/rss+xml application/atom+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/ttf font/otf font/woff application/vnd.ms-fontobject
+</IfModule>
+
+# Caching - Vite fingerprints every filename under /assets/ with a content hash, so those files
+# are safe to cache forever (a content change always produces a new filename). index.html is not
+# fingerprinted and references the current hashes, so it must always be revalidated.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(js|css|webp|png|jpg|jpeg|svg|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>

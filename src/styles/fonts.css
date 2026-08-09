@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Armenian:wght@400;500;600;700;800&display=swap');
+/* Font loading moved to <link rel="stylesheet"> + preconnect in index.html - a CSS @import here
+   is render-blocking and sequential (parse this file, discover the import, then a fresh
+   cross-origin round-trip before the font CSS itself can even start downloading). */
 
 :root {
   --font-display: 'Manrope', 'Noto Sans Armenian', 'Inter', system-ui, sans-serif;

@@ -232,7 +232,7 @@ export function Contact() {
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "validation-error" | "submit-error">("idle");
 
   function updateField(field: keyof typeof form) {
     return (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
@@ -243,13 +243,13 @@ export function Contact() {
     event.preventDefault();
 
     if (!form.firstName || !form.lastName || (!form.phone && !form.email)) {
-      setStatus("error");
+      setStatus("validation-error");
       return;
     }
 
     setStatus("submitting");
     const ok = await submitContactRequest(form);
-    setStatus(ok ? "success" : "error");
+    setStatus(ok ? "success" : "submit-error");
     if (ok) {
       setForm((prev) => ({ ...prev, firstName: "", lastName: "", phone: "", email: "", message: "" }));
     }
@@ -395,8 +395,11 @@ export function Contact() {
                   {status === "success" && (
                     <p className="text-sm text-green-700">{t("contact.request.success", { defaultValue: "Thank you - we'll be in touch shortly." })}</p>
                   )}
-                  {status === "error" && (
-                    <p className="text-sm text-red-600">{t("contact.request.error", { defaultValue: "Something went wrong. Please fill in your name and a phone or email, then try again." })}</p>
+                  {status === "validation-error" && (
+                    <p className="text-sm text-red-600">{t("contact.request.validationError", { defaultValue: "Please fill in your name and a phone or email, then try again." })}</p>
+                  )}
+                  {status === "submit-error" && (
+                    <p className="text-sm text-red-600">{t("contact.request.submitError", { defaultValue: "Something went wrong sending your request. Please try again shortly, or contact us by phone." })}</p>
                   )}
                 </div>
               </form>

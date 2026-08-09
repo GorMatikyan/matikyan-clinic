@@ -1,9 +1,6 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useSanityData } from "../../hooks/useSanityData";
-import { SLIDES_QUERY } from "../../lib/queries";
-import type { SanitySlide } from "../../lib/sanityTypes";
 import { LocalizedNavLink } from "../routing";
 import { siteImages } from "../siteImages";
 
@@ -18,12 +15,10 @@ const fallbackSlides = [
 
 export function PhotoSlider() {
   const { t } = useTranslation();
-  const { data: sanitySlides } = useSanityData<SanitySlide[]>(SLIDES_QUERY, []);
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
   const [loadedSlides, setLoadedSlides] = useState<number[]>([0]);
 
-  const useSanity = Array.isArray(sanitySlides) && sanitySlides.length > 0;
   const localizedFallbackSlides = useMemo(() => {
     const translatedSlides = t("slider.slides", { returnObjects: true });
 
@@ -47,7 +42,7 @@ export function PhotoSlider() {
     });
   }, [t]);
 
-  const slides = useSanity ? sanitySlides : localizedFallbackSlides;
+  const slides = localizedFallbackSlides;
   const totalSlides = slides.length;
 
   const next = useCallback(() => setCurrent((c) => (c + 1) % totalSlides), [totalSlides]);

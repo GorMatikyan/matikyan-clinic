@@ -1,9 +1,6 @@
 import { useMemo, useState } from "react";
 import { ChevronDown, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useSanityData } from "../../hooks/useSanityData";
-import { FAQ_QUERY } from "../../lib/queries";
-import type { SanityFaqItem } from "../../lib/sanityTypes";
 import { LocalizedNavLink } from "../routing";
 import { PageHero } from "../components/PageHero";
 
@@ -48,52 +45,17 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 export function FAQ() {
   const { t } = useTranslation();
   const [activeKey, setActiveKey] = useState<typeof categoryKeys[number]>("general");
-  const { data: faqItems } = useSanityData<SanityFaqItem[]>(FAQ_QUERY, []);
   const faqData = useMemo(() => {
-    if (!faqItems.length) {
-      return Object.fromEntries(
-        categoryKeys.map((key) => [
-          key,
-          questionsData[key].map((item, index) => ({
-            q: t(`faq.items.${key}.${index}.q`, { defaultValue: item.q }),
-            a: t(`faq.items.${key}.${index}.a`, { defaultValue: item.a }),
-          })),
-        ]),
-      ) as typeof questionsData;
-    }
-
-    const grouped: Partial<typeof questionsData> = {};
-    faqItems.forEach(({ question, answer, category }) => {
-      const key = category?.toLowerCase();
-      if (!key || !categoryKeys.some((categoryKey) => categoryKey === key)) return;
-      const typedKey = key as keyof typeof questionsData;
-      const current = grouped[typedKey] ?? [];
-      grouped[typedKey] = [...current, { q: question, a: answer }];
-    });
-
-    return {
-      ...Object.fromEntries(
-        categoryKeys.map((key) => [
-          key,
-          questionsData[key].map((item, index) => ({
-            q: t(`faq.items.${key}.${index}.q`, { defaultValue: item.q }),
-            a: t(`faq.items.${key}.${index}.a`, { defaultValue: item.a }),
-          })),
-        ]),
-      ),
-      ...Object.fromEntries(
-        Object.entries(grouped)
-          .filter(([, items]) => items && items.length > 0)
-          .map(([key, items]) => [
-            key,
-            (items ?? []).map((item, index) => ({
-              q: t(`faq.items.${key}.${index}.q`, { defaultValue: item.q }),
-              a: t(`faq.items.${key}.${index}.a`, { defaultValue: item.a }),
-            })),
-          ]),
-      ),
-    } as typeof questionsData;
-  }, [faqItems, t]);
+    return Object.fromEntries(
+      categoryKeys.map((key) => [
+        key,
+        questionsData[key].map((item, index) => ({
+          q: t(`faq.items.${key}.${index}.q`, { defaultValue: item.q }),
+          a: t(`faq.items.${key}.${index}.a`, { defaultValue: item.a }),
+        })),
+      ]),
+    ) as typeof questionsData;
+  }, [t]);
 
   return (
     <div>

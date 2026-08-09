@@ -2,17 +2,18 @@ import { MessageCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useSiteSettings } from "../../hooks/useSiteSettings";
 
-const DEFAULT_PHONE = "+37410210122";
+const DEFAULT_WHATSAPP_NUMBER = "+37494250122";
 
 /**
  * Online-chat capability (spec item 24) via WhatsApp click-to-chat - a real, zero-backend way for
- * visitors to reach the clinic instantly, using the same phone number already shown in the header.
+ * visitors to reach the clinic instantly. Uses its own whatsappNumber setting (independent of the
+ * main displayed phone number) since a business's WhatsApp line commonly differs from its landline.
  * No third-party chat-widget account/ID exists for this project, so this avoids a fake integration.
  */
 export function WhatsAppChat() {
   const { t } = useTranslation();
   const settings = useSiteSettings();
-  const phone = (settings?.phoneNumber ?? DEFAULT_PHONE).replace(/[^\d+]/g, "");
+  const phone = (settings?.whatsappNumber ?? DEFAULT_WHATSAPP_NUMBER).replace(/[^\d+]/g, "");
 
   return (
     <a

@@ -43,6 +43,7 @@ export interface CmsPublicSettings {
   preferredDomain: string;
   address: string;
   phoneNumber: string;
+  whatsappNumber: string | null;
   email: string;
   openingHours: string | null;
   defaultOgImageUrl: string | null;

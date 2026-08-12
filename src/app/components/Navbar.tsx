@@ -166,34 +166,6 @@ export function Navbar() {
               ))}
             </div>
 
-            <div className="hidden 2xl:flex items-center gap-1">
-              {socialLinks.map(({ url, platform }) => {
-                const Icon = socialIcons[platform];
-                return (
-                  <a
-                    key={url}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={platform}
-                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl transition-colors ${
-                      isOverlay ? "text-white/72 hover:bg-white/8 hover:text-white" : "text-[#5B6475] hover:bg-[#B5C7EB]/10 hover:text-[#0F1932]"
-                    }`}
-                  >
-                    <Icon className="w-4 h-4" />
-                  </a>
-                );
-              })}
-              <a
-                href={`mailto:${email}`}
-                aria-label={email}
-                className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl transition-colors ${
-                  isOverlay ? "text-white/72 hover:bg-white/8 hover:text-white" : "text-[#5B6475] hover:bg-[#B5C7EB]/10 hover:text-[#0F1932]"
-                }`}
-              >
-                <Mail className="w-4 h-4" />
-              </a>
-            </div>
             <a
               href={phoneHref}
               aria-label={t("nav.callClinic")}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router";
-import { Menu, X, Phone, Mail, Facebook, Instagram, Youtube, Share2 } from "lucide-react";
+import { Menu, X, Phone, Facebook, Instagram, Youtube, Share2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import logoImg from "../../imports/matikyan-clinic-logo-am.png";
 import { getLocalizedPathForLanguage, LocalizedNavLink, stripLanguagePrefix, type AppLanguage, useCurrentLanguage } from "../routing";
@@ -9,7 +9,6 @@ import { parseSocialLinks, type SocialPlatform } from "../../lib/socialLinks";
 import { SiteSearch } from "./SiteSearch";
 
 const DEFAULT_PHONE = "+37410210122";
-const DEFAULT_EMAIL = "info@matikyan.am";
 
 const socialIcons: Record<SocialPlatform, typeof Facebook> = {
   facebook: Facebook,
@@ -51,7 +50,6 @@ export function Navbar() {
   const settings = useSiteSettings();
   const phone = settings?.phoneNumber ?? DEFAULT_PHONE;
   const phoneHref = `tel:${phone.replace(/\s+/g, "")}`;
-  const email = settings?.email ?? DEFAULT_EMAIL;
   const socialLinks = parseSocialLinks(settings?.socialLinksJson);
 
   useEffect(() => {
@@ -244,14 +242,6 @@ export function Navbar() {
           >
             <Phone className="h-4 w-4 text-[#7890BF]" />
             {phone}
-          </a>
-          <a
-            href={`mailto:${email}`}
-            className="flex items-center justify-center gap-2 rounded-xl border border-[#0F1932]/10 px-5 py-3 text-sm text-[#0F1932]"
-            style={{ fontWeight: 500 }}
-          >
-            <Mail className="h-4 w-4 text-[#7890BF]" />
-            {email}
           </a>
           {socialLinks.length > 0 && (
             <div className="flex items-center justify-center gap-2 pt-1">

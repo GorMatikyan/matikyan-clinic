@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 `matikyan-clinic` is the public-facing website for Matikyan Dental Clinic — a React SPA, deployed as static files to cPanel hosting (no server process of its own). Its CMS/SEO backend and admin panel live in the **sibling** repo `../matikyan-website-service` (`backend/` + `admin/`) — see that repo's `CLAUDE.md` for backend architecture. Do not confuse it with `../medical-management-service`, which is a separate, unrelated clinic-ops CRM project (patients/appointments/doctors) that this website has no connection to and should never call into.
 
+**VM/deploy/infra operations (the production server, cPanel/FTPS, nginx, database, secrets): see [`../matikyan-website-service/infra/OPERATIONS.md`](../matikyan-website-service/infra/OPERATIONS.md).** This is the actual deploy pipeline's home even though it's in the sibling repo — this site has no deploy mechanism of its own.
+
 ## Constraints that still apply
 
 - **Pages, images, and the color palette are approved** — don't add/remove pages or replace images without a clear reason; minor cropping/format conversion (e.g. WebP) is fine.

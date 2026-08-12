@@ -167,6 +167,54 @@ async function exportRedirectsIntoHtaccess() {
   console.log(`[export-seo-files] wrote ${rules.trim().split("\n").filter(Boolean).length} redirect(s) into public/.htaccess`);
 }
 
+function htmlAttrEscape(value) {
+  return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+// index.html's <title>/description/OG/Twitter tags are static markup - there's no per-route
+// server rendering, so link-preview crawlers (which never execute JS) only ever see this one
+// file regardless of which page was actually shared. This at least keeps the homepage's own
+// preview (the one actually shared most often) in sync with what's set in the admin panel,
+// rather than the hardcoded placeholder values the template shipped with.
+async function applyHomepageMetaTags(pageSeoEntries) {
+  const homepage = pageSeoEntries.find((page) => page.path === "/");
+  if (!homepage) return;
+
+  const { seoFields } = homepage;
+  const title = seoFields.metaTitle;
+  const description = seoFields.metaDescription;
+  const ogTitle = seoFields.ogTitle || title;
+  const ogDescription = seoFields.ogDescription || description;
+  const ogImage = seoFields.ogImageUrl;
+
+  const indexPath = path.join(ROOT_DIR, "index.html");
+  let html = await readFile(indexPath, "utf-8");
+
+  const replacements = [
+    [/<title>.*?<\/title>/s, title && `<title>${htmlAttrEscape(title)}</title>`],
+    [/<meta name="description" content="[^"]*" \/>/, description && `<meta name="description" content="${htmlAttrEscape(description)}" />`],
+    [/<meta property="og:title" content="[^"]*" \/>/, ogTitle && `<meta property="og:title" content="${htmlAttrEscape(ogTitle)}" />`],
+    [/<meta property="og:description" content="[^"]*" \/>/, ogDescription && `<meta property="og:description" content="${htmlAttrEscape(ogDescription)}" />`],
+    [/<meta property="og:image" content="[^"]*" \/>/, ogImage && `<meta property="og:image" content="${htmlAttrEscape(ogImage)}" />`],
+    [/<meta name="twitter:title" content="[^"]*" \/>/, ogTitle && `<meta name="twitter:title" content="${htmlAttrEscape(ogTitle)}" />`],
+    [/<meta name="twitter:description" content="[^"]*" \/>/, ogDescription && `<meta name="twitter:description" content="${htmlAttrEscape(ogDescription)}" />`],
+    [/<meta name="twitter:image" content="[^"]*" \/>/, ogImage && `<meta name="twitter:image" content="${htmlAttrEscape(ogImage)}" />`],
+  ];
+
+  let changed = 0;
+  for (const [pattern, replacement] of replacements) {
+    if (replacement && pattern.test(html)) {
+      html = html.replace(pattern, replacement);
+      changed += 1;
+    }
+  }
+
+  if (changed > 0) {
+    await writeFile(indexPath, html, "utf-8");
+    console.log(`[export-seo-files] updated ${changed} homepage meta tag(s) in index.html from CMS data`);
+  }
+}
+
 async function applyStagingNoindex() {
   if (!SITE_STAGING) return;
 
@@ -194,6 +242,7 @@ try {
   const settings = await fetchJsonData("/api/public/cms/settings");
   const pageSeoEntries = await fetchJsonData("/api/public/cms/pages/all");
   await exportSitemap(settings.preferredDomain, pageSeoEntries);
+  await applyHomepageMetaTags(pageSeoEntries);
 } catch (error) {
-  console.warn(`[export-seo-files] could not build sitemap.xml (${error.message}). Keeping the existing public/sitemap.xml as-is.`);
+  console.warn(`[export-seo-files] could not build sitemap.xml / homepage meta tags (${error.message}). Keeping index.html/sitemap.xml as-is.`);
 }

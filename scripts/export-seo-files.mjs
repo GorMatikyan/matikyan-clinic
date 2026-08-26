@@ -82,9 +82,10 @@ async function exportFile(endpoint, filename) {
   }
 }
 
-async function exportGeneratedJson(endpoint, filename, { unwrap = true } = {}) {
+async function exportGeneratedJson(endpoint, filename, { unwrap = true, transform } = {}) {
   try {
-    const data = unwrap ? await fetchJsonData(endpoint) : JSON.parse(await fetchText(endpoint));
+    let data = unwrap ? await fetchJsonData(endpoint) : JSON.parse(await fetchText(endpoint));
+    if (transform) data = transform(data);
     await mkdir(GENERATED_DIR, { recursive: true });
     await writeFile(path.join(GENERATED_DIR, filename), JSON.stringify(data, null, 2) + "\n", "utf-8");
     console.log(`[export-seo-files] wrote src/generated/${filename} from ${CMS_API_BASE_URL}${endpoint}`);
@@ -234,7 +235,11 @@ await exportFile("/api/public/cms/robots.txt", "robots.txt");
 await exportRedirectsIntoHtaccess();
 await applyStagingNoindex();
 
-await exportGeneratedJson("/api/public/cms/settings", "settings.json");
+await exportGeneratedJson("/api/public/cms/settings", "settings.json", {
+  // Never fire real GA events from the staging copy of the site - it'd pollute production
+  // analytics data with our own testing traffic.
+  transform: (settings) => (SITE_STAGING ? { ...settings, googleAnalyticsId: null } : settings),
+});
 await exportGeneratedJson("/api/public/cms/pages/all", "pages.json");
 await exportGeneratedJson("/api/public/cms/settings/schema", "schema.json", { unwrap: false });
 

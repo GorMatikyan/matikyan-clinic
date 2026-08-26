@@ -7,6 +7,7 @@ import { SeoHead } from "./SeoHead";
 import { StructuredData } from "./StructuredData";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { WhatsAppChat } from "./WhatsAppChat";
+import { Analytics } from "./Analytics";
 import { getLanguageFromPathname } from "../routing";
 
 export function Layout() {
@@ -33,6 +34,7 @@ export function Layout() {
     <div className="min-h-screen flex flex-col bg-background">
       <SeoHead />
       <StructuredData />
+      <Analytics />
       <Navbar />
       <main className="flex-1">
         <Breadcrumbs />

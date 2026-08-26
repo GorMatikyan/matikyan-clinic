@@ -50,6 +50,7 @@ export interface CmsPublicSettings {
   googleMapsEmbedUrl: string | null;
   googleBusinessProfileUrl: string | null;
   yandexMapsUrl: string | null;
+  googleAnalyticsId: string | null;
   socialLinksJson: string | null;
 }
 

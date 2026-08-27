@@ -8,6 +8,7 @@ import { StructuredData } from "./StructuredData";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { WhatsAppChat } from "./WhatsAppChat";
 import { Analytics } from "./Analytics";
+import { YandexMetrica } from "./YandexMetrica";
 import { getLanguageFromPathname } from "../routing";
 
 export function Layout() {
@@ -35,6 +36,7 @@ export function Layout() {
       <SeoHead />
       <StructuredData />
       <Analytics />
+      <YandexMetrica />
       <Navbar />
       <main className="flex-1">
         <Breadcrumbs />

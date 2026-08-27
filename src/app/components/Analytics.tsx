@@ -27,10 +27,18 @@ export function Analytics() {
     window.gtag = gtag;
     // Modern gtag.js ships Consent Mode enabled by default, which silently withholds the
     // actual network hit (everything still initializes locally - dataLayer pushes, gtm.dom/
-    // gtm.load fire - but Google's servers never receive anything) unless a consent signal is
-    // given. This site has no cookie-consent banner and no EU/GDPR audience, so grant by
+    // gtm.load fire - but Google's servers never receive anything) unless ALL FOUR Consent
+    // Mode v2 signals are given. Granting only ad_storage/analytics_storage leaves consent
+    // unresolved internally (confirmed via window.google_tag_data.ics.entries being empty)
+    // and gtag.js withholds every hit as a result - it never even attempts the network call.
+    // This site has no cookie-consent banner and no EU/GDPR audience, so grant all four by
     // default rather than silently losing all real analytics data.
-    gtag("consent", "default", { ad_storage: "granted", analytics_storage: "granted" });
+    gtag("consent", "default", {
+      ad_storage: "granted",
+      analytics_storage: "granted",
+      ad_user_data: "granted",
+      ad_personalization: "granted",
+    });
     gtag("js", new Date());
     // send_page_view: false - this SPA has no full page reload between routes, so page_view
     // events are sent manually below on every route change instead of only on initial load.

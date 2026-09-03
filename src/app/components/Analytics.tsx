@@ -42,7 +42,16 @@ export function Analytics() {
     gtag("js", new Date());
     // send_page_view: false - this SPA has no full page reload between routes, so page_view
     // events are sent manually below on every route change instead of only on initial load.
-    gtag("config", measurementId, { send_page_view: false });
+    //
+    // transport_type: "beacon" - root-caused live on 2026-09-03: gtag.js's default transport
+    // (fetch/XHR) silently never attempted a single network request on this site - zero hits
+    // in months, zero console errors, dataLayer/consent/ics all correct. A hand-built
+    // navigator.sendBeacon() call to the exact same /g/collect endpoint with the same
+    // measurement ID registered in Realtime within seconds. Forcing gtag.js onto the Beacon
+    // API (the one transport proven to work here) instead of letting it auto-select fetch/XHR
+    // is the fix - see also YandexMetrica.tsx, which never had this problem because Yandex's
+    // tag.js uses sendBeacon/image-pixel by default rather than fetch.
+    gtag("config", measurementId, { send_page_view: false, transport_type: "beacon" });
   }, [measurementId]);
 
   useEffect(() => {

@@ -239,7 +239,9 @@ await exportGeneratedJson("/api/public/cms/settings", "settings.json", {
   // Never fire real GA/Metrica events from the staging copy of the site - it'd pollute
   // production analytics data with our own testing traffic.
   transform: (settings) =>
-    SITE_STAGING ? { ...settings, googleAnalyticsId: null, yandexMetricaId: null } : settings,
+    SITE_STAGING
+      ? { ...settings, googleAnalyticsId: null, googleAnalyticsApiSecret: null, yandexMetricaId: null }
+      : settings,
 });
 await exportGeneratedJson("/api/public/cms/pages/all", "pages.json");
 await exportGeneratedJson("/api/public/cms/settings/schema", "schema.json", { unwrap: false });

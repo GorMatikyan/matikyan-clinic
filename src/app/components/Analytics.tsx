@@ -23,21 +23,24 @@ function getOrCreateClientId(): string {
 }
 
 /**
- * Sends page_view hits to GA4 directly via the Measurement Protocol (navigator.sendBeacon),
- * bypassing gtag.js's own delivery entirely.
+ * Sends page_view hits to GA4 directly via the Measurement Protocol, bypassing gtag.js's own
+ * delivery entirely.
  *
- * Root-caused live on 2026-09-03: gtag.js's own hit-sending mechanism silently never
- * attempted a single network request on this site, in production, for months - dataLayer
- * sequence, Consent Mode signals, and gtag.js taking control of the dataLayer were all
- * verified correct; zero console errors; yet GA4 Admin's Data Streams page confirmed
- * "no data received". Forcing transport_type: "beacon" in the gtag('config', ...) call
- * (a real, documented gtag.js option) did NOT fix it either - gtag.js still never sent
- * anything even when forced onto the one transport mechanism proven to work here. A
- * hand-built Measurement Protocol request sent via navigator.sendBeacon() to the exact same
- * endpoint and measurement ID registered in GA4 Realtime within seconds, proving the
- * property/endpoint were never the problem - only gtag.js's internal send logic was. This
- * component reimplements just page-view tracking using that proven-working mechanism
- * directly, without gtag.js.
+ * Root-caused live on 2026-09-03, in two stages:
+ * 1. gtag.js's own hit-sending mechanism silently never attempted a single network request on
+ *    this site, in production, for months - dataLayer sequence, Consent Mode signals, and
+ *    gtag.js taking control of the dataLayer were all verified correct; zero console errors;
+ *    yet GA4 Admin's Data Streams page confirmed "no data received". Forcing
+ *    transport_type: "beacon" in the gtag('config', ...) call (a real, documented gtag.js
+ *    option) did NOT fix it - gtag.js still never sent anything even forced onto the one
+ *    transport mechanism separately proven to work (a hand-built request via
+ *    navigator.sendBeacon() to the g/collect endpoint registered in Realtime within seconds).
+ * 2. Replacing gtag.js with a direct Measurement Protocol call still failed at first: sending
+ *    it via navigator.sendBeacon() got an HTTP 503 every time. sendBeacon() always sends in
+ *    "no-cors" mode with no real CORS negotiation, and the Measurement Protocol's mp/collect
+ *    endpoint (unlike the old g/collect pixel endpoint) rejects that for a JSON POST body. A
+ *    plain fetch() with keepalive:true (proper CORS mode, same page-unload-survival guarantee
+ *    as sendBeacon) got a clean 204 on the first try.
  *
  * Only page_view is sent (no gtag.js Enhanced Measurement, so no automatic scroll/outbound
  * click/file download events) - if those are needed later, add explicit sendHit() calls for
@@ -72,10 +75,12 @@ export function Analytics() {
         },
       ],
     });
-    // Blob with an explicit type sets the Content-Type header correctly (application/json) -
-    // a plain string would default to text/plain, which the Measurement Protocol endpoint
-    // does not reliably accept.
-    navigator.sendBeacon(url, new Blob([body], { type: "application/json" }));
+    // keepalive:true survives page unload the same way sendBeacon does, but (unlike
+    // sendBeacon) performs a real CORS request - see the root-cause note above for why that
+    // distinction is exactly what makes this work against mp/collect.
+    fetch(url, { method: "POST", body, keepalive: true }).catch(() => {
+      // Best-effort - a dropped analytics hit should never surface as a user-visible error.
+    });
   }, [measurementId, apiSecret, location.pathname, location.search]);
 
   return null;

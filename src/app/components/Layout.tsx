@@ -10,6 +10,7 @@ import { WhatsAppChat } from "./WhatsAppChat";
 import { Analytics } from "./Analytics";
 import { YandexMetrica } from "./YandexMetrica";
 import { getLanguageFromPathname } from "../routing";
+import { ensureLanguageLoaded } from "../../i18n";
 
 export function Layout() {
   const { pathname } = useLocation();
@@ -24,7 +25,7 @@ export function Layout() {
   useEffect(() => {
     if (activeLanguage === currentLanguage) return;
     localStorage.setItem("lang", currentLanguage);
-    void i18n.changeLanguage(currentLanguage);
+    void ensureLanguageLoaded(currentLanguage).then(() => i18n.changeLanguage(currentLanguage));
   }, [activeLanguage, currentLanguage, i18n]);
 
   if (activeLanguage !== currentLanguage) {

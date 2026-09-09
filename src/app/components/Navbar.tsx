@@ -7,6 +7,7 @@ import { getLocalizedPathForLanguage, LocalizedNavLink, stripLanguagePrefix, typ
 import { useSiteSettings } from "../../hooks/useSiteSettings";
 import { parseSocialLinks, type SocialPlatform } from "../../lib/socialLinks";
 import { SiteSearch } from "./SiteSearch";
+import { ensureLanguageLoaded } from "../../i18n";
 
 const DEFAULT_PHONE = "+37410210122";
 
@@ -65,7 +66,7 @@ export function Navbar() {
   const changeLang = (code: AppLanguage) => {
     localStorage.setItem("lang", code);
     const localizedPath = getLocalizedPathForLanguage(location.pathname, code);
-    void i18n.changeLanguage(code);
+    void ensureLanguageLoaded(code).then(() => i18n.changeLanguage(code));
     void navigate(`${localizedPath}${location.search}${location.hash}`);
   };
 

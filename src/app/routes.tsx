@@ -1,5 +1,6 @@
 import { Suspense, lazy, useEffect, useState, type ReactNode } from "react";
-import { createBrowserRouter, useLocation, useNavigate, useParams, type RouteObject } from "react-router";
+import { useTranslation } from "react-i18next";
+import { createBrowserRouter, useLocation, useNavigate, type RouteObject } from "react-router";
 import { Layout } from "./components/Layout";
 import { Home } from "./pages/Home";
 import { getLanguageFromPathname, isSecondaryLanguage, localizePath, LocalizedNavLink, stripLanguagePrefix } from "./routing";
@@ -57,14 +58,16 @@ const ServiceDetail = lazy(async () => {
 });
 
 function NotFoundContent() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-[60vh] flex items-center justify-center text-center px-6">
       <div>
         <div className="text-primary mb-4" style={{ fontFamily: "var(--font-display)", fontSize: "5rem", lineHeight: 1 }}>404</div>
-        <h1 className="text-foreground mb-4" style={{ fontFamily: "var(--font-display)", fontSize: "1.8rem" }}>Page Not Found</h1>
-        <p className="text-muted-foreground mb-6">The page you're looking for doesn't exist.</p>
+        <h1 className="text-foreground mb-4" style={{ fontFamily: "var(--font-display)", fontSize: "1.8rem" }}>{t("notFound.title")}</h1>
+        <p className="text-muted-foreground mb-6">{t("notFound.description")}</p>
         <LocalizedNavLink to="/" className="px-6 py-3 bg-primary text-primary-foreground rounded-xl text-sm hover:bg-primary/90 transition-colors inline-block">
-          Go Home
+          {t("notFound.goHome")}
         </LocalizedNavLink>
       </div>
     </div>
@@ -120,16 +123,6 @@ function NotFound() {
   return <NotFoundContent />;
 }
 
-function LocalizedLayout() {
-  const { lang } = useParams();
-
-  if (!isSecondaryLanguage(lang)) {
-    return <NotFound />;
-  }
-
-  return <Layout />;
-}
-
 function RouteLoader() {
   return (
     <div className="min-h-[60vh] px-6 py-16">
@@ -179,9 +172,21 @@ export const router = createBrowserRouter([
     Component: Layout,
     children: routeChildren,
   },
+  // Explicit /en and /ru prefixes rather than a generic ":lang" param - a dynamic param here
+  // used to rank above "/"'s own catch-all in React Router's route matching, so *any* unknown
+  // path (e.g. /some-typo, /foo/bar) was silently routed through this branch instead, treating
+  // the first segment as an unrecognized "lang" and rendering NotFound completely unwrapped -
+  // no Navbar, no Footer, no SeoHead. With explicit static prefixes, only genuine /en/* and
+  // /ru/* paths match here; everything else falls through to "/"'s own (fully Layout-wrapped)
+  // catch-all as intended. Keep in sync with SECONDARY_LANGUAGES in routing.tsx.
   {
-    path: ":lang",
-    Component: LocalizedLayout,
+    path: "en",
+    Component: Layout,
+    children: routeChildren,
+  },
+  {
+    path: "ru",
+    Component: Layout,
     children: routeChildren,
   },
 ]);

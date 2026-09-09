@@ -1,60 +1,423 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://matikyan.am/</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/"/>
   </url>
   <url>
     <loc>https://matikyan.am/about</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/about"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/about"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/about</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/about"/>
   </url>
   <url>
     <loc>https://matikyan.am/doctors</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/doctors"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/doctors"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/doctors"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/doctors"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/doctors</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/doctors"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/doctors"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/doctors"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/doctors"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/doctors</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/doctors"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/doctors"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/doctors"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/doctors"/>
   </url>
   <url>
     <loc>https://matikyan.am/services</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/services</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services"/>
   </url>
   <url>
     <loc>https://matikyan.am/faq</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/faq"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/faq</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/faq"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/faq</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/faq"/>
   </url>
   <url>
     <loc>https://matikyan.am/blog</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/blog"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/blog"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/blog</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/blog"/>
   </url>
   <url>
     <loc>https://matikyan.am/contact</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/contact"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/contact"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/contact</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/contact"/>
   </url>
   <url>
     <loc>https://matikyan.am/warranty</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/warranty"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/warranty"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/warranty"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/warranty"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/warranty</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/warranty"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/warranty"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/warranty"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/warranty"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/warranty</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/warranty"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/warranty"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/warranty"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/warranty"/>
   </url>
   <url>
     <loc>https://matikyan.am/dental-tourism</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/dental-tourism"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/dental-tourism"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/dental-tourism"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/dental-tourism"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/dental-tourism</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/dental-tourism"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/dental-tourism"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/dental-tourism"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/dental-tourism"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/dental-tourism</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/dental-tourism"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/dental-tourism"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/dental-tourism"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/dental-tourism"/>
   </url>
   <url>
     <loc>https://matikyan.am/services/dental-cleaning-check-up</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/dental-cleaning-check-up"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/dental-cleaning-check-up"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/dental-cleaning-check-up"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/dental-cleaning-check-up"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/services/dental-cleaning-check-up</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/dental-cleaning-check-up"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/dental-cleaning-check-up"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/dental-cleaning-check-up"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/dental-cleaning-check-up"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/services/dental-cleaning-check-up</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/dental-cleaning-check-up"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/dental-cleaning-check-up"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/dental-cleaning-check-up"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/dental-cleaning-check-up"/>
   </url>
   <url>
     <loc>https://matikyan.am/services/teeth-whitening</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/teeth-whitening"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/teeth-whitening"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/teeth-whitening"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/teeth-whitening"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/services/teeth-whitening</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/teeth-whitening"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/teeth-whitening"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/teeth-whitening"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/teeth-whitening"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/services/teeth-whitening</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/teeth-whitening"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/teeth-whitening"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/teeth-whitening"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/teeth-whitening"/>
   </url>
   <url>
     <loc>https://matikyan.am/services/veneers</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/veneers"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/veneers"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/veneers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/veneers"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/services/veneers</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/veneers"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/veneers"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/veneers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/veneers"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/services/veneers</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/veneers"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/veneers"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/veneers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/veneers"/>
   </url>
   <url>
     <loc>https://matikyan.am/services/dental-implants</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/dental-implants"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/dental-implants"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/dental-implants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/dental-implants"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/services/dental-implants</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/dental-implants"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/dental-implants"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/dental-implants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/dental-implants"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/services/dental-implants</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/dental-implants"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/dental-implants"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/dental-implants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/dental-implants"/>
   </url>
   <url>
     <loc>https://matikyan.am/services/prosthetics-crowns</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/prosthetics-crowns"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/prosthetics-crowns"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/prosthetics-crowns"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/prosthetics-crowns"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/services/prosthetics-crowns</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/prosthetics-crowns"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/prosthetics-crowns"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/prosthetics-crowns"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/prosthetics-crowns"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/services/prosthetics-crowns</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/prosthetics-crowns"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/prosthetics-crowns"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/prosthetics-crowns"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/prosthetics-crowns"/>
   </url>
   <url>
     <loc>https://matikyan.am/services/root-canal-treatment</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/root-canal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/root-canal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/root-canal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/root-canal-treatment"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/services/root-canal-treatment</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/root-canal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/root-canal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/root-canal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/root-canal-treatment"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/services/root-canal-treatment</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/root-canal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/root-canal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/root-canal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/root-canal-treatment"/>
   </url>
   <url>
     <loc>https://matikyan.am/services/orthodontics</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/orthodontics"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/orthodontics"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/orthodontics"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/orthodontics"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/services/orthodontics</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/orthodontics"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/orthodontics"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/orthodontics"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/orthodontics"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/services/orthodontics</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/orthodontics"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/orthodontics"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/orthodontics"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/orthodontics"/>
   </url>
   <url>
     <loc>https://matikyan.am/services/periodontal-treatment</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/periodontal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/periodontal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/periodontal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/periodontal-treatment"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/services/periodontal-treatment</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/periodontal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/periodontal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/periodontal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/periodontal-treatment"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/services/periodontal-treatment</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/periodontal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/periodontal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/periodontal-treatment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/periodontal-treatment"/>
   </url>
   <url>
     <loc>https://matikyan.am/services/oral-surgery</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/oral-surgery"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/oral-surgery"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/oral-surgery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/oral-surgery"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/services/oral-surgery</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/oral-surgery"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/oral-surgery"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/oral-surgery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/oral-surgery"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/services/oral-surgery</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/oral-surgery"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/oral-surgery"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/oral-surgery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/oral-surgery"/>
   </url>
   <url>
     <loc>https://matikyan.am/services/digital-diagnostics</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/digital-diagnostics"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/digital-diagnostics"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/digital-diagnostics"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/digital-diagnostics"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/services/digital-diagnostics</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/digital-diagnostics"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/digital-diagnostics"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/digital-diagnostics"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/digital-diagnostics"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/services/digital-diagnostics</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/services/digital-diagnostics"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/services/digital-diagnostics"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/services/digital-diagnostics"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/services/digital-diagnostics"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/blog/teeth-whitening-what-to-know</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/blog/teeth-whitening-what-to-know"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/blog/teeth-whitening-what-to-know"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/blog/teeth-whitening-what-to-know"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/blog/teeth-whitening-what-to-know"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/en/blog/teeth-whitening-what-to-know</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/blog/teeth-whitening-what-to-know"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/blog/teeth-whitening-what-to-know"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/blog/teeth-whitening-what-to-know"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/blog/teeth-whitening-what-to-know"/>
+  </url>
+  <url>
+    <loc>https://matikyan.am/ru/blog/teeth-whitening-what-to-know</loc>
+    <xhtml:link rel="alternate" hreflang="hy" href="https://matikyan.am/blog/teeth-whitening-what-to-know"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://matikyan.am/en/blog/teeth-whitening-what-to-know"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://matikyan.am/ru/blog/teeth-whitening-what-to-know"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://matikyan.am/blog/teeth-whitening-what-to-know"/>
   </url>
 </urlset>

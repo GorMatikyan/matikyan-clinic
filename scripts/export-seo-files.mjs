@@ -100,6 +100,18 @@ function xmlEscape(value) {
   return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
+// Mirrors src/app/routing.tsx's PRIMARY_LANGUAGE/SECONDARY_LANGUAGES/localizePath - kept as a
+// separate copy since this script runs under plain Node, not the app's module graph.
+const SUPPORTED_LANGUAGES = ["hy", "en", "ru"];
+
+function localizedUrl(origin, route, language) {
+  const normalizedRoute = route.replace(/^\/+/, "");
+  if (language === "hy") {
+    return normalizedRoute ? `${origin}/${normalizedRoute}` : `${origin}/`;
+  }
+  return normalizedRoute ? `${origin}/${language}/${normalizedRoute}` : `${origin}/${language}`;
+}
+
 async function exportSitemap(preferredDomain, pageSeoEntries) {
   const origin = `https://${preferredDomain}`;
   const noindexByPath = new Map(pageSeoEntries.map((page) => [page.path, page.seoFields.robotsNoindex]));
@@ -112,29 +124,53 @@ async function exportSitemap(preferredDomain, pageSeoEntries) {
     console.warn(`[export-seo-files] could not fetch blog posts for sitemap (${error.message}). Sitemap will omit blog posts.`);
   }
 
-  const staticUrls = STATIC_ROUTES.filter((route) => noindexByPath.get(`/${route}`) !== true).map(
-    (route) => `${origin}/${route}`,
-  );
-  const blogUrls = blogPosts.map((post) => `${origin}/blog/${post.slug}`);
+  const staticRoutes = STATIC_ROUTES.filter((route) => noindexByPath.get(`/${route}`) !== true);
+  const blogRoutes = blogPosts.map((post) => `blog/${post.slug}`);
 
   // Any admin-managed page-SEO row for a path that isn't already a known static route (e.g. a
   // custom landing page created purely through the admin panel) still belongs in the sitemap.
-  const extraAdminUrls = pageSeoEntries
+  const extraAdminRoutes = pageSeoEntries
     .filter((page) => !page.seoFields.robotsNoindex && !STATIC_ROUTES.includes(page.path.replace(/^\//, "")))
-    .map((page) => `${origin}${page.path}`);
+    .map((page) => page.path.replace(/^\//, ""));
 
-  const allUrls = [...new Set([...staticUrls, ...blogUrls, ...extraAdminUrls])];
+  const allRoutes = [...new Set([...staticRoutes, ...blogRoutes, ...extraAdminRoutes])];
+
+  // Every route gets an entry per language (hy/en/ru), each cross-linked to its siblings via
+  // xhtml:link hreflang annotations - the sitemap-based equivalent of per-page <link
+  // rel="alternate" hreflang> tags. This site bakes its hreflang tags into <head> client-side
+  // only (see SeoHead.tsx), which a non-JS-rendering crawler never sees; sitemap hreflang
+  // annotations are plain XML, read on the very first (non-JS) crawl pass, so they're the more
+  // robust signal and don't depend on the page tags at all.
+  const urlBlocks = allRoutes.flatMap((route) => {
+    const alternates = SUPPORTED_LANGUAGES.map((lang) => ({
+      lang,
+      href: localizedUrl(origin, route, lang),
+    }));
+    const xDefaultHref = localizedUrl(origin, route, "hy");
+
+    return alternates.map(
+      ({ href }) =>
+        `  <url>\n    <loc>${xmlEscape(href)}</loc>\n` +
+        alternates
+          .map(
+            ({ lang, href: altHref }) =>
+              `    <xhtml:link rel="alternate" hreflang="${lang}" href="${xmlEscape(altHref)}"/>`,
+          )
+          .join("\n") +
+        `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${xmlEscape(xDefaultHref)}"/>\n  </url>`,
+    );
+  });
 
   const xml = [
     `<?xml version="1.0" encoding="UTF-8"?>`,
-    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
-    ...allUrls.map((url) => `  <url>\n    <loc>${xmlEscape(url)}</loc>\n  </url>`),
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">`,
+    ...urlBlocks,
     `</urlset>`,
     "",
   ].join("\n");
 
   await writeFile(path.join(PUBLIC_DIR, "sitemap.xml"), xml, "utf-8");
-  console.log(`[export-seo-files] wrote sitemap.xml with ${allUrls.length} URL(s)`);
+  console.log(`[export-seo-files] wrote sitemap.xml with ${urlBlocks.length} URL(s) (${allRoutes.length} routes x ${SUPPORTED_LANGUAGES.length} languages)`);
 }
 
 async function exportRedirectsIntoHtaccess() {

@@ -23,6 +23,7 @@ const servicePreviewItems = [
     path,
     image: service?.image,
     imageMobile: service?.imageMobile,
+    imageSmall: service?.imageSmall,
   };
 });
 
@@ -57,7 +58,7 @@ export function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {servicePreviewItems.map(({ key, path, image, imageMobile }) => {
+            {servicePreviewItems.map(({ key, path, image, imageMobile, imageSmall }) => {
               const serviceTitle = t(`home.services.items.${key}.title`);
               return (
                 <LocalizedNavLink
@@ -69,8 +70,17 @@ export function Home() {
                     {image ? (
                       <img
                         src={image}
-                        srcSet={imageMobile ? `${imageMobile} 960w, ${image} ${SERVICE_IMAGE_FULL_WIDTH}w` : undefined}
-                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        srcSet={
+                          imageMobile
+                            ? `${imageSmall ? `${imageSmall} 720w, ` : ""}${imageMobile} 960w, ${image} ${SERVICE_IMAGE_FULL_WIDTH}w`
+                            : undefined
+                        }
+                        // Below 640px this grid is a single column inside a px-6 (3rem total)
+                        // padded container, so the true slot width is 100vw minus that padding,
+                        // not bare 100vw - a bare 100vw hint makes the browser assume a wider
+                        // slot than actually exists and reach for a needlessly large srcset
+                        // candidate regardless of how small the images available actually are.
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, calc(100vw - 3rem)"
                         alt={t("services.card.imageAlt", { service: serviceTitle })}
                         width={1536}
                         height={1024}
@@ -102,8 +112,8 @@ export function Home() {
           <div className="relative">
             <img
               src={siteImages.clinicFacade.full}
-              srcSet={`${siteImages.clinicFacade.mobile} 960w, ${siteImages.clinicFacade.full} ${siteImages.clinicFacade.fullWidth}w`}
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              srcSet={`${siteImages.clinicFacade.small} 720w, ${siteImages.clinicFacade.mobile} 960w, ${siteImages.clinicFacade.full} ${siteImages.clinicFacade.fullWidth}w`}
+              sizes="(min-width: 1024px) 50vw, calc(100vw - 3rem)"
               alt={t("home.whyUs.imageAlt")}
               className="w-full rounded-2xl object-cover shadow-xl"
               style={{ height: "460px" }}

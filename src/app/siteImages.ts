@@ -12,11 +12,14 @@ import aboutInteriorPhoto from "../../images/sections/section-about-interior-01.
 import aboutInteriorPhotoMobile from "../../images/sections/section-about-interior-01-mobile.webp";
 import whyUsImage from "../../images/sections/section-why-us-patient.webp";
 import whyUsImageMobile from "../../images/sections/section-why-us-patient-mobile.webp";
+import whyUsImageSmall from "../../images/sections/section-why-us-patient-mobile-720.webp";
 import aboutConsultationPhoto from "../../images/sections/section-about-consultation-01.webp";
 import aboutConsultationPhotoMobile from "../../images/sections/section-about-consultation-01-mobile.webp";
 
 export const siteImages = {
-  clinicFacade: { full: whyUsImage, mobile: whyUsImageMobile, fullWidth: 1200 },
+  // small: only this section's ~364px-wide display context needs it - aboutImages.main below
+  // shares the same source but is currently unused, so it's left without a small variant.
+  clinicFacade: { full: whyUsImage, mobile: whyUsImageMobile, small: whyUsImageSmall, fullWidth: 1200 },
   aboutImages: {
     main: { full: whyUsImage, mobile: whyUsImageMobile, fullWidth: 1200 },
     consultation: { full: aboutConsultationPhoto, mobile: aboutConsultationPhotoMobile, fullWidth: 1200 },

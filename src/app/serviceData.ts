@@ -2,30 +2,47 @@ import type { SanityService } from "../lib/sanityTypes";
 import i18n from "../i18n";
 import serviceDentalImplants from "../../images/services/service-dental-implants.webp";
 import serviceDentalImplantsMobile from "../../images/services/service-dental-implants-mobile.webp";
+import serviceDentalImplantsSmall from "../../images/services/service-dental-implants-mobile-720.webp";
 import serviceDigitalDiagnostics from "../../images/services/service-digital-diagnostics.webp";
 import serviceDigitalDiagnosticsMobile from "../../images/services/service-digital-diagnostics-mobile.webp";
+import serviceDigitalDiagnosticsSmall from "../../images/services/service-digital-diagnostics-mobile-720.webp";
 import serviceEndodonticTreatment from "../../images/services/service-endodontic-treatment.webp";
 import serviceEndodonticTreatmentMobile from "../../images/services/service-endodontic-treatment-mobile.webp";
+import serviceEndodonticTreatmentSmall from "../../images/services/service-endodontic-treatment-mobile-720.webp";
 import serviceOralSurgery from "../../images/services/service-oral-surgery.webp";
 import serviceOralSurgeryMobile from "../../images/services/service-oral-surgery-mobile.webp";
+import serviceOralSurgerySmall from "../../images/services/service-oral-surgery-mobile-720.webp";
 import serviceOrthodontics from "../../images/services/service-orthodontics.webp";
 import serviceOrthodonticsMobile from "../../images/services/service-orthodontics-mobile.webp";
+import serviceOrthodonticsSmall from "../../images/services/service-orthodontics-mobile-720.webp";
 import servicePeriodontalTreatment from "../../images/services/service-periodontal-treatment.webp";
 import servicePeriodontalTreatmentMobile from "../../images/services/service-periodontal-treatment-mobile.webp";
+import servicePeriodontalTreatmentSmall from "../../images/services/service-periodontal-treatment-mobile-720.webp";
 import serviceProfessionalOralHygiene from "../../images/services/service-professional-oral-hygiene.webp";
 import serviceProfessionalOralHygieneMobile from "../../images/services/service-professional-oral-hygiene-mobile.webp";
+import serviceProfessionalOralHygieneSmall from "../../images/services/service-professional-oral-hygiene-mobile-720.webp";
 import serviceProstheticsCrowns from "../../images/services/service-prosthetics-crowns.webp";
 import serviceProstheticsCrownsMobile from "../../images/services/service-prosthetics-crowns-mobile.webp";
+import serviceProstheticsCrownsSmall from "../../images/services/service-prosthetics-crowns-mobile-720.webp";
 import serviceTeethWhitening from "../../images/services/service-teeth-whitening.webp";
 import serviceTeethWhiteningMobile from "../../images/services/service-teeth-whitening-mobile.webp";
+import serviceTeethWhiteningSmall from "../../images/services/service-teeth-whitening-mobile-720.webp";
 import serviceVeneersRestorations from "../../images/services/service-veneers-restorations.webp";
 import serviceVeneersRestorationsMobile from "../../images/services/service-veneers-restorations-mobile.webp";
+import serviceVeneersRestorationsSmall from "../../images/services/service-veneers-restorations-mobile-720.webp";
 
 // All source service images are 1536px wide - shared srcset width descriptor for every entry.
 export const SERVICE_IMAGE_FULL_WIDTH = 1536;
 
 export type ServiceDetail = SanityService & {
   imageMobile: string;
+  // 720w variant - only for the small (~360px, 2x DPR) grid cards on Home/Services; the mobile
+  // (960w) size is still correct for ServiceLandingPage's larger banner display, so this is
+  // additive, not a replacement (see PageSpeed's "Improve image delivery" finding, ~212KiB
+  // oversized on the small-card contexts specifically). 720, not the display width itself,
+  // because srcset candidates must satisfy displayWidth x devicePixelRatio (~360 x 2) or the
+  // browser skips the candidate as too blurry and falls back to the next larger one anyway.
+  imageSmall: string;
   slug: string;
   intro: string;
   h2Title: string;
@@ -53,6 +70,7 @@ export const serviceDetails: ServiceDetail[] = [
     rating: 4.9,
     image: serviceProfessionalOralHygiene,
     imageMobile: serviceProfessionalOralHygieneMobile,
+    imageSmall: serviceProfessionalOralHygieneSmall,
     benefits: [
       "Ultrasonic tartar removal",
       "AirFlow polishing",
@@ -88,6 +106,7 @@ export const serviceDetails: ServiceDetail[] = [
     rating: 5,
     image: serviceTeethWhitening,
     imageMobile: serviceTeethWhiteningMobile,
+    imageSmall: serviceTeethWhiteningSmall,
     benefits: [
       "Visible brightening",
       "In-clinic supervision",
@@ -123,6 +142,7 @@ export const serviceDetails: ServiceDetail[] = [
     rating: 5,
     image: serviceVeneersRestorations,
     imageMobile: serviceVeneersRestorationsMobile,
+    imageSmall: serviceVeneersRestorationsSmall,
     benefits: [
       "E.max and ceramic veneers",
       "Composite veneers and bonding",
@@ -173,6 +193,7 @@ export const serviceDetails: ServiceDetail[] = [
     rating: 4.9,
     image: serviceDentalImplants,
     imageMobile: serviceDentalImplantsMobile,
+    imageSmall: serviceDentalImplantsSmall,
     benefits: [
       "Implant placement",
       "Mini-implant options",
@@ -208,6 +229,7 @@ export const serviceDetails: ServiceDetail[] = [
     rating: 4.9,
     image: serviceProstheticsCrowns,
     imageMobile: serviceProstheticsCrownsMobile,
+    imageSmall: serviceProstheticsCrownsSmall,
     benefits: [
       "Removable prosthetics",
       "Metal-ceramic crowns",
@@ -243,6 +265,7 @@ export const serviceDetails: ServiceDetail[] = [
     rating: 4.9,
     image: serviceEndodonticTreatment,
     imageMobile: serviceEndodonticTreatmentMobile,
+    imageSmall: serviceEndodonticTreatmentSmall,
     benefits: [
       "Pulpitis management",
       "Canal filling",
@@ -278,6 +301,7 @@ export const serviceDetails: ServiceDetail[] = [
     rating: 5,
     image: serviceOrthodontics,
     imageMobile: serviceOrthodonticsMobile,
+    imageSmall: serviceOrthodonticsSmall,
     benefits: [
       "Clear aligner options",
       "Braces systems",
@@ -328,6 +352,7 @@ export const serviceDetails: ServiceDetail[] = [
     rating: 4.9,
     image: servicePeriodontalTreatment,
     imageMobile: servicePeriodontalTreatmentMobile,
+    imageSmall: servicePeriodontalTreatmentSmall,
     benefits: [
       "Gingivitis treatment",
       "Closed and open curettage",
@@ -363,6 +388,7 @@ export const serviceDetails: ServiceDetail[] = [
     rating: 4.8,
     image: serviceOralSurgery,
     imageMobile: serviceOralSurgeryMobile,
+    imageSmall: serviceOralSurgerySmall,
     benefits: [
       "Tooth extractions",
       "Apicoectomy",
@@ -398,6 +424,7 @@ export const serviceDetails: ServiceDetail[] = [
     rating: 5,
     image: serviceDigitalDiagnostics,
     imageMobile: serviceDigitalDiagnosticsMobile,
+    imageSmall: serviceDigitalDiagnosticsSmall,
     benefits: [
       "Clinical consultation",
       "RVG imaging",

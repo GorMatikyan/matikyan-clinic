@@ -88,8 +88,10 @@ export function Services() {
                     <div className="relative overflow-hidden h-48 bg-[#eef1f8]">
                       <img
                         src={service.image}
-                        srcSet={`${service.imageMobile} 960w, ${service.image} ${SERVICE_IMAGE_FULL_WIDTH}w`}
-                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        srcSet={`${service.imageSmall} 720w, ${service.imageMobile} 960w, ${service.image} ${SERVICE_IMAGE_FULL_WIDTH}w`}
+                        // See Home.tsx's identical service-grid image for why calc(100vw - 3rem)
+                        // and not bare 100vw - same px-6-padded single-column mobile layout.
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, calc(100vw - 3rem)"
                         alt={t("services.card.imageAlt", { service: service.title })}
                         loading="lazy"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

@@ -7,7 +7,23 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Armenian:wght@400;500;600;700;800&display=swap" />
+      <!--
+        Lighthouse flagged this stylesheet as render-blocking (~750ms on Slow 4G) - a plain
+        synchronous <link rel="stylesheet"> here blocks CSSOM construction (and therefore all
+        rendering, since this SPA has no server-rendered HTML to paint in the meantime) until it
+        arrives. media="print" makes the browser fetch it without treating it as render-blocking
+        (it doesn't apply to the current render), then the onload swap applies it once ready;
+        the <noscript> tag is the fallback for the (very rare) no-JS case.
+      -->
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Armenian:wght@400;500;600;700;800&display=swap"
+        media="print"
+        onload="this.media='all'"
+      />
+      <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Armenian:wght@400;500;600;700;800&display=swap" />
+      </noscript>
       <title>Matikyan Dental Clinic | Ժամանակակից ստոմատոլոգիա Հայաստանում</title>
       <meta name="description" content="Matikyan Dental Clinic-ը առաջարկում է կանխարգելիչ, էսթետիկ, վերականգնողական, օրթոդոնտիկ և վիրաբուժական ստոմատոլոգիական խնամք՝ պացիենտակենտրոն մոտեցմամբ։" />
       <meta property="og:title" content="Matikyan Dental Clinic | Ժամանակակից ստոմատոլոգիա Հայաստանում" />

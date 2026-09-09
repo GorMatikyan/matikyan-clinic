@@ -46,7 +46,17 @@ export function SeoHead() {
   useEffect(() => {
     const currentLanguage = getLanguageFromPathname(pathname);
     const pageOverride = findPageOverride(routePath);
-    const override = liveOverride ?? pageOverride;
+    const rawOverride = liveOverride ?? pageOverride;
+    // Admin-entered title/description (page_seo.metaTitle etc.) is a single language-neutral
+    // field, not one per language - so whatever language it was typed in (Armenian, since
+    // that's the primary/no-prefix language admins use) would otherwise leak onto every /en and
+    // /ru page too. Only trust it on the primary language; secondary languages fall back to
+    // seo.ts's routeSeo, which is genuinely per-language. Non-text fields (noindex, canonical)
+    // are page-level decisions, not language-specific content, so those still apply everywhere.
+    const override =
+      rawOverride && currentLanguage !== PRIMARY_LANGUAGE
+        ? { ...rawOverride, title: undefined, description: undefined, ogTitle: undefined, ogDescription: undefined }
+        : rawOverride;
 
     const baseMetadata = getSeoMetadata(routePath, currentLanguage);
     const metadata = mergeMetadata(baseMetadata, override, routePath, settings.defaultOgImageUrl);

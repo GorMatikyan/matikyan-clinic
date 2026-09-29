@@ -106,9 +106,15 @@ export function SeoHead() {
       removeMeta("name", "robots");
     }
 
-    const canonicalUrl = metadata.canonicalPath.startsWith("http")
-      ? metadata.canonicalPath
-      : buildCanonicalUrl(localizePath(metadata.canonicalPath, currentLanguage));
+    // metadata.canonicalPath may already be an absolute URL (BlogDetail sets a real
+    // per-post URL here) - normalize to a bare relative path first so localizePath()
+    // (which expects a relative path) can correctly re-derive it for every language,
+    // instead of treating the whole absolute URL as one opaque unrecognized segment.
+    const canonicalPath = metadata.canonicalPath.startsWith("http")
+      ? stripLanguagePrefix(new URL(metadata.canonicalPath).pathname)
+      : metadata.canonicalPath;
+
+    const canonicalUrl = buildCanonicalUrl(localizePath(canonicalPath, currentLanguage));
 
     upsertLink("canonical", canonicalUrl);
     upsertMeta("property", "og:url", canonicalUrl);
@@ -119,9 +125,9 @@ export function SeoHead() {
       replaceAlternateLinks(
         SUPPORTED_LANGUAGES.map((language) => ({
           hrefLang: language,
-          href: buildCanonicalUrl(localizePath(metadata.canonicalPath, language)),
+          href: buildCanonicalUrl(localizePath(canonicalPath, language)),
         })),
-        buildCanonicalUrl(localizePath(metadata.canonicalPath, PRIMARY_LANGUAGE)),
+        buildCanonicalUrl(localizePath(canonicalPath, PRIMARY_LANGUAGE)),
       );
     }
 

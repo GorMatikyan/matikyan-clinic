@@ -217,11 +217,14 @@ async function applyHomepageMetaTags(pageSeoEntries) {
   const homepage = pageSeoEntries.find((page) => page.path === "/");
   if (!homepage) return;
 
+  // index.html's static markup is inherently the Armenian version - it's the one file a non-JS
+  // crawler ever sees (see the comment below), and there's no per-language variant of this file
+  // to bake en/ru into. Always reads the *Hy field, regardless of visitor language.
   const { seoFields } = homepage;
-  const title = seoFields.metaTitle;
-  const description = seoFields.metaDescription;
-  const ogTitle = seoFields.ogTitle || title;
-  const ogDescription = seoFields.ogDescription || description;
+  const title = seoFields.metaTitleHy;
+  const description = seoFields.metaDescriptionHy;
+  const ogTitle = seoFields.ogTitleHy || title;
+  const ogDescription = seoFields.ogDescriptionHy || description;
   const ogImage = seoFields.ogImageUrl;
 
   const indexPath = path.join(ROOT_DIR, "index.html");

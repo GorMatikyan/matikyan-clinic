@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { fetchPublishedBlogPosts, type CmsBlogPost } from "../../lib/cmsApi";
+import { fetchPublishedBlogPosts, pickLocalizedBlogField, type CmsBlogPost } from "../../lib/cmsApi";
 import { PageHero } from "../components/PageHero";
-import { LocalizedNavLink } from "../routing";
+import { LocalizedNavLink, useCurrentLanguage } from "../routing";
 import { siteImages } from "../siteImages";
 
-function readingTime(bodyHtml: string | null): number {
-  const text = (bodyHtml ?? "").replace(/<[^>]+>/g, " ");
+function readingTime(bodyHtml: string): number {
+  const text = bodyHtml.replace(/<[^>]+>/g, " ");
   const words = text.trim().split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.round(words / 200));
 }
 
 export function Blog() {
   const { t } = useTranslation();
+  const language = useCurrentLanguage();
   const [posts, setPosts] = useState<CmsBlogPost[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -59,15 +60,15 @@ export function Blog() {
                 </div>
                 <div className="p-8 lg:p-10 flex flex-col justify-center">
                   <h2 className="text-white mb-4 leading-snug" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.4rem, 2.5vw, 2rem)", fontWeight: 800 }}>
-                    {featured.title}
+                    {pickLocalizedBlogField(featured, "title", language)}
                   </h2>
-                  <p className="text-white/55 text-sm leading-relaxed mb-7">{featured.excerpt}</p>
+                  <p className="text-white/55 text-sm leading-relaxed mb-7">{pickLocalizedBlogField(featured, "excerpt", language)}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-xs text-white/40">
                       {featured.publishedAt && <span>{new Date(featured.publishedAt).toLocaleDateString()}</span>}
                       <span>·</span>
                       <Clock className="w-3 h-3" />
-                      <span>{t("blog.readTimeMinutes", { count: readingTime(featured.bodyHtml) })}</span>
+                      <span>{t("blog.readTimeMinutes", { count: readingTime(pickLocalizedBlogField(featured, "bodyHtml", language)) })}</span>
                     </div>
                     <span className="flex items-center gap-2 text-[#B5C7EB] text-sm" style={{ fontWeight: 600 }}>
                       {t("blog.read")} <ArrowRight className="w-4 h-4" />
@@ -96,13 +97,13 @@ export function Blog() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-[#0F1932] mb-3 leading-snug" style={{ fontFamily: "var(--font-display)", fontSize: "1.05rem", fontWeight: 700 }}>
-                    {post.title}
+                    {pickLocalizedBlogField(post, "title", language)}
                   </h3>
-                  <p className="text-[#5B6475] text-sm leading-relaxed mb-5 line-clamp-3">{post.excerpt}</p>
+                  <p className="text-[#5B6475] text-sm leading-relaxed mb-5 line-clamp-3">{pickLocalizedBlogField(post, "excerpt", language)}</p>
                   <div className="flex items-center justify-between pt-4 border-t border-[#0F1932]/8">
                     <div className="text-xs text-[#5B6475] flex items-center gap-1.5">
                       <Clock className="w-3 h-3 text-[#B5C7EB]" />
-                      <span>{t("blog.readTimeMinutes", { count: readingTime(post.bodyHtml) })}</span>
+                      <span>{t("blog.readTimeMinutes", { count: readingTime(pickLocalizedBlogField(post, "bodyHtml", language)) })}</span>
                     </div>
                     <span className="text-[#0F1932] text-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1" style={{ fontWeight: 600 }}>
                       {t("blog.readMore")} <ArrowRight className="w-3 h-3" />

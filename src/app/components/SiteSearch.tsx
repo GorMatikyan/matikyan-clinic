@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Search, X } from "lucide-react";
-import { LocalizedNavLink, stripLanguagePrefix } from "../routing";
-import { fetchPublishedBlogPosts, type CmsBlogPost } from "../../lib/cmsApi";
+import { LocalizedNavLink, stripLanguagePrefix, useCurrentLanguage } from "../routing";
+import { fetchPublishedBlogPosts, pickLocalizedBlogField, type CmsBlogPost } from "../../lib/cmsApi";
 import { serviceDetails, getLocalizedServiceDetailBySlug } from "../serviceData";
 
 interface SearchResult {
@@ -32,6 +32,7 @@ export function SiteSearch({ overlay }: { overlay: boolean }) {
   const [blogPosts, setBlogPosts] = useState<CmsBlogPost[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const { t } = useTranslation();
+  const language = useCurrentLanguage();
 
   useEffect(() => {
     if (open && blogPosts.length === 0) {
@@ -56,13 +57,13 @@ export function SiteSearch({ overlay }: { overlay: boolean }) {
     }));
 
     const blogResults = blogPosts.map((post) => ({
-      label: post.title,
+      label: pickLocalizedBlogField(post, "title", language),
       path: `/blog/${post.slug}`,
       category: t("search.categoryBlog", { defaultValue: "Blog" }),
     }));
 
     return [...navResults, ...serviceResults, ...blogResults];
-  }, [blogPosts, t]);
+  }, [blogPosts, t, language]);
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();

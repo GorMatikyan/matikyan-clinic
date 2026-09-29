@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft } from "lucide-react";
-import { fetchBlogPostBySlug, type CmsBlogPost } from "../../lib/cmsApi";
+import { fetchBlogPostBySlug, pickLocalizedBlogField, pickLocalizedSeoField, type CmsBlogPost } from "../../lib/cmsApi";
 import { setSeoOverride } from "../seoOverrides";
 import { buildCanonicalUrl } from "../seo";
 import { LocalizedNavLink, localizePath, useCurrentLanguage } from "../routing";
@@ -33,19 +33,27 @@ export function BlogDetail() {
 
       const path = `/blog/${slug}`;
       const canonicalUrl = buildCanonicalUrl(localizePath(path, language));
+      const title = pickLocalizedBlogField(result, "title", language);
+      const excerpt = pickLocalizedBlogField(result, "excerpt", language) || undefined;
+      const metaTitle = pickLocalizedSeoField(result.seoFields, "metaTitle", language);
+      const metaDescription = pickLocalizedSeoField(result.seoFields, "metaDescription", language);
+      const ogTitle = pickLocalizedSeoField(result.seoFields, "ogTitle", language);
+      const ogDescription = pickLocalizedSeoField(result.seoFields, "ogDescription", language);
 
       setSeoOverride(path, {
-        breadcrumbLabel: result.title,
-        title: result.seoFields.metaTitle || `${result.title} | Matikyan Dental Clinic`,
-        description: result.seoFields.metaDescription || result.excerpt || undefined,
+        breadcrumbLabel: title,
+        title: metaTitle || `${title} | Matikyan Dental Clinic`,
+        description: metaDescription || excerpt,
         canonicalPath: canonicalUrl,
-        ogTitle: result.seoFields.ogTitle || result.title,
-        ogDescription: result.seoFields.ogDescription || result.excerpt || undefined,
+        ogTitle: ogTitle || title,
+        ogDescription: ogDescription || excerpt,
         ogImage: result.seoFields.ogImageUrl || result.coverImage?.url,
         ogType: "article",
         robotsNoindex: result.seoFields.robotsNoindex,
         robotsNofollow: result.seoFields.robotsNofollow,
-        skipHreflang: true,
+        // Real per-language URLs now exist even before every post's translation is filled in
+        // (content falls back to Armenian, but the /en and /ru URLs are genuinely live) - so
+        // unlike before this feature, hreflang no longer needs to be suppressed here.
       });
     });
 
@@ -63,11 +71,15 @@ export function BlogDetail() {
     return <div className="min-h-[60vh] flex items-center justify-center text-[#5B6475]">{t("blog.loading", { defaultValue: "Loading..." })}</div>;
   }
 
+  const title = pickLocalizedBlogField(post, "title", language);
+  const excerpt = pickLocalizedBlogField(post, "excerpt", language) || undefined;
+  const bodyHtml = pickLocalizedBlogField(post, "bodyHtml", language);
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: post.title,
-    description: post.excerpt ?? undefined,
+    headline: title,
+    description: excerpt,
     image: post.coverImage?.url,
     datePublished: post.publishedAt ?? undefined,
   };
@@ -86,7 +98,7 @@ export function BlogDetail() {
             <ArrowLeft className="w-4 h-4" /> {t("blog.backToBlog", { defaultValue: "Back to blog" })}
           </LocalizedNavLink>
           <h1 className="text-white" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 800, lineHeight: 1.15 }}>
-            {post.title}
+            {title}
           </h1>
           {post.publishedAt && (
             <p className="text-white/50 text-sm mt-4">{new Date(post.publishedAt).toLocaleDateString()}</p>
@@ -108,7 +120,7 @@ export function BlogDetail() {
       <div className="max-w-3xl mx-auto px-6 py-14">
         <div
           className="prose max-w-none text-[#3A4256] leading-relaxed [&_h2]:text-[#0F1932] [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:text-[#0F1932] [&_h3]:mt-8 [&_h3]:mb-3 [&_a]:text-[#2D5BFF] [&_img]:rounded-xl"
-          dangerouslySetInnerHTML={{ __html: post.bodyHtml ?? "" }}
+          dangerouslySetInnerHTML={{ __html: bodyHtml }}
         />
       </div>
     </article>

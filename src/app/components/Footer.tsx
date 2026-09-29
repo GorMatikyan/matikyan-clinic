@@ -3,8 +3,8 @@ import { Phone, Globe, MapPin, Clock, Facebook, Instagram, Youtube, Share2 } fro
 import { useTranslation } from "react-i18next";
 import logoImg from "../../imports/matikyan-clinic-logo-am.png";
 import { getServiceSlugByTitle } from "../serviceData";
-import { LocalizedNavLink } from "../routing";
-import { fetchPublishedBlogPosts, type CmsBlogPost } from "../../lib/cmsApi";
+import { LocalizedNavLink, useCurrentLanguage } from "../routing";
+import { fetchPublishedBlogPosts, pickLocalizedBlogField, type CmsBlogPost } from "../../lib/cmsApi";
 import { useSiteSettings } from "../../hooks/useSiteSettings";
 import { parseSocialLinks, type SocialPlatform } from "../../lib/socialLinks";
 
@@ -25,6 +25,7 @@ const socialIcons: Record<SocialPlatform, typeof Facebook> = {
 
 export function Footer() {
   const { t } = useTranslation();
+  const language = useCurrentLanguage();
   const [latestPosts, setLatestPosts] = useState<CmsBlogPost[]>([]);
   const settings = useSiteSettings();
 
@@ -90,7 +91,7 @@ export function Footer() {
                         to={`/blog/${post.slug}`}
                         className="text-sm text-white/55 hover:text-[#B5C7EB] transition-colors line-clamp-1"
                       >
-                        {post.title}
+                        {pickLocalizedBlogField(post, "title", language)}
                       </LocalizedNavLink>
                     </li>
                   ))}

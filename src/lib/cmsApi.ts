@@ -1,13 +1,21 @@
 const CMS_API_BASE_URL = import.meta.env.VITE_CMS_API_BASE_URL ?? "https://matikyan-admin.am";
 
 export interface CmsSeoFields {
-  metaTitle: string | null;
-  metaDescription: string | null;
+  metaTitleHy: string | null;
+  metaTitleEn: string | null;
+  metaTitleRu: string | null;
+  metaDescriptionHy: string | null;
+  metaDescriptionEn: string | null;
+  metaDescriptionRu: string | null;
   canonicalUrl: string | null;
   robotsNoindex: boolean;
   robotsNofollow: boolean;
-  ogTitle: string | null;
-  ogDescription: string | null;
+  ogTitleHy: string | null;
+  ogTitleEn: string | null;
+  ogTitleRu: string | null;
+  ogDescriptionHy: string | null;
+  ogDescriptionEn: string | null;
+  ogDescriptionRu: string | null;
   ogImageUrl: string | null;
   schemaType: string;
   schemaJson: string | null;
@@ -16,6 +24,35 @@ export interface CmsSeoFields {
 export interface CmsPageSeo {
   path: string;
   seoFields: CmsSeoFields;
+}
+
+/** hy/en/ru - matches AppLanguage in ../app/routing.tsx (not imported here to avoid this
+ * data-layer module depending on the app layer). */
+type Language = "hy" | "en" | "ru";
+
+function localizedSuffix(language: Language) {
+  return language === "hy" ? "Hy" : language === "en" ? "En" : "Ru";
+}
+
+/** Picks the {base}Hy/{base}En/{base}Ru field for the given language from CmsSeoFields - shared
+ * by SeoHead.tsx (pages) and BlogDetail.tsx (posts), which both need this exact lookup. Page SEO
+ * fallback (own-language -> seo.ts's per-language default) happens in SeoHead.tsx, not here -
+ * this just returns whatever's actually stored, including null. */
+export function pickLocalizedSeoField(
+  fields: CmsSeoFields,
+  base: "metaTitle" | "metaDescription" | "ogTitle" | "ogDescription",
+  language: Language,
+): string | null {
+  return fields[`${base}${localizedSuffix(language)}` as keyof CmsSeoFields] as string | null;
+}
+
+/** Picks a blog post's {base}Hy/{base}En/{base}Ru content field, falling back to the Armenian
+ * value when a translation hasn't been filled in yet - unlike page SEO, blog posts have no
+ * secondary per-language fallback source (no per-post seo.ts entry), so Armenian is the only
+ * sensible fallback. Shared by BlogDetail.tsx and Blog.tsx (the listing), which both need it. */
+export function pickLocalizedBlogField(post: CmsBlogPost, base: "title" | "excerpt" | "bodyHtml", language: Language): string {
+  const own = post[`${base}${localizedSuffix(language)}` as keyof CmsBlogPost] as string | null;
+  return own || (post[`${base}Hy` as keyof CmsBlogPost] as string) || "";
 }
 
 export interface CmsMediaAsset {
@@ -29,9 +66,15 @@ export interface CmsMediaAsset {
 export interface CmsBlogPost {
   id: number;
   slug: string;
-  title: string;
-  excerpt: string | null;
-  bodyHtml: string | null;
+  titleHy: string;
+  titleEn: string | null;
+  titleRu: string | null;
+  excerptHy: string | null;
+  excerptEn: string | null;
+  excerptRu: string | null;
+  bodyHtmlHy: string | null;
+  bodyHtmlEn: string | null;
+  bodyHtmlRu: string | null;
   coverImage: CmsMediaAsset | null;
   status: "DRAFT" | "PUBLISHED";
   publishedAt: string | null;

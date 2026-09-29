@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 import { buildCanonicalUrl, getNotFoundSeoMetadata, getSeoMetadata, type SeoMetadata } from "../seo";
-import { getLanguageFromPathname, localizePath, PRIMARY_LANGUAGE, SUPPORTED_LANGUAGES, stripLanguagePrefix } from "../routing";
+import { getLanguageFromPathname, localizePath, PRIMARY_LANGUAGE, SUPPORTED_LANGUAGES, stripLanguagePrefix, type AppLanguage } from "../routing";
 import { useSeoOverride, type SeoOverride } from "../seoOverrides";
 import { useSiteSettings } from "../../hooks/useSiteSettings";
 import type { CmsPageSeo } from "../../lib/cmsApi";
+import { pickLocalizedSeoField } from "../../lib/cmsApi";
 import pagesData from "../../generated/pages.json";
 
 const MANAGED_ATTRIBUTE = "data-seo-managed";
@@ -17,7 +18,13 @@ const SCHEMA_ATTRIBUTE = "data-seo-managed-schema";
 // (via the seoOverrides store, set by BlogDetail) since the blog is expected to publish instantly.
 const pages = pagesData as CmsPageSeo[];
 
-function findPageOverride(routePath: string): SeoOverride | null {
+// Page SEO fallback is admin's own-language field -> seo.ts's per-language default -> never the
+// raw Armenian admin value (returning null/undefined here, not the hy field, is what lets
+// mergeMetadata() fall through to seo.ts's routeSeo below). Falling back to Armenian text would
+// silently reintroduce the exact leak this per-language split was built to fix - pages already
+// have a genuine per-language fallback source (seo.ts) predating this feature, blog posts don't
+// (see BlogDetail.tsx, which falls back to Armenian instead, for exactly that reason).
+function findPageOverride(routePath: string, currentLanguage: AppLanguage): SeoOverride | null {
   const page = pages.find((p) => p.path === routePath);
   if (!page) return null;
 
@@ -27,11 +34,16 @@ function findPageOverride(routePath: string): SeoOverride | null {
     robotsNofollow: fields.robotsNofollow,
   };
 
-  if (fields.metaTitle) override.title = fields.metaTitle;
-  if (fields.metaDescription) override.description = fields.metaDescription;
+  const metaTitle = pickLocalizedSeoField(fields, "metaTitle", currentLanguage);
+  const metaDescription = pickLocalizedSeoField(fields, "metaDescription", currentLanguage);
+  const ogTitle = pickLocalizedSeoField(fields, "ogTitle", currentLanguage);
+  const ogDescription = pickLocalizedSeoField(fields, "ogDescription", currentLanguage);
+
+  if (metaTitle) override.title = metaTitle;
+  if (metaDescription) override.description = metaDescription;
   if (fields.canonicalUrl) override.canonicalPath = fields.canonicalUrl;
-  if (fields.ogTitle) override.ogTitle = fields.ogTitle;
-  if (fields.ogDescription) override.ogDescription = fields.ogDescription;
+  if (ogTitle) override.ogTitle = ogTitle;
+  if (ogDescription) override.ogDescription = ogDescription;
   if (fields.ogImageUrl) override.ogImage = fields.ogImageUrl;
 
   return override;
@@ -45,18 +57,8 @@ export function SeoHead() {
 
   useEffect(() => {
     const currentLanguage = getLanguageFromPathname(pathname);
-    const pageOverride = findPageOverride(routePath);
-    const rawOverride = liveOverride ?? pageOverride;
-    // Admin-entered title/description (page_seo.metaTitle etc.) is a single language-neutral
-    // field, not one per language - so whatever language it was typed in (Armenian, since
-    // that's the primary/no-prefix language admins use) would otherwise leak onto every /en and
-    // /ru page too. Only trust it on the primary language; secondary languages fall back to
-    // seo.ts's routeSeo, which is genuinely per-language. Non-text fields (noindex, canonical)
-    // are page-level decisions, not language-specific content, so those still apply everywhere.
-    const override =
-      rawOverride && currentLanguage !== PRIMARY_LANGUAGE
-        ? { ...rawOverride, title: undefined, description: undefined, ogTitle: undefined, ogDescription: undefined }
-        : rawOverride;
+    const pageOverride = findPageOverride(routePath, currentLanguage);
+    const override = liveOverride ?? pageOverride;
 
     const baseMetadata = getSeoMetadata(routePath, currentLanguage);
     const metadata = mergeMetadata(baseMetadata, override, routePath, settings.defaultOgImageUrl);

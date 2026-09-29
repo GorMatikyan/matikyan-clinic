@@ -125,8 +125,11 @@ export async function fetchPublishedBlogPosts(): Promise<CmsBlogPost[]> {
   return page?.content ?? [];
 }
 
-export async function fetchBlogPostBySlug(slug: string): Promise<CmsBlogPost | null> {
-  return get<CmsBlogPost>(`/api/public/cms/blog-posts/${encodeURIComponent(slug)}`);
+// previewToken lets an admin open a DRAFT post before publishing - see BlogPostPreviewTokenService
+// on the backend. Omitted for normal (published-only) visits.
+export async function fetchBlogPostBySlug(slug: string, previewToken?: string): Promise<CmsBlogPost | null> {
+  const query = previewToken ? `?previewToken=${encodeURIComponent(previewToken)}` : "";
+  return get<CmsBlogPost>(`/api/public/cms/blog-posts/${encodeURIComponent(slug)}${query}`);
 }
 
 export interface CmsRedirect {

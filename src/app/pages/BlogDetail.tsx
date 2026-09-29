@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router";
+import { useNavigate, useParams, useSearchParams } from "react-router";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft } from "lucide-react";
 import { fetchBlogPostBySlug, pickLocalizedBlogField, pickLocalizedSeoField, type CmsBlogPost } from "../../lib/cmsApi";
@@ -12,6 +12,8 @@ export function BlogDetail() {
   const { t } = useTranslation();
   const language = useCurrentLanguage();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const previewToken = searchParams.get("preview") ?? undefined;
   const [post, setPost] = useState<CmsBlogPost | null>(null);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
@@ -20,7 +22,7 @@ export function BlogDetail() {
     if (!slug) return;
     let cancelled = false;
 
-    fetchBlogPostBySlug(slug).then((result) => {
+    fetchBlogPostBySlug(slug, previewToken).then((result) => {
       if (cancelled) return;
       if (!result) {
         setNotFound(true);
@@ -49,7 +51,9 @@ export function BlogDetail() {
         ogDescription: ogDescription || excerpt,
         ogImage: result.seoFields.ogImageUrl || result.coverImage?.url,
         ogType: "article",
-        robotsNoindex: result.seoFields.robotsNoindex,
+        // A preview link (unpublished post, opened via ?preview=<token>) must never be indexable,
+        // even though the token itself already keeps it unguessable.
+        robotsNoindex: previewToken ? true : result.seoFields.robotsNoindex,
         robotsNofollow: result.seoFields.robotsNofollow,
         // Real per-language URLs now exist even before every post's translation is filled in
         // (content falls back to Armenian, but the /en and /ru URLs are genuinely live) - so
@@ -60,7 +64,7 @@ export function BlogDetail() {
     return () => {
       cancelled = true;
     };
-  }, [slug, language]);
+  }, [slug, language, previewToken]);
 
   if (notFound) {
     navigate("/blog", { replace: true });

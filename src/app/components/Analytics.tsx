@@ -1,87 +1,71 @@
-import { useEffect, useRef } from "react";
-import { useLocation } from "react-router";
+import { useEffect } from "react";
 import { useSiteSettings } from "../../hooks/useSiteSettings";
 
-const CLIENT_ID_STORAGE_KEY = "_ga4_mp_client_id";
-
-function randomClientId(): string {
-  return `${Math.floor(Math.random() * 2147483647)}.${Math.floor(Date.now() / 1000)}`;
-}
-
-function getOrCreateClientId(): string {
-  try {
-    const existing = localStorage.getItem(CLIENT_ID_STORAGE_KEY);
-    if (existing) return existing;
-    const created = randomClientId();
-    localStorage.setItem(CLIENT_ID_STORAGE_KEY, created);
-    return created;
-  } catch {
-    // localStorage unavailable (private mode, disabled) - fall back to a per-load id rather
-    // than crashing; this visit just won't be recognized as returning on a future visit.
-    return randomClientId();
-  }
-}
+const GTAG_SCRIPT_ID = "ga4-gtag-js";
 
 /**
- * Sends page_view hits to GA4 directly via the Measurement Protocol, bypassing gtag.js's own
- * delivery entirely.
+ * Loads GA4's gtag.js (the standard Google tag) once, only if an admin has set a Measurement ID
+ * (Settings -> Analytics). Suppressed entirely on the staging build - see
+ * scripts/export-seo-files.mjs.
  *
- * Root-caused live on 2026-09-03, in two stages:
- * 1. gtag.js's own hit-sending mechanism silently never attempted a single network request on
- *    this site, in production, for months - dataLayer sequence, Consent Mode signals, and
- *    gtag.js taking control of the dataLayer were all verified correct; zero console errors;
- *    yet GA4 Admin's Data Streams page confirmed "no data received". Forcing
- *    transport_type: "beacon" in the gtag('config', ...) call (a real, documented gtag.js
- *    option) did NOT fix it - gtag.js still never sent anything even forced onto the one
- *    transport mechanism separately proven to work (a hand-built request via
- *    navigator.sendBeacon() to the g/collect endpoint registered in Realtime within seconds).
- * 2. Replacing gtag.js with a direct Measurement Protocol call still failed at first: sending
- *    it via navigator.sendBeacon() got an HTTP 503 every time. sendBeacon() always sends in
- *    "no-cors" mode with no real CORS negotiation, and the Measurement Protocol's mp/collect
- *    endpoint (unlike the old g/collect pixel endpoint) rejects that for a JSON POST body. A
- *    plain fetch() with keepalive:true (proper CORS mode, same page-unload-survival guarantee
- *    as sendBeacon) got a clean 204 on the first try.
+ * History:
+ * - Until 2026-09-03 this site loaded gtag.js through a hand-rolled shim,
+ *   `function gtag(...args) { dataLayer.push(args) }`, and gtag.js silently never sent a single
+ *   hit for months (zero console errors, dataLayer looked right). The likely cause: gtag.js only
+ *   treats `arguments` objects on the dataLayer as gtag() commands - a plain rest-args array is
+ *   read as a different (GTM "method call") format and ignored, so `config`/`event` never ran.
+ * - 2026-09-03 to 2026-09-30 the site bypassed gtag.js and POSTed page_views straight to the
+ *   Measurement Protocol (fetch+keepalive; sendBeacon got HTTP 503 from mp/collect). That worked
+ *   but carries no geo/device/traffic-source/engagement data - see commit 199784c if it ever
+ *   needs restoring.
+ * - 2026-09-30: back to gtag.js using Google's official snippet (`arguments`), verified sending
+ *   real /g/collect hits. Deliberately NO Measurement Protocol fallback alongside it: gtag.js
+ *   delays/batches hits by ~5s (more in background tabs), so any "gtag didn't send within N
+ *   seconds -> send via MP" rule double-counts whenever gtag is merely slow.
  *
- * Only page_view is sent (no gtag.js Enhanced Measurement, so no automatic scroll/outbound
- * click/file download events) - if those are needed later, add explicit sendHit() calls for
- * them rather than reintroducing gtag.js.
+ * Page views: gtag.js owns them entirely - `config` sends the initial one, and GA4's Enhanced
+ * Measurement "Page changes based on browser history events" (on for this stream) sends one per
+ * SPA route change. Do NOT also send page_view manually: verified 2026-09-30 that doing so
+ * counts every in-app navigation twice (explicit event + gtm.historyChange-v2).
  */
 export function Analytics() {
   const settings = useSiteSettings();
   const measurementId = settings.googleAnalyticsId;
-  const apiSecret = settings.googleAnalyticsApiSecret;
-  const location = useLocation();
-  const sessionIdRef = useRef<string | null>(null);
 
   useEffect(() => {
-    if (!measurementId || !apiSecret) return;
-    if (!sessionIdRef.current) sessionIdRef.current = String(Date.now());
+    if (!measurementId || document.getElementById(GTAG_SCRIPT_ID)) return;
 
-    const url = `https://www.google-analytics.com/mp/collect?measurement_id=${measurementId}&api_secret=${apiSecret}`;
-    const body = JSON.stringify({
-      client_id: getOrCreateClientId(),
-      events: [
-        {
-          name: "page_view",
-          params: {
-            page_location: window.location.origin + location.pathname + location.search,
-            page_title: document.title,
-            session_id: sessionIdRef.current,
-            // A nonzero engagement time is required for GA4 to count this as an "engaged
-            // session" rather than a bounce - 1ms is the minimum needed for that, not a real
-            // measurement (we have no reliable client-side engagement timer here).
-            engagement_time_msec: 1,
-          },
-        },
-      ],
+    const script = document.createElement("script");
+    script.id = GTAG_SCRIPT_ID;
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    document.head.appendChild(script);
+
+    // Google's official snippet - keep `arguments`, never rest args (see history above).
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function gtag() {
+      window.dataLayer.push(arguments);
+    };
+
+    // This site has no cookie-consent banner and no EU/GDPR audience - grant all four Consent
+    // Mode v2 signals so gtag.js doesn't withhold hits waiting for a consent update that never
+    // comes (see commit 3c4d8c1).
+    window.gtag("consent", "default", {
+      ad_storage: "granted",
+      analytics_storage: "granted",
+      ad_user_data: "granted",
+      ad_personalization: "granted",
     });
-    // keepalive:true survives page unload the same way sendBeacon does, but (unlike
-    // sendBeacon) performs a real CORS request - see the root-cause note above for why that
-    // distinction is exactly what makes this work against mp/collect.
-    fetch(url, { method: "POST", body, keepalive: true }).catch(() => {
-      // Best-effort - a dropped analytics hit should never surface as a user-visible error.
-    });
-  }, [measurementId, apiSecret, location.pathname, location.search]);
+    window.gtag("js", new Date());
+    window.gtag("config", measurementId);
+  }, [measurementId]);
 
   return null;
+}
+
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void;
+  }
 }

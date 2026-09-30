@@ -49,9 +49,11 @@ export function YandexMetrica() {
     })(window, document, "script", `https://mc.yandex.ru/metrika/tag.js?id=${counterId}`, "ym");
 
     callYm(Number(counterId), "init", {
-      // ssr:true suppresses init's own automatic pageview hit - this SPA has no full page
-      // reload between routes, so the hit effect below fires it manually on every route
-      // change instead, including the first one. Same purpose as GA4's send_page_view:false.
+      // defer:true (below) is what suppresses init's own automatic pageview - this SPA has no
+      // full page reload between routes, so the hit effect below fires it manually on every
+      // route change instead, including the first one. Init still sends one early /watch
+      // request carrying pv=1, but it's flagged nohit=1 (a settings fetch, not counted) -
+      // verified 2026-09-30, so the landing page is NOT double-counted.
       ssr: true,
       clickmap: true,
       trackLinks: true,

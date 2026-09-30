@@ -279,7 +279,7 @@ await exportGeneratedJson("/api/public/cms/settings", "settings.json", {
   // production analytics data with our own testing traffic.
   transform: (settings) =>
     SITE_STAGING
-      ? { ...settings, googleAnalyticsId: null, googleAnalyticsApiSecret: null, yandexMetricaId: null }
+      ? { ...settings, googleAnalyticsId: null, yandexMetricaId: null }
       : settings,
 });
 await exportGeneratedJson("/api/public/cms/pages/all", "pages.json");

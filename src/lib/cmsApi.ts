@@ -94,7 +94,6 @@ export interface CmsPublicSettings {
   googleBusinessProfileUrl: string | null;
   yandexMapsUrl: string | null;
   googleAnalyticsId: string | null;
-  googleAnalyticsApiSecret: string | null;
   yandexMetricaId: string | null;
   socialLinksJson: string | null;
 }

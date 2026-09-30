@@ -7,7 +7,6 @@ import { SeoHead } from "./SeoHead";
 import { StructuredData } from "./StructuredData";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { WhatsAppChat } from "./WhatsAppChat";
-import { Analytics } from "./Analytics";
 import { YandexMetrica } from "./YandexMetrica";
 import { getLanguageFromPathname } from "../routing";
 import { ensureLanguageLoaded } from "../../i18n";
@@ -36,7 +35,6 @@ export function Layout() {
     <div className="min-h-screen flex flex-col bg-background">
       <SeoHead />
       <StructuredData />
-      <Analytics />
       <YandexMetrica />
       <Navbar />
       <main className="flex-1">
